@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+if (${1:true}) {
+	${2:// code...}
+} else {
+	${3:// code...}
+}
+]]></content>
+	<tabTrigger>ife</tabTrigger>
+	<scope>source.mohaa</scope>
+	<description>if … else</description>
+</snippet>

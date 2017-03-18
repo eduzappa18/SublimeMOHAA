@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+while (${1:1}) {
+	${0:// code...}
+}
+]]></content>
+	<tabTrigger>while</tabTrigger>
+	<scope>source.mohaa</scope>
+	<description>while …</description>
+</snippet>

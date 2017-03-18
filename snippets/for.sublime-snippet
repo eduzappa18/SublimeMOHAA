@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+for (local.${1:i} = ${2:0}; local.${1:i} < $3; local.${1:i}++) { 
+	${0:// code...}
+}
+]]></content>
+	<tabTrigger>for</tabTrigger>
+	<scope>source.mohaa</scope>
+	<description>for (for loop)</description>
+</snippet>

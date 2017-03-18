@@ -1,0 +1,21 @@
+{
+	"scope": "source.mohaa",
+
+	"completions":
+	[
+		{ "trigger": "null", "contents": "NULL" },
+		{ "trigger": "nil", "contents": "NIL" },
+
+		{ "trigger": "getcvar", "contents": "getcvar(\"${1:variable}\")" },
+		{ "trigger": "setcvar", "contents": "setcvar \"${1:variable}\" \"${2:value}\";" },
+
+		{ "trigger": "iprintln", "contents": "iprintln(\"${1:string}\")" },
+		{ "trigger": "iprintln_noloc", "contents": "iprintln_noloc(\"${1:string}\")" },
+		{ "trigger": "iprintlnbold", "contents": "iprintlnbold(\"${1:string}\")" },
+		{ "trigger": "iprintlnbold_noloc", "contents": "iprintlnbold_noloc(\"${1:string}\")" },
+
+		{ "trigger": "int", "contents": "int(${1:value})" },
+		{ "trigger": "float", "contents": "float(${1:value})" }
+		
+	]
+}
