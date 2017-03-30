@@ -1,5 +1,5 @@
 # MOHAA Syntax Highlighting for Sublime Text.
-### Syntax Highlighting for [Medal of Honor: Allied Assault](https://en.wikipedia.org/wiki/Medal_of_Honor:_Allied_Assault) scripting languages.
+### Syntax Definitions for [Medal of Honor: Allied Assault](https://en.wikipedia.org/wiki/Medal_of_Honor:_Allied_Assault) scripting languages.
 _____________________________________________________________
 
 It currently support:
