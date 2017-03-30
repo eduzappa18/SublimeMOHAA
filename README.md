@@ -1,6 +1,16 @@
-Morpheus Script (MoH:AA) Syntax Highlighting
-==============================
+# MOHAA Syntax Highlighting for Sublime Text.
+### Syntax Highlighting for [Medal of Honor: Allied Assault](https://en.wikipedia.org/wiki/Medal_of_Honor:_Allied_Assault) scripting languages.
+_____________________________________________________________
 
-Syntax highlighting for [MOHAA](https://en.wikipedia.org/wiki/Medal_of_Honor:_Allied_Assault) (.scr) code
+It currently support:
+
+
+* `.scr` Morpheus Script files.
+  * Syntax Highlighting, Completions & Snippets.
+
+* `.log` Server log files
+  * Syntax Highlighting.
+
+_____________________________________________________________
 
 ![alt text](https://raw.githubusercontent.com/eduzappa18/SublimeMOHAA/master/shot.png "Screenshot")
