@@ -11,7 +11,7 @@ _____________________________________________________________
 **Coming soon:**
 * [ ] `.cfg` Config files.
 * [ ] `.mus` Music files.
-* [ ] `.shader` shader files.
+* [ ] `.shader` Shader files.
 * [ ] `.st` State files.
 * [ ] `.tik` TIKI files.
 * [ ] `.urc` URC files.
