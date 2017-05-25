@@ -3,11 +3,11 @@
 
 **The currently supported file types are:**
 
-
 * [x] `.scr` Morpheus Script files. (*Syntax Highlighting, Completions & Snippets.*)
 * [x] `.log` Server log files. (*Syntax Highlighting.*)
 
 **Coming soon:**
+
 * [ ] `.cfg` Config files.
 * [ ] `.mus` Music files.
 * [ ] `.shader` Shader files.
