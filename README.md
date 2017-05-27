@@ -29,7 +29,9 @@ _____________________________________________________________
 ### Screenshots
 
 **Morpheus Script**
+
 ![Morpheus Script](https://raw.githubusercontent.com/eduzappa18/SublimeMOHAA/master/screenshots/mohaa.scr.png)
 
 **Config files**
+
 ![Configs](https://raw.githubusercontent.com/eduzappa18/SublimeMOHAA/master/screenshots/mohaa.cfg.png)
