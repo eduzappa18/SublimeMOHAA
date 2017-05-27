@@ -1,14 +1,14 @@
 # MOHAA Syntax Highlighting for Sublime Text.
 ## Syntax Definitions for [Medal of Honor: Allied Assault](https://en.wikipedia.org/wiki/Medal_of_Honor:_Allied_Assault) scripting languages.
 
-**The currently supported file types are:**
+### The currently supported file types are:
 
 * [x] `.scr` Morpheus Script files. (*Syntax Highlighting, Completions & Snippets.*)
+* [x] `.cfg` Config files. (*Syntax Highlighting.*)
 * [x] `.log` Server log files. (*Syntax Highlighting.*)
 
 **Coming soon:**
 
-* [ ] `.cfg` Config files.
 * [ ] `.mus` Music files.
 * [ ] `.shader` Shader files.
 * [ ] `.st` State files.
@@ -17,11 +17,7 @@
 
 _____________________________________________________________
 
-## Installation
-
-### Package Control
-
-It is highly recommended to install this package with [Package Control](https://packagecontrol.io) as it automatically keeps all packages up to date.
+### Installation
 
 1. [Install Package Control](https://packagecontrol.io/installation) if you haven't yet.
 2. Open the command palette (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> for Windows & Linux,<kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> for Mac)
@@ -30,5 +26,10 @@ It is highly recommended to install this package with [Package Control](https://
 
 _____________________________________________________________
 
-## Screenshots
-![alt text](https://raw.githubusercontent.com/eduzappa18/SublimeMOHAA/master/shot.png "Screenshot")
+### Screenshots
+
+**Morpheus Script**
+![Morpheus Script](https://raw.githubusercontent.com/eduzappa18/SublimeMOHAA/master/screenshots/mohaa.scr.png)
+
+**Config files**
+![Configs](https://raw.githubusercontent.com/eduzappa18/SublimeMOHAA/master/screenshots/mohaa.cfg.png)
