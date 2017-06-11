@@ -1,0 +1,39 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: MOHAA Config
+scopeName: source.cfg
+fileTypes: [cfg]
+uuid: 7368b9d3-8779-4ed2-bc48-cd08ff644e5a
+
+patterns:
+- comment: Comment lines
+  name: comment.line.cfg
+  match: \s*\/\/\s*.*
+
+- name: string.quoted.double.cfg
+  begin: (["])
+  beginCaptures:
+    '0': {name: punctuation.definition.string.begin}
+  end: (\1)|(\n)
+  endCaptures:
+    '1': {name: punctuation.definition.string.end}
+    '2': {name: invalid.illegal.newline}
+  patterns:
+  - name: constant.character.escape.newline
+    match: \\\s*\n
+  - name: constant.character.escape
+    match: \\[nrt"\\]
+
+- comment: Semicolon
+  name: punctuation.terminator.statement
+  match: \;
+
+- comment: Functions
+  name: support.function
+  match: \b(add|alias|altbind|append|bind|bindlist|clear|cmd|ctrlbind|cvar_restart|echo|exec|map|quit|rcon|reset|restart|say|sayone|sayprivate|sayteam|scale|set|seta|sets|setu|subtract|toggle|unaltbind|unbind|unbindall|unctrlbind|vstr|wait|wisper|writeconfig)\b
+
+- comment: Numbers
+  name: constant.numeric.cfg
+  match: \b\d+\.?(?:\d+)?\b
+
+...

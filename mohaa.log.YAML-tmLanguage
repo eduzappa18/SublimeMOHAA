@@ -1,0 +1,51 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: MOHAA Log
+scopeName: source.mohaa_log
+fileTypes: [log]
+uuid: 253f50ef-27bb-4bfa-a191-534f3bbaa626
+
+patterns:
+- include: '#string'
+- include: '#numeric'
+- include: '#info'
+- include: '#errors'
+- include: '#script_error'
+- include: '#critical'
+- include: '#client'
+- include: '#other'
+
+repository:
+  string:
+    name: string
+    begin: '"'
+    end: '"+?'
+
+  numeric:
+    name: constant.numeric.mohaa
+    match: '\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\.[0-9]+)?))\b'
+
+  info:
+    name: variable.parameter.function
+    match: (Cvar_Set2:|Reborn INFO:|-->|(-|=){4,30})
+
+  errors:
+    name: keyword.control
+    match: ^((\^~\^~\^ (Script Error:)*)|ERROR:|WARNING[:-]|Warning:|Hitch warning:|Reborn WARNING:|ERROR PlaySound:|DUPLICATE ALIASES:|couldn\'t exec|Server Shutdown|TIKI_InitTiki:)
+
+  script_error:
+    name: invalid
+    match: .+\^$
+
+  critical:
+    name: invalid
+    match: (-{5} Server Shutdown -{5}|={4} ShutdownGame ={4}|LoadLibrary.+failed|Info string length exceeded|pending server commands|NET_CompareAdr:)
+
+  client:
+    name: entity.name
+    match: ^(clientCommand:|clientDownload:)|^.+has entered the battle$
+
+  other:
+    name: support.function.mohaa
+    match: \b(SV packet|Rcon from)\b
+...
