@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+makeArray
+	${0:// data...}
+endArray
+]]></content>
+	<tabTrigger>makeArray</tabTrigger>
+	<scope>source.mohaa</scope>
+	<description>makeArray …</description>
+</snippet>
