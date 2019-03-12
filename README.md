@@ -31,5 +31,17 @@ _____________________________________________________________
 **Morpheus Script**  
 ![Morpheus Script](https://raw.githubusercontent.com/eduzappa18/SublimeMOHAA/master/screenshots/mohaa.scr.png)
 
+**State files**  
+![State files](https://raw.githubusercontent.com/eduzappa18/SublimeMOHAA/master/screenshots/mohaa.st.png)
+
 **Config files**  
 ![Configs](https://raw.githubusercontent.com/eduzappa18/SublimeMOHAA/master/screenshots/mohaa.cfg.png)
+
+**Log files**  
+![Log files](https://raw.githubusercontent.com/eduzappa18/SublimeMOHAA/master/screenshots/mohaa.log.png)
+
+_____________________________________________________________
+
+
+**Light & Dark Themes**  
+![Themes](https://raw.githubusercontent.com/eduzappa18/SublimeMOHAA/master/screenshots/themes.gif)
