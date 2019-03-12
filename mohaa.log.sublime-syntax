@@ -1,0 +1,36 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: MOHAA Log file [.log]
+file_extensions:
+  - log
+scope: source.log
+contexts:
+  main:
+    # client stuff
+    - match: '^(clientCommand:|clientDownload:)|^.+has entered the battle$'
+      scope: markup.inserted.log
+    # warnings
+    - match: '^(WARNING[:-]|Warning:|Hitch warning:|TIKI_InitTiki:|TIKI_FreeSkel:|Tiki:LoadFile|DUPLICATE ALIASES:|(BIG )?Info string length exceeded).*$\n?'
+      scope: markup.deleted.log
+    # errors
+    - match: '^(\^~\^~\^|ERROR|Reborn SCRIPT ERROR:|--> Reborn WARNING:|LoadLibrary.+failed|NET_CompareAdr:|(Reborn )*EXCEPTION:|===== pending server commands =====).*$\n?'
+      scope: invalid.log
+    # info
+    - match: '(Cvar_Set2:|Reborn INFO:|-->|^([-=]{3,30}).*$)'
+      scope: markup.bold.log
+    # numeric
+    - match: '\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\.[0-9]+)?))\b'
+      scope: constant.numeric.log
+    # ^~^~^ Script Error code, precache code
+    - match: '.+\^$|^cache\s.*$'
+      scope: markup.raw.inline.log
+    # queries
+    - match: '^(SV packet|Rcon from)\b'
+      scope: markup.inserted.log
+    # strings
+    - match: '"'
+      push:
+        - meta_scope: string.quoted.double.log
+        - match: '"+?|\n'
+          pop: true

@@ -1,0 +1,38 @@
+{
+	"scope": "source.cfg",
+
+	"completions":
+	[
+		"add",
+		"alias",
+		"altbind",
+		"append",
+		"bind",
+		"bindlist",
+		"clear",
+		"cmd",
+		"ctrlbind",
+		"cvar_restart",
+		"echo",
+		"exec",
+		"map",
+		"quit",
+		"rcon",
+		"reset",
+		"restart",
+		"scale",
+		"set",
+		"seta",
+		"sets",
+		"setu",
+		"subtract",
+		"toggle",
+		"unaltbind",
+		"unbind",
+		"unbindall",
+		"unctrlbind",
+		"vstr",
+		"wait",
+		"writeconfig"
+	]
+}

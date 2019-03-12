@@ -5,6 +5,6 @@ for (local.${1:i} = ${2:0}; local.${1:i} < $3; local.${1:i}++) {
 }
 ]]></content>
 	<tabTrigger>for</tabTrigger>
-	<scope>source.mohaa</scope>
+	<scope>source.scr</scope>
 	<description>for (for loop)</description>
 </snippet>

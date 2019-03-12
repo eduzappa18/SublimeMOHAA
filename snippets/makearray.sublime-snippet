@@ -5,6 +5,6 @@ makeArray
 endArray
 ]]></content>
 	<tabTrigger>makeArray</tabTrigger>
-	<scope>source.mohaa</scope>
+	<scope>source.scr</scope>
 	<description>makeArray …</description>
 </snippet>

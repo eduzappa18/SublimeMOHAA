@@ -4,14 +4,14 @@
 ### The currently supported file types are:
 
 * [x] `.scr` Morpheus Script files. (*Syntax Highlighting, Completions & Snippets.*)
-* [x] `.cfg` Config files. (*Syntax Highlighting.*)
+* [x] `.st` State files. (*Syntax Highlighting.*)
+* [x] `.cfg` Config files. (*Syntax Highlighting & Completions*)
 * [x] `.log` Server log files. (*Syntax Highlighting.*)
 
 **Coming soon:**
 
 * [ ] `.mus` Music files.
 * [ ] `.shader` Shader files.
-* [ ] `.st` State files.
 * [ ] `.tik` TIKI files.
 * [ ] `.urc` URC files.
 
@@ -28,10 +28,8 @@ _____________________________________________________________
 
 ### Screenshots
 
-**Morpheus Script**
-
+**Morpheus Script**  
 ![Morpheus Script](https://raw.githubusercontent.com/eduzappa18/SublimeMOHAA/master/screenshots/mohaa.scr.png)
 
-**Config files**
-
+**Config files**  
 ![Configs](https://raw.githubusercontent.com/eduzappa18/SublimeMOHAA/master/screenshots/mohaa.cfg.png)

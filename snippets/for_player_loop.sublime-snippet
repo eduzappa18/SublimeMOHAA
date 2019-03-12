@@ -6,6 +6,6 @@ for (local.i = 1; local.i <= \$player.size; local.i++) {
 }
 ]]></content>
 	<tabTrigger>for</tabTrigger>
-	<scope>source.mohaa</scope>
+	<scope>source.scr</scope>
 	<description>for ($player Array)</description>
 </snippet>

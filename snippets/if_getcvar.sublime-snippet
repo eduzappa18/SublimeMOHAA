@@ -5,6 +5,6 @@ if (getcvar("${1:cvar}") == "${2:value}") {
 }
 ]]></content>
 	<tabTrigger>if</tabTrigger>
-	<scope>source.mohaa</scope>
+	<scope>source.scr</scope>
 	<description>if (getcvar())</description>
 </snippet>

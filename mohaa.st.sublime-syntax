@@ -1,0 +1,57 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: MOHAA State file [.st]
+file_extensions:
+  - st
+scope: source.st
+contexts:
+  main:
+    # inline comment
+    - match: '\s*\/\/\s*.*'
+      scope: comment.line.st
+    # keywords
+    - match: '!|\-|\+|:|default'
+      scope: keyword.operator.st
+    # numerics
+    - match: '\b((0[0-9]+)|([0-9]+(\.[0-9]+)?))\b'
+      scope: constant.numeric.st
+    # curly braces
+    - match: '\{|\}'
+      scope: meta.brace.curly.st
+    # movetype
+    - match: '\b(movetype|camera)\b'
+      scope: support.function.st
+    # state NAME_OF_THE_STATE
+    - match: '\b(state)\b(?:\s)+\b([a-zA-Z0-9_-]*)\b'
+      captures:
+        1: entity.name.function.st
+        2: variable.parameter.function.st
+    # states
+    - match: '\b(action|legs|states)\b'
+      scope: entity.name.function.st
+    # strings
+    - match: '(["])'
+      captures:
+        0: punctuation.definition.string.begin.st
+      push:
+        - meta_scope: string.quoted.st
+        - match: (\1)|(\n)
+          captures:
+            1: punctuation.definition.string.end.st
+            2: invalid.illegal.newline.st
+          pop: true
+        - match: \\\s*\n
+          scope: constant.character.escape.newline.st
+        - match: '\\[nrt"\\]'
+          scope: constant.character.escape.st
+    # entrycommands|exitcommands (embedded morpheus-script)
+    - match: '(?i)(entrycommands|exitcommands)\b'
+      scope: entity.name.function.st
+      push: [pop_at_hash, mohaa.scr.sublime-syntax]
+      with_prototype:
+      - match: '(?=\})'
+        pop: true
+  pop_at_hash:
+    - match: '\}'
+      pop: true

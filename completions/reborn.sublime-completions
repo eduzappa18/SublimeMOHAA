@@ -1,5 +1,5 @@
 {
-	"scope": "source.mohaa",
+	"scope": "source.scr",
 
 	"completions":
 	[
@@ -12,7 +12,7 @@
 		"bindweap",
 		"ceil",
 		"charToInt",
-		{ "trigger": "conprintf\t()", "contents": "conprintf(\"${0:}\" + \"\\n\");" },
+		{ "trigger": "conprintf\t()", "contents": "conprintf(${1:})" },
 		"cos",
 		"cosh",
 		"exp",
@@ -77,7 +77,7 @@
 		"tan",
 		"tanh",
 		"teamswitchdelay",
-		"traced",
+		{ "trigger": "traced\t()", "contents": "traced( ${1:Vector start}, ${2:Vector end}, ${3:[Integer pass_entities]}, ${4:[Vector mins]}, ${5:[Vector maxs]}, ${6:[Integer mask]})" },
 		"typeof",
 		"unregisterev",
 		"userinfo"

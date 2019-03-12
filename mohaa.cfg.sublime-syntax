@@ -1,0 +1,36 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: MOHAA Config file [.cfg]
+file_extensions:
+  - cfg
+scope: source.cfg
+contexts:
+  main:
+    # comment lines
+    - match: '\s*\/\/\s*.*'
+      scope: comment.line.cfg
+    # semicolon
+    - match: \;
+      scope: punctuation.terminator.statement.cfg
+    # commands
+    - match: '\b(add|alias|altbind|append|bind|bindlist|clear|cmd|ctrlbind|cvar_restart|echo|exec|map|quit|rcon|reset|restart|scale|set|seta|sets|setu|subtract|toggle|unaltbind|unbind|unbindall|unctrlbind|vstr|wait|writeconfig)\b'
+      scope: support.function.cfg
+    # numbers
+    - match: '\b\d+\.?(?:\d+)?\b'
+      scope: constant.numeric.cfg
+    # strings
+    - match: '(["])'
+      captures:
+        0: punctuation.definition.string.begin.cfg
+      push:
+        - meta_scope: string.quoted.double.cfg
+        - match: '(\1)|(\n)'
+          captures:
+            1: punctuation.definition.string.end.cfg
+            2: invalid.illegal.newline.cfg
+          pop: true
+        - match: '\\\s*\n'
+          scope: constant.character.escape.newline.cfg
+        - match: '\\[nrt"\\]'
+          scope: constant.character.escape.cfg

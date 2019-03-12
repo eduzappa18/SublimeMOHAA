@@ -1,15 +1,15 @@
 <snippet>
 	<content><![CDATA[
-huddraw_virtualsize	${1:<index>} ${2:<virtualsize>} // <1|0>
-huddraw_align		${1:<index>} ${3:<horizontal> <vertical>} // <left|center|right> <top|center|bottom>
-huddraw_color		${1:<index>} ${4:<red> <green> <blue>}
-huddraw_font		${1:<index>} ${5:<font>}
-huddraw_rect		${1:<index>} ${6:<X position> <Y position> <width> <height>}
-huddraw_shader		${1:<index>} ${7:<shader>}
-huddraw_string		${1:<index>} ${8:<string>}
-huddraw_alpha		${1:<index>} ${9:<alpha>}
+huddraw_virtualsize ${1:<index>} ${2:<virtualsize>} // <1|0>
+huddraw_align       ${1:<index>} ${3:<horizontal> <vertical>} // <left|center|right> <top|center|bottom>
+huddraw_color       ${1:<index>} ${4:<red> <green> <blue>}
+huddraw_font        ${1:<index>} ${5:<font>}
+huddraw_rect        ${1:<index>} ${6:<x> <y> <width> <height>}
+huddraw_shader      ${1:<index>} ${7:<shader>}
+huddraw_string      ${1:<index>} ${8:<string>}
+huddraw_alpha       ${1:<index>} ${9:<alpha>}
 ]]></content>
 	<tabTrigger>huddraw</tabTrigger>
-	<scope>source.mohaa</scope>
+	<scope>source.scr</scope>
 	<description>huddraw …</description>
 </snippet>
