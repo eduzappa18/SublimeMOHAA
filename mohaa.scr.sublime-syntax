@@ -7,19 +7,25 @@ file_extensions:
 scope: source.scr
 contexts:
   main:
-    # (wait)thread-goto 'LABEL'
-    - match: '(?i)(\b(thread|waitthread)|(goto)\b)\s+(([\w-]+)\b)(?!\.|\/)'
+    # thread-waitthread-goto 'LABEL'
+    - match: '(?i)(?:\b(thread|waitthread)|(goto)\b)\s+([\w-]+)\b(?!\.|\/\w)'
       captures:
-        2: support.function.scr
-        3: keyword.control.scr
-        4: markup.raw.inline.scr
+        1: support.function.scr
+        2: keyword.control.scr
+        3: markup.bold.scr
     # threads labels with arguments
-    - match: '^\s*((?!(?:default))[a-zA-Z0-9_-]+)(\s*)(\s+[\s\.a-zA-Z0-9_-]*)*(:)'
+    - match: '^\s*((?!(?:default))[\w-]+)(\s)*([\s\w.-]*)(:)(?!:)'
       captures:
-        1: entity.name.function.scr
+        1: entity.name.function.scr markup.bold.scr
         2: punctuation.definition.parameters.begin.scr
         3: variable.parameter.function.scr
         4: punctuation.definition.parameters.end.scr
+    # paths
+    - match: '(?:(?:[\w-]+/)+(?:[\w-]+)\.(?:[\w]+))(?:(::)(?:([\w-]+)\b)(?!\.))?'
+      captures:
+        0: meta.path.scr
+        1: keyword.operator.scr
+        2: markup.bold.scr
     # semicolon
     - match: '\;'
       scope: punctuation.terminator.statement.scr
@@ -83,12 +89,12 @@ contexts:
         0: punctuation.definition.string.begin.scr
       push:
         - meta_scope: string.quoted.double.scr
-        - match: (\1)|(\n)
+        - match: '(\1)|(\n)'
           captures:
             1: punctuation.definition.string.end.scr
             2: invalid.illegal.newline.scr
           pop: true
-        - match: \\\s*\n
+        - match: '\\\s*\n'
           scope: constant.character.escape.newline.scr
         - match: '\\[nrt"\\]'
           scope: constant.character.escape.scr
