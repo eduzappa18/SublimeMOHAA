@@ -94,7 +94,5 @@ contexts:
             1: punctuation.definition.string.end.scr
             2: invalid.illegal.newline.scr
           pop: true
-        - match: '\\\s*\n'
-          scope: constant.character.escape.newline.scr
         - match: '\\[nrt"\\]'
           scope: constant.character.escape.scr
