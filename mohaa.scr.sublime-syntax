@@ -54,7 +54,7 @@ contexts:
     - match: '\.(useheld|fireheld|secfireheld)\b'
       scope: support.function.scr
     # keyword-control
-    - match: '(?<!\.|:|\[)\b(break|case|continue|default|else|for|goto|if|switch|throw|while|end)\b'
+    - match: '(?<!\.|:|\[)\b(break|case|catch|continue|default|else|end|for|goto|if|switch|throw|try|while)\b'
       scope: keyword.control.scr
     # keyword-operator
     - match: '%|&|\*|\/|\-\-|\-|\+\+|\+|~|===|==|=|!=|!==|<=|>=|<<=|>>=|>>>=|<>|<|>|\^|!|&&|\||\|\||\*=|%=|\+=|\-=|&=|\^=|::'
