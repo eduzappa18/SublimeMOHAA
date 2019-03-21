@@ -7,8 +7,8 @@ file_extensions:
 scope: source.scr
 contexts:
   main:
-    # thread-waitthread-goto 'LABEL'
-    - match: '(?i)(?:\b(thread|waitthread)|(goto)\b)\s+([\w-]+)\b(?!\.|\/\w)'
+    # thread-waitthread-setthread-goto 'LABEL'
+    - match: '(?i)(?:\b(thread|waitthread|setthread)|(goto)\b)\s+([\w-]+)\b(?!\.|\/\w)'
       captures:
         1: support.function.scr
         2: keyword.control.scr
