@@ -1,57 +1,144 @@
 %YAML 1.2
 ---
 # http://www.sublimetext.com/docs/3/syntax.html
+# https://www.sublimetext.com/docs/3/scope_naming.html
+
 name: MOHAA State file [.st]
 file_extensions:
   - st
 scope: source.st
+
+variables:
+  identifier: \b([[:upper:][:digit:]_]+)\b
+  cmds: \b(movetype|camera)\b
+
 contexts:
   main:
-    # inline comment
-    - match: '\s*\/\/\s*.*'
-      scope: comment.line.st
-    # keywords
-    - match: '!|\-|\+|:|default'
+    - match: (?=^\s*\bstate\b\s+{{identifier}})
+      push: state
+
+  prototype:
+    - include: comments
+
+  immediately-pop:
+    - match: ''
+      pop: true
+
+  else-pop:
+    - match: (?=\S)
+      pop: true
+
+  definitions:
+    - include: keywords
+    - include: strings
+
+  comments:
+    - match: //
+      scope: punctuation.definition.comment.st
+      push:
+        - meta_scope: comment.line.double-slash.st
+        - match: \n
+          pop: true
+
+  keywords:
+    - match: '!|\-|\+|:|\bdefault\b'
       scope: keyword.operator.st
-    # numerics
-    - match: '\b((0[0-9]+)|([0-9]+(\.[0-9]+)?))\b'
-      scope: constant.numeric.st
-    # curly braces
-    - match: '\{|\}'
-      scope: meta.brace.curly.st
-    # movetype
-    - match: '\b(movetype|camera)\b'
-      scope: support.function.st
-    # state NAME_OF_THE_STATE
-    - match: '\b(state)\b(?:\s)+\b([a-zA-Z0-9_-]*)\b'
-      captures:
-        1: entity.name.function.st
-        2: variable.parameter.function.st
-    # states
-    - match: '\b(action|legs|states)\b'
-      scope: entity.name.function.st
-    # strings
-    - match: '(["])'
-      captures:
-        0: punctuation.definition.string.begin.st
+
+  strings:
+    - match: '"'
+      scope: punctuation.definition.string.begin.st
       push:
         - meta_scope: string.quoted.st
-        - match: (\1)|(\n)
+        - match: (\")|(\n)
           captures:
             1: punctuation.definition.string.end.st
             2: invalid.illegal.newline.st
           pop: true
-        - match: \\\s*\n
-          scope: constant.character.escape.newline.st
         - match: '\\[nrt"\\]'
           scope: constant.character.escape.st
-    # entrycommands|exitcommands (embedded morpheus-script)
-    - match: '(?i)(entrycommands|exitcommands)\b'
-      scope: entity.name.function.st
-      push: [pop_at_hash, mohaa.scr.sublime-syntax]
-      with_prototype:
-      - match: '(?=\})'
-        pop: true
-  pop_at_hash:
+
+  commands:
+    - match: '{{cmds}}'
+      scope: support.function.st
+      push:
+        - match: '$'
+          pop: true
+        - match: '[\w]+\b'
+          scope: string.unquoted.st
+          pop: true
+
+  state:
+    - match: \b(state)\b
+      captures:
+        1: storage.type.st
+      push:
+        - meta_scope: meta.state.declaration.st
+        - match: '$'
+          pop: true
+        - match: '{{identifier}}'
+          scope: entity.name.function.st
+          set:
+            - match: '\{'
+              scope: punctuation.definition.block.begin.st
+              push: state-body
+            - include: else-pop
+
+  state-body:
+    - meta_scope: meta.state.body.st
     - match: '\}'
+      scope: punctuation.definition.block.end.st
       pop: true
+    - include: commands
+    - include: entry-exit-commands
+    - include: states
+    - include: anims
+
+  entry-exit-commands:
+    - match: '\b(entrycommands|exitcommands)\b'
+      scope: keyword.other.st
+      push:
+        - match: '\}'
+          scope: punctuation.section.block.end.st
+          pop: true
+        - match: '\{'
+          scope: punctuation.section.block.begin.st
+          embed: scope:source.scr
+          embed_scope: source.scr.embedded.st
+          escape: '(?=\})'
+
+  states:
+    - match: ^\s*\b(states)\b
+      captures:
+        1: keyword.other.st
+      push:
+        - match: '\{'
+          scope: punctuation.section.block.begin.st
+          set:
+            - meta_scope: meta.block.st
+            - match: '\}'
+              scope: punctuation.section.block.end.st
+              pop: true
+            - match: '^\s*({{identifier}})(?=\s+:)'
+              captures:
+                1: variable.function.st
+            - include: definitions
+        - include: else-pop
+
+  anims:
+    - match: ^\s*\b(action|legs|torso)\b
+      captures:
+        1: keyword.other.st
+      push:
+        - match: '\{'
+          scope: punctuation.section.block.begin.st
+          set:
+            - meta_scope: meta.block.st
+            - match: '\}'
+              scope: punctuation.section.block.end.st
+              pop: true
+            - match: '^\s*(?:(none)|([\w]+))(?=\s+:)'
+              captures:
+                1: constant.language.st
+                2: string.unquoted.st
+            - include: definitions
+        - include: else-pop
