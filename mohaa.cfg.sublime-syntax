@@ -1,36 +1,153 @@
 %YAML 1.2
 ---
-# http://www.sublimetext.com/docs/3/syntax.html
-name: MOHAA Config file [.cfg]
+name: Config file [.cfg]
 file_extensions:
   - cfg
 scope: source.cfg
+
+variables:
+  cmds: |-
+    (?xi:
+      # from "cmdlist" command
+      ui_removehud|ui_addhud|ui_hud|vote|callvote|pushmenu_weaponselect|pushmenu_teamselect|instamsg_group_e|
+      instamsg_group_d|instamsg_group_c|instamsg_group_b|instamsg_group_a|instamsg_main|wisper|sayone|
+      sayprivate|teamsay|sayteam|say|messagemode_private|messagemode_team|messagemode_all|messagemode|
+      editchshader|getchshader|resetvss|loademitter|dumpemitter|deleteemittercommand|newemittercommand|
+      nextemittercommand|prevemittercommand|triggertestemitter|testemitter|cg_dumpallclasses|cg_dumpclassevents|
+      cg_classevents|cg_classtree|cg_classlist|cg_pendingevents|cg_dumpevents|cg_eventhelp|cg_eventlist|
+      sizedown|sizeup|viewpos|toggleitem|weapdrop|uselast|useweaponclass|ter_restart|exec|ai_calltrace|
+      ai_delete|exitintermission|entcount|gamevars|levelvars|snd|cam|classtree|classlist|dumpallclasses|
+      dumpclassevents|classevents|dumpevents|eventhelp|pendingevents|eventlist|dmmessage|secondarydmweapon|
+      primarydmweapon|spectator|join_team|zoomoff|safezoom|safeholster|holster|fov|gameversion|reload|weapnext|
+      weapprev|invnext|invprev|notready|ready|script|kill|noclip|notarget|god|give|devmap|set|devcon|
+      gotoreturnmenu|setreturnmenu|ui_getplayermodel|ui_applyplayermodel|playermodel|finishloadingscreen|
+      startserver|locationprint|centerprint|ui_checkrestart|ui_resetcvars|clear|ui_testlist|ui_loadconsolepos|
+      ui_saveconsolepos|ui_hidemouse|ui_showmouse|inv_restart|editspecificshader|editshader|editscript|notepad|
+      soundpicker|lod_spawnlist|viewspawnlist|ui_startdmmap|dmmapselect|maplist|loadmenu|togglemenu|listmenus|
+      globalwidgetcommand|widgetcommand|hidemenu|showmenu|popmenu|forcemenu|pushmenu_dm|pushmenu_sp|pushmenu|
+      tmstop|tmstartloop|tmstart|pitch|playsong|loadsoundtrack|stopmp3|playmp3|sounddump|soundinfo|soundlist|
+      play|ff_disable|r_infoworldtris|r_infostaticmodels|farplane_info|gfxinfo|screenshot|modelist|modellist|
+      shaderlist|imagelist|cl_dumpallclasses|cl_dumpclassevents|cl_classevents|cl_classtree|cl_classlist|
+      cl_pendingevents|cl_dumpevents|cl_eventhelp|cl_eventlist|gogetpatch|launchgamespy|fastconnect|aliasdump|
+      dialog|saveshot|vidmode|tiki|animlist|tikilist|tikianimlist|ping|setenv|rcon|localservers|reconnect|
+      menuconnect|connect|stoprecord|cinematic|disconnect|vid_restart|snd_restart|clientinfo|configstrings|
+      cmd|centerview|difficultyHard|difficultyMedium|difficultyEasy|loadlastgame|loadgame|autosavegame|savegame|
+      killserver|gamemap|map|spdevmap|spmap|sectorlist|restart|dumpuser|systeminfo|serverinfo|status|clientkick|
+      kick|heartbeat|midiinfo|net_restart|in_restart|pause|writeconfig|changeVectors|quit|alias|bind|seta|
+      altbind|unbindall|touchFile|cd|fdir|dir|path|ctrlbindlist|altbindlist|bindlist|unctrlbind|ctrlbind|
+      unaltbind|unbind|append|scale|subtract|add|cvar_savegame_restart|cvar_restart|cvarlist|reset|setu|sets|
+      toggle|wait|echo|vstr|meminfo|rconpassword|
+      # Reborn ClientAdmin Console Commands
+      ad_banid|ad_banidr|ad_banip|ad_banipr|ad_banname|ad_chatfilteradd|ad_chatfilterremove|ad_clientkick|
+      ad_clientkickr|ad_dischat|ad_distaunt |ad_fraglimit|ad_gametype|ad_kick|ad_kickr|ad_listadmins|
+      ad_listchatfilter|ad_listips|ad_listnames|ad_listprotnames|ad_login|ad_map|ad_protname|ad_rcon|
+      ad_restart|ad_say|ad_sayp|ad_status|ad_timelimit|ad_unbanip|ad_unbanname|ad_unprotname
+    )
+
 contexts:
   main:
-    # comment lines
-    - match: '\s*\/\/\s*.*'
-      scope: comment.line.cfg
-    # semicolon
+    - match: (?=\S)
+      push: statement
+
+  prototype:
+    - include: comments
+
+  statement:
+    - include: commands
+    - include: literal-string
+
+  eol-pop:
+    - match: $
+      pop: true
+
     - match: \;
       scope: punctuation.terminator.statement.cfg
-    # commands
-    - match: '\b(add|alias|altbind|append|bind|bindlist|clear|cmd|ctrlbind|cvar_restart|echo|exec|map|quit|rcon|reset|restart|scale|set|seta|sets|setu|subtract|toggle|unaltbind|unbind|unbindall|unctrlbind|vstr|wait|writeconfig)\b'
-      scope: support.function.cfg
-    # numbers
-    - match: '\b\d+\.?(?:\d+)?\b'
-      scope: constant.numeric.cfg
-    # strings
-    - match: '(["])'
-      captures:
-        0: punctuation.definition.string.begin.cfg
+      pop: true
+
+  else-pop:
+    - match: (?=\S)
+      pop: true
+
+  immediately-pop:
+    - match: ''
+      pop: true
+
+  comments:
+    - match: //
+      scope: punctuation.definition.comment.cfg
       push:
+        - meta_include_prototype: false
+        - meta_scope: comment.line.double-slash.cfg
+
+        - match: $\n?
+          pop: true
+
+  commands:
+    - include: eol-pop
+
+    - match: \bwait\b
+      scope: support.function.cfg
+      push: post
+
+    - match: \b(?:altbind|bind|ctrlbind|unaltbind|unbind|unctrlbind)\b
+      scope: support.function.cfg
+      push:
+        - include: literal-string
+        - match: \S+(?=\s)
+          scope: constant.character.cfg
+          set: post
+        - include: eol-pop
+
+    - match: \b(?:add|alias|append|scale|set|seta|sets|setu|subtract|toggle|vstr)\b
+      scope: support.function.cfg
+      push:
+        - include: literal-string
+        - include: vars
+        - include: eol-pop
+
+    - match: '\b({{cmds}})\b'
+      scope: support.function.cfg
+      set: post
+
+    - include: vars
+
+  literal-string:
+    - match: '"'
+      scope: punctuation.definition.string.begin.cfg
+      set:
+        - meta_include_prototype: false
         - meta_scope: string.quoted.double.cfg
-        - match: '(\1)|(\n)'
+
+        - match: (\")|($\n?)
           captures:
             1: punctuation.definition.string.end.cfg
             2: invalid.illegal.newline.cfg
           pop: true
-        - match: '\\\s*\n'
-          scope: constant.character.escape.newline.cfg
+
         - match: '\\[nrt"\\]'
           scope: constant.character.escape.cfg
+
+  unquoted-string:
+    - match: \S+\b
+      scope: string.unquoted.cfg
+
+  literal-number:
+    - match: (?:\b\d*\.?\d+|\B\.\d+)\b
+      scope: constant.numeric.cfg
+
+  vars:
+    - match: '(([+-])?[\w+-]+)\b'
+      captures:
+        1: variable.other.readwrite.cfg
+        2: keyword.other.cfg
+      set:
+        - include: eol-pop
+        - include: literal-number
+        - include: literal-string
+        - include: unquoted-string
+
+  post:
+    - include: eol-pop
+    - include: literal-number
+    - include: literal-string
+    - include: unquoted-string
