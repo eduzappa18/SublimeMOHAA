@@ -1,0 +1,15 @@
+{
+	"scope": "meta.waittill-levelphase.scr",
+
+	"completions":
+	[
+		"prespawn",
+		"spawn",
+		"postthink",
+		"playerspawn",
+		"roundstart",
+		"allieswin",
+		"axiswin",
+		"draw"
+	]
+}

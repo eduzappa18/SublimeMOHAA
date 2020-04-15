@@ -1,5 +1,5 @@
 {
-	"scope": "source.scr",
+	"scope": "source.scr - string.quoted - meta.property - meta.waittill-levelphase.scr",
 
 	"completions":
 	[
