@@ -1,10 +1,10 @@
 <snippet>
 	<content><![CDATA[
-case "${1:value}":
+case ${1:}:
 	${0:// code...}
 	break;
 ]]></content>
 	<tabTrigger>case</tabTrigger>
-	<scope>source.scr</scope>
+	<scope>meta.switch.scr meta.block.scr</scope>
 	<description>case …</description>
 </snippet>

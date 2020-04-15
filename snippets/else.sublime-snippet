@@ -1,10 +1,10 @@
 <snippet>
 	<content><![CDATA[
-if ($1) {
+else {
 	$0
 }
 ]]></content>
-	<tabTrigger>if</tabTrigger>
+	<tabTrigger>else</tabTrigger>
 	<scope>source.scr</scope>
-	<description>if ()</description>
+	<description>else {…}</description>
 </snippet>
