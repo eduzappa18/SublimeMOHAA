@@ -1,0 +1,757 @@
+// SYNTAX TEST "Packages/MOHAA/mohaa.scr.sublime-syntax"
+
+;
+// <- punctuation.terminator.statement.empty.scr
+
+    // comment line
+//  ^^^^^^^^^^^^^^^ comment.line.double-slash.scr
+//  ^^ punctuation.definition.comment.scr
+
+    /**/exec/**/
+//  ^^^^ comment.block.scr
+//      ^^^^ - comment.block.scr
+//          ^^^^ comment.block.scr
+
+    /*    */
+//  ^^^^^^^^ comment.block.scr
+//  ^^ punctuation.definition.comment.begin.scr
+//        ^^ punctuation.definition.comment.end.scr
+
+/**
+// <- comment.block.documentation.scr
+ *
+ * Blah blah...
+ * @author Name
+ * @version 1.0.0
+ * @anything Any keyword you want to highlight
+// ^^^^^^^^^ keyword.other.documentation.scr
+ * @contact username@domain.com
+//                  ^^^^^^^ - keyword
+ *
+ */
+// <- comment.block.documentation.scr
+
+    "Hello, World!";
+//  ^^^^^^^^^^^^^^^ string.quoted.double.scr
+//  ^ punctuation.definition.string.begin.scr
+//                ^ punctuation.definition.string.end.scr
+//                 ^ punctuation.terminator.statement.scr
+
+    "\t \n \r \"";
+//  ^^^^^^^^^^^^^ string.quoted.double.scr
+//   ^^ constant.character.escape.scr
+//      ^^ constant.character.escape.scr
+//         ^^ constant.character.escape.scr
+//            ^^ constant.character.escape.scr
+
+    "// /* not a comment";
+//     ^^^^^^^^^^^^^^^^^^^ - comment
+
+    "string
+//         ^ invalid.illegal.newline.scr
+
+    } ] )
+//  ^ invalid.illegal.stray-bracket-end.scr
+//    ^ invalid.illegal.stray-bracket-end.scr
+//      ^ invalid.illegal.stray-bracket-end.scr
+
+    { /* block */ }
+//  ^^^^^^^^^^^^^^^ meta.block.scr
+//  ^ punctuation.section.block.begin.scr
+//                ^ punctuation.section.block.end.scr
+
+    [ /* brackets */ ]
+//  ^^^^^^^^^^^^^^^^^^ meta.brackets.scr
+//  ^ punctuation.section.brackets.begin.scr
+//                   ^ punctuation.section.brackets.end.scr
+
+    ( /* group */ )
+//  ^^^^^^^^^^^^^^^ meta.group.scr
+//  ^ punctuation.section.group.begin.scr
+//                ^ punctuation.section.group.end.scr
+
+    game; level; local; group; parm;
+//  ^^^^ variable.language.scr
+//      ^ punctuation.terminator.statement.scr
+//        ^^^^^ variable.language.scr
+//             ^ punctuation.terminator.statement.scr
+//               ^^^^^ variable.language.scr
+//                    ^ punctuation.terminator.statement.scr
+//                      ^^^^^ variable.language.scr
+//                           ^ punctuation.terminator.statement.scr
+//                             ^^^^ variable.language.scr
+//                                 ^ punctuation.terminator.statement.scr
+
+    game.prop; level.prop; local.prop; group.prop; parm.prop;
+//  ^^^^ variable.language.scr
+//      ^ punctuation.accessor.dot.scr
+//       ^^^^ meta.property.object.scr
+//           ^ punctuation.terminator.statement.scr
+//             ^^^^^ variable.language.scr
+//                  ^ punctuation.accessor.dot.scr
+//                   ^^^^ meta.property.object.scr
+//                       ^ punctuation.terminator.statement.scr
+//                         ^^^^^ variable.language.scr
+//                              ^ punctuation.accessor.dot.scr
+//                               ^^^^ meta.property.object.scr
+//                                   ^ punctuation.terminator.statement.scr
+//                                     ^^^^^ variable.language.scr
+//                                          ^ punctuation.accessor.dot.scr
+//                                           ^^^^ meta.property.object.scr
+//                                               ^ punctuation.terminator.statement.scr
+//                                                 ^^^^ variable.language.scr
+//                                                     ^ punctuation.accessor.dot.scr
+//                                                      ^^^^ meta.property.object.scr
+//                                                          ^ punctuation.terminator.statement.scr
+
+    gamestr; levelstr; localstr; groupstr; parmstr;
+//  ^^^^^^^ string.unquoted.scr
+//         ^ punctuation.terminator.statement.scr
+//           ^^^^^^^^ string.unquoted.scr
+//                   ^ punctuation.terminator.statement.scr
+//                     ^^^^^^^^ string.unquoted.scr
+//                             ^ punctuation.terminator.statement.scr
+//                               ^^^^^^^^ string.unquoted.scr
+//                                       ^ punctuation.terminator.statement.scr
+//                                         ^^^^^^^ string.unquoted.scr
+//                                                ^ punctuation.terminator.statement.scr
+
+
+    0
+//  ^ constant.numeric.scr
+
+    1234567890
+//  ^^^^^^^^^^ constant.numeric.scr
+
+    123.456
+//  ^^^^^^^ constant.numeric.scr
+
+    .123
+//  ^^^^ constant.numeric.scr
+
+    123.
+//  ^^^ constant.numeric.scr
+//     ^ punctuation.accessor.dot.scr
+
+
+    local.a::local.b
+//         ^^ keyword.operator.const-array.scr
+
+    !local.a
+//  ^ keyword.operator.logical.scr
+
+    local.a && local.b
+//          ^^ keyword.operator.logical.scr
+
+    local.a || local.b
+//          ^^ keyword.operator.logical.scr
+
+    local.a = local.b
+//          ^ keyword.operator.assignment.scr
+
+    local.a + local.b
+//          ^ keyword.operator.arithmetic.scr
+
+    local.a - local.b
+//          ^ keyword.operator.arithmetic.scr
+
+    local.a * local.b
+//          ^ keyword.operator.arithmetic.scr
+
+    local.a / local.b
+//          ^ keyword.operator.arithmetic.scr
+
+    local.a % local.b
+//          ^ keyword.operator.arithmetic.scr
+
+    local.a == local.b
+//          ^^ keyword.operator.comparison.scr
+
+    local.a != local.b
+//          ^^ keyword.operator.comparison.scr
+
+    local.a > local.b
+//          ^ keyword.operator.relational.scr
+
+    local.a < local.b
+//          ^ keyword.operator.relational.scr
+
+    local.a >= local.b
+//          ^^ keyword.operator.relational.scr
+
+    local.a <= local.b
+//          ^^ keyword.operator.relational.scr
+
+    local.a += local.b
+//          ^^ keyword.operator.assignment.augmented.scr
+
+    local.a -= local.b
+//          ^^ keyword.operator.assignment.augmented.scr
+
+    local.a++
+//         ^^ keyword.operator.arithmetic.scr
+
+    local.a--
+//         ^^ keyword.operator.arithmetic.scr
+
+    local.a & local.b
+//          ^ keyword.operator.bitwise.scr
+
+    local.a | local.b
+//          ^ keyword.operator.bitwise.scr
+
+    local.a ^ local.b
+//          ^ keyword.operator.bitwise.scr
+
+    ~local.a
+//  ^ keyword.operator.bitwise.scr
+
+
+    local.ca = 123::123abc123::spawn::int::case::default::.123::(int 1.23)::$ent;
+//  ^^^^^ variable.language.scr
+//       ^ punctuation.accessor.dot.scr
+//        ^^ meta.property.object.scr
+//           ^ keyword.operator.assignment.scr
+//             ^^^ constant.numeric.scr
+//                ^^ keyword.operator.const-array.scr
+//                  ^^^^^^^^^ string.unquoted.scr
+//                           ^^ keyword.operator.const-array.scr
+//                             ^^^^^ string.unquoted.scr
+//                                  ^^ keyword.operator.const-array.scr
+//                                    ^^^ string.unquoted.scr
+//                                       ^^ keyword.operator.const-array.scr
+//                                         ^^^^ keyword.control.switch.scr
+//                                             ^^ keyword.operator.const-array.scr
+//                                               ^^^^^^^ keyword.control.switch.scr
+//                                                      ^^ keyword.operator.const-array.scr
+//                                                        ^^^^ constant.numeric.scr
+//                                                            ^^ keyword.operator.const-array.scr
+//                                                              ^^^^^^^^^^ meta.group.scr
+//                                                              ^ punctuation.section.group.begin.scr
+//                                                               ^^^ storage.type.scr
+//                                                                  ^ - storage - constant
+//                                                                   ^^^^ constant.numeric.scr
+//                                                                       ^ punctuation.section.group.end.scr
+//                                                                        ^^ keyword.operator.const-array.scr
+//                                                                          ^^^^ variable.language.scr
+//                                                                          ^ keyword.operator.targetname.scr
+//                                                                              ^ punctuation.terminator.statement.scr
+
+    local.ca =  "asdf"     :: \
+//              ^^^^^^ string.quoted.double.scr
+//                         ^^ keyword.operator.const-array.scr
+//                            ^ punctuation.separator.continuation.scr
+                1234       :: \
+//              ^^^^ constant.numeric.scr
+//                         ^^ keyword.operator.const-array.scr
+//                            ^ punctuation.separator.continuation.scr
+                qwerty     :: \
+//              ^^^^^^ string.unquoted.scr
+//                         ^^ keyword.operator.const-array.scr
+//                            ^ punctuation.separator.continuation.scr
+                spawn      :: \
+//              ^^^^^ string.unquoted.scr
+//                         ^^ keyword.operator.const-array.scr
+                (123+123);
+//              ^^^^^^^^^ meta.group.scr
+//              ^ punctuation.section.group.begin.scr
+//               ^^^ constant.numeric.scr
+//                  ^ keyword.operator.arithmetic.scr
+//                   ^^^ constant.numeric.scr
+//                      ^ punctuation.section.group.end.scr
+//                       ^ punctuation.terminator.statement.scr
+
+    local.case = case
+//  ^^^^^ variable.language.scr
+//       ^ punctuation.accessor.dot.scr
+//        ^^^^ meta.property.object.scr
+//             ^ keyword.operator.assignment.scr
+//               ^^^^ keyword.control.switch.scr
+
+    local.foo-bar = foo-bar
+//  ^^^^^ variable.language.scr
+//       ^ punctuation.accessor.dot.scr
+//        ^^^ meta.property.object.scr
+//           ^ keyword.operator.arithmetic.scr
+//            ^^^ string.unquoted.scr
+//                ^ keyword.operator.assignment.scr
+//                  ^^^^^^^ string.unquoted.scr
+
+    local.foo = 123-1
+//  ^^^^^ variable.language.scr
+//       ^ punctuation.accessor.dot.scr
+//        ^^^ meta.property.object.scr
+//            ^ keyword.operator.assignment.scr
+//              ^^^ constant.numeric.scr
+//                 ^ keyword.operator.arithmetic.scr
+//                  ^ constant.numeric.scr
+
+    local.foo = (123-1)
+//  ^^^^^ variable.language.scr
+//       ^ punctuation.accessor.dot.scr
+//        ^^^ meta.property.object.scr
+//            ^ keyword.operator.assignment.scr
+//              ^^^^^^^ meta.group.scr
+//              ^ punctuation.section.group.begin.scr
+//               ^^^ constant.numeric.scr
+//                  ^ keyword.operator.arithmetic.scr
+//                   ^ constant.numeric.scr
+//                    ^ punctuation.section.group.end.scr
+
+
+    switch (local.variable) {
+//  ^^^^^^^^^^^^^^^^^^^^^^^^^ meta.switch.scr
+//  ^^^^^^ keyword.control.switch.scr
+//         ^^^^^^^^^^^^^^^^ meta.group.scr
+//         ^ punctuation.section.group.begin.scr
+//          ^^^^^ variable.language.scr
+//               ^ punctuation.accessor.dot.scr
+//                ^^^^^^^^ meta.property.object.scr
+//                        ^ punctuation.section.group.end.scr
+//                          ^ punctuation.section.block.begin.scr
+//^^ - meta
+
+        case "value":
+//      ^^^^ keyword.control.switch.scr
+//           ^^^^^^^ string.quoted.double.scr
+//                  ^ punctuation.separator.scr
+            break;
+//          ^^^^^ keyword.control.loop.scr
+        case 123:
+//      ^^^^ keyword.control.switch.scr
+//           ^^^ constant.numeric.scr
+//              ^ punctuation.separator.scr
+            break;
+        case local.value:
+//      ^^^^ keyword.control.switch.scr
+//           ^^^^^ variable.language.scr
+//                ^ punctuation.accessor.dot.scr
+//                 ^^^^^ meta.property.object.scr
+//                      ^ punctuation.separator.scr
+            break;
+        default:
+//      ^^^^^^^ keyword.control.switch.scr
+//             ^ punctuation.separator.scr
+            break;
+//          ^^^^^ keyword.control.loop.scr
+//               ^ punctuation.terminator.statement.scr
+    }
+//^^^ meta.switch.scr
+//^^^ meta.block.scr
+//  ^ punctuation.section.block.end.scr
+//   ^ - meta
+
+    for (local.i = 0; local.i < 5; local.i++) { }
+//  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.for.scr
+//      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.group.scr
+//                                            ^^^ meta.block.scr
+//                                            ^ punctuation.section.block.begin.scr
+//                                              ^ punctuation.section.block.end.scr
+
+    for (local.i = 1; local.i <= $player.size; local.i++) {
+//  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.for.scr
+//      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.group.scr
+//  ^^^ keyword.control.loop.scr
+//      ^ punctuation.section.group.begin.scr
+//       ^^^^^ variable.language.scr
+//            ^ punctuation.accessor.dot.scr
+//             ^ meta.property.object.scr
+//               ^ keyword.operator.assignment.scr
+//                 ^ constant.numeric.scr
+//                  ^ punctuation.separator.expression.scr
+//                    ^^^^^ variable.language.scr
+//                         ^ punctuation.accessor.dot.scr
+//                          ^ meta.property.object.scr
+//                            ^^ keyword.operator.relational.scr
+//                               ^^^^^^^ variable.language.scr
+//                                      ^ punctuation.accessor.dot.scr
+//                                       ^^^^ meta.property.object.scr support.function.builtin.scr
+//                                           ^ punctuation.separator.expression.scr
+//                                             ^^^^^ variable.language.scr
+//                                                  ^ punctuation.accessor.dot.scr
+//                                                   ^ meta.property.object.scr
+//                                                    ^^ keyword.operator.arithmetic.scr
+//                                                      ^ punctuation.section.group.end.scr
+//                                                        ^ punctuation.section.block.begin.scr
+
+        local.player = $player[local.i];
+//      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.for.scr meta.block.scr
+//      ^^^^^ variable.language.scr
+//           ^ punctuation.accessor.dot.scr
+//            ^^^^^^ meta.property.object.scr
+//                   ^ keyword.operator.assignment.scr
+//                     ^^^^^^^ variable.language.scr
+//                            ^^^^^^^^^ meta.brackets.scr
+//                            ^ punctuation.section.brackets.begin.scr
+//                             ^^^^^ variable.language.scr
+//                                  ^ punctuation.accessor.dot.scr
+//                                    ^ punctuation.section.brackets.end.scr
+//                                     ^ punctuation.terminator.statement.scr
+    }
+//^^^ meta.for.scr
+//^^^ meta.block.scr
+//  ^ punctuation.section.block.end.scr
+//   ^ - meta
+
+    while (1) { }
+//  ^^^^^^^^^^^^^ meta.while.scr
+//  ^^^^^ keyword.control.loop.scr
+//        ^^^ meta.group.scr
+//            ^^^ meta.block.scr
+//            ^ punctuation.section.block.begin.scr
+//              ^ punctuation.section.block.end.scr
+
+    if ($player && level.time < 10) { }
+//  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.conditional.scr
+//     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.group.scr
+//     ^ punctuation.section.group.begin.scr
+//      ^^^^^^^ variable.language.scr
+//              ^^ keyword.operator.logical.scr
+//                 ^^^^^ variable.language.scr
+//                      ^ punctuation.accessor.dot.scr
+//                       ^^^^ meta.property.object.scr support.function.builtin.scr
+//                            ^ keyword.operator.relational.scr
+//                              ^^ constant.numeric.scr
+//                                ^ punctuation.section.group.end.scr
+//                                  ^^^ meta.conditional.scr meta.block.scr
+//                                  ^ punctuation.section.block.begin.scr
+//                                    ^ punctuation.section.block.end.scr
+
+    if (1) {
+//  ^^^^^^^^ meta.conditional.scr
+    } else if (2) {
+//   ^ - meta
+//    ^^^^^^^^^^^^^ meta.conditional.scr
+    } else {
+//   ^ - meta
+//    ^^^^^^ meta.conditional.scr
+    }
+// ^^ meta.conditional.scr meta.block.scr
+
+
+    try {
+//  ^^^^^ meta.try.scr
+//  ^^^ keyword.control.trycatch.scr
+
+        if (local.a > local.b) {
+            throw Exception;
+//          ^^^^^ keyword.control.scr
+//                ^^^^^^^^^ meta.function-call.scr support.function.scr
+        }
+
+    } catch {
+//    ^^^^^^^ meta.catch.scr
+//    ^^^^^ keyword.control.trycatch.scr
+//          ^ punctuation.section.block.begin.scr
+        Exception:
+//      ^^^^^^^^^ entity.name.function.scr
+            println("ERROR: error");
+//          ^^^^^^^^^^^^^^^^^^^^^^^^ meta.catch.scr meta.block.scr
+//          ^^^^^^^ support.function.builtin.scr
+//                 ^^^^^^^^^^^^^^^^ meta.group.scr
+//                  ^^^^^^^^^^^^^^ string.quoted.double.scr
+//                                 ^ punctuation.terminator.statement.scr
+    }
+// ^^ meta.catch.scr meta.block.scr
+//  ^ punctuation.section.block.end.scr
+
+
+    /* reserved keywords can't be used as labels */
+    break: case: catch: continue: default: else: end: for: goto: if: switch: throw: try: while:
+//  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ - entity
+//  ^^^^^ keyword.control.loop.scr
+//         ^^^^ keyword.control.switch.scr
+//               ^^^^^ keyword.control.trycatch.scr
+//                      ^^^^^^^^ keyword.control.loop.scr
+//                                ^^^^^^^ keyword.control.switch.scr
+//                                         ^^^^ keyword.control.conditional.scr
+//                                               ^^^ keyword.control.flow.scr
+//                                                    ^^^ keyword.control.loop.scr
+//                                                         ^^^^ keyword.control.scr
+//                                                               ^^ keyword.control.conditional.scr
+//                                                                   ^^^^^^ keyword.control.switch.scr
+//                                                                           ^^^^^ keyword.control.scr
+//                                                                                  ^^^ keyword.control.trycatch.scr
+//                                                                                       ^^^^^ keyword.control.loop.scr
+
+
+    end 1
+//  ^^^ keyword.control.flow.scr
+//      ^ constant.numeric.scr
+
+    main:
+//  ^^^^^ meta.function.declaration.scr
+//  ^^^^ entity.name.function.scr
+//      ^ punctuation.separator.scr
+//       ^ - meta
+
+/*comment*/    label local.parm1 local.parm2:
+//             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.function.declaration.scr
+//             ^^^^^ entity.name.function.scr
+//                  ^ - entity.name.function.scr - variable.parameter.function.scr
+//                   ^^^^^^^^^^^ variable.parameter.function.scr
+//                              ^ - variable.parameter.function.scr
+//                               ^^^^^^^^^^^ variable.parameter.function.scr
+//                                          ^ punctuation.separator.scr
+//                                           ^ - meta
+
+    multiline_declaration local.parm1 local.parm2 local.parm3 \
+//  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.function.declaration.scr
+//  ^^^^^^^^^^^^^^^^^^^^^ entity.name.function.scr
+//                        ^^^^^^^^^^^ variable.parameter.function.scr
+//                                    ^^^^^^^^^^^ variable.parameter.function.scr
+//                                                ^^^^^^^^^^^ variable.parameter.function.scr
+//                                                            ^ punctuation.separator.continuation.scr
+    local.parm4 local.parm5 local.parm6 \
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.function.declaration.scr
+//  ^^^^^^^^^^^ variable.parameter.function.scr
+//              ^^^^^^^^^^^ variable.parameter.function.scr
+//                          ^^^^^^^^^^^ variable.parameter.function.scr
+//                                      ^ punctuation.separator.continuation.scr
+    local.parm7 local.parm8 local.parm9 \
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.function.declaration.scr
+//  ^^^^^^^^^^^ variable.parameter.function.scr
+//              ^^^^^^^^^^^ variable.parameter.function.scr
+//                          ^^^^^^^^^^^ variable.parameter.function.scr
+//                                      ^ punctuation.separator.continuation.scr
+    :
+// ^^ meta.function.declaration.scr
+//  ^ punctuation.separator.scr
+
+
+    /* TYPES <bool|entity|float|int|string> */
+
+    local.a = bool local.b
+//            ^^^^ storage.type.scr
+
+    local.a = entity local.b
+//            ^^^^^^ storage.type.scr
+
+    local.a = float local.b
+//            ^^^^^ storage.type.scr
+
+    local.a = int local.b
+//            ^^^ storage.type.scr
+
+    local.a = string local.b
+//            ^^^^^^ storage.type.scr
+
+
+local.master = spawn ScriptMaster
+//             ^^^^^ support.function.builtin.scr
+//                   ^^^^^^^^^^^^ string.unquoted.scr
+
+local.master aliascache gasmask1 sound/characters/gasmask1.wav soundparms 1.0 0.0 1.0 0.0 320 2200 dialog loaded maps "m dm obj"
+//           ^^^^^^^^^^ support.function.builtin.scr
+//                      ^^^^^^^^ string.unquoted.scr
+//                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.file-path.scr
+//                                                             ^^^^^^^^^^ support.function.builtin.scr
+//                                                                        ^^^ constant.numeric.scr
+//                                                                            ^^^ constant.numeric.scr
+//                                                                                ^^^ constant.numeric.scr
+//                                                                                    ^^^ constant.numeric.scr
+//                                                                                        ^^^ constant.numeric.scr
+//                                                                                            ^^^^ constant.numeric.scr
+//                                                                                                 ^^^^^^ string.unquoted.scr
+//                                                                                                        ^^^^^^ support.function.builtin.scr
+//                                                                                                               ^^^^ support.function.builtin.scr
+//                                                                                                                    ^^^^^^^^^^ string.quoted.double.scr
+
+
+    goto label;
+//  ^^^^ keyword.control.scr
+//       ^^^^^ meta.function-call.scr support.function.scr
+
+    thread label//comment
+//  ^^^^^^ keyword.control.scr
+//         ^^^^^ meta.function-call.scr support.function.scr
+//              ^^^^^^^^^^ comment.line.double-slash.scr
+    waitthread label
+//  ^^^^^^^^^^ keyword.control.scr
+//             ^^^^^ meta.function-call.scr support.function.scr
+
+    thread path/to/file.scr::string_label//comment
+//  ^^^^^^ keyword.control.scr
+//         ^^^^^^^^^^^^^^^^ meta.file-path.scr string.unquoted.scr
+//                         ^^ keyword.operator.const-array.scr
+//                           ^^^^^^^^^^^^ string.unquoted.scr
+//                                       ^^^^^^^^^^ comment.line.double-slash.scr
+
+    waitthread path/to/file.scr::string_label;
+//  ^^^^^^^^^^ keyword.control.scr
+//             ^^^^^^^^^^^^^^^^ meta.file-path.scr string.unquoted.scr
+//                             ^^ keyword.operator.const-array.scr
+//                               ^^^^^^^^^^^^ string.unquoted.scr
+//                                           ^ punctuation.terminator.statement.scr
+
+    exec path/to/file.scr//
+//  ^^^^ keyword.control.scr
+//       ^^^^^^^^^^^^^^^^ meta.file-path.scr string.unquoted.scr
+//                       ^^ comment.line.double-slash.scr
+
+    exec path/to/file.scr/*  */
+//  ^^^^ keyword.control.scr
+//       ^^^^^^^^^^^^^^^^ meta.file-path.scr string.unquoted.scr
+//                       ^^^^^^ comment.block.scr
+
+    waitexec path/to/file.scr::string_label;
+//  ^^^^^^^^ keyword.control.scr
+//           ^^^^^^^^^^^^^^^^ meta.file-path.scr string.unquoted.scr
+//                           ^^ keyword.operator.const-array.scr
+//                             ^^^^^^^^^^^^ string.unquoted.scr
+//                                         ^ punctuation.terminator.statement.scr
+
+    models/player/allied_manon.tik
+//  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.file-path.scr string.unquoted.scr
+
+    cache models/player/allied_manon.tik
+//  ^^^^^ support.function.builtin.scr
+//        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.file-path.scr string.unquoted.scr
+
+    cache models/player/allied_manon_fps.tik;
+//  ^^^^^ support.function.builtin.scr
+//        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.file-path.scr string.unquoted.scr
+//                                          ^ punctuation.terminator.statement.scr
+
+    wait 1;
+//  ^^^^ support.function.builtin.scr
+//       ^ constant.numeric.scr
+//        ^ punctuation.terminator.statement.scr
+    wait .1;
+//  ^^^^ support.function.builtin.scr
+//       ^^ constant.numeric.scr
+//         ^ punctuation.terminator.statement.scr
+    wait 1.1;
+//  ^^^^ support.function.builtin.scr
+//       ^^^ constant.numeric.scr
+//          ^ punctuation.terminator.statement.scr
+
+    loopsound radio;
+//  ^^^^^^^^^ support.function.builtin.scr
+//            ^^^^^ string.unquoted.scr
+//                 ^ punctuation.terminator.statement.scr
+
+    loopsound local.sound;
+//  ^^^^^^^^^ support.function.builtin.scr
+//            ^^^^^ variable.language.scr
+//                 ^ punctuation.accessor.dot.scr
+//                  ^^^^^ meta.property.object.scr
+//                       ^ punctuation.terminator.statement.scr
+
+    level waittill prespawn;
+//  ^^^^^ variable.language.scr
+//        ^^^^^^^^^^^^^^^^^ meta.waittill-levelphase.scr
+//        ^^^^^^^^ support.function.builtin.scr
+//                 ^^^^^^^^ keyword.other.scr
+//                         ^ punctuation.terminator.statement.scr
+    level waittill spawn
+    level waittill postthink
+    level waittill playerspawn
+    level waittill roundstart
+    level waittill allieswin
+    level waittill axiswin
+    level waittill draw
+    level waittill not_a_phase
+//  ^^^^^ variable.language.scr
+//        ^^^^^^^^^^^^^^^^^^^^ meta.waittill-levelphase.scr
+//        ^^^^^^^^ support.function.builtin.scr
+//                 ^^^^^^^^^^^ invalid.illegal.scr
+
+    $
+//  ^ keyword.operator.targetname.scr
+
+    $abc
+//  ^^^^ variable.language.scr
+//  ^ keyword.operator.targetname.scr
+
+    abc$abc
+//  ^^^ string.unquoted.scr
+//     ^ - keyword.operator.targetname.scr
+//     ^^^^ - variable.language.scr
+//      ^^^ string.unquoted.scr
+
+    $("name" + $player[1].entnum).angles += ( 0 0 90 );
+//  ^ keyword.operator.targetname.scr
+//   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.group.scr
+//    ^^^^^^ string.quoted.double.scr
+//           ^ keyword.operator.arithmetic.scr
+//             ^^^^^^^ variable.language.scr
+//                    ^^^ meta.brackets.scr
+//                    ^ punctuation.section.brackets.begin.scr
+//                     ^ constant.numeric.scr
+//                      ^ punctuation.section.brackets.end.scr
+//                       ^ punctuation.accessor.dot.scr
+//                        ^^^^^^ support.function.builtin.scr
+//                              ^ punctuation.section.group.end.scr
+//                               ^ punctuation.accessor.dot.scr
+//                                ^^^^^^ meta.property.object.scr support.function.builtin.scr
+
+    $thing.adminrights
+    $thing.angle
+    $thing.angles
+    $thing.classname
+    $thing.dmteam
+    $thing.entnum
+    $thing.fireheld
+    $thing.forwardvector
+    $thing.health
+    $thing.inventory
+    $thing.leanleftheld
+    $thing.leanrightheld
+    $thing.leftvector
+    $thing.origin
+    $thing.rightvector
+    $thing.runheld
+    $thing.scale
+    $thing.secfireheld
+    $thing.size
+    $thing.target
+    $thing.targetname
+    $thing.upvector
+    $thing.useheld
+    $thing.userinfo
+    $thing.velocity
+    $thing.viewangles
+//  ^^^^^^ variable.language.scr
+//        ^ punctuation.accessor.dot.scr
+//         ^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+
+
+    /* built-in level properties */
+
+    level.alarm
+    level.badplace
+    level.bombs_planted
+    level.clockside
+    level.dmrespawning
+    level.dmroundlimit
+    level.found_secrets
+    level.ignoreclock
+    level.loop_protection
+    level.nodrophealth
+    level.objectivebased
+    level.papers
+    level.planting_team
+    level.rain_density
+    level.rain_length
+    level.rain_min_dist
+    level.rain_numshaders
+    level.rain_shader
+    level.rain_slant
+    level.rain_speed
+    level.rain_speed_vary
+    level.rain_width
+    level.removebadplace
+    level.roundbased
+    level.targets_destroyed
+    level.targets_to_destroy
+    level.time
+    level.total_secrets
+//  ^^^^^ variable.language.scr
+//       ^ punctuation.accessor.dot.scr
+//        ^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+
+    level.not_builtin
+//  ^^^^^ variable.language.scr
+//       ^ punctuation.accessor.dot.scr
+//        ^^^^^^^^^^^ meta.property.object.scr - support.function.builtin.scr
