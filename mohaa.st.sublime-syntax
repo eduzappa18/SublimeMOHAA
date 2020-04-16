@@ -1,9 +1,6 @@
 %YAML 1.2
 ---
-# http://www.sublimetext.com/docs/3/syntax.html
-# https://www.sublimetext.com/docs/3/scope_naming.html
-
-name: MOHAA State file [.st]
+name: State file [.st]
 file_extensions:
   - st
 scope: source.st
@@ -11,11 +8,37 @@ scope: source.st
 variables:
   identifier: \b([[:upper:][:digit:]_]+)\b
   cmds: \b(movetype|camera)\b
+  conditions: (?:{{player_conditions}}|{{weapon_conditions}})
+  player_conditions: |-
+    (?x:
+      ANIMDONE_LEGS|ANIMDONE_TORSO|AT_DOOR|AT_LADDER|AT_TOP_OF_LADDER|AT_USEANIM|AT_USEOBJECT|BACKWARD|BLOCKED|
+      CAN_CLIMB_DOWN_LADDER|CAN_CLIMB_UP_LADDER|CAN_FALL|CAN_GET_OFF_LADDER_BOTTOM|CAN_GET_OFF_LADDER_TOP|
+      CAN_MOVE_BACKWARD|CAN_MOVE_FORWARD|CAN_MOVE_LEFT|CAN_MOVE_RIGHT|CAN_PLACE_LANDMINE|CAN_PULL|CAN_PUSH|
+      CAN_STAND|CAN_TURN|CAN_WALL_HUG|CHANCE|CHECK_HEIGHT|CROUCH|DO_JUMP_FLIP|DUCKED_VIEW_IN_WATER|
+      FACING_DOWN_SLOPE|FACING_UP_SLOPE|FALLING|FEET_AT_LADDER|FINISHEDUSEANIM|FORWARD|FORWARD_VELOCITY|
+      GROUNDENTITY|HARD_IMPACT|HAS_VELOCITY|HEALTH|HOLSTERWEAPON|IS_USING_TURRET|IS_USING_VEHICLE|JUMP|KILLED|
+      KNOCKDOWN|LEFT|LEFT_LEG_HIGH|LEGS|LOOKING_UP|LOOP_USEOBJECT|MEDIUM_IMPACT|MOVEMENT_TYPE|NEAR_LANDMINE|
+      ON_LADDER|ON_LANDMINE|ONGROUND|PAIN|PAIN_DIRECTION|PAIN_LOCATION|PAIN_THRESHOLD|PAIN_TYPE|POSITION_TYPE|
+      RIGHT|RIGHT_LEG_HIGH|RISE|RUN|SLOPE_22|SLOPE_45|SNEAK|SOLID_FORWARD|STRAFE_LEFT|STRAFE_RIGHT|TORSO|
+      TOUCHEDUSEANIM|TURRET_TYPE|USE|VEHICLE_TYPE|VIEW_IN_WATER
+    )
+  weapon_conditions: |-
+    (?x:
+      ABLE_TO_DEFUSE|ANIMDONE_VM|ANY_WEAPON_ACTIVE|ATTACK_BLOCKED|ATTACK_PRIMARY|ATTACK_PRIMARY_BUTTON|
+      ATTACK_SECONDARY|ATTACK_SECONDARY_BUTTON|BLOCK_DELAY|CHECK_MOVEMENT_SPEED|CLIENT_COMMAND|HAS_AMMO|
+      HAS_AMMO_IN_CLIP|HAS_WEAPON|IMMEDIATE_SWITCH|IS_NEW_WEAPON|IS_NEW_WEAPONCLASS|IS_VM_ANIM|IS_WEAPON_ACTIVE|
+      IS_WEAPON_READY_TO_FIRE|IS_WEAPON_READY_TO_FIRE_NOSOUND|IS_WEAPON_SEMIAUTO|IS_WEAPONCLASS_ACTIVE|
+      IS_WEAPONCLASS_READY_TO_FIRE|MAX_CHARGE_TIME_MET|MIN_CHARGE_TIME_MET|MUZZLE_CLEAR|NEW_WEAPON|NULL|
+      PUTAWAYLEFT|PUTAWAYMAIN|RELOAD|STATE_ACTIVE|VAR_OPERATOR|WEAPON_CURRENT_FIRE_ANIM|WEAPONS_HOLSTERED
+    )
 
 contexts:
   main:
     - match: (?=^\s*\bstate\b\s+{{identifier}})
       push: state
+
+    - match: \S+
+      scope: invalid.illegal.st
 
   prototype:
     - include: comments
@@ -30,6 +53,7 @@ contexts:
 
   definitions:
     - include: keywords
+    - include: conditions
     - include: strings
 
   comments:
@@ -37,12 +61,19 @@ contexts:
       scope: punctuation.definition.comment.st
       push:
         - meta_scope: comment.line.double-slash.st
-        - match: \n
+        - match: $\n?
           pop: true
 
   keywords:
-    - match: '!|\-|\+|:|\bdefault\b'
+    - match: '!|-|\+|\bdefault\b'
       scope: keyword.operator.st
+
+    - match: ':'
+      scope: punctuation.separator.st
+
+  conditions:
+    - match: \b{{conditions}}\b
+      scope: constant.language.st
 
   strings:
     - match: '"'
@@ -115,12 +146,15 @@ contexts:
           scope: punctuation.section.block.begin.st
           set:
             - meta_scope: meta.block.st
+
             - match: '\}'
               scope: punctuation.section.block.end.st
               pop: true
+
             - match: '^\s*({{identifier}})(?=\s+:)'
               captures:
                 1: variable.function.st
+
             - include: definitions
         - include: else-pop
 
@@ -138,7 +172,7 @@ contexts:
               pop: true
             - match: '^\s*(?:(none)|([\w]+))(?=\s+:)'
               captures:
-                1: constant.language.st
+                1: constant.language.nil.st
                 2: string.unquoted.st
             - include: definitions
-        - include: else-pop
+        #- include: else-pop
