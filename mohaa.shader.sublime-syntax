@@ -1,0 +1,251 @@
+%YAML 1.2
+---
+name: Shader file [.shader]
+file_extensions:
+  - shader
+scope: source.shader
+
+variables:
+  constants: |-
+    (?xi:
+      # Blend Functions
+      add|filter|blend|alphaadd|
+      GL_DST_COLOR|GL_ONE|GL_ONE_MINUS_DST_COLOR|GL_ONE_MINUS_SRC_ALPHA|
+      GL_ONE_MINUS_SRC_COLOR|GL_SRC_ALPHA|GL_SRC_COLOR|GL_ZERO|
+      # alphaFunc
+      GT0|LT128|GE128|
+      # depthFunc
+      always|equal|lequal|
+      # cull
+      back|disable|front|none|twosided|
+      # deform
+      noiseanim|
+      # spritegen
+      oriented|parallel|parallel_oriented|parallel_upright|
+      # (rgb|alpha)Gen
+      colorwave|const|constant|distFade|dot|entity|exactVertex|fromClient|fromentity|fromVertex|global|
+      identity|identityLighting|lightingDiffuse|lightingGrid|lightingSpecular|lightingSpherical|
+      oneMinusDot|oneMinusEntity|oneMinusSkyAlpha|oneMinusVertex|sCoord|skyAlpha|static|tCoord|vertex|wave|
+      # tcGen
+      base|environment|environmentmodel|lightmap|vector|
+      # tcMod
+      offset|parallax|rotate|scale|scroll|stretch|trans|transform|turb|wavetrant|
+      # sort
+      additive|banner|decal|nearest|opaque|portal|seethrough|sky|underwater|
+      # DeformVertexes
+      autosprite|autosprite2|bulge|flap|lightglow|move|normal|projectionShadow|wave|
+      sin|triangle|square|sawtooth|inversesawtooth|t|s|
+      # skyParms
+      half|full
+    )
+
+  general_directives: |-
+    (?xi:
+      cull|deform|deformVertexes|fogParms|force32bit|nodraw|noMerge|noMipMaps|noPicMip|polygonOffset|
+      portal|portalsky|q3map_backshader|q3map_globaltexture|q3map_lightimage|q3map_lightsubdivide|q3map_nolightmap|
+      q3map_sun|q3map_surfacelight|skyParms|sort|spriteGen|spritescale|subdivisions|surfaceColor|surfacelight|tessSize
+    )
+
+  stage_directives: |-
+    (?xi:
+      alphaFunc|alphaGen|animmap|animMapPhase|blendFunc|clampMap|clampmapy|depthFunc|
+      depthMask|depthWrite|detail|map|noDepthTest|rgbGen|tcGen|tcMod
+    )
+
+  qer_directives: |-
+    (?xi:
+      qer_alphaFunc|qer_editorImage|qer_keyword|qer_noCarve|qer_trans
+    )
+
+  surface_parameter_directives: |-
+    (?xi:
+      alphashadow|antiportal|areaportal|backside|botclip|carpet|castshadow|clusterportal|detail|dirt|donotenter|
+      dust|fence|flesh|fog|foliage|glass|grass|gravel|grill|hint|ladder|lava|lightfilter|lightgrid|metal|
+      metalsteps|monsterclip|mud|nodamage|nodlight|nodraw|noimpact|nolightmap|nomarks|nonsolid|nosteps|origin|
+      paper|plaster|playerclip|pointlight|puddle|rock|sand|skip|sky|slick|slime|snow|stone|structural|trans|
+      translucent|vehicleclip|water|weaponclip|wood|solid|shootonly
+    )
+
+contexts:
+  main:
+    - match: (?=\S)
+      push: shaders
+
+  prototype:
+    - include: comments
+
+  immediately-pop:
+    - match: ''
+      pop: true
+
+  else-pop:
+    - match: (?=\S)
+      pop: true
+
+  comments:
+    - match: /\*
+      scope: punctuation.definition.comment.begin.shader
+      push:
+        - meta_include_prototype: false
+        - meta_scope: comment.block.shader
+
+        - match: \*/
+          scope: punctuation.definition.comment.end.shader
+          pop: true
+
+    - match: //
+      scope: punctuation.definition.comment.shader
+      push:
+        - meta_scope: comment.line.double-slash.shader
+        - match: $\n?
+          pop: true
+
+  strings:
+    - match: '"'
+      scope: punctuation.definition.string.begin.shader
+      push:
+        - meta_scope: string.quoted.shader
+        - match: (\")|(\n)
+          captures:
+            1: punctuation.definition.shaderring.end.shader
+            2: invalid.illegal.newline.shader
+          pop: true
+
+  statements:
+    - match: (?=\S)
+      push: statement
+
+  statement:
+    - include: block
+    - include: vectors
+    - include: directives
+    - include: literal-number
+    - include: constants
+    - include: keywords
+    - include: strings
+    - include: file-path
+    - include: else-pop
+
+  shaders:
+    - match: '[\w''-]+(?:/[\w''-]+)*'
+      scope: entity.name.shader
+      push:
+        - match: '\{'
+          scope: punctuation.section.block.begin.shader
+          set:
+            - meta_scope: meta.block.shader
+
+            - match: '\}'
+              scope: punctuation.section.block.end.shader
+              pop: true
+
+            - include: statements
+
+  block:
+    - match: '\{'
+      scope: punctuation.section.block.begin.shader
+      set:
+        - meta_scope: meta.block.shader
+        - match: '\}'
+          scope: punctuation.section.block.end.shader
+          pop: true
+        - include: statements
+
+  vectors:
+    - match: \(
+      scope: punctuation.section.group.begin.shader
+      set:
+        - meta_scope: meta.group.shader
+
+        - match: \)
+          scope: punctuation.section.group.end.shader
+          pop: true
+
+        - match: (?=\S)
+          push: statement
+
+  literal-number:
+    - match: (?:\+|-)?(?:\b\d*\.?\d+|\B\.\d+)\b
+      scope: constant.numeric.shader
+      pop: true
+
+  constants:
+    - match: '\b{{constants}}\b'
+      scope: constant.language.shader
+      pop: true
+
+    - include: else-pop
+
+  keywords:
+    - match: '\B(#)(?:if|else|endif)\b'
+      captures:
+        0: keyword.control.conditional.shader
+        1: punctuation.definition.keyword
+      pop: true
+
+    - match: \-
+      scope: keyword.control.shader
+      pop: true
+
+    - match: (?i:\bnextbundle\b)
+      scope: keyword.control.shader
+      pop: true
+
+    - match: \B(\$|\*)(\w+)\b
+      captures:
+        1: keyword.other.shader
+        2: constant.language.shader
+      pop: true
+
+  directives:
+    - match: (?i:\bqer_keyword\b)
+      scope: keyword.other.shader
+      push: unquoted-string
+
+    - match: (?i:\bsurfaceparm\b)
+      scope: keyword.other.shader
+      push: surface_parameters
+
+    - match: (?i:\bsort\b)
+      scope: keyword.other.shader
+      push: constants
+
+    - match: '\b{{general_directives}}\b'
+      scope: keyword.other.shader
+      pop: true
+
+    - match: '\b{{qer_directives}}\b'
+      scope: keyword.other.shader
+      pop: true
+
+    - match: '\b{{stage_directives}}\b'
+      scope: support.function.shader
+      pop: true
+
+
+  surface_parameters:
+    - meta_scope: meta.surfaceparms.shader
+
+    - match: $
+      pop: true
+
+    - match: '\b{{surface_parameter_directives}}\b'
+      scope: constant.language.shader
+      pop: true
+
+    - match: \b\w+\b
+      scope: invalid.illegal.shader
+      pop: true
+
+  unquoted-string:
+    - match: $
+      pop: true
+
+    - match: '[\w\./@#-]+\b'
+      scope: string.unquoted.shader
+      pop: true
+
+  file-path:
+    - match: '(?:[\w-]+/)+(?:[\w''-]+(?:\.\w+)?)'
+      scope: meta.file-path.shader string.unquoted.shader
+      pop: true
