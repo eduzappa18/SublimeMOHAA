@@ -1,10 +1,10 @@
 %YAML 1.2
 ---
-# http://www.sublimetext.com/docs/3/syntax.html
-name: MOHAA Log file [.log]
+name: Log file [.log]
 file_extensions:
   - log
 scope: source.log
+
 contexts:
   main:
     # client stuff
