@@ -1,0 +1,60 @@
+| SYNTAX TEST "Packages/MOHAA/mohaa.log.sublime-syntax"
+
+    Cvar_Set2: sv_maxRate 25000
+|   ^^^^^^^^^^ markup.bold.log
+|                         ^^^^^ constant.numeric.log 
+
+------------------ MoH:AA 1.12 Reborn Patch InitGame ------------------ 
+| <- markup.bold.log
+|^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ markup.bold.log
+
+Warning: cvar "sv_zombietime" given initial values: "2" and "1"
+| <- markup.deleted.log
+|^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ markup.deleted.log
+
+--> gamex86mohaa.dll file valid!
+| <- markup.bold.log
+
+--> Reborn WARNING: You are using different version of mohaa_server.exe
+| <- invalid.log
+|^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invalid.log
+
+
+^~^~^ Add the following line to the *_precache.scr map script:
+| <- invalid.log
+|^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invalid.log
+
+cache models/human/1st-ranger_medic.tik
+| <- markup.raw.inline.log
+|^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ markup.raw.inline.log
+
+UnnamedSoldier has entered the battle
+| <- markup.inserted.log
+|^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ markup.inserted.log
+
+            self setmotionanim (self.weapongroup + "_stand_nervous_b") (anim/stand.scr, 243)
+|                                                  ^^^^^^^^^^^^^^^^^^ string.quoted.double.log
+|                                                                                       ^^^ constant.numeric.log
+
+            self ^
+|           ^^^^^^ markup.raw.inline.log
+
+^~^~^ Script Error: unknown animation 'unarmed_stand_nervous_b' in 'models/human/1st-ranger_medic.tik'
+| <- invalid.log
+|^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invalid.log
+
+clientCommand: UnnamedSoldier : 7 : ad_login user password
+| <- markup.inserted.log
+|^^^^^^^^^^^^^ markup.inserted.log
+
+Reborn INFO: 127.0.0.1 (UnnamedSoldier) logged as admin using login "user" and password "password"
+| <- markup.bold.log
+|^^^^^^^^^^^ markup.bold.log
+
+SV packet 123.123.123.123:-30245 : getinfo
+| <- markup.inserted.log
+|^^^^^^^^ markup.inserted.log
+
+DUPLICATE ALIASES: headshot and headshot
+| <- markup.deleted.log
+|^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ markup.deleted.log
