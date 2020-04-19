@@ -1,0 +1,65 @@
+SublimeMOHAA v1.1.0
+
+Changelog
+=========
+
+
+Morpheus Script Syntax Highlighting
+-----------------------------------
+  - changed: Regex improvement to use the latest/fastest regex engine
+  - fixed: Corrected various scopes for better/correct syntax highlighting
+  - added: Support for multiline thread declaration
+  - added: Documentation comment blocks with "@keyword" highlighting (javadoc-like)
+  - added: Highlighting for built-in parameters/methods. e.g. ".origin", ".size", etc...
+  - added: Highlighting for unquoted strings. e.g. "playsound radioloop"
+  - added: Configuration to trim all trailing whitespace on save
+  - added: "else" and "else if" snippets
+  - added: Toggle comment shortcuts
+           "Ctrl + /" to toggle a line comment.
+           "Ctrl + Shift + /" to toggle a block comment
+           (the "/" key may vary depending on your keyboard language)
+
+
+TIKI Syntax Highlighting
+------------------------
+  - added: Syntax Highlighting for TIKI (.tik) files
+  - added: Configuration to trim all trailing whitespace on save
+  - added: Toggle comment shortcuts
+           "Ctrl + /" to toggle a line comment.
+           (the "/" key may vary depending on your keyboard language)
+
+
+Shaders Syntax Highlighting
+---------------------------
+  - added: Syntax Highlighting for Shader files
+  - added: Configuration to trim all trailing whitespace on save
+  - added: Toggle comment shortcuts
+           "Ctrl + /" to toggle a line comment.
+           "Ctrl + Shift + /" to toggle a block comment
+           (the "/" key may vary depending on your keyboard language)
+
+
+Menu files Syntax Highlighting
+------------------------------
+  - added: Syntax Highlighting for Menu (.urc) files
+  - added: Configuration to trim all trailing whitespace on save
+
+
+Music files Syntax Highlighting
+------------------------------
+  - added: Syntax Highlighting for Music (.mus) files
+
+
+State files Syntax Highlighting
+-------------------------------
+  - fixed: Corrected various scopes for better/correct syntax highlighting
+
+
+Config files Syntax Highlighting
+--------------------------------
+  - changed: Regex improvements for better highlighting
+
+
+
+For more info please visit the xNULL forums:
+· https://www.x-null.net/forums/threads/3155-MOHAA-Syntax-Highlighting-for-Sublime-Text
