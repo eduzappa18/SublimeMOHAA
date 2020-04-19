@@ -1,0 +1,493 @@
+%YAML 1.2
+---
+name: TIKI file [.tik]
+file_extensions:
+  - tik
+first_line_match: ^TIKI$
+scope: source.tik
+
+variables:
+  setup_commands: (?i:scale|path|skelmodel|surface|shader|radius|ischaracter|lod_bias)
+  client_commands: |-
+    (?xi:
+      accel|alias|aliascache|align|alignonce|alignstretch|alpha|alwaysdraw|angles|anim|animateonce|avelocity|
+      beam_offset_endpoints|beamdelay|beamlength|beampersist|beamshader|beamsphere|beamtoggledelay|blockdlight|
+      bodyfall|bouncedecal|bouncefactor|bouncesound|bouncesoundonce|cache|cachefont|cachefromalias|cacheimage|
+      circle|clampvel|clampvelaxis|client|collision|color|colorvelocity|commanddelay|cone|count|decalradius|
+      decalshader|delayedrepeat|delayedsfx|detail|dietouch|dlight|emitterangles|emitteroff|emitteron|endalpha|
+      entcolor|eyelimits|eyemovement|fade|fadedelay|fadein|flicker|footstep|friction|globalfade|hardlink|
+      inwardsphere|landing|life|lightstyle|loopsound|maxoffset|minoffset|model|numsegments|offset|offsetalongaxis|
+      orientation|originbeamemitter|originbeamspawn|origindlight|originemitter|originspawn|parallel|parentangles|
+      parentlink|physicsrate|print|radialvelocity|radius|randomchance|randomroll|randvel|randvelaxis|scale|
+      scalemax|scalemin|scalerate|scaleupdown|settiki|sfx|smokeparms|sound|spawnrange|spawnrate|sphere|spread|
+      spritegridlighting|startoff|stopaliaschannel|stopsound|swarm|swipe|swipeoff|swipeon|tagbeamemitter|
+      tagbeamspawn|tagdlight|tagemitter|taglist|tagspawn|tagspawnlinked|tracelength|trail|treads|treadsoff|
+      twinkle|uselasttraceend|varycolor|velocity|viewkick|volumetric|wateronly|wind
+    )
+  emitters: (?:blockdlight|originbeamemitter|originbeamspawn|originemitter|originspawn|tagemitter|tagspawn|tagspawnlinked)
+  emitter_vars: (?:random|crandom|range|in|out)
+  ClientSpecialEffectsManager: (?i:effectdelay)
+
+contexts:
+  main:
+    - match: '\)|\}|\]'
+      scope: invalid.illegal.stray-bracket-end.tik
+
+    - match: (?=\S)
+      push: statement
+
+  prototype:
+    - include: comments
+
+  immediately-pop:
+    - match: ''
+      pop: true
+
+  eol-pop:
+    - match: $
+      pop: true
+
+  else-pop:
+    - match: (?=\S)
+      pop: true
+
+  comments:
+    - match: /\*(?!QUAKED)
+      scope: punctuation.definition.comment.begin.tik
+      push:
+        - meta_include_prototype: false
+        - meta_scope: comment.block.tik
+
+        - match: \*/
+          scope: punctuation.definition.comment.end.tik
+          pop: true
+
+    - match: //
+      scope: punctuation.definition.comment.tik
+      push:
+        - meta_scope: comment.line.double-slash.tik
+        - match: $\n?
+          pop: true
+
+  block-scope:
+    - include: block
+    - include: else-pop
+
+  block:
+    - match: '\{'
+      scope: punctuation.section.block.begin.tik
+      set:
+        - meta_scope: meta.block.tik
+        - match: '\}'
+          scope: punctuation.section.block.end.tik
+          pop: true
+        - include: statements
+
+  statements:
+    - match: '\)|\}|\]'
+      scope: invalid.illegal.stray-bracket-end.tik
+      pop: true
+
+    - match: (?=\S)
+      push: statement
+
+  statement:
+    - match: \bTIKI\b
+      scope: keyword.other.tik
+      pop: true
+
+    - include: keywords
+    - include: sections
+    - include: arguments
+    - include: else-pop
+
+  sections:
+    - match: \bsetup\b
+      scope: keyword.control.setup.tik
+      set:
+        - setup-meta
+        - setup-block
+
+    - match: \binit\b
+      scope: keyword.control.init.tik
+      set:
+        - init-meta
+        - init-block
+
+    - match: \banimations\b
+      scope: keyword.control.animations.tik
+      set:
+        - animations-meta
+        - animations-block
+
+    - match: (/\*)(QUAKED)\b
+      captures:
+        1: punctuation.definition.comment.begin.tik
+        2: keyword.other.tik
+      push:
+        - meta_scope: comment.block.documentation.tik
+
+        - match: \*/
+          scope: punctuation.definition.comment.end.tik
+          pop: true
+
+#### meta.setup content start ####
+  setup-meta:
+    - meta_scope: meta.setup.tik
+    - include: immediately-pop
+
+  setup-block:
+    - match: '\{'
+      scope: punctuation.section.block.begin.tik
+      set: setup-block-contents
+
+    - include: else-pop
+
+  setup-block-contents:
+    - meta_scope: meta.block.tik
+
+    - match: '\}'
+      scope: punctuation.section.block.end.tik
+      pop: true
+
+    - include: keywords
+    - include: arguments
+
+#### meta.setup content end ####
+
+#### meta.animations content start ####
+  animations-meta:
+    - meta_scope: meta.animations.tik
+    - include: immediately-pop
+
+  animations-block:
+    - match: '\{'
+      scope: punctuation.section.block.begin.tik
+      set: animations-block-contents
+
+    - include: else-pop
+
+  animations-block-contents:
+    - meta_scope: meta.block.tik
+
+    - match: '\}'
+      scope: punctuation.section.block.end.tik
+      pop: true
+
+    - include: keywords
+
+    - match: \b[\w-]+\b
+      scope: entity.name.tik
+      push:
+        - include: eol-pop
+
+        - match: \b(?:autosteps_run|autosteps_walk|crossblend|default_angles|dontrepeate|random|weight)\b
+          scope: support.function.builtin.tik
+
+        - include: arguments
+
+    - match: '\{'
+      scope: punctuation.section.block.begin.tik
+      push: anim-commands
+
+  anim-commands:
+    - meta_scope: meta.block.tik
+    - match: '\}'
+      scope: punctuation.section.block.end.tik
+      pop: true
+
+    - match: \bserver\b
+      scope: keyword.control.animations.server.tik
+      push:
+        - animserver-meta
+        - animserver-block
+
+    - match: \bclient\b
+      scope: keyword.control.animations.client.tik
+      push:
+        - animclient-meta
+        - animclient-block
+
+#----- animations -> server
+  animserver-meta:
+    - meta_scope: meta.animations.server.tik
+    - include: immediately-pop
+
+  animserver-block:
+    - match: '\{'
+      scope: punctuation.section.block.begin.tik
+      set: animserver-block-contents
+    - include: else-pop
+
+  animserver-block-contents:
+    - meta_scope: meta.block.tik
+
+    - match: '\}'
+      scope: punctuation.section.block.end.tik
+      pop: true
+
+    - match: '\b(?:enter|entry|first|last|exit|\d+\b)\b'
+      scope: constant.language.tik
+      embed: scope:source.scr
+      embed_scope: source.scr.embedded.tik
+      escape: '(?=$)'
+
+    - match: '\b(?:commanddelay|anim)\b'
+      scope: support.function.builtin.tik
+
+    - include: literal-number
+
+#----- animations -> client
+  animclient-meta:
+    - meta_scope: meta.animations.client.tik
+    - include: immediately-pop
+
+  animclient-block:
+    - match: '\{'
+      scope: punctuation.section.block.begin.tik
+      set: animclient-block-contents
+    - include: else-pop
+
+  animclient-block-contents:
+    - meta_scope: meta.block.tik
+
+    - match: '\}'
+      scope: punctuation.section.block.end.tik
+      pop: true
+
+    - match: '\b(?:enter|entry|first|last|exit|bodyfall|\d+\b)\b'
+      scope: constant.language.tik
+      push:
+        - include: eol-pop
+        - include: emitters
+
+        - match: '\b{{client_commands}}\b'
+          scope: support.function.builtin.tik
+
+        - include: literal-number
+        - include: unquoted-string
+        - include: literal-string
+
+    - match: '\b(?:commanddelay|anim)\b'
+      scope: support.function.builtin.tik
+
+    - include: literal-number
+
+#### meta.animations content end ####
+
+#### meta.init content start ####
+  init-meta:
+    - meta_scope: meta.init.tik
+    - include: immediately-pop
+
+  init-block:
+    - match: '\{'
+      scope: punctuation.section.block.begin.tik
+      set: init-block-contents
+    - include: else-pop
+
+  init-block-contents:
+    - meta_scope: meta.block.tik
+
+    - match: '\}'
+      scope: punctuation.section.block.end.tik
+      pop: true
+
+    - match: '\b(server)\b'
+      scope: keyword.other.tik
+      push:
+        - match: '\}'
+          scope: punctuation.section.block.end.tik
+          pop: true
+        - match: '\{'
+          scope: punctuation.section.block.begin.tik
+          embed: scope:source.scr
+          embed_scope: source.scr.embedded.tik
+          escape: '(?=\})'
+
+    - match: '\b(client)\b'
+      scope: keyword.other.tik
+      push:
+        - client-meta
+        - client-block
+#### meta.init content end ####
+
+#### meta.init.client content start ####
+  client-meta:
+    - meta_scope: meta.client.tik
+    - include: immediately-pop
+
+  client-block:
+    - match: '\{'
+      scope: punctuation.section.block.begin.tik
+      set: client-block-contents
+    - include: else-pop
+
+  client-block-contents:
+    - meta_scope: meta.block.tik
+
+    - match: '\}'
+      scope: punctuation.section.block.end.tik
+      pop: true
+
+    - include: emitters
+    - include: client-expression
+
+  emitters:
+    - match: \b{{emitters}}\b
+      scope: keyword.other.tik
+      push:
+        - emitters-meta
+        - emitter-group
+        - emitters-condition
+
+  emitters-meta:
+    - meta_scope: meta.emitter.tik
+    - include: immediately-pop
+
+  emitters-condition:
+    - include: eol-pop
+    - include: arguments
+
+  emitter-group:
+    - match: '\('
+      scope: punctuation.section.group.begin.tik
+      set: emitter-group-contents
+
+    - include: else-pop
+
+  emitter-group-contents:
+    - meta_scope: meta.group.tik
+
+    - match: '\)'
+      scope: punctuation.section.group.end.tik
+      pop: true
+
+    - include: client-expression
+
+  client-expression:
+    - match: \b{{client_commands}}\b
+      scope: support.function.builtin.tik
+
+    - match: \b{{emitter_vars}}\b
+      scope: variable.language.tik
+
+    - include: arguments
+
+#### meta.init.client content end ####
+
+  keywords:
+    - match: \bcase\b
+      scope: keyword.control.tik
+      push:
+        - case-meta
+        - setup-block
+        - case-condition
+
+    - match: \b{{setup_commands}}\b
+      scope: support.function.builtin.tik
+
+    # surface wildcard
+    - match: \*
+      scope: keyword.other.tik
+
+    - match: \B\$(?:include|path)\b
+      scope: keyword.control.tik
+      push:
+        - include: eol-pop
+        - match: '\b[\w''-]+(?:/[\w''-]+)+(?:\.\w+)?\b'
+          scope: string.unquoted.tik
+          pop: true
+
+    - match: \B\$define\b
+      scope: keyword.control.tik
+      push:
+        - include: eol-pop
+        - match: \b\w+\b
+          scope: entity.name.namespace.tik
+          set:
+            - match: '\b[\w''-]+(?:/[\w''-]+)+(?:\.\w+)?\b'
+              scope: string.unquoted.tik
+              pop: true
+
+    - match: \B\$mapspec\b
+      scope: keyword.control.tik
+      push:
+        - mapspec-meta
+        - animations-block
+        - mapspec-condition
+
+    - match: \bincludes\b
+      scope: keyword.control.tik
+      push:
+        - includes-meta
+        - setup-block
+        - includes-condition
+
+  case-meta:
+    - meta_scope: meta.case.tik
+    - include: immediately-pop
+
+  case-condition:
+    - include: eol-pop
+    - match: \w+\b
+      scope: variable.language.tik
+      set:
+        - include: literal-string
+        - include: unquoted-string
+        - include: eol-pop
+
+  includes-meta:
+    - meta_scope: meta.includes.tik
+    - include: immediately-pop
+
+  includes-condition:
+    - include: eol-pop
+    - match: '(?:\w+\/)?\w+\b'
+      scope: entity.name.tik
+
+  mapspec-meta:
+    - meta_scope: meta.mapspec.tik
+    - include: immediately-pop
+
+  mapspec-condition:
+    - include: eol-pop
+    - match: '(?:\w+\/)?\w+\b'
+      scope: entity.name.tik
+
+  arguments:
+    - include: literal-string
+    - include: literal-number
+    - include: path
+    - include: file
+    - include: unquoted-string
+
+  literal-string:
+    - match: '"'
+      scope: punctuation.definition.string.begin.tik
+      push:
+        - meta_include_prototype: false
+        - meta_scope: string.quoted.double.tik
+        - match: (\")|(\n)
+          captures:
+            1: punctuation.definition.string.end.tik
+            2: invalid.illegal.newline.tik
+          pop: true
+        - match: '\\[nrt"\\]'
+          scope: constant.character.escape.tik
+
+  unquoted-string:
+    - match: '\b[\w@#''-]+\b'
+      scope: string.unquoted.tik
+
+  literal-number:
+    - match: (?:\+|-)?(?:\b\d*\.?\d+|\B\.\d+)\b
+      scope: constant.numeric.tik
+
+  path:
+    - match: '\b[\w''-]+(?:/[\w\(\)''-]+)+(?:\.\w+)?\b'
+      scope: meta.file-path.tik string.unquoted.tik
+
+  file:
+    - match: '\b[\w''-]+\.\w+\b'
+      scope: string.unquoted.tik
