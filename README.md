@@ -8,10 +8,9 @@
 * [x] `.shader` Shader files. (*Syntax Highlighting.*)
 * [x] `.tik` TIKI files. (*Syntax Highlighting.*)
 * [x] `.cfg` Config files. (*Syntax Highlighting & Completions*)
+* [x] `.urc` Menu files. (*Syntax Highlighting.*)
+* [x] `.mus` Music files. (*Syntax Highlighting.*)
 * [x] `.log` Server log files. (*Syntax Highlighting.*)
-
-* [ ] `.urc` Menu files.
-* [ ] `.mus` Music files.
 
 _____________________________________________________________
 
@@ -40,6 +39,12 @@ _____________________________________________________________
 
 **Config files**  
 ![Configs](screenshots/mohaa.cfg.png)
+
+**Menu files**  
+![Menu files](screenshots/mohaa.urc.png)
+
+**Music files**  
+![Music files](screenshots/mohaa.mus.png)
 
 **Log files**  
 ![Log files](screenshots/mohaa.log.png)
