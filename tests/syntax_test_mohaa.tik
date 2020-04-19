@@ -1,0 +1,484 @@
+// SYNTAX TEST "Packages/MOHAA/mohaa.tik.sublime-syntax"
+
+    TIKI
+//  ^^^^ keyword.other.tik
+
+    // comment
+// ^ - comment
+//  ^^^^^^^^^^ comment.line.double-slash.tik
+//  ^^ punctuation.definition.comment.tik
+
+
+    includes test m1l1 m2l2
+// ^ - meta
+//  ^^^^^^^^^^^^^^^^^^^^^^^^ meta.includes.tik
+//           ^^^^ entity.name.tik
+//                ^^^^ entity.name.tik
+//                     ^^^^ entity.name.tik
+    {
+// ^ - meta.block
+//  ^^ meta.includes.tik meta.block.tik
+//  ^ punctuation.section.block.begin.tik
+
+        // REAL GENERIC GERMAN FILES
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.includes.tik meta.block.tik
+//      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.tik
+//      ^^ punctuation.definition.comment.tik
+
+        $include models/human/animation/dialogue/Generic_dialogue_germanA.tik
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.includes.tik meta.block.tik
+//      ^^^^^^^^ keyword.control.tik
+//               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ string.unquoted.tik
+        $include models/human/animation/dialogue/Generic_dialogue_germanC.tik
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.includes.tik meta.block.tik
+//      ^^^^^^^^ keyword.control.tik
+//               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ string.unquoted.tik
+    }
+// ^^ meta.includes.tik meta.block.tik
+//  ^ punctuation.section.block.end.tik
+//   ^ - meta
+
+
+    path models/human/heads
+//  ^^^^ support.function.builtin.tik
+//       ^^^^^^^^^^^^^^^^^^ meta.file-path.tik string.unquoted.tik
+
+
+    case headskin hopper z1 z2 z3 z4 z5 z6 z7 z8
+// ^ - meta
+//  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.case.tik
+//  ^^^^ keyword.control.tik
+//       ^^^^^^^^ variable.language.tik
+//                ^^^^^^ string.unquoted.tik
+//                       ^^ string.unquoted.tik
+//                          ^^ string.unquoted.tik
+//                             ^^ string.unquoted.tik
+//                                ^^ string.unquoted.tik
+//                                   ^^ string.unquoted.tik
+//                                      ^^ string.unquoted.tik
+//                                         ^^ string.unquoted.tik
+//                                            ^^ string.unquoted.tik
+
+    {
+// ^^^^ meta.case.tik
+//  ^^ meta.block.tik
+//  ^ punctuation.section.block.begin.tik
+        surface head shader hopper
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.case.tik meta.block.tik
+//      ^^^^^^^ support.function.builtin.tik
+//              ^^^^ string.unquoted.tik
+//                   ^^^^^^ support.function.builtin.tik
+//                          ^^^^^^ string.unquoted.tik
+
+        case headmodel head2
+//      ^^^^^^^^^^^^^^^^^^^^^ meta.case.tik meta.block.tik meta.case.tik
+//      ^^^^ keyword.control.tik
+//           ^^^^^^^^^ variable.language.tik
+//                     ^^^^^ string.unquoted.tik
+        {
+//      ^^ meta.case.tik meta.block.tik meta.case.tik meta.block.tik
+            skelmodel head2.skd//comment
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.case.tik meta.block.tik meta.case.tik meta.block.tik
+//          ^^^^^^^^^ support.function.builtin.tik
+//                    ^^^^^^^^^ string.unquoted.tik
+//                             ^^^^^^^^^^ comment.line.double-slash.tik
+        }
+// ^^^^^^ meta.case.tik meta.block.tik meta.case.tik meta.block.tik
+//      ^ punctuation.section.block.end.tik
+    }
+// ^^ meta.case.tik meta.block.tik
+//  ^ punctuation.section.block.end.tik
+//   ^ - meta
+
+
+/////////////////////////////////
+////////// setup block //////////
+/////////////////////////////////
+
+    setup
+// ^ - meta
+//  ^^^^^^ meta.setup.tik
+//  ^^^^^ keyword.control.setup.tik
+//       ^ - keyword
+    {
+// ^ - meta.block
+//  ^^ meta.setup.tik meta.block.tik
+//  ^ punctuation.section.block.begin.tik
+
+        scale 0.52// comment
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.setup.tik meta.block.tik
+//      ^^^^^ support.function.builtin.tik
+//            ^^^^ constant.numeric.tik
+//                ^^^^^^^^^^ comment.line.double-slash.tik
+//                ^^ punctuation.definition.comment.tik
+
+        path models/fx/dummy
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.setup.tik meta.block.tik
+//      ^^^^ support.function.builtin.tik
+//           ^^^^^^^^^^^^^^^ meta.file-path.tik string.unquoted.tik
+
+        skelmodel dummy3.skd
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.setup.tik meta.block.tik
+//      ^^^^^^^^^ support.function.builtin.tik
+//                ^^^^^^^^^^ string.unquoted.tik
+
+        surface mysurface shader myshader
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.setup.tik meta.block.tik
+//      ^^^^^^^ support.function.builtin.tik
+//              ^^^^^^^^^ string.unquoted.tik
+//                        ^^^^^^ support.function.builtin.tik
+//                               ^^^^^^^^ string.unquoted.tik
+
+        $include models/human/heads/us_old_heads.tik
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.setup.tik meta.block.tik
+//      ^^^^^^^^ keyword.control.tik
+//               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ string.unquoted.tik
+
+        case weapon "thompson"
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.setup.tik meta.block.tik
+//     ^ - meta.case.tik
+//      ^^^^^^^^^^^^^^^^^^^^^^^ meta.case.tik
+//      ^^^^ keyword.control.tik
+//           ^^^^^^ variable.language.tik
+//                  ^^^^^^^^^^ string.quoted.double.tik
+//                  ^ punctuation.definition.string.begin.tik
+//                           ^ punctuation.definition.string.end.tik
+
+        {
+//      ^^ meta.setup.tik meta.block.tik meta.case.tik meta.block.tik
+//      ^ punctuation.section.block.begin.tik
+
+            path models/equipment/USGear/helmets
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.setup.tik meta.block.tik meta.case.tik meta.block.tik
+//          ^^^^ support.function.builtin.tik
+//               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.file-path.tik string.unquoted.tik
+
+            skelmodel us_helmet.skd
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.setup.tik meta.block.tik meta.case.tik meta.block.tik
+//          ^^^^^^^^^ support.function.builtin.tik
+//                    ^^^^^^^^^^^^^ string.unquoted.tik
+
+            surface us_helmet shader us-helmet_captain
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.setup.tik meta.block.tik meta.case.tik meta.block.tik
+//          ^^^^^^^ support.function.builtin.tik
+//                  ^^^^^^^^^ string.unquoted.tik
+//                            ^^^^^^ support.function.builtin.tik
+//                                   ^^^^^^^^^^^^^^^^^ string.unquoted.tik
+
+        }
+// ^^^^^^ meta.setup.tik meta.block.tik meta.case.tik meta.block.tik
+//      ^ punctuation.section.block.end.tik
+//       ^ meta.setup.tik meta.block.tik - meta.case.tik
+
+        radius 20
+// ^^^^^^^^^^^^^^^^ meta.setup.tik meta.block.tik
+//      ^^^^^^ support.function.builtin.tik
+//             ^^ constant.numeric.tik
+
+    }
+// ^^ meta.setup.tik meta.block.tik
+//  ^ punctuation.section.block.end.tik
+//   ^ - meta
+
+////////////////////////////////
+////////// init block //////////
+////////////////////////////////
+
+    init
+// ^ - meta
+//  ^^^^^ meta.init.tik
+//  ^^^^ keyword.control.init.tik
+    {
+// ^ - meta.block
+//  ^^ meta.init.tik meta.block.tik
+//  ^ punctuation.section.block.begin.tik
+
+        server
+// ^^^^^^^^^^^^^ meta.init.tik meta.block.tik
+//      ^^^^^^ keyword.other.tik
+        {
+//      ^ meta.init.tik meta.block.tik punctuation.section.block.begin.tik - source.scr
+
+            notsolid // source.scr.embedded
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.init.tik meta.block.tik source.scr.embedded.tik source.scr
+//          ^^^^^^^^ support.function.builtin.scr
+
+        }
+//      ^ meta.init.tik meta.block.tik punctuation.section.block.end.tik - source.scr
+
+        client
+// ^^^^^^^^^^^^^ meta.init.tik meta.block.tik
+//      ^^^^^^^ meta.client.tik
+//      ^^^^^^ keyword.other.tik
+        {
+//      ^ meta.init.tik meta.block.tik meta.client.tik meta.block.tik punctuation.section.block.begin.tik
+
+            cache tracer.spr
+//          ^^^^^ support.function.builtin.tik
+//                ^^^^^^^^^^ string.unquoted.tik
+            cache models/fx/muzflash.tik
+//          ^^^^^ support.function.builtin.tik
+//                ^^^^^^^^^^^^^^^^^^^^^^ meta.file-path.tik string.unquoted.tik
+
+            delayedsfx 0.1 blockdlight 300 0.25
+// ^^^^^^^^^^^^^^^^^^^^^^^^ meta.init.tik meta.block.tik meta.client.tik meta.block.tik - meta.emitter.tik
+//          ^^^^^^^^^^ support.function.builtin.tik
+//                     ^^^ constant.numeric.tik
+//                         ^^^^^^^^^^^^^^^^^^^^^ meta.init.tik meta.block.tik meta.client.tik meta.block.tik meta.emitter.tik
+//                         ^^^^^^^^^^^ meta.init.tik meta.block.tik meta.client.tik meta.block.tik meta.emitter.tik keyword.other.tik
+//                                     ^^^ constant.numeric.tik
+//                                         ^^^^ constant.numeric.tik
+            (
+// ^^^^^^^^^ meta.init.tik meta.block.tik meta.client.tik meta.block.tik meta.emitter.tik - meta.group.tik
+//          ^^ meta.init.tik meta.block.tik meta.client.tik meta.block.tik meta.emitter.tik meta.group.tik
+//          ^ punctuation.section.group.begin.tik
+
+                color 0.7 0.7 0.7
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.init.tik meta.block.tik meta.client.tik meta.block.tik meta.emitter.tik meta.group.tik
+//              ^^^^^ support.function.builtin.tik
+//                    ^^^ constant.numeric.tik
+//                        ^^^ constant.numeric.tik
+//                            ^^^ constant.numeric.tik
+            )
+// ^^^^^^^^^ meta.init.tik meta.block.tik meta.client.tik meta.block.tik meta.emitter.tik meta.group.tik
+//          ^ punctuation.section.group.end.tik
+//           ^ - meta.emitter.tik - meta.group.tik
+
+            originemitter smoke1
+// ^^^^^^^^^ meta.init.tik meta.block.tik meta.client.tik meta.block.tik - meta.emitter.tik
+//          ^^^^^^^^^^^^^^^^^^^^^ meta.emitter.tik
+//          ^^^^^^^^^^^^^ keyword.other.tik
+//                        ^^^^^^ string.unquoted.tik
+            (
+// ^^^^^^^^^^^^ meta.init.tik meta.block.tik meta.client.tik meta.block.tik meta.emitter.tik
+//          ^^ meta.emitter.tik meta.group.tik
+//          ^ punctuation.section.group.begin.tik
+
+                model vsssource.spr
+//              ^^^^^ support.function.builtin.tik
+//                    ^^^^^^^^^^^^^ string.unquoted.tik
+                startoff
+//              ^^^^^^^^ support.function.builtin.tik
+                alpha 0.75
+//              ^^^^^ support.function.builtin.tik
+//                    ^^^^ constant.numeric.tik
+                color 0.90 0.90 0.90
+//              ^^^^^ support.function.builtin.tik
+//                    ^^^^ constant.numeric.tik
+//                         ^^^^ constant.numeric.tik
+//                              ^^^^ constant.numeric.tik
+                life 5.00
+//              ^^^^ support.function.builtin.tik
+//                   ^^^^ constant.numeric.tik
+                spawnrate 12.00
+//              ^^^^^^^^^ support.function.builtin.tik
+//                        ^^^^^ constant.numeric.tik
+                scalerate 0.20
+//              ^^^^^^^^^ support.function.builtin.tik
+//                        ^^^^ constant.numeric.tik
+                accel 3 0 -8
+//              ^^^^^ support.function.builtin.tik
+//                    ^ constant.numeric.tik
+//                      ^ constant.numeric.tik
+//                        ^^ constant.numeric.tik
+                offset crandom 16 crandom 16 range 16 16
+//              ^^^^^^ support.function.builtin.tik
+//                     ^^^^^^^ variable.language.tik
+//                             ^^ constant.numeric.tik
+//                                ^^^^^^^ variable.language.tik
+//                                        ^^ constant.numeric.tik
+//                                           ^^^^^ variable.language.tik
+//                                                 ^^ constant.numeric.tik
+//                                                    ^^ constant.numeric.tik
+                randvel crandom 8 crandom 8 range 48 20
+//              ^^^^^^^ support.function.builtin.tik
+//                      ^^^^^^^ variable.language.tik
+//                              ^ constant.numeric.tik
+//                                ^^^^^^^ variable.language.tik
+//                                        ^ constant.numeric.tik
+//                                          ^^^^^ variable.language.tik
+//                                                ^^ constant.numeric.tik
+//                                                   ^^ constant.numeric.tik
+                scalemin 1
+//              ^^^^^^^^ support.function.builtin.tik
+//                       ^ constant.numeric.tik
+                scalemax 1.5
+//              ^^^^^^^^ support.function.builtin.tik
+//                       ^^^ constant.numeric.tik
+                fade
+//              ^^^^ support.function.builtin.tik
+                fadein 0.25
+//              ^^^^^^ support.function.builtin.tik
+//                     ^^^^ constant.numeric.tik
+                trail "textures/sprites/metalshard_med" Bone1 Bone2 5
+//              ^^^^^ support.function.builtin.tik
+//                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ string.quoted.double.tik
+//                    ^ string.quoted.double.tik punctuation.definition.string.begin.tik
+//                                                    ^ string.quoted.double.tik punctuation.definition.string.end.tik
+//                                                      ^^^^^ string.unquoted.tik
+//                                                            ^^^^^ string.unquoted.tik
+//                                                                  ^ constant.numeric.tik
+            )
+// ^^^^^^^^^^ meta.init.tik meta.block.tik meta.client.tik meta.block.tik meta.emitter.tik meta.group.tik
+//          ^ punctuation.section.group.end.tik
+//           ^ - meta.emitter.tik - meta.group.tik
+
+        }
+//      ^ meta.init.tik meta.block.tik meta.client.tik meta.block.tik punctuation.section.block.end.tik
+//       ^ meta.init.tik meta.block.tik - meta.client
+
+    }
+// ^^ meta.init.tik meta.block.tik
+//  ^ punctuation.section.block.end.tik
+//   ^ - meta
+
+
+    animations
+// ^ - meta
+//  ^^^^^^^^^^^ meta.animations.tik
+//  ^^^^^^^^^^ keyword.control.animations.tik
+    {
+// ^ meta.animations.tik - meta.block.tik
+//  ^^ meta.animations.tik meta.block.tik
+//  ^ punctuation.section.block.begin.tik
+        idle dummy2.skc
+// ^^^^^^^^^^^^^^^^^^^^^^ meta.animations.tik meta.block.tik
+//      ^^^^ entity.name.tik
+//           ^^^^^^^^^^ string.unquoted.tik
+
+        bar_stand_alert01 weapon_bar/alert/bar_stand_alert_a(action).skc random
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.animations.tik meta.block.tik
+//      ^^^^^^^^^^^^^^^^^ entity.name.tik
+//                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.file-path.tik string.unquoted.tik
+//                                                                       ^^^^^^ support.function.builtin.tik
+
+        bar_stand_curious02 weapon_bar/curious/bar_stand_curious_twitch.skc weight 1 dontrepeate
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.animations.tik meta.block.tik
+//      ^^^^^^^^^^^^^^^^^^^ entity.name.tik
+//                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.file-path.tik string.unquoted.tik
+//                                                                          ^^^^^^ support.function.builtin.tik
+//                                                                                 ^ constant.numeric.tik
+//                                                                                   ^^^^^^^^^^^ support.function.builtin.tik
+
+    }
+// ^^ meta.animations.tik meta.block.tik
+//  ^ punctuation.section.block.end.tik
+//   ^ - meta
+
+// TODO
+
+    animations
+// ^ - meta
+//  ^^^^^^^^^^^ meta.animations.tik
+//  ^^^^^^^^^^ keyword.control.animations.tik
+    {
+// ^ meta.animations.tik - meta.block.tik
+//  ^^ meta.animations.tik meta.block.tik
+//  ^ punctuation.section.block.begin.tik
+
+        $mapspec m3l1a test/move_test_rifle test/move_test gallery//comment
+// ^^^^^ meta.animations.tik meta.block.tik - meta.mapspec.tik
+//      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.animations.tik meta.block.tik meta.mapspec.tik
+//      ^^^^^^^^ keyword.control.tik
+//               ^^^^^ entity.name.tik
+//                     ^^^^^^^^^^^^^^^^^^^^ entity.name.tik
+//                                          ^^^^^^^^^^^^^^ entity.name.tik
+//                                                         ^^^^^^^ entity.name.tik
+//                                                                ^^^^^^^^^^ comment.line.double-slash.tik
+
+        {
+// ^^^^^^^^ meta.animations.tik meta.block.tik meta.mapspec.tik
+//      ^^ meta.animations.tik meta.block.tik meta.mapspec.tik meta.block.tik
+//      ^  punctuation.section.block.begin.tik
+
+            medic01   scripted/level_m3l1/medic01.skc
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.animations.tik meta.block.tik meta.mapspec.tik meta.block.tik
+//          ^^^^^^^ entity.name.tik
+//                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ string.unquoted.tik
+            patient01 scripted/level_m3l1/patient01.skc//comment
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.animations.tik meta.block.tik meta.mapspec.tik meta.block.tik
+//          ^^^^^^^^^ entity.name.tik
+//                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.file-path.tik string.unquoted.tik
+//                                                     ^^^^^^^^^^ comment.line.double-slash.tik
+
+            // ---Bangalore---
+            bangalore scripted/level_m3l1/bangalore_assembly.skc
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.animations.tik meta.block.tik meta.mapspec.tik meta.block.tik
+//          ^^^^^^^^^ entity.name.tik
+//                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.file-path.tik string.unquoted.tik
+
+            {
+// ^^^^^^^^^ meta.animations.tik meta.block.tik meta.mapspec.tik meta.block.tik
+//          ^^ meta.animations.tik meta.block.tik meta.mapspec.tik meta.block.tik meta.block.tik
+//          ^ punctuation.section.block.begin.tik
+
+                client
+// ^^^^^^^^^^^^^ meta.animations.tik meta.block.tik meta.mapspec.tik meta.block.tik meta.block.tik - meta.animations.client.tik
+//              ^^^^^^^ meta.animations.client.tik
+//              ^^^^^^ keyword.control.animations.client.tik
+
+                {
+// ^^^^^^^^^^^^^^^^ meta.animations.tik meta.block.tik meta.mapspec.tik meta.block.tik meta.block.tik meta.animations.client.tik
+//              ^^ meta.animations.tik meta.block.tik meta.mapspec.tik meta.block.tik meta.block.tik meta.animations.client.tik meta.block.tik
+//              ^ punctuation.section.block.begin.tik
+
+                    7 sound  Item_Bangaloredirt01 dialog 1.0 -1 0.9 0.2
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.animations.tik meta.block.tik meta.mapspec.tik meta.block.tik meta.block.tik meta.animations.client.tik meta.block.tik
+//                  ^ constant.language.tik
+//                    ^^^^^ support.function.builtin.tik
+//                           ^^^^^^^^^^^^^^^^^^^^ string.unquoted.tik
+//                                                ^^^^^^ string.unquoted.tik
+//                                                       ^^^ constant.numeric.tik
+//                                                           ^^ constant.numeric.tik
+//                                                              ^^^ constant.numeric.tik
+//                                                                  ^^^ constant.numeric.tik
+
+                }
+// ^^^^^^^^^^^^^^ meta.animations.tik meta.block.tik meta.mapspec.tik meta.block.tik meta.block.tik meta.animations.client.tik meta.block.tik
+//              ^ punctuation.section.block.end.tik
+//               ^ meta.animations.tik meta.block.tik meta.mapspec.tik meta.block.tik meta.block.tik - meta.animations.client.tik
+
+                server
+// ^^^^^^^^^^^^^ meta.animations.tik meta.block.tik meta.mapspec.tik meta.block.tik meta.block.tik - meta.animations.server.tik
+//              ^^^^^^^ meta.animations.tik meta.block.tik meta.mapspec.tik meta.block.tik meta.block.tik meta.animations.server.tik
+//              ^^^^^^ keyword.control.animations.server.tik
+
+                {
+// ^^^^^^^^^^^^^ meta.animations.tik meta.block.tik meta.mapspec.tik meta.block.tik meta.block.tik meta.animations.server.tik
+//              ^^ meta.animations.tik meta.block.tik meta.mapspec.tik meta.block.tik meta.block.tik meta.animations.server.tik meta.block.tik
+//              ^ punctuation.section.block.begin.tik
+
+                    0  surface   bang12 +nodraw
+//                  ^ constant.language.tik
+//                   ^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.animations.tik meta.block.tik meta.mapspec.tik meta.block.tik meta.block.tik meta.animations.server.tik meta.block.tik source.scr.embedded.tik source.scr
+//
+                    61 surface  bang12 -nodraw// 182 at 30 fps
+//                  ^^ constant.language.tik
+//                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.animations.tik meta.block.tik meta.mapspec.tik meta.block.tik meta.block.tik meta.animations.server.tik meta.block.tik source.scr.embedded.tik source.scr
+
+                }
+            }
+
+        } //end mapspec
+// ^^^^^^ meta.animations.tik meta.block.tik meta.mapspec.tik meta.block.tik
+//      ^ punctuation.section.block.end.tik
+//       ^ - meta.mapspec.tik
+    }
+// ^^ meta.animations.tik meta.block.tik
+//  ^ punctuation.section.block.end.tik
+//   ^ - meta
+
+
+    /*QUAKED fx_cockroach (0.5 .25 0.25) (-12 -12 0) (12 12 80)
+// ^- comment
+//  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.tik
+//  ^^ punctuation.definition.comment.begin.tik
+//    ^^^^^^ keyword.other.tik
+
+    a cockroach
+//  ^^^^^^^^^^^^ comment.block.documentation.tik
+
+    */
+// ^^^ comment.block.documentation.tik
+//  ^^ punctuation.definition.comment.end.tik
+//    ^ - comment
