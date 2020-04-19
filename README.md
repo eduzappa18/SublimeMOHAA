@@ -5,15 +5,13 @@
 
 * [x] `.scr` Morpheus Script files. (*Syntax Highlighting, Completions & Snippets.*)
 * [x] `.st` State files. (*Syntax Highlighting.*)
+* [x] `.shader` Shader files. (*Syntax Highlighting.*)
+* [x] `.tik` TIKI files. (*Syntax Highlighting.*)
 * [x] `.cfg` Config files. (*Syntax Highlighting & Completions*)
 * [x] `.log` Server log files. (*Syntax Highlighting.*)
 
-**Coming soon:**
-
+* [ ] `.urc` Menu files.
 * [ ] `.mus` Music files.
-* [ ] `.shader` Shader files.
-* [ ] `.tik` TIKI files.
-* [ ] `.urc` URC files.
 
 _____________________________________________________________
 
@@ -29,16 +27,22 @@ _____________________________________________________________
 ### Screenshots
 
 **Morpheus Script**  
-![Morpheus Script](https://raw.githubusercontent.com/eduzappa18/SublimeMOHAA/master/screenshots/mohaa.scr.png)
+![Morpheus Script](screenshots/mohaa.scr.png)
 
 **State files**  
-![State files](https://raw.githubusercontent.com/eduzappa18/SublimeMOHAA/master/screenshots/mohaa.st.png)
+![State files](screenshots/mohaa.st.png)
+
+**Shader files**  
+![Shader files](screenshots/mohaa.shader.png)
+
+**TIKI files**  
+![TIKI files](screenshots/mohaa.tik.png)
 
 **Config files**  
-![Configs](https://raw.githubusercontent.com/eduzappa18/SublimeMOHAA/master/screenshots/mohaa.cfg.png)
+![Configs](screenshots/mohaa.cfg.png)
 
 **Log files**  
-![Log files](https://raw.githubusercontent.com/eduzappa18/SublimeMOHAA/master/screenshots/mohaa.log.png)
+![Log files](screenshots/mohaa.log.png)
 
 _____________________________________________________________
 
