@@ -1,0 +1,177 @@
+// SYNTAX TEST "Packages/MOHAA/mohaa.urc.sublime-syntax"
+
+    //comment
+//  ^^^^^^^^^^ comment.line.double-slash.urc
+//  ^^ punctuation.definition.comment.urc
+
+    menu "main" 639 479 NONE 0
+//  ^^^^ support.function.builtin.urc
+//       ^^^^^^ string.quoted.double.urc
+//       ^ punctuation.definition.string.begin.urc
+//            ^ punctuation.definition.string.end.urc
+//              ^^^ constant.numeric.urc
+//                  ^^^ constant.numeric.urc
+//                      ^^^^ string.unquoted.urc
+//                           ^ constant.numeric.urc
+
+    bgcolor 1 1 1 1
+//  ^^^^^^^ support.function.builtin.urc
+//          ^ constant.numeric.urc
+//            ^ constant.numeric.urc
+//              ^ constant.numeric.urc
+//                ^ constant.numeric.urc
+
+    borderstyle NONE
+//  ^^^^^^^^^^^ support.function.builtin.urc
+//              ^^^^ string.unquoted.urc
+
+    fullscreen 1
+//  ^^^^^^^^^^ support.function.builtin.urc
+//             ^ constant.numeric.urc
+
+    fadein .5
+//  ^^^^^^ support.function.builtin.urc
+//         ^^ constant.numeric.urc
+
+    include "ui/common.inc"
+//  ^^^^^^^ keyword.control.urc
+//          ^^^^^^^^^^^^^^^ string.quoted.double.urc
+//          ^ punctuation.definition.string.begin.urc
+//                        ^ punctuation.definition.string.end.urc
+
+    include  ui/common.inc
+//  ^^^^^^^ keyword.control.urc
+//           ^^^^^^^^^^^^^ meta.file-path.urc string.unquoted.urc
+
+    postinclude ui/loadingbar.txt
+//  ^^^^^^^^^^^ keyword.control.urc
+//              ^^^^^^^^^^^^^^^^^ meta.file-path.urc string.unquoted.urc
+
+
+    resource
+//  ^^^^^^^^ storage.type.urc
+    Label
+//  ^^^^^ keyword.other.urc
+    {
+// ^ - meta
+//  ^^ meta.block.urc
+//  ^ punctuation.section.block.begin.urc
+
+        name "Default"
+// ^^^^^^^^^^^^^^^^^^^^^ meta.block.urc
+//      ^^^^ support.function.builtin.urc
+//           ^ string.quoted.double.urc punctuation.definition.string.begin.urc
+
+        rect 256 0 256 256
+// ^^^^^^^^^^^^^^^^^^^^^^^^^ meta.block.urc
+//      ^^^^ support.function.builtin.urc
+//           ^^^ constant.numeric.urc
+//               ^ constant.numeric.urc
+//                 ^^^ constant.numeric.urc
+//                     ^^^ constant.numeric.urc
+
+        fgcolor 1.00 1.00 1.00 1.00
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.block.urc
+//      ^^^^^^^ support.function.builtin.urc
+//              ^^^^ constant.numeric.urc
+//                   ^^^^ constant.numeric.urc
+//                        ^^^^ constant.numeric.urc
+//                             ^^^^ constant.numeric.urc
+
+        bgcolor .50 .50 .50 0.00
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.block.urc
+//      ^^^^^^^ support.function.builtin.urc
+//              ^^^ constant.numeric.urc
+//                  ^^^ constant.numeric.urc
+//                      ^^^ constant.numeric.urc
+//                          ^^^^ constant.numeric.urc
+
+        borderstyle "NONE"
+// ^^^^^^^^^^^^^^^^^^^^^^^^ meta.block.urc
+//      ^^^^^^^^^^^ support.function.builtin.urc
+//                  ^^^^^^ string.quoted.double.urc
+//                  ^ string.quoted.double.urc punctuation.definition.string.begin.urc
+//                       ^ string.quoted.double.urc punctuation.definition.string.end.urc
+
+        shader "textures/mohmenu/voodoo/main_b.tga"
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.block.urc
+//      ^^^^^^ support.function.builtin.urc
+//             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ string.quoted.double.urc
+//             ^ string.quoted.double.urc punctuation.definition.string.begin.urc
+//                                                ^ string.quoted.double.urc punctuation.definition.string.end.urc
+
+        shader textures/hud/crosshair
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.block.urc
+//      ^^^^^^ meta.block.urc support.function.builtin.urc
+//             ^^^^^^^^^^^^^^^^^^^^^^ meta.block.urc meta.file-path.urc string.unquoted.urc
+
+        direction from_right .1
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.block.urc
+//      ^^^^^^^^^ support.function.builtin.urc
+//                ^^^^^^^^^^ string.unquoted.urc
+//                           ^^ constant.numeric.urc
+
+        enabledcvar "ui_voodoo"
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.block.urc
+//      ^^^^^^^^^^^ support.function.builtin.urc
+//                  ^^^^^^^^^^^ string.quoted.double.urc
+
+        font facfont-20
+// ^^^^^^^^^^^^^^^^^^^^^^ meta.block.urc
+//      ^^^^ support.function.builtin.urc
+//           ^^^^^^^^^^ string.unquoted.urc
+
+        clicksound sound/menu/scroll.wav
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.block.urc
+//      ^^^^^^^^^^ support.function.builtin.urc
+//                 ^^^^^^^^^^^^^^^^^^^^^ meta.file-path.urc string.unquoted.urc
+
+        initdata dump/testemitter.txt
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.block.urc
+//      ^^^^^^^^ support.function.builtin.urc
+//               ^^^^^^^^^^^^^^^^^^^^ meta.file-path.urc string.unquoted.urc
+
+        statbar vertical_stagger_odd
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.block.urc
+//      ^^^^^^^ support.function.builtin.urc
+//              ^^^^^^^^^^^^^^^^^^^^ string.unquoted.urc
+
+    }
+// ^^ meta.block.urc
+//  ^ punctuation.section.block.end.urc
+//   ^ - meta
+
+
+    resource
+//  ^^^^^^^^ storage.type.urc
+
+    PulldownMenuContainer
+//  ^^^^^^^^^^^^^^^^^^^^^ keyword.other.urc
+
+    {
+// ^ - meta
+//  ^^ meta.block.urc
+//  ^ punctuation.section.block.begin.urc
+
+        menushader "MENU" "textures/menu/pulldownarrow"
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.block.urc
+//      ^^^^^^^^^^ support.function.builtin.urc
+//                 ^^^^^^ string.quoted.double.urc
+//                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ string.quoted.double.urc
+
+        addpopup "MENU" "SFX Mode" command "set cg_te_mode 3"
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.block.urc
+//      ^^^^^^^^ support.function.builtin.urc
+//               ^^^^^^ string.quoted.double.urc
+//                      ^^^^^^^^^^ string.quoted.double.urc
+//                                 ^^^^^^^ support.function.builtin.urc
+//                                         ^^^^^^^^^^^^^^^^^^ string.quoted.double.urc
+
+    }
+// ^^ meta.block.urc
+//  ^ punctuation.section.block.end.urc
+//   ^ - meta
+
+    end.
+//  ^^^ keyword.control.urc
+//     ^ punctuation.terminator.statement.urc
