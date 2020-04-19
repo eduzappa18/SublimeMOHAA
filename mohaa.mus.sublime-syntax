@@ -1,0 +1,78 @@
+%YAML 1.2
+---
+name: Music file [.mus]
+file_extensions:
+  - mus
+scope: source.mus
+
+contexts:
+  main:
+    - match: (?=\S)
+      push: statement
+
+  prototype:
+    - include: comments
+
+  else-pop:
+    - match: (?=\S)
+      pop: true
+
+  comments:
+    - match: //
+      scope: punctuation.definition.comment.mus
+      push:
+        - meta_scope: comment.line.double-slash.mus
+        - match: $\n?
+          pop: true
+
+  statement:
+    - include: commands
+    - include: arguments
+    - include: else-pop
+
+  commands:
+    - match: \!
+      scope: keyword.operator.logical.mus
+
+    - match: \b(?:path|normal|aux\d?)\b
+      scope: keyword.other.mus
+
+    - match: \b(?:fadetime|loop|restart|volume)\b
+      scope: support.function.builtin.mus
+
+  arguments:
+    - include: literal-string
+    - include: literal-number
+    - include: path
+    - include: file
+    - include: unquoted-string
+
+  literal-string:
+    - match: '"'
+      scope: punctuation.definition.string.begin.mus
+      push:
+        - meta_include_prototype: false
+        - meta_scope: string.quoted.double.mus
+        - match: (\")|(\n)
+          captures:
+            1: punctuation.definition.string.end.mus
+            2: invalid.illegal.newline.mus
+          pop: true
+        - match: '\\[nrt"\\]'
+          scope: constant.character.escape.mus
+
+  literal-number:
+    - match: (?:\+|-)?(?:\b\d*\.?\d+|\B\.\d+)\b
+      scope: constant.numeric.mus
+
+  path:
+    - match: '\b[\w''-]+(?:/[\w\(\)''-]+)+(?:\.\w+)?\b'
+      scope: meta.file-path.mus string.unquoted.mus
+
+  file:
+    - match: '\b[\w''-]+\.\w+\b'
+      scope: string.unquoted.mus
+
+  unquoted-string:
+    - match: '\b[\w@#''-]+\b'
+      scope: string.unquoted.mus
