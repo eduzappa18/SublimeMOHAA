@@ -1,0 +1,250 @@
+%YAML 1.2
+---
+name: Menu file [.urc]
+file_extensions:
+  - urc
+  - inc
+scope: source.urc
+
+variables: # from "cl_allclasses.html" (cl_dumpallclasses)
+  resources: |-
+    (?xi:
+      #UI
+      BindButton|ButtonBase|Button|CheckBox|Console|DMBox|FakkBindList|FakkBindListLabel|FakkLabel|FAKKLoadGameClass|
+      FAKKServerList|Field|FloatingConsole|FloatingDMConsole|FloatingWindow|GMBox|HorizScroll|Label|
+      LANGameClass|LanGameList|LanGameListLabel|Layout|List|ListBox|ListCtrl|MultiLineEdit|Notepad|NotepadEdit|
+      PopupMenu|PulldownMenu|PulldownMenuContainer|Slider|StatusBar|VertScroll|Widget|WidgetContainer|WindowSizer
+    )
+
+  cmds: |-
+    (?xi:
+      #bindlistener
+      activebackgroundcolor|activebordercolor|activeforegroundcolor|activesound|align|bind_alternatekeyheight|
+      bind_alternatekeywidth|bind_commandheight|bind_commandwidth|bind_fillwidth|bind_height|bind_primarykeyheight|
+      bind_primarykeywidth|bind_width|binditem|changesound|entersound|header|highlightbackgroundcolor|
+      highlightforegroundcolor|inactivebackgroundcolor|inactiveforegroundcolor|selectbackgroundcolor|
+      selectforegroundcolor|titlebackgroundcolor|titleforegroundcolor|
+      #ConsoleHider
+      floatingwindow_close_pressed|widget_destroyed|
+      #DMConsoleHider
+      deactivated|floatingwindow_close_pressed|widget_destroyed|
+      #ExecCmd
+      button_pressed|
+      #FakkInventory
+      left_mouse_down|mouse_entered|mouse_exited|mouse_moved|right_mouse_down|
+      #FakkItemList
+      left_mouse_down|left_mouse_up|mouse_entered|mouse_exited|
+      mouse_moved|right_mouse_down|right_mouse_up|widget_destroyed|
+      #FakkMiniconsole
+      size_changed|
+      #FilePickerClass
+      deactivated|listbase_item_doubleclicked|listbase_item_selected|
+      #invlistener
+      ammo|barheight|baroffsetx|baroffsety|barshader|barwidth|bg|bg_tile|bgshader|button_shader|checkammo|
+      command|equip|height|hover_shader|hudangledeltas|hudangles|hudanim|hudcompassangles|
+      hudcompassneedleangles|hudmodel|hudmove|hudoffset|hudrotateoffset|hudscale|inv_align|inv_cascade|
+      inv_changesound|inv_height|inv_horiz_offset|inv_rejectsound|inv_selectsound|inv_vert_offset|
+      inv_width|invangledeltas|invangles|invanim|invmodel|invmove|invoffset|invrotateoffset|invscale|
+      item|modelwindow|sel_shader|selitem_shader|selitem_shaderontop|typedef|width|
+      #Listener
+      commanddelay|delete|immediateremove|remove|
+      #Menu
+      hidemenu|showmenu|
+      #MenuManager
+      lock|pushmenu|unlock|
+      #MpMapPickerClass
+      deactivated|listbase_item_doubleclicked|listbase_item_selected|
+      #PlayerModelPickerClass
+      deactivated|floatingwindow_close_pressed|listbase_item_doubleclicked|listbase_item_selected|
+      #StatsUpdater
+      updatestats|
+      #ToggleCVar
+      button_pressed|
+      #UIBindButton
+      any_mouse_down|bindcommand|
+      #UIButtonBase
+      hovercommand|hoversound|left_mouse_down|left_mouse_up|left_mousedragged|mouse_entered|mouse_exited|
+      #UICheckBox
+      checked_command|checked_shader|left_mouse_down|left_mouse_up|
+      mouse_entered|mouse_exited|unchecked_command|unchecked_shader|
+      #UIConsole
+      print|size_changed|
+      #UIDMBox
+      size_changed|
+      #UIFakkBindList
+      filename|stopbind|
+      #UIFakkBindListLabel
+      left_mouse_down|
+      #UIFakkLabel
+      clearinvitemref|invmodelhand|invmodelname|itemstat|maxplayerstat|modelangles|modelanim|
+      modeloffset|modelrotateoffset|modelscale|playerstat|playerstatconfigstring|rendermodel|
+      statbar|statbar_endangles|statbar_needlewidth|statbar_rotatorsize|statbar_shader|
+      statbar_shader_flash|statbar_tileshader|statbar_tileshader_flash|
+      #UIFAKKLoadGameClass
+      deletegame|listbase_item_doubleclicked|listbase_item_selected|loadgame|nodeletegame|removegame|savegame|
+      #UIFAKKServerList
+      cancelrefresh|connect|lanlisting|listbase_item_doubleclicked|
+      listbase_item_selected|refreshlanserverlist|refreshserverlist|updateserver|
+      #UIField
+      left_mouse_down|
+      #UIFloatingConsole
+      floatingwindow_close_pressed|
+      #UIFloatingDMConsole
+      deactivated|floatingwindow_close_pressed|
+      #UIFloatingWindow
+      activated|floatingwindow_close_pressed|floatingwindow_minimize_pressed|
+      left_mouse_down|left_mouse_up|left_mousedragged|size_changed|
+      #UIGMBox
+      size_changed|
+      #UIHorizScroll
+      left_mouse_down|left_mouse_up|left_mousedragged|mouse_entered|mouse_exited|
+      #UILabel
+      linkcvartoshader|linkstring|mouse_entered|mouse_exited|shader|tileshader|
+      #UILANGameClass
+      joingame|listbase_item_doubleclicked|listbase_item_selected|
+      #UILanGameList
+      connecttoselected|
+      #UILanGameListLabel
+      left_mouse_down|left_mouse_up|
+      #UILayout
+      menu|
+      #UIList
+      additem|left_mouse_down|left_mouse_up|
+      #UIListBox
+      addconfigstringitem|additem|deleteallitems|font|left_mouse_down|left_mouse_up|
+      #UIListCtrl
+      left_mouse_down|left_mouse_up|left_mousedragged|mouse_entered|size_changed|
+      #UIMultiLineEdit
+      edit|left_mouse_down|left_mouse_up|left_mousedragged|size_changed|updatecvar|
+      #UINotepad
+      floatingwindow_close_pressed|openfile|
+      #UINotepadEdit
+      left_mouse_down|
+      #UIPopupMenu
+      deactivated|left_mouse_up|mouse_exited|mouse_moved|
+      #UIPulldownMenu
+      highlight_bgcolor|highlight_fgcolor|left_mouse_down|left_mouse_up|left_mousedragged|
+      #UIPulldownMenuContainer
+      addpopup|highlight_bgcolor|highlight_fgcolor|menushader|popup_bgcolor|popup_fgcolor|
+      popup_highlight_bgcolor|popup_highlight_fgcolor|selmenushader|virtualres|
+      #UISlider
+      autodec|autoinc|left_mouse_down|left_mouse_up|left_mousedragged|leftshader|
+      mouse_entered|mouse_exited|rightshader|setrange|slidertype|stepsize|thumbshader|
+      #UIStatusBar
+      realign_widget|size_changed|
+      #UIVertScroll
+      left_mouse_down|left_mouse_up|left_mousedragged|mouse_entered|mouse_exited|
+      #UIWidget
+      activate|aliascache|align|bgcolor|bordercolor|borderstyle|clicksound|direction|disable|
+      enable|enabledcvar|fadein|fgcolor|font|hide|hidecommand|hovershader|initdata|linkcvar|
+      name|noparentadjust|noparentclip|ordernumber|pressedshader|rect|shader|showcommand|size|
+      stopsound|stretch|stuffcommand|textalign|tileshader|title|virtualres|
+      #UIWidgetContainer
+      bgfill|fullscreen|vidmode|
+      #UIWindowSizer
+      left_mouse_down|left_mouse_up|left_mousedragged|
+      #View3D
+      activated|deactivated|left_mouse_down
+    )
+
+contexts:
+  main:
+    - match: \}
+      scope: invalid.illegal.stray-bracket-end.urc
+
+    - match: (?=\S)
+      push: statement
+
+  prototype:
+    - include: comments
+
+  else-pop:
+    - match: (?=\S)
+      pop: true
+
+  comments:
+    - match: //
+      scope: punctuation.definition.comment.urc
+      push:
+        - meta_scope: comment.line.double-slash.urc
+        - match: $\n?
+          pop: true
+
+  statements:
+    - match: \}
+      scope: invalid.illegal.stray-bracket-end.urc
+      pop: true
+
+    - match: (?=\S)
+      push: statement
+
+  statement:
+    - include: block
+    - include: keywords
+    - include: commands
+    - include: arguments
+    - include: else-pop
+
+  block:
+    - match: '\{'
+      scope: punctuation.section.block.begin.urc
+      set:
+        - meta_scope: meta.block.urc
+        - match: '\}'
+          scope: punctuation.section.block.end.urc
+          pop: true
+        - include: statements
+
+  keywords:
+    - match: \b(?:include|postinclude|end)\b
+      scope: keyword.control.urc
+
+    - match: \.\B
+      scope: punctuation.terminator.statement.urc
+
+  commands:
+    - match: '\b{{cmds}}\b'
+      scope: support.function.builtin.urc
+
+    - match: \bresource\b
+      scope: storage.type.urc
+
+    - match: '\b{{resources}}\b'
+      scope: keyword.other.urc
+
+  arguments:
+    - include: literal-string
+    - include: literal-number
+    - include: path
+    - include: file
+    - include: unquoted-string
+
+  literal-string:
+    - match: '"'
+      scope: punctuation.definition.string.begin.urc
+      push:
+        - meta_include_prototype: false
+        - meta_scope: string.quoted.double.urc
+        - match: (\")|(\n)
+          captures:
+            1: punctuation.definition.string.end.urc
+            2: invalid.illegal.newline.urc
+          pop: true
+        - match: '\\[nrt"\\]'
+          scope: constant.character.escape.urc
+
+  literal-number:
+    - match: (?:\+|-)?(?:\b\d*\.?\d+|\B\.\d+)\b
+      scope: constant.numeric.urc
+
+  path:
+    - match: '\b[\w''-]+(?:/[\w\(\)''-]+)+(?:\.\w+)?\b'
+      scope: meta.file-path.urc string.unquoted.urc
+
+  file:
+    - match: '\b[\w''-]+\.\w+\b'
+      scope: string.unquoted.urc
+
+  unquoted-string:
+    - match: '\b[\w@#''-]+\b'
+      scope: string.unquoted.urc
