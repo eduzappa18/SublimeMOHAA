@@ -12,6 +12,7 @@
     includes test m1l1 m2l2
 // ^ - meta
 //  ^^^^^^^^^^^^^^^^^^^^^^^^ meta.includes.tik
+//  ^^^^^^^^ keyword.control.tik
 //           ^^^^ entity.name.tik
 //                ^^^^ entity.name.tik
 //                     ^^^^ entity.name.tik
