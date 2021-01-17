@@ -1,4 +1,4 @@
-| SYNTAX TEST "Packages/MOHAA/mohaa.log.sublime-syntax"
+| SYNTAX TEST "Packages/MOHAA/syntaxes/mohaa.log.sublime-syntax"
 
     Cvar_Set2: sv_maxRate 25000
 |   ^^^^^^^^^^ markup.bold.log

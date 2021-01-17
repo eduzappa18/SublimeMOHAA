@@ -1,4 +1,4 @@
-// SYNTAX TEST "Packages/MOHAA/mohaa.urc.sublime-syntax"
+// SYNTAX TEST "Packages/MOHAA/syntaxes/mohaa.urc.sublime-syntax"
 
     //comment
 //  ^^^^^^^^^^ comment.line.double-slash.urc

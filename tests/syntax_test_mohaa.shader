@@ -1,4 +1,4 @@
-// SYNTAX TEST "Packages/MOHAA/mohaa.shader.sublime-syntax"
+// SYNTAX TEST "Packages/MOHAA/syntaxes/mohaa.shader.sublime-syntax"
 
     /*
 //  ^^ comment.block.shader punctuation.definition.comment.begin.shader
