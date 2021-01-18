@@ -95,7 +95,7 @@ variables:
       disablespawn|disconnect_paths|disguise_accept_thread|disguise_level|disguise_period|disguise_range|
       distancetoenemy|dlight|dm|dmammorequired|dmamount|dmbulletcount|dmbulletdamage|dmbulletrange|dmbulletspread|
       dmcantpartialreload|dmcrosshair|dmdeathdrop|dmfiredelay|dmfirespreadmult|dmg|dmlife|dmmaxamount|dmmessage|
-      dmmovementspeed|dmprojectile|dmrealism|dmstartammo|dmteam|dmzoomspreadmult|doActivat|doActivate|doBlocked|doclose|
+      dmmovementspeed|dmprojectile|dmrealism|dmstartammo|dmteam|dmzoomspreadmult|doActivate|doBlocked|doclose|
       dog|doinit|dojitter|donedeath|donefiring|donereloading|dontdropweapons|doopen|door_triggerfield|doorclosed|
       dooropened|doortype|doroundtransition|doTouch|doUse|dprintln|drawhud|drivable|drive|driveNoWait|dropitems|
       droptofloor|dropturret|drunk|dumb|duration|
@@ -103,7 +103,7 @@ variables:
       earthquake|edgeeffect|edgetriggered|effects|emitter|emotion|enableEnemy|enablePain|enablespawn|endactionanim|
       endalpha|endArray|EndCycle|endlevel|endpath|endpoint|enemy|enemy_visible_change_time|enemysharerange|
       enemyswitchdisable|enemyswitchenable|ensureforwardoffladder|ensureoverladder|enter|entity|entitystart|entnum|
-      error|exec|exit|explode|Explode|explodeontouch|explosionattack|explosioneffect|explosionmodel|explosionoffset|
+      error|exec|exit|explode|explodeontouch|explosionattack|explosioneffect|explosionmodel|explosionoffset|
       explosions|ExplosionSound|eyeslookat|
       #F
       face|fade|fadedelay|fadein|fadeout|fadesound|fadetime|fakebullets|fallback|fallheight|fallingangleadjust|
@@ -125,7 +125,7 @@ variables:
       ID|idle|idleCheckOffset|idleinit|idlesay|ignorebadplaces|ignoreclock|immediateremove|immune|impactmarkorientation|
       impactmarkradius|impactmarkshader|initialize|inpvs|inreload|int|interrupt_point|interval|intervaldir|invnext|
       invprev|iprint|iprintln|iprintln_noloc|iprintlnbold|iprintlnbold_noloc|is_disguised|is_enemy_visible|isabandoned|
-      isalive|isAlive|IsAlive|isdonut|isimmune|isloopinganim|istouching|isTouching|isturnedon|item|item_droptofloor|
+      isAlive|isdonut|isimmune|isloopinganim|istouching|isturnedon|item|item_droptofloor|
       item_pickup|
       #J
       jitteramount|join_team|joinTeam|jump|jumpto|jumpxy|
@@ -138,11 +138,11 @@ variables:
       lockmovement|locprint|lod_angles|lod_discard|lod_model|lod_roll|lod_spawn|lod_think|lod_yaw|logstats|
       lookaroundangle|lookat|loop|loopfire|loopsound|low_wall_arc|
       #M
-      mainattachtotag|makeArray|makenoise|map|maps|mass|max_health|max_time|maxalpha|maxamount|maxchargetime|MaxDelay|
+      mainattachtotag|makeArray|makenoise|map|maps|mass|max_health|max_time|maxalpha|maxamount|maxchargetime|
       maxdelay|maxdist|maxdonut|MaxDuration|maxfiremovement|maxgibs|maxIdlePitch|maxIdleYaw|maxmouthangle|
       maxmovementsound|MaxNumShots|maxoffset|maxrange|maxs|maxuseangle|maxYawOffset|meansofdeath|meleeattackend|
-      meleeattackstart|message|min_dist|min_time|minchargetime|MinDelay|mindelay|mindist|mindonut|MinDuration|minlife|
-      MinNumShots|minoffset|minrange|mins|minspeed|missionfailed|missiontransition|model|Model|modelname|modheight|
+      meleeattackstart|message|min_dist|min_time|minchargetime|mindelay|mindist|mindonut|MinDuration|minlife|
+      MinNumShots|minoffset|minrange|mins|minspeed|missionfailed|missiontransition|model|modelname|modheight|
       modifydrive|modifyflypath|mood|motionfail|move|moveanim|moveBackward|movedir|movedone|movedoneradius|moveDown|
       moveEast|movefail|moveForward|moveLeft|movementspeed|movementstealth|moveNorth|moveOffset|moveplayer|moveposflags|
       moveRight|movesound|moveSouth|moveto|movetopos|moveUp|moveWest|moving_from_anim|mprint|mprintln|multifaceted|
