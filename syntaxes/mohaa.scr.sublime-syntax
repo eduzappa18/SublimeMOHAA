@@ -786,6 +786,9 @@ contexts:
       scope: keyword.control.scr
       pop: true
 
+    - match: '\b(?i:wait|waitframe)\b'
+      scope: keyword.control.scr
+      pop: true
 
     - match: '\b{{builtin_funcs}}\b'
       scope: support.function.builtin.scr

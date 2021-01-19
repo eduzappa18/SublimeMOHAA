@@ -625,16 +625,23 @@ local.master aliascache gasmask1 sound/characters/gasmask1.wav soundparms 1.0 0.
 //        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.file-path.scr string.unquoted.scr
 //                                          ^ punctuation.terminator.statement.scr
 
+    waitframe
+//  ^^^^^^^^^ keyword.control.scr
+
+    waitframe;
+//  ^^^^^^^^^ keyword.control.scr
+//           ^ punctuation.terminator.statement.scr
+
     wait 1;
-//  ^^^^ support.function.builtin.scr
+//  ^^^^ keyword.control.scr
 //       ^ constant.numeric.scr
 //        ^ punctuation.terminator.statement.scr
     wait .1;
-//  ^^^^ support.function.builtin.scr
+//  ^^^^ keyword.control.scr
 //       ^^ constant.numeric.scr
 //         ^ punctuation.terminator.statement.scr
     wait 1.1;
-//  ^^^^ support.function.builtin.scr
+//  ^^^^ keyword.control.scr
 //       ^^^ constant.numeric.scr
 //          ^ punctuation.terminator.statement.scr
 
