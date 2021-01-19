@@ -104,6 +104,13 @@
 //                                                      ^^^^ meta.property.object.scr
 //                                                          ^ punctuation.terminator.statement.scr
 
+    local.
+//  ^^^^^ variable.language.scr
+//       ^ punctuation.accessor.dot.scr
+//        ^ - meta.property.object.scr
+    prop
+//  ^^^^ string.unquoted.scr - meta.property.object.scr
+
     gamestr; levelstr; localstr; groupstr; parmstr;
 //  ^^^^^^^ string.unquoted.scr
 //         ^ punctuation.terminator.statement.scr
@@ -569,6 +576,11 @@ local.master aliascache gasmask1 sound/characters/gasmask1.wav soundparms 1.0 0.
     waitthread label
 //  ^^^^^^^^^^ keyword.control.scr
 //             ^^^^^ meta.function-call.scr support.function.scr
+
+    waitthread
+//  ^^^^^^^^^^ keyword.control.scr
+    label
+//  ^^^^^ string.unquoted.scr - meta.function-call.scr
 
     thread path/to/file.scr::string_label//comment
 //  ^^^^^^ keyword.control.scr

@@ -246,12 +246,16 @@ contexts:
   prototype:
     - include: comments
 
-  else-pop:
-    - match: (?=\S)
-      pop: true
-
   immediately-pop:
     - match: ''
+      pop: true
+
+  eol-pop:
+    - match: $\n?
+      pop: true
+
+  else-pop:
+    - match: (?=\S)
       pop: true
 
   comments:
@@ -284,8 +288,7 @@ contexts:
         - meta_include_prototype: false
         - meta_scope: comment.line.double-slash.scr
 
-        - match: $\n?
-          pop: true
+        - include: eol-pop
 
   literal-string:
     - match: '"'
@@ -603,8 +606,7 @@ contexts:
     - match: \.(?!\d+\b)
       scope: punctuation.accessor.dot.scr
       push:
-        - match: $\n?
-          pop: true
+        - include: eol-pop
 
         - match: '{{builtin_props}}'
           scope: meta.property.object.scr support.function.builtin.scr
@@ -802,6 +804,7 @@ contexts:
       pop: true
 
   expect-label:
+    - include: eol-pop
     - include: file-path
 
     - match: '{{identifier_label}}'
