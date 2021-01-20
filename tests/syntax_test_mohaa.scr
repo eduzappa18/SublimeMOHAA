@@ -481,6 +481,14 @@
 //                                                                                  ^^^ keyword.control.trycatch.scr
 //                                                                                       ^^^^^ keyword.control.loop.scr
 
+    end
+//  ^^^ keyword.control.flow.scr
+
+    End
+//  ^^^ keyword.control.flow.scr
+
+    END
+//  ^^^ keyword.control.flow.scr
 
     end 1
 //  ^^^ keyword.control.flow.scr

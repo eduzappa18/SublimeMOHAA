@@ -476,7 +476,7 @@ contexts:
       scope: keyword.control.loop.scr
       set: expect-semicolon
 
-    - match: \bend\b
+    - match: \b(?i:end)\b
       scope: keyword.control.flow.scr
       set: expect-semicolon
 
