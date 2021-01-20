@@ -802,7 +802,7 @@ contexts:
     #- include: else-pop
 
   file-path:
-    - match: (?:[\w-]+/)+(?:[\w-]+\.\w+\b)
+    - match: (?:[\w-]+/)+(?:[\w-]+(?:\.\w+)?\b)
       scope: meta.file-path.scr string.unquoted.scr
       pop: true
 
