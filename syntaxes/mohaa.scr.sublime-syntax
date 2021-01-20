@@ -774,7 +774,7 @@ contexts:
 
   type:
     - match: \b{{storage}}\b
-      scope: storage.type.scr
+      scope: storage.type.scr support.function.builtin
       pop: true
 
   built-in-functions:
