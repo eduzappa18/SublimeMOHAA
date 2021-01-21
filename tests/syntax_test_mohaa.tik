@@ -457,6 +457,14 @@
 //                  ^^ constant.language.tik
 //                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.animations.tik meta.block.tik meta.mapspec.tik meta.block.tik meta.block.tik meta.animations.server.tik meta.block.tik source.scr.embedded.tik source.scr
 
+                    end weaponcommand mainhand movementspeed 1.0
+//                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.scr.embedded.tik source.scr
+//                  ^^^ constant.language.tik
+//                      ^^^^^^^^^^^^^ source.scr.embedded.tik source.scr support.function.builtin.scr
+//                                    ^^^^^^^^ source.scr.embedded.tik source.scr string.unquoted.scr
+//                                             ^^^^^^^^^^^^^ source.scr.embedded.tik source.scr support.function.builtin.scr
+//                                                           ^^^ source.scr.embedded.tik source.scr constant.numeric.scr
+
                 }
             }
 

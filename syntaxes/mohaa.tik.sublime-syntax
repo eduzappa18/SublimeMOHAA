@@ -226,7 +226,7 @@ contexts:
       scope: punctuation.section.block.end.tik
       pop: true
 
-    - match: '\b(?:enter|entry|first|last|exit|\d+\b)\b'
+    - match: '\b(?:enter|entry|first|last|exit|end|\d+\b)\b'
       scope: constant.language.tik
       embed: scope:source.scr
       embed_scope: source.scr.embedded.tik
@@ -255,7 +255,7 @@ contexts:
       scope: punctuation.section.block.end.tik
       pop: true
 
-    - match: '\b(?:enter|entry|first|last|exit|bodyfall|\d+\b)\b'
+    - match: '\b(?:enter|entry|first|last|exit|end|bodyfall|\d+\b)\b'
       scope: constant.language.tik
       push:
         - include: eol-pop
