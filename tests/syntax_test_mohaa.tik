@@ -130,6 +130,11 @@
 //                        ^^^^^^ support.function.builtin.tik
 //                               ^^^^^^^^ string.unquoted.tik
 
+        lod_scale 100
+// ^^^^^^^^^^^^^^^^^^^^ meta.setup.tik meta.block.tik
+//      ^^^^^^^^^ support.function.builtin.tik
+//                ^^^ constant.numeric.tik
+
         $include models/human/heads/us_old_heads.tik
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.setup.tik meta.block.tik
 //      ^^^^^^^^ keyword.control.tik
