@@ -366,7 +366,7 @@ contexts:
     - include: client-expression
 
   client-expression:
-    - match: \b{{client_commands}}\b
+    - match: \b{{client_commands}}\b(?!/)
       scope: support.function.builtin.tik
 
     - match: \b{{emitter_vars}}\b

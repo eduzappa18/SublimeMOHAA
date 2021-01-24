@@ -226,6 +226,11 @@
 //          ^^^^^ support.function.builtin.tik
 //                ^^^^^^^^^^^^^^^^^^^^^^ meta.file-path.tik string.unquoted.tik
 
+            cache sound/environment/switch/crank.wav
+//         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.init.tik meta.block.tik meta.client.tik meta.block.tik
+//          ^^^^^ support.function.builtin.tik
+//                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.file-path.tik string.unquoted.tik
+
             delayedsfx 0.1 blockdlight 300 0.25
 // ^^^^^^^^^^^^^^^^^^^^^^^^ meta.init.tik meta.block.tik meta.client.tik meta.block.tik - meta.emitter.tik
 //          ^^^^^^^^^^ support.function.builtin.tik
