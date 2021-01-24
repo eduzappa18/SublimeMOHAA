@@ -261,12 +261,10 @@ contexts:
         - include: eol-pop
         - include: emitters
 
-        - match: '\b{{client_commands}}\b'
+        - match: '\b{{client_commands}}\b(?!/)'
           scope: support.function.builtin.tik
 
-        - include: literal-number
-        - include: unquoted-string
-        - include: literal-string
+        - include: arguments
 
     - match: '\b(?:commanddelay|anim)\b'
       scope: support.function.builtin.tik

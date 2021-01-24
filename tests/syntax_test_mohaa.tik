@@ -444,6 +444,13 @@
 //                                                              ^^^ constant.numeric.tik
 //                                                                  ^^^ constant.numeric.tik
 
+                    16 sound sound/footsteps/misc/2.wav 2 .3
+//                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.animations.tik meta.block.tik meta.mapspec.tik meta.block.tik meta.block.tik meta.animations.client.tik meta.block.tik
+//                  ^^ constant.language.tik
+//                     ^^^^^ support.function.builtin.tik
+//                           ^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.file-path.tik string.unquoted.tik
+//                                                      ^ constant.numeric.tik
+//                                                        ^^ constant.numeric.tik
                 }
 // ^^^^^^^^^^^^^^ meta.animations.tik meta.block.tik meta.mapspec.tik meta.block.tik meta.block.tik meta.animations.client.tik meta.block.tik
 //              ^ punctuation.section.block.end.tik
