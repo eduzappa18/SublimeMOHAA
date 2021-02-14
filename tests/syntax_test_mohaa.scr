@@ -721,38 +721,84 @@ local.master aliascache gasmask1 sound/characters/gasmask1.wav soundparms 1.0 0.
 //                               ^ punctuation.accessor.dot.scr
 //                                ^^^^^^ meta.property.object.scr support.function.builtin.scr
 
-    $thing.adminrights
-    $thing.angle
-    $thing.angles
-    $thing.classname
-    $thing.dmteam
-    $thing.entnum
-    $thing.fireheld
-    $thing.forwardvector
-    $thing.health
-    $thing.inventory
-    $thing.leanleftheld
-    $thing.leanrightheld
-    $thing.leftvector
-    $thing.origin
-    $thing.rightvector
-    $thing.runheld
-    $thing.scale
-    $thing.secfireheld
-    $thing.size
-    $thing.target
-    $thing.targetname
-    $thing.upvector
-    $thing.useheld
-    $thing.userinfo
-    $thing.velocity
-    $thing.viewangles
-//  ^^^^^^ variable.language.scr
-//        ^ punctuation.accessor.dot.scr
-//         ^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+// Built-in Properties, Getters, Setters
+
+    game.detail
+    game.skill
+//  ^^^^ variable.language.scr
+//      ^ punctuation.accessor.dot.scr
+//       ^^^^^ meta.property.object.scr support.function.builtin.scr
+    game.not_builtin
+//  ^^^^ variable.language.scr
+//      ^ punctuation.accessor.dot.scr
+//       ^^^^^^^^^^^ meta.property.object.scr
 
 
-    /* built-in level properties */
+    local.actor.deathhandler
+    local.actor.enemy
+    local.actor.enemy_visible_change_time
+    local.actor.intervaldir
+
+    local.array.size
+
+    local.entity.angle
+    local.entity.angles
+    local.entity.avelocity
+    local.entity.centroid
+    local.entity.classname
+    local.entity.entnum
+    local.entity.forwardvector
+    local.entity.getmaxs
+    local.entity.getmins
+    local.entity.health
+    local.entity.leftvector
+    local.entity.max_health
+    local.entity.origin
+    local.entity.rightvector
+    local.entity.scale
+    local.entity.target
+    local.entity.targetname
+    local.entity.upvector
+    local.entity.velocity
+    local.entity.viewangles
+
+    local.player.adminrights
+    local.player.dmteam
+    local.player.fireheld
+    local.player.inventory
+    local.player.leanleftheld
+    local.player.leanrightheld
+    local.player.runheld
+    local.player.secfireheld
+    local.player.useheld
+    local.player.userinfo
+//  ^^^^^ variable.language.scr
+//       ^ punctuation.accessor.dot.scr
+//        ^^^^^^ meta.property.object.scr
+//              ^ punctuation.accessor.dot.scr
+//               ^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+
+    $player.userinfo
+//  ^^^^^^^ variable.language.scr
+//  ^ keyword.operator.targetname.scr
+//         ^ punctuation.accessor.dot.scr
+//          ^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+
+    $player[1].userinfo
+//  ^^^^^^^ variable.language.scr
+//  ^ keyword.operator.targetname.scr
+//         ^^^ meta.brackets.scr
+//         ^ punctuation.section.brackets.begin.scr
+//          ^ constant.numeric.scr
+//           ^ punctuation.section.brackets.end.scr
+//            ^ punctuation.accessor.dot.scr
+//             ^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+
+    local.userinfo
+//  ^^^^^ variable.language.scr
+//       ^ punctuation.accessor.dot.scr
+//        ^^^^^^^^ meta.property.object.scr - support.function.builtin.scr
+
 
     level.alarm
     level.badplace
@@ -786,7 +832,27 @@ local.master aliascache gasmask1 sound/characters/gasmask1.wav soundparms 1.0 0.
 //       ^ punctuation.accessor.dot.scr
 //        ^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
 
+    level.ent.time
+//  ^^^^^ variable.language.scr
+//       ^ punctuation.accessor.dot.scr
+//        ^^^ meta.property.object.scr
+//           ^ punctuation.accessor.dot.scr
+//            ^^^^ meta.property.object.scr - support.function.builtin.scr
+
     level.not_builtin
 //  ^^^^^ variable.language.scr
 //       ^ punctuation.accessor.dot.scr
 //        ^^^^^^^^^^^ meta.property.object.scr - support.function.builtin.scr
+
+
+    parm.motionfail
+    parm.movedone
+    parm.movefail
+    parm.other
+    parm.owner
+    parm.previousthread
+    parm.sayfail
+    parm.upperfail
+//  ^^^^ variable.language.scr
+//      ^ punctuation.accessor.dot.scr
+//       ^^^^^^^^^ meta.property.object.scr support.function.builtin.scr

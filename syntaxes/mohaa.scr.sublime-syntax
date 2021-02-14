@@ -27,10 +27,13 @@ variables:
     )\b
   builtin_props: |-
     (?xi:
-      useheld|fireheld|secfireheld|leanleftheld|leanrightheld|runheld|inventory|adminrights|userinfo|dmteam|
-      size|entnum|classname|origin|angle|angles|viewangles|forwardvector|leftvector|rightvector|upvector|
-      target|targetname|health|velocity|scale
+      adminrights|angle|angles|avelocity|centroid|classname|deathhandler|dmteam|enemy|enemy_visible_change_time|
+      entnum|fireheld|forwardvector|getmaxs|getmins|health|intervaldir|inventory|leanleftheld|leanrightheld|
+      leftvector|max_health|origin|rightvector|runheld|scale|secfireheld|size|target|targetname|upvector|useheld|
+      userinfo|velocity|viewangles
     )\b
+  parm_props: (?i:motionfail|movedone|movefail|other|owner|previousthread|sayfail|upperfail)\b
+  game_props: (?i:detail|skill)\b
   level_phases: (?i:prespawn|spawn|postthink|playerspawn|roundstart|allieswin|axiswin|draw)
   thread_lookahead: |-
     (?x:
@@ -412,6 +415,20 @@ contexts:
       scope: variable.language.this.scr
       pop: true
 
+    - match: (?i:\b(game)(\.))({{game_props}})
+      captures:
+        1: variable.language.scr
+        2: punctuation.accessor.dot.scr
+        3: meta.property.object.scr support.function.builtin.scr
+      pop: true
+
+    - match: (?i:\b(parm)(\.)({{parm_props}}))
+      captures:
+        1: variable.language.scr
+        2: punctuation.accessor.dot.scr
+        3: meta.property.object.scr support.function.builtin.scr
+      pop: true
+
     - match: (?i:\blevel\b(?=\s+waittill\b))
       scope: variable.language.scr
       set: waittill-level-phases
@@ -421,6 +438,13 @@ contexts:
         1: variable.language.scr
         2: punctuation.accessor.dot.scr
         3: meta.property.object.scr support.function.builtin.scr
+      pop: true
+
+    - match: (?i:\b(game|level|local|group)(\.))({{builtin_props}})
+      captures:
+        1: variable.language.scr
+        2: punctuation.accessor.dot.scr
+        3: meta.property.object.scr
       pop: true
 
     - match: '\b(?:game|level|local|group|parm)\b'
