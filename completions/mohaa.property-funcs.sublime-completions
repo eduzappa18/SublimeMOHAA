@@ -4,15 +4,35 @@
 	"completions":
 	[
 		"adminrights",
+		"angle",
+		"angles",
+		"avelocity",
+		"centroid",
+		"classname",
+		"dmteam",
+		"entnum",
 		"fireheld",
+		"forwardvector",
+		"getmaxs",
+		"getmins",
+		"health",
 		"inventory",
 		"leanleftheld",
 		"leanrightheld",
+		"leftvector",
+		"max_health",
 		"origin",
+		"rightvector",
 		"runheld",
+		"scale",
 		"secfireheld",
 		"size",
+		"target",
+		"targetname",
+		"upvector",
 		"useheld",
-		"userinfo"
+		"userinfo",
+		"velocity",
+		"viewangles"
 	]
 }
