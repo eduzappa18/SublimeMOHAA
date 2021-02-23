@@ -20,7 +20,7 @@ variables:
   storage: '(?:bool|entity|float|int|string)'
   level_props: |-
     (?xi:
-      alarm|badplace|bombs_planted|clockside|dmrespawning|dmroundlimit|found_secrets|ignoreclock|
+      alarm|badplace|bombs_planted|clockside|dmrespawning|dmroundlimit|found_secrets|
       loop_protection|nodrophealth|objectivebased|papers|planting_team|rain_density|rain_length|
       rain_min_dist|rain_numshaders|rain_shader|rain_slant|rain_speed|rain_speed_vary|rain_width|
       removebadplace|roundbased|targets_destroyed|targets_to_destroy|time|total_secrets

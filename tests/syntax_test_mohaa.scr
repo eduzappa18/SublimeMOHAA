@@ -807,7 +807,6 @@ local.master aliascache gasmask1 sound/characters/gasmask1.wav soundparms 1.0 0.
     level.dmrespawning
     level.dmroundlimit
     level.found_secrets
-    level.ignoreclock
     level.loop_protection
     level.nodrophealth
     level.objectivebased
