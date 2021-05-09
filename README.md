@@ -1,16 +1,18 @@
 # MOHAA Syntax Highlighting for Sublime Text.
 ## Syntax Definitions for [Medal of Honor: Allied Assault](https://en.wikipedia.org/wiki/Medal_of_Honor:_Allied_Assault) scripting languages.
 
-### The currently supported file types are:
+### This package contains:
 
-* [x] `.scr` Morpheus Script files. (*Syntax Highlighting, Completions & Snippets.*)
-* [x] `.st` State files. (*Syntax Highlighting.*)
-* [x] `.shader` Shader files. (*Syntax Highlighting.*)
-* [x] `.tik` TIKI files. (*Syntax Highlighting.*)
-* [x] `.cfg` Config files. (*Syntax Highlighting & Completions*)
-* [x] `.urc` Menu files. (*Syntax Highlighting.*)
-* [x] `.mus` Music files. (*Syntax Highlighting.*)
-* [x] `.log` Server log files. (*Syntax Highlighting.*)
+|File Type|Syntax Highlighting|Completions|Snippets|
+|---------|:-----------------:|:---------:|:------:|
+|`.scr` Morpheus Script files|✔|✔|✔|
+|`.tik` TIKI files|✔|❌|❌|
+|`.st` State Machine files|✔|❌|❌|
+|`.urc` Uber Resource Script files|✔|❌|❌|
+|`.mus` Music files|✔|❌|❌|
+|`.shader` Shader files|✔|❌|❌|
+|`.cfg` Config files|✔|✔|❌|
+|`.log` Server log files|✔|❌|❌|
 
 _____________________________________________________________
 
@@ -53,4 +55,4 @@ _____________________________________________________________
 
 
 **Light & Dark Themes**  
-![Themes](https://raw.githubusercontent.com/eduzappa18/SublimeMOHAA/master/screenshots/themes.gif)
+![Themes](screenshots/themes.gif)
