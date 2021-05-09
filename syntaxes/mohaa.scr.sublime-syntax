@@ -21,16 +21,16 @@ variables:
   level_props: |-
     (?xi:
       alarm|badplace|bombs_planted|clockside|dmrespawning|dmroundlimit|found_secrets|
-      loop_protection|nodrophealth|objectivebased|papers|planting_team|rain_density|rain_length|
+      loop_protection|nodrophealth|nodropweapons|objectivebased|papers|planting_team|rain_density|rain_length|
       rain_min_dist|rain_numshaders|rain_shader|rain_slant|rain_speed|rain_speed_vary|rain_width|
-      removebadplace|roundbased|targets_destroyed|targets_to_destroy|time|total_secrets
+      removebadplace|roundbased|roundstarted|targets_destroyed|targets_to_destroy|time|total_secrets
     )\b
   builtin_props: |-
     (?xi:
       accuracy|adminrights|alarmnode|alarmthread|ammo_grenade|angle|angles|avelocity|centroid|classname|deathhandler|
       dmteam|enemy|enemy_visible_change_time|entnum|fireheld|forwardvector|getmaxs|getmins|health|intervaldir|inventory|
-      leanleftheld|leanrightheld|leftvector|max_health|origin|rightvector|runheld|scale|secfireheld|size|target|
-      targetname|upvector|useheld|userinfo|velocity|viewangles
+      leanleftheld|leanrightheld|leftvector|max_health|origin|rightvector|runheld|scale|secfireheld|secondaryfireheld|
+      size|target|targetname|upvector|useheld|userinfo|velocity|viewangles
     )\b
   parm_props: (?i:motionfail|movedone|movefail|other|owner|previousthread|sayfail|upperfail)\b
   game_props: (?i:detail|skill)\b
@@ -66,7 +66,7 @@ variables:
     (?xi:
       #A
       abs|accuracy|actionanimend|activate|activateitem|activatenewweapon|activatepapers|ActivateSound|activatetrigger|
-      active|actor|actorinfo|add|additionalstartammo|addkills|addmusictrigger|addobjective|addownervelocity|
+      activator|active|actor|actorinfo|add|additionalstartammo|addkills|addmusictrigger|addobjective|addownervelocity|
       addrandomspeaker|addreverbtrigger|addspeaker|addvelocity|ai_event|ai_off|ai_on|ai_visiondistance|aibulletspread|
       aimat|aimoffset|aimtarget|aimtolerance|airange|alarmnode|alarmthread|alias|aliascache|all_ai_off|all_ai_on|
       AlliesObjNum|alpha|altcurrent|altfallback|altreverblevel|altreverbtype|alwaysaway|alwaysdraw|american|ammo|
@@ -74,37 +74,38 @@ variables:
       angles_pointat|angles_toforward|angles_toleft|angles_toup|anglespeed|anim|anim_attached|anim_noclip|anim_scripted|
       animated_farplane|animated_farplane_bias|animated_farplane_color|AnimationSet|animdone|animfinal|animloop|
       animloop_legs|animloop_pain|animloop_torso|animname|animscript|animscript_attached|animscript_noclip|
-      animscript_scripted|arc|arctotarget|arena|armor|assert|attach|AttachDriverSlot|attachedmodelanim|attachgrenade|
-      attachmodel|AttachPassengerSlot|attachtohand|attachtoladder|AttachTurretSlot|attackhandler|attackmode|
-      attackplayer|auto_active|auto_join_team|auto_maxfov|auto_radius|auto_starttime|auto_state|auto_stoptime|autoaim|
-      autoputaway|avelocity|avoidplayer|AxisObjNum|
+      animscript_scripted|arc|arctotarget|arena|armor|armwithweapons|assert|attach|AttachDriverSlot|attachedmodelanim|
+      attachgrenade|attachmodel|AttachPassengerSlot|attachtohand|attachtoladder|AttachTurretSlot|attackhandler|
+      attackmode|attackplayer|auto_active|auto_join_team|auto_maxfov|auto_radius|auto_starttime|auto_state|
+      auto_stoptime|autoaim|autoputaway|avelocity|avoidplayer|AxisObjNum|
       #B
       back_mass|balconyheight|barreltype|base_velocity|beam|becomebomb|bedead|BeginCycle|bind|blendtime|blockend|
-      blockstart|bloodmodel|BlowUp|bool|bouncefactor|bouncesound|bouncesound_hard|bouncesound_metal|bouncesound_water|
-      bouncesoundchance|bouncetouch|breakspecial|brushmodel|bsptransition|bulletcount|bulletdamage|bulletknockback|
-      bulletlarge|bulletrange|bulletspread|burstFireSettings|
+      blockstart|bloodmodel|BlowUp|bool|bounce|bounceBackwardsVelocity|bouncefactor|bounceForwardsVelocity|bouncesound|
+      bouncesound_hard|bouncesound_metal|bouncesound_water|bouncesoundchance|bouncetouch|breakspecial|brushmodel|
+      bsptransition|bulletcount|bulletdamage|bulletknockback|bulletlarge|bulletrange|bulletspread|burstFireSettings|
       #C
       cache|calcgrenadetoss|calcgrenadetoss2|callvote|cam|camera|camera_think|cancelFor|canhitowner|canjump|canmoveto|
-      cansee|canseenoents|canshoot|canshootenemyfrom|cantpartialreload|censor|centerprint|centroid|chance|channel|
-      charge|chargelife|chargespeed|checkanims|checkonground|cinematic|classname|clear_objective_pos|clearAimTarget|
-      clearfade|clearletterbox|clearowner|clip_add|clip_empty|clip_fill|clipsize|close|closeportal|cnt|collisionent|
-      color|commanddelay|Complete|cone|connect_paths|constantdamage|continue|ControlledBy|convergeTime|cooktime|coord|
-      correctweaponattachments|count|crawlto|CreateListener|crosshair|crouchto|cuecamera|cueplayer|current|cut|Cycles|
+      cansee|canseenoents|canshoot|canshootenemyfrom|cantpartialreload|canuse|censor|centerprint|centroid|chance|
+      channel|charge|chargelife|chargespeed|checkanims|checkonground|cinematic|classname|claypidgeon|
+      clear_objective_pos|clearAimTarget|clearfade|clearletterbox|clearowner|clip_add|clip_empty|clip_fill|clipsize|
+      close|closeportal|cnt|collisionent|color|commanddelay|Complete|cone|connect_paths|constantdamage|continue|
+      controlledBy|convergeTime|cooktime|coord|correctweaponattachments|count|crawlto|CreateListener|crosshair|crouchto|
+      cuecamera|cueplayer|curiousoff|curiouson|current|cut|cycles|
       #D
-      damage|damage_multiplier|damage_type|damageagain|damageeveryframe|damagemult|damagepuff|damagesounds|damagetype|
-      dampening|deactivate|deactivateweapon|dead|deadbody|deathembalm|deathhandler|deathsinkeachframe|deathsinkstart|
-      debrismodel|debristype|debug_int3|debugline|defaultnonvislevel|delay|delaythrow|delete|DestroyModel|detach|
-      detachallchildren|DetachDriverSlot|detachgrenade|DetachPassengerSlot|DetachTurretSlot|detail|dialogneeded|
-      disablespawn|disconnect_paths|disguise_accept_thread|disguise_level|disguise_period|disguise_range|
-      distancetoenemy|dlight|dm|dmammorequired|dmamount|dmbulletcount|dmbulletdamage|dmbulletrange|dmbulletspread|
-      dmcantpartialreload|dmcrosshair|dmdeathdrop|dmfiredelay|dmfirespreadmult|dmg|dmlife|dmmaxamount|dmmessage|
-      dmmovementspeed|dmprojectile|dmrealism|dmstartammo|dmteam|dmzoomspreadmult|doActivate|doBlocked|doclose|
-      dog|doinit|dojitter|donedeath|donefiring|donereloading|dontdropweapons|doopen|door_triggerfield|doorclosed|
-      dooropened|doortype|doroundtransition|doTouch|doUse|dprintln|drawhud|drivable|drive|driveNoWait|dropitems|
-      droptofloor|dropturret|drunk|dumb|duration|
+      damage|damage_multiplier|damage_type|damageable|damageagain|damageeveryframe|damagemult|damagepuff|damagesounds|
+      damagetype|dampening|deactivate|deactivateweapon|dead|deadbody|deathembalm|deathhandler|deathsinkeachframe|
+      deathsinkstart|debrismodel|debristype|debug_int3|debugline|defaultnonvislevel|delay|delaythrow|delete|
+      DestroyModel|detach|detachallchildren|DetachDriverSlot|detachgrenade|detachPassengerSlot|DetachTurretSlot|detail|
+      dialogneeded|dieinwater|disablespawn|disconnect_paths|disguise_accept_thread|disguise_level|disguise_period|
+      disguise_range|distancetoenemy|dlight|dm|dmammorequired|dmamount|dmbulletcount|dmbulletdamage|dmbulletrange|
+      dmbulletspread|dmcantpartialreload|dmcrosshair|dmdeathdrop|dmfiredelay|dmfirespreadmult|dmg|dmlife|dmmaxamount|
+      dmmessage|dmmovementspeed|dmprojectile|dmrealism|dmstartammo|dmteam|dmzoomspreadmult|doActivate|doBlocked|doclose|
+      dog|doinit|dojitter|donedeath|donefiring|donereloading|dontdrophealth|dontdropweapons|doopen|door_triggerfield|
+      doorclosed|dooropened|doortype|doroundtransition|doTouch|doUse|dprintln|drawhud|drivable|drive|driveNoWait|
+      dropitems|droptofloor|dropturret|drunk|duckableglue|dumb|duration|
       #E
       earthquake|edgeeffect|edgetriggered|effects|emitter|emotion|enableEnemy|enablePain|enablespawn|endactionanim|
-      endalpha|endArray|EndCycle|endlevel|endpath|endpoint|enemy|enemy_visible_change_time|enemysharerange|
+      endalpha|endArray|EndCycle|endlevel|endpath|endpoint|enemy|enemy_visible_change_time|enemyname|enemysharerange|
       enemyswitchdisable|enemyswitchenable|ensureforwardoffladder|ensureoverladder|enter|entity|entitystart|entnum|
       error|exec|exit|explode|explodeontouch|explosionattack|explosioneffect|explosionmodel|explosionoffset|
       explosions|ExplosionSound|eyeslookat|
@@ -113,12 +114,14 @@ variables:
       farclipoverride|farplane|farplane_bias|farplane_color|farplane_cull|farplaneclipcolor|favoriteenemy|findendpoint|
       findenemy|finishroundtransition|finishuseanim|finishuseobject|fire|fire_grenade|firedelay|FireOnStartUp|
       firespreadmult|firetype|firewarmupdelay|fixedleash|flags|flash|float|flypath|follow|follow_distance|follow_yaw|
-      follow_yaw_absolute|follow_yaw_relative|followpath|forceactivate|forcelegsstate|forcemusic|forcetorsostate|
-      forwardvector|fov|freezeplayer|front_mass|fullheal|fullstop|fuse|
+      follow_yaw_absolute|follow_yaw_relative|followpath|forceactivate|forcedrophealth|forcedropweapon|
+      forcelandminemeasure|forcelegsstate|forcemusic|forcetorsostate|forwardvector|fov|freezeplayer|front_mass|
+      fullheal|fullstop|fuse|
       #G
-      gameversion|german|get_render_terrain|getboundkey1|getboundkey2|getcontrollerangles|getcvar|GetLocalYawFromVector|
-      getmaxs|getmins|getmovement|getposition|GetRunAnim|gettagangles|gettagposition|gettargetentity|GetWalkAnim|ghost|
-      give|givedynitem|giveweapon|globaltranslate|glue|gotkill|gravity|gren_awareness|gun|gvo|
+      gameversion|german|get_render_terrain|getboundkey1|getboundkey2|getcontrollerangles|getcurrentdmweapontype|
+      getcvar|getentbyentnum|GetLocalYawFromVector|getmaxs|getmins|getmovement|getposition|GetRunAnim|gettagangles|
+      gettagposition|gettargetentity|GetWalkAnim|ghost|give|givedynitem|giveweapon|globaltranslate|glue|gotkill|
+      gravity|gren_awareness|gun|gvo|
       #H
       handlespawn|has_disguise|hascompletelookahead|headmodel|headskin|heal|health|health_postspawn|healthonly|hearing|
       heatseek|hide|hidemenu|hidemouse|hitdamage|hiteffect|holster|holsterangles|holsteroffset|holsterscale|holstertag|
@@ -126,77 +129,83 @@ variables:
       huddraw_virtualsize|hurt|
       #I
       ID|idle|idleCheckOffset|idleinit|idlesay|ignorebadplaces|ignoreclock|immediateremove|immune|impactmarkorientation|
-      impactmarkradius|impactmarkshader|initialize|inpvs|inreload|int|interrupt_point|interval|intervaldir|invnext|
-      invprev|iprint|iprintln|iprintln_noloc|iprintlnbold|iprintlnbold_noloc|is_disguised|is_enemy_visible|isabandoned|
-      isAlive|isdonut|isimmune|isloopinganim|istouching|isturnedon|item|item_droptofloor|
-      item_pickup|
+      impactmarkradius|impactmarkshader|initialize|injail|inpvs|inreload|int|interrupt_point|interval|intervaldir|
+      invnext|invprev|iprint|iprintln|iprintln_noloc|iprintlnbold|iprintlnbold_noloc|is_disguised|is_enemy_visible|
+      isabandoned|isAlive|isdonut|isEscaping|isimmune|isinside|isloopinganim|isOpen|isSpectator|istouching|isturnedon|
+      item|item_droptofloor|item_pickup|
       #J
-      jitteramount|join_team|joinTeam|jump|jumpto|jumpxy|
+      jailassistescape|jailescape|jailescapestop|jitteramount|join_team|joinTeam|jump|jumpto|jumpxy|
       #K
-      key|kickdir|kill|killattach|killclass|killed|killedeffect|killent|killtarget|killthread|killtrace|knockback|
+      key|kickdir|kill|kill_axis|killattach|killclass|killed|killedeffect|killent|killtarget|killthread|killtrace|
+      knockback|
       #L
-      land_angles|land_radius|landminedamage|last_enemy_visible_time|launchsound|lavaalpha|lavacolor|leash|leave_team|
-      leftvector|letterbox|leveltransition|life|light|lightBlue|lightGreen|lightOff|lightOn|lightRadius|lightRed|
-      lightStyle|limit|linkdoor|linkturret|lip|listinventory|load|loaded|loc_convert_string|locatecamera|lock|
-      lockmovement|locprint|lod_angles|lod_discard|lod_model|lod_roll|lod_spawn|lod_think|lod_yaw|logstats|
-      lookaroundangle|lookat|loop|loopfire|loopsound|low_wall_arc|
+      land_angles|land_radius|landmark_name|landminedamage|last_enemy_visible_time|launchsound|lavaalpha|lavacolor|
+      leash|leave_team|leftvector|letterbox|leveltransition|life|light|lightBlue|lightGreen|lightOff|lightOn|
+      lightRadius|lightRed|lightStyle|limit|linkdoor|linkturret|lip|listinventory|load|loaded|loc_convert_string|
+      locatecamera|lock|lockmovement|locprint|lod_angles|lod_discard|lod_model|lod_roll|lod_spawn|lod_think|lod_yaw|
+      logstats|lookaroundangle|lookat|loop|loopfire|loopsound|low_wall_arc|
       #M
       mainattachtotag|makeArray|makenoise|map|maps|mass|max_health|max_time|maxalpha|maxamount|maxchargetime|
       maxdelay|maxdist|maxdonut|MaxDuration|maxfiremovement|maxgibs|maxIdlePitch|maxIdleYaw|maxmouthangle|
       maxmovementsound|MaxNumShots|maxoffset|maxrange|maxs|maxuseangle|maxYawOffset|meansofdeath|meleeattackend|
       meleeattackstart|message|min_dist|min_time|minchargetime|mindelay|mindist|mindonut|MinDuration|minlife|
       MinNumShots|minoffset|minrange|mins|minspeed|missionfailed|missiontransition|model|modelname|modheight|
-      modifydrive|modifyflypath|mood|motionfail|move|moveanim|moveBackward|movedir|movedone|movedoneradius|moveDown|
-      moveEast|movefail|moveForward|moveLeft|movementspeed|movementstealth|moveNorth|moveOffset|moveplayer|moveposflags|
-      moveRight|movesound|moveSouth|moveto|movetopos|moveUp|moveWest|moving_from_anim|mprint|mprintln|multifaceted|
-      mumble|music|musicvolume|
+      modheightfloat|modifydrive|modifyflypath|mood|motionfail|move|moveanim|moveBackward|movedir|movedone|
+      movedoneradius|moveDown|moveEast|movefail|moveForward|moveLeft|movementspeed|movementstealth|moveNorth|
+      moveOffset|moveplayer|moveposflags|moveRight|movesound|moveSouth|moveto|movetopos|moveUp|moveWest|
+      moving_from_anim|mprint|mprintln|multifaceted|mumble|music|musicvolume|
       #N
-      name|neverdraw|new|next|nextcamera|nextdrive|nextmap|nextpaintime|nextpath|no_idle|no_remove|noammosound|
-      noanimlerp|noclip|nodamage|noise|nolongpain|noncinematic|nonvislevel|normal_damage|normal_health|normalangles|
-      normaldraw|northyaw|noshadow|nosurprise|notactive|notarget|notdroppable|noticescale|notouchdamage|notready|
-      notshootable|notsolid|nottriggerable|nowatch|num_loops|numarenas|numfireanims|numsegments|numspherebeams|
+      name|nationality|nationalityprefix|neverdraw|new|next|nextcamera|nextdrive|nextmap|nextpaintime|nextpath|no_idle|
+      no_remove|noammosound|noanimlerp|noclip|nodamage|noise|nolongpain|noncinematic|nonvislevel|normal_damage|
+      normal_health|normalangles|normaldraw|northyaw|noshadow|nosurprise|notactive|notarget|notdroppable|noticescale|
+      notouchdamage|notready|notshootable|notsolid|nottriggerable|nowatch|num_loops|numarenas|numfireanims|
+      numsegments|numspherebeams|
       #O
       objectivecount|ObjectiveNbr|off|offhandattachtotag|offset|on|oneshot|onfire|open|openangle|opendot|openportal|
       orbit|orbit_height|orientedbbox|origin|other|overcooked|overcooked_warning|overlap|owner|
       #P
-      pain|painhandler|path_relativeyaw|pathdist|patrolpath|pause|pauseanims|perferredweapon|persist|physics_off|
-      physics_on|physics_velocity|pickup|pickup_done|pickup_thread|pickupoffset|pickupsound|pickweapon|pitchCaps|
-      pitchSpeed|placeturret|play|playerspawn|PlayMovie|playpreimpact|playsound|pointat|pophelmet|popmenu|position|
-      powerupname|poweruptimer|preimpactsound|preimpactsoundprob|preimpactsoundtime|prespawnsentient|prethink|prev|
-      previewreverb|previousthread|prevpath|primarydmweapon|print|print3d|println|projectile|psetviewangles|pusher|
-      pushmenu|pushsound|putawayweapon|
+      pain|painhandler|path_relativeyaw|pathdist|pathDrivable|patrolpath|pause|pauseanims|perferredweapon|persist|
+      physics_off|physics_on|physics_velocity|pickup|pickup_done|pickup_thread|pickupoffset|pickupsound|pickweapon|
+      pingformines|pitchCaps|pitchSpeed|placeturret|play|playerspawn|PlayMovie|playpreimpact|playreloadsound|playsound|
+      pointat|pophelmet|popmenu|position|powerupname|poweruptimer|prealarmthread|preimpactsound|preimpactsoundprob|
+      preimpactsoundtime|prespawnsentient|prethink|prev|previewreverb|previousthread|prevpath|primarydmweapon|
+      primaryfireheld|print|print3d|println|projectile|projectilevulnerable|psetviewangles|pusher|pushmenu|pushsound|
+      putawayweapon|
       #Q
       QueryDriverSlotAngles|QueryDriverSlotEntity|QueryDriverSlotPosition|QueryDriverSlotStatus|QueryFreeDriverSlot|
       QueryFreePassengerSlot|QueryFreeTurretSlot|QueryPassengerSlotEntity|QueryPassengerSlotPosition|
-      QueryPassengerSlotStatus|QueryTurretSlotEntity|QueryTurretSlotPosition|QueryTurretSlotStatus|quiet|quitTeam|
+      QueryPassengerSlotStatus|QuerySpeed|QueryTurretSlotEntity|QueryTurretSlotPosition|QueryTurretSlotStatus|
+      quiet|quitTeam|
       #R
       radius|Radius|radiusdamage|radnum|random|random_velocity|randomfloat|randomint|range|rank|ready|ReadyToFire|
       realism|releasefire|releaseplayer|reload|reload_mg42|reloaddelay|reloadshots|reloadweapon|remove|
       removeattachedmodel|removeclass|removeent|removeimmune|removeondeath|removewhenstopped|renamepath|render_terrain|
       rendereffects|replace|reset|reset_time|resetdelay|resethaveitem|resetleash|resetreverb|resetsound|resetspeed|
-      resetstate|respawn|respawn_done|respawnsound|restoremusicvolume|restoresoundtrack|reverblevel|reverbtype|
-      rightvector|roll|rotateaxis|rotateaxisdown|rotateaxisdownto|rotateaxisup|rotateaxisupto|rotatedbbox|rotatedownto|
-      rotateto|rotateupto|rotateX|rotateXdown|rotateXdownto|rotateXup|rotateXupto|rotateY|rotateYdown|rotateYdownto|
-      rotateYup|rotateYupto|rotateZ|rotateZdown|rotateZdownto|rotateZup|rotateZupto|runanimrate|runsounds|runto|
+      resetstate|respawn|respawn_done|respawnsound|restoremusicvolume|restoresoundtrack|reverblevel|reverbtype|revive|
+      rightvector|roll|rotate|rotateaxis|rotateaxisdown|rotateaxisdownto|rotateaxisup|rotateaxisupto|rotatedbbox|
+      rotatedownto|rotateto|rotateupto|rotateX|rotateXdown|rotateXdownto|rotateXup|rotateXupto|rotateY|rotateYdown|
+      rotateYdownto|rotateYup|rotateYupto|rotateZ|rotateZdown|rotateZdownto|rotateZup|rotateZupto|runanimrate|
+      runsounds|runto|
       #S
       safeholster|safesolid|safezoom|save|savemap|savename|say|saydone|sayfail|scale|scalerate|score|scriptshader|
       scriptslave_followingpath|scriptslave_movedone|seatanglesoffset|seatoffset|secondary|secondaryammoinhud|self|
       semiauto|server|set_objective_pos|set_respawn|set_respawn_time|setactionanim|setaimanim|setaimmotionanim|
       setAimOffset|setaimtarget|setAimTarget|setanim|setanimlength|setbaseentity|setcollisionentity|setcontrollerangles|
       SetCurrent|setcurrentfireanim|setcurrentobjective|setcvar|SetDamage|setdamage|setfadetime|setfov|sethelmet|
-      setlightstyle|setmeansofdeath|setmotionanim|setpath|setPlayerUsable|setreloadcover|setsay|setshaderdata|
-      setshadertime|setsize|setsoundparameters|setspeed|setsynctime|settarget|settargetentity|settargetname|setthread|
-      setupperanim|setusable|setusethread|setvolumeparameters|setweapon|setyawfrombone|severity|shader|shadow|
-      share_enemy|share_grenade|shareclip|shoot|shootableonly|shootradius|show|showmenu|showquakes|showweapon|sight|
-      sighttrace|silent|sinksound|skidding|skill|skipcinematic|skyalpha|skybox_farplane|skybox_speed|skyportal|
-      smashthroughglass|solid|sound|sound_awareness|sound_close_end|sound_close_start|sound_locked|sound_message|
-      sound_open_end|sound_open_start|soundparms|SoundSet|soundtrack|sp|spawn|spawnbloodygibs|spawnchance|spawnflags|
-      spawnitem|spawnlife|spawnmodel|spawnrate|spawnspot|spawntarget|spawntargetname|spawnturret|spectator|speed|spin|
-      SplinePath_create|sprealism|start|startammo|startangles|startfiring|startFiring|startingammotoowner|startitem|
-      startorigin|startuseobject|startyaw|state|state_backwards|stationary|stats|steerinplace|stickybombwet|stop|
-      stopatend|stopfire|stopFiring|stoploopsound|stoponfire|stopped|stoprotating|stopsound|stopwatch|StopWatchDuration|
-      stopwatchingactor|string|stuffcmd|stufftext|stunend|stunstart|suppresschance|suppressHeight|suppressTime|
-      suppressWaitTime|suppressWidth|surface|svflags|switchfacet|
+      setlightstyle|setmeansofdeath|setmotionanim|setpath|setPlayerUsable|setreloadcover|setsay|setscoreboardtoggle|
+      setshaderdata|setshadertime|setsize|setsoundparameters|setspeed|setswitchthread|setsynctime|settarget|
+      settargetentity|settargetname|setthread|setupperanim|setusable|setusethread|setvolumeparameters|setweapon|
+      setweaponidlestate|setyawfrombone|severity|shader|shadow|share_enemy|share_grenade|shareclip|shoot|shootableonly|
+      shootradius|show|showmenu|showquakes|showweapon|sight|sighttrace|silent|sinksound|skidding|skill|skipcinematic|
+      skyalpha|skybox_farplane|skybox_speed|skyportal|smashthroughglass|solid|sound|sound_awareness|sound_close_end|
+      sound_close_start|sound_locked|sound_message|sound_open_end|sound_open_start|soundparms|SoundSet|soundtrack|sp|
+      spawn|spawnbloodygibs|spawnchance|spawnflags|spawnitem|spawnlife|spawnmodel|spawnrate|spawnspot|spawntarget|
+      spawntargetname|spawnturret|spectator|speed|spin|SplinePath_create|sprealism|start|startammo|startangles|
+      startfiring|startFiring|startingammotoowner|startitem|startorigin|startuseobject|startyaw|state|state_backwards|
+      stationary|stats|steerinplace|stickybombwet|stop|stopatend|StopBackwardsVelocity|stopfire|stopFiring|
+      StopForwardsVelocity|stoploopsound|stoponfire|stopped|stoprotating|stopsound|stopteamrespawn|stopwatch|
+      StopWatchDuration|stopwatchingactor|string|stuffcmd|stufftext|stunend|stunstart|suppresschance|suppressHeight|
+      suppressTime|suppressWaitTime|suppressWidth|surface|svflags|switchfacet|
       #T
       take|takeall|takedamage|TakeOver|takepain|target|targetname|targettype|team|teamwin|tele|testmojo|testplayeranim|
       testthread|tether|Text|thinkstate|thread|threadmove|threatbias|throughmetal|throughwood|throw|throwgib|throwsound|
@@ -211,17 +220,17 @@ variables:
       usenoammo|userdistance|usestuff|useweaponclass|
       #V
       vector_add|vector_closer|vector_cross|vector_dot|vector_length|vector_normalize|vector_scale|vector_subtract|
-      vector_toangles|vector_within|vehicleanim|vehiclebouncy|vehicledestroyed|vehicledrag|vehicleinit|vehiclemass|
-      vehicleradius|vehicleRoll|vehiclerollingresistance|vehiclesoudnentity_updatetraces|vehiclesoundentity_postspawn|
-      vehiclespeed|vehiclespringy|vehicletread|VehicleWheelCorners|vehicleYaw|vehicleZ|velocity|viewangles|viewanimate|
-      viewattach|viewdelete|viewdeleteall|viewdetach|viewdetachall|viewjitter|viewkick|viewlastframe|viewmodel|
-      viewmodelanim|viewnext|viewnextanim|viewOffset|vieworigin|viewpitch|viewprev|viewprevanim|viewroll|
-      viewsavesurfaces|viewscale|viewscaledown|viewscaleup|viewscrub|viewsetanim|viewsetanim2|viewsetanimslot|viewspawn|
-      viewthing_think|viewthingnext|viewthingprev|viewyaw|voicetype|volume|volumedamage|vote|
+      vector_toangles|vector_within|vehicle|vehicleanim|vehiclebouncy|vehicledestroyed|vehicledrag|vehicleinit|
+      vehiclemass|vehicleradius|vehicleRoll|vehiclerollingresistance|vehiclesoudnentity_updatetraces|
+      vehiclesoundentity_postspawn|vehiclespeed|vehiclespringy|vehicletread|VehicleWheelCorners|vehicleYaw|vehicleZ|
+      velocity|viewangles|viewanimate|viewattach|viewdelete|viewdeleteall|viewdetach|viewdetachall|viewjitter|
+      viewkick|viewlastframe|viewmodel|viewmodelanim|viewnext|viewnextanim|viewOffset|vieworigin|viewpitch|viewprev|
+      viewprevanim|viewroll|viewsavesurfaces|viewscale|viewscaledown|viewscaleup|viewscrub|viewsetanim|viewsetanim2|
+      viewsetanimslot|viewspawn|viewthing_think|viewthingnext|viewthingprev|viewyaw|voicetype|volume|volumedamage|vote|
       #W
       wait|waitexec|waitForState|waitframe|waitmove|waitthread|waittill|waittrigger|walkto|warmupdelay|watch|watchactor|
       watchnode|watchpath|watchstring|wateralpha|watercolor|weapdrop|weapnext|weapon|weapon_internal|weaponcommand|
-      weapongroup|weaponsubtype|weapontype|weapprev|whatis|worldhitspawn|wuss|
+      weapongroup|weaponsubtype|weapontype|weapprev|whatis|worldhitspawn|writestats|wuss|
       #Y
       yaw|yaw_offset|yawCenter|
       #Z
