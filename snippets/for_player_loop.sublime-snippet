@@ -6,6 +6,6 @@ for (local.i = 1; local.i <= \$player.size; local.i++) {
 }
 ]]></content>
 	<tabTrigger>for</tabTrigger>
-	<scope>source.scr</scope>
+	<scope>source.scr - string.quoted - meta.property - meta.waittill-levelphase.scr</scope>
 	<description>for ($player Array)</description>
 </snippet>

@@ -10,6 +10,6 @@ ihuddraw_string      ${1:<player>} ${2:<index>} ${9:<string>}
 ihuddraw_alpha       ${1:<player>} ${2:<index>} ${10:<alpha>}
 ]]></content>
 	<tabTrigger>ihuddraw</tabTrigger>
-	<scope>source.scr</scope>
+	<scope>source.scr - string.quoted - meta.property - meta.waittill-levelphase.scr</scope>
 	<description>ihuddraw …</description>
 </snippet>

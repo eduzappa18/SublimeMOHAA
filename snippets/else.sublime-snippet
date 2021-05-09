@@ -5,6 +5,6 @@ else {
 }
 ]]></content>
 	<tabTrigger>else</tabTrigger>
-	<scope>source.scr</scope>
+	<scope>source.scr - string.quoted - meta.property - meta.waittill-levelphase.scr</scope>
 	<description>else {…}</description>
 </snippet>

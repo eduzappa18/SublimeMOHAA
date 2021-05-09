@@ -5,6 +5,6 @@ if (getcvar("${1:cvar}") == "${2:value}") {
 }
 ]]></content>
 	<tabTrigger>if</tabTrigger>
-	<scope>source.scr</scope>
+	<scope>source.scr - string.quoted - meta.property - meta.waittill-levelphase.scr</scope>
 	<description>if (getcvar())</description>
 </snippet>

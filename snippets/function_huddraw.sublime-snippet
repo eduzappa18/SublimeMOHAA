@@ -10,6 +10,6 @@ huddraw_string      ${1:<index>} ${8:<string>}
 huddraw_alpha       ${1:<index>} ${9:<alpha>}
 ]]></content>
 	<tabTrigger>huddraw</tabTrigger>
-	<scope>source.scr</scope>
+	<scope>source.scr - string.quoted - meta.property - meta.waittill-levelphase.scr</scope>
 	<description>huddraw …</description>
 </snippet>
