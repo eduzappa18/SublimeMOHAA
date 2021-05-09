@@ -1,0 +1,29 @@
+SublimeMOHAA v1.1.1
+
+Changelog
+=========
+
+
+Morpheus Script Syntax Highlighting
+-----------------------------------
+  - fixed: Improved highlighting of built-in properties (getters, setters)
+  - fixed: Improved the scope of all snippets. They are ignored when writing quoted strings or object properties
+  - fixed: All missing Breakthrough commands are now present
+  - changed: "wait" and "waitframe" keywords use now the 'keyword' scope instead of the 'function' scope (it makes more sense, visually)
+  - changed: Various regex improvements
+
+
+TIKI Syntax Highlighting
+------------------------
+  - fixed: Added missing Keywords 'end' and 'lod_scale'
+  - fixed: Improved 'string.unquoted' scope for paths
+
+
+Uber Resource Script files Syntax Highlighting
+------------------------------
+  - changed: The name "Menu file" to "Uber Resource Script (menus)"
+
+
+
+For more info, please visit the xNULL forums:
+· https://www.x-null.net/forums/threads/3155-MOHAA-Syntax-Highlighting-for-Sublime-Text
