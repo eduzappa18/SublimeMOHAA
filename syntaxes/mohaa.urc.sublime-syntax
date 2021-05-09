@@ -1,6 +1,6 @@
 %YAML 1.2
 ---
-name: Menu file [.urc]
+name: Uber Resource Script (menus) [.urc]
 file_extensions:
   - urc
   - inc
