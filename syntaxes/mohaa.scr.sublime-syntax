@@ -27,10 +27,10 @@ variables:
     )\b
   builtin_props: |-
     (?xi:
-      accuracy|adminrights|alarmnode|alarmthread|ammo_grenade|angle|angles|avelocity|centroid|classname|deathhandler|
-      dmteam|enemy|enemy_visible_change_time|entnum|fireheld|forwardvector|getmaxs|getmins|health|intervaldir|inventory|
-      leanleftheld|leanrightheld|leftvector|max_health|origin|rightvector|runheld|scale|secfireheld|secondaryfireheld|
-      size|target|targetname|upvector|useheld|userinfo|velocity|viewangles
+      accuracy|adminrights|alarmnode|alarmthread|ammo_grenade|angle|angles|avelocity|brushmodel|centroid|classname|
+      deathhandler|dmteam|enemy|enemy_visible_change_time|entnum|fireheld|forwardvector|getmaxs|getmins|health|
+      intervaldir|inventory|leanleftheld|leanrightheld|leftvector|max_health|model|origin|rightvector|runheld|
+      scale|secfireheld|secondaryfireheld|size|target|targetname|upvector|useheld|userinfo|velocity|viewangles
     )\b
   parm_props: (?i:motionfail|movedone|movefail|other|owner|previousthread|sayfail|upperfail)\b
   game_props: (?i:detail|skill)\b
@@ -81,7 +81,7 @@ variables:
       #B
       back_mass|balconyheight|barreltype|base_velocity|beam|becomebomb|bedead|BeginCycle|bind|blendtime|blockend|
       blockstart|bloodmodel|BlowUp|bool|bounce|bounceBackwardsVelocity|bouncefactor|bounceForwardsVelocity|bouncesound|
-      bouncesound_hard|bouncesound_metal|bouncesound_water|bouncesoundchance|bouncetouch|breakspecial|brushmodel|
+      bouncesound_hard|bouncesound_metal|bouncesound_water|bouncesoundchance|bouncetouch|breakspecial|
       bsptransition|bulletcount|bulletdamage|bulletknockback|bulletlarge|bulletrange|bulletspread|burstFireSettings|
       #C
       cache|calcgrenadetoss|calcgrenadetoss2|callvote|cam|camera|camera_think|cancelFor|canhitowner|canjump|canmoveto|
