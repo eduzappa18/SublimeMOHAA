@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+huddraw_virtualsize ${1:local.index} ${2:0} // 0 or 1
+huddraw_align       ${1:local.index} ${3:"center" "center"} // <left|center|right> <top|center|bottom>
+huddraw_rect        ${1:local.index} ${4:-30 -15 0 0} // x, y, width, height
+huddraw_string      ${1:local.index} ${5:"text here"}
+huddraw_font        ${1:local.index} ${6:"facfont-20"}
+huddraw_color       ${1:local.index} ${7:1 1 1} // red green blue
+huddraw_alpha       ${1:local.index} ${8:1}
+]]></content>
+	<tabTrigger>huddraw_string</tabTrigger>
+	<scope>source.scr - string.quoted - meta.property - meta.waittill-levelphase.scr</scope>
+	<description>huddraw_string snippet…</description>
+</snippet>

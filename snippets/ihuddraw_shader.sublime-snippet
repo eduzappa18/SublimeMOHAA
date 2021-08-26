@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+ihuddraw_virtualsize ${2:local.player} ${1:local.index} ${3:0} // 0 or 1
+ihuddraw_align       ${2:local.player} ${1:local.index} ${4:"center" "center"} // <left|center|right> <top|center|bottom>
+ihuddraw_rect        ${2:local.player} ${1:local.index} ${5:0 0 100 100} // x, y, width, height
+ihuddraw_shader      ${2:local.player} ${1:local.index} ${6:"textures/mohmenu/black.tga"}
+ihuddraw_alpha       ${2:local.player} ${1:local.index} ${7:1}
+]]></content>
+	<tabTrigger>ihuddraw_shader</tabTrigger>
+	<scope>source.scr - string.quoted - meta.property - meta.waittill-levelphase.scr</scope>
+	<description>ihuddraw_shader snippet…</description>
+</snippet>

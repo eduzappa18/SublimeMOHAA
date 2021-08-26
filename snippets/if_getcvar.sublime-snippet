@@ -1,10 +1,10 @@
 <snippet>
 	<content><![CDATA[
-if (getcvar("${1:cvar}") == "${2:value}") {
+if (getcvar "${1:cvar}" == "${2:value}") {
 	${0:}
 }
 ]]></content>
 	<tabTrigger>if</tabTrigger>
 	<scope>source.scr - string.quoted - meta.property - meta.waittill-levelphase.scr</scope>
-	<description>if (getcvar())</description>
+	<description>if (getcvar…)</description>
 </snippet>

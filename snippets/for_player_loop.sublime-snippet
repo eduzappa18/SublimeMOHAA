@@ -2,7 +2,7 @@
 	<content><![CDATA[
 for (local.i = 1; local.i <= \$player.size; local.i++) {
 	local.player = \$player[local.i];
-	${0:}
+	$0
 }
 ]]></content>
 	<tabTrigger>for</tabTrigger>

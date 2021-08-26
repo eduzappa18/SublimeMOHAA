@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+huddraw_virtualsize ${1:local.index} ${2:0} // 0 or 1
+huddraw_align       ${1:local.index} ${3:"center" "center"} // <left|center|right> <top|center|bottom>
+huddraw_rect        ${1:local.index} ${4:0 0 100 100} // x, y, width, height
+huddraw_shader      ${1:local.index} ${5:"textures/mohmenu/black.tga"}
+huddraw_alpha       ${1:local.index} ${6:1}
+]]></content>
+	<tabTrigger>huddraw_shader</tabTrigger>
+	<scope>source.scr - string.quoted - meta.property - meta.waittill-levelphase.scr</scope>
+	<description>huddraw_shader snippet…</description>
+</snippet>

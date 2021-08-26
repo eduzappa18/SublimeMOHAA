@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+ihuddraw_virtualsize ${2:local.player} ${1:local.index} ${3:0} // 0 or 1
+ihuddraw_align       ${2:local.player} ${1:local.index} ${4:"center" "center"} // <left|center|right> <top|center|bottom>
+ihuddraw_rect        ${2:local.player} ${1:local.index} ${5:-30 -15 0 0} // x, y, width, height
+ihuddraw_string      ${2:local.player} ${1:local.index} ${6:"text here"}
+ihuddraw_font        ${2:local.player} ${1:local.index} ${7:"facfont-20"}
+ihuddraw_color       ${2:local.player} ${1:local.index} ${8:1 1 1} // red green blue
+ihuddraw_alpha       ${2:local.player} ${1:local.index} ${9:1}
+]]></content>
+	<tabTrigger>ihuddraw_string</tabTrigger>
+	<scope>source.scr - string.quoted - meta.property - meta.waittill-levelphase.scr</scope>
+	<description>ihuddraw_string snippet…</description>
+</snippet>
