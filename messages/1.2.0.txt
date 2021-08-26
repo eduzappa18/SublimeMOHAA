@@ -1,0 +1,26 @@
+SublimeMOHAA v1.2.0
+
+Changelog
+=========
+
+  - added: All 1378 stock MOHAA TIKI models (with paths) to completions for quoted strings
+  - added: Syntax improvements
+  - added: Completions improvements
+  - added: Snippets improvements
+  - added: Toggle comment shortcuts for all file types
+  - added: Tooltips for Morpheus built-in functions (Allied Assault, Spearhead, Breakthrough and Reborn Patch)
+
+
+Tooltips Info:
+==============
+
+To show a tooltip with the info about a function just click it with the cursor
+
+To disable the tooltips, go to:
+Preferences -> Package Settings -> MOHAA -> Settings
+and set "show_tooltips" to false (in the right side panel)
+
+
+
+For more info, please visit the xNULL forums:
+· https://www.x-null.net/forums/threads/3155-MOHAA-Syntax-Highlighting-for-Sublime-Text

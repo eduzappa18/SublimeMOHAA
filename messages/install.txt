@@ -13,5 +13,17 @@ The currently supported file types are:
   [x] .log    - Server log files. (Syntax Highlighting)
 
 
+Tooltips Info:
+==============
+This package contains tooltips for Morpheus built-in functions (Allied Assault, Spearhead, Breakthrough and Reborn Patch)
+
+To show a tooltip with the info about a function just click it with the cursor
+
+To disable the tooltips, go to:
+Preferences -> Package Settings -> MOHAA -> Settings
+and set "show_tooltips" to false (in the right side panel)
+
+
+
 For more info visit the xNULL forums:
 · https://www.x-null.net/forums/threads/3155-MOHAA-Syntax-Highlighting-for-Sublime-Text
