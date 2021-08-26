@@ -1,0 +1,2725 @@
+// SYNTAX TEST "Packages/MOHAA/syntaxes/mohaa.scr.sublime-syntax"
+
+    abs
+//  ^^^ support.function.builtin.scr
+    accuracy (local.actor.accuracy)
+//  ^^^^^^^^ support.function.builtin.scr
+//                        ^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    actionanimend
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    activate
+//  ^^^^^^^^ support.function.builtin.scr
+    activateitem
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    activatenewweapon
+//  ^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    activatepapers
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    activateSound
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    activatetrigger
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    activator
+//  ^^^^^^^^^ support.function.builtin.scr
+    active
+//  ^^^^^^ support.function.builtin.scr
+    actor
+//  ^^^^^ support.function.builtin.scr
+    actorinfo
+//  ^^^^^^^^^ support.function.builtin.scr
+    add
+//  ^^^ support.function.builtin.scr
+    additionalstartammo
+//  ^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    addkills
+//  ^^^^^^^^ support.function.builtin.scr
+    addmusictrigger
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    addobjective
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    addownervelocity
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    addrandomspeaker
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    addreverbtrigger
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    addspeaker
+//  ^^^^^^^^^^ support.function.builtin.scr
+    addvelocity
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    ai_event
+//  ^^^^^^^^ support.function.builtin.scr
+    ai_off
+//  ^^^^^^ support.function.builtin.scr
+    ai_on
+//  ^^^^^ support.function.builtin.scr
+    ai_visiondistance
+//  ^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    aibulletspread
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    aimat
+//  ^^^^^ support.function.builtin.scr
+    aimoffset
+//  ^^^^^^^^^ support.function.builtin.scr
+    aimtarget
+//  ^^^^^^^^^ support.function.builtin.scr
+    aimtolerance
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    airange
+//  ^^^^^^^ support.function.builtin.scr
+    alarm  (level.alarm)
+//  ^^^^^ string.unquoted.scr
+//                ^^^^^ meta.property.object.scr support.function.builtin.scr
+    alarmnode (local.actor.alarmnode)
+//  ^^^^^^^^^ support.function.builtin.scr
+//                         ^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    alarmthread (local.actor.alarmthread)
+//  ^^^^^^^^^^^ support.function.builtin.scr
+//                           ^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    alias
+//  ^^^^^ support.function.builtin.scr
+    aliascache
+//  ^^^^^^^^^^ support.function.builtin.scr
+    all_ai_off
+//  ^^^^^^^^^^ support.function.builtin.scr
+    all_ai_on
+//  ^^^^^^^^^ support.function.builtin.scr
+    alliesObjNum
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    alpha
+//  ^^^^^ support.function.builtin.scr
+    altcurrent
+//  ^^^^^^^^^^ support.function.builtin.scr
+    altfallback
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    altreverblevel
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    altreverbtype
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    alwaysaway
+//  ^^^^^^^^^^ support.function.builtin.scr
+    alwaysdraw
+//  ^^^^^^^^^^ support.function.builtin.scr
+    american
+//  ^^^^^^^^ support.function.builtin.scr
+    ammo
+//  ^^^^ support.function.builtin.scr
+    ammo_grenade (local.actor.ammo_grenade)
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+//                            ^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    ammo_in_clip
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    ammoentity_postspawn
+//  ^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    ammopickupsound
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    ammorequired
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    ammotype
+//  ^^^^^^^^ support.function.builtin.scr
+    amount
+//  ^^^^^^ support.function.builtin.scr
+    angle (local.entity.angle)
+//  ^^^^^ support.function.builtin.scr
+//                      ^^^^^ meta.property.object.scr support.function.builtin.scr
+    angles (local.entity.angles)
+//  ^^^^^^ support.function.builtin.scr
+//                       ^^^^^^ meta.property.object.scr support.function.builtin.scr
+    angles_pointat
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    angles_toforward
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    angles_toleft
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    angles_toup
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    anglespeed
+//  ^^^^^^^^^^ support.function.builtin.scr
+    anim
+//  ^^^^ support.function.builtin.scr
+    anim_attached
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    anim_noclip
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    anim_scripted
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    animated_farplane
+//  ^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    animated_farplane_bias
+//  ^^^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    animated_farplane_color
+//  ^^^^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    animationSet
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    animdone
+//  ^^^^^^^^ support.function.builtin.scr
+    animfinal
+//  ^^^^^^^^^ support.function.builtin.scr
+    animloop
+//  ^^^^^^^^ support.function.builtin.scr
+    animloop_legs
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    animloop_pain
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    animloop_torso
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    animname (local.actor.animname)
+//  ^^^^^^^^ string.unquoted.scr
+//                        ^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    animscript
+//  ^^^^^^^^^^ support.function.builtin.scr
+    animscript_attached
+//  ^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    animscript_noclip
+//  ^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    animscript_scripted
+//  ^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    arc
+//  ^^^ support.function.builtin.scr
+    arctotarget
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    arena
+//  ^^^^^ support.function.builtin.scr
+    armor
+//  ^^^^^ support.function.builtin.scr
+    armwithweapons
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    assert
+//  ^^^^^^ support.function.builtin.scr
+    atan
+//  ^^^^ support.function.builtin.scr
+    attach
+//  ^^^^^^ support.function.builtin.scr
+    attachDriverSlot
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    attachedmodelanim
+//  ^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    attachgrenade
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    attachmodel
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    AttachPassengerSlot
+//  ^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    attachtohand
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    attachtoladder
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    attachTurretSlot
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    attackhandler
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    attackmode
+//  ^^^^^^^^^^ support.function.builtin.scr
+    attackplayer
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    auto_active
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    auto_join_team
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    auto_maxfov
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    auto_radius
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    auto_starttime
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    auto_state
+//  ^^^^^^^^^^ support.function.builtin.scr
+    auto_stoptime
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    autoaim
+//  ^^^^^^^ support.function.builtin.scr
+    autoputaway
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    avelocity (local.entity.avelocity)
+//  ^^^^^^^^^ support.function.builtin.scr
+//                          ^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    avoidplayer (local.actor.avoidplayer)
+//  ^^^^^^^^^^^ support.function.builtin.scr
+//                           ^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    axisObjNum
+//  ^^^^^^^^^^ support.function.builtin.scr
+    back_mass
+//  ^^^^^^^^^ support.function.builtin.scr
+    badplace
+//  ^^^^^^^^ support.function.builtin.scr
+    balconyheight (local.actor.balconyheight)
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+//                             ^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    barreltype
+//  ^^^^^^^^^^ support.function.builtin.scr
+    base_velocity
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    beam
+//  ^^^^ support.function.builtin.scr
+    becomebomb
+//  ^^^^^^^^^^ support.function.builtin.scr
+    bedead
+//  ^^^^^^ support.function.builtin.scr
+    begincycle
+//  ^^^^^^^^^^ support.function.builtin.scr
+    bind
+//  ^^^^ support.function.builtin.scr
+    blendtime (local.actor.blendtime)
+//  ^^^^^^^^^ string.unquoted.scr
+//                         ^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    blockend
+//  ^^^^^^^^ support.function.builtin.scr
+    blockstart
+//  ^^^^^^^^^^ support.function.builtin.scr
+    bloodmodel
+//  ^^^^^^^^^^ support.function.builtin.scr
+    blowUp
+//  ^^^^^^ support.function.builtin.scr
+    bombs_planted (level.bombs_planted)
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+//                       ^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    bool
+//  ^^^^ storage.type.scr support.function.builtin.scr
+    bounce
+//  ^^^^^^ support.function.builtin.scr
+    BounceBackwardsVelocity
+//  ^^^^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    bouncefactor
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    BounceForwardsVelocity
+//  ^^^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    bouncesound
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    bouncesound_hard
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    bouncesound_metal
+//  ^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    bouncesound_water
+//  ^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    bouncesoundchance
+//  ^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    bouncetouch
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    breakspecial
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    brushmodel (local.entity.brushmodel)
+//  ^^^^^^^^^^ string.unquoted.scr
+//                           ^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    bsptransition
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    bulletcount
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    bulletdamage
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    bulletknockback
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    bulletlarge
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    bulletrange
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    bulletspread
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    burstFireSettings
+//  ^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    cache
+//  ^^^^^ support.function.builtin.scr
+    calcgrenadetoss
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    calcgrenadetoss2
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    callvote
+//  ^^^^^^^^ support.function.builtin.scr
+    cam
+//  ^^^ support.function.builtin.scr
+    camera
+//  ^^^^^^ support.function.builtin.scr
+    camera_think
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    cancelFor
+//  ^^^^^^^^^ support.function.builtin.scr
+    canhitowner
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    canjump
+//  ^^^^^^^ support.function.builtin.scr
+    canmoveto
+//  ^^^^^^^^^ support.function.builtin.scr
+    cansee
+//  ^^^^^^ support.function.builtin.scr
+    canseenoents
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    canshoot
+//  ^^^^^^^^ support.function.builtin.scr
+    canshootenemyfrom
+//  ^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    cantpartialreload
+//  ^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    canuse
+//  ^^^^^^ support.function.builtin.scr
+    censor
+//  ^^^^^^ support.function.builtin.scr
+    centerprint
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    centroid (local.entity.centroid)
+//  ^^^^^^^^ string.unquoted.scr
+//                         ^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    chance
+//  ^^^^^^ support.function.builtin.scr
+    channel
+//  ^^^^^^^ support.function.builtin.scr
+    charge
+//  ^^^^^^ support.function.builtin.scr
+    chargelife
+//  ^^^^^^^^^^ support.function.builtin.scr
+    chargespeed
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    checkanims
+//  ^^^^^^^^^^ support.function.builtin.scr
+    checkonground
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    cinematic
+//  ^^^^^^^^^ support.function.builtin.scr
+    classname (local.entity.classname)
+//  ^^^^^^^^^ support.function.builtin.scr
+//                          ^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    claypidgeon
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    clear_objective_pos
+//  ^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    clearAimTarget
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    clearfade
+//  ^^^^^^^^^ support.function.builtin.scr
+    clearletterbox
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    clearowner
+//  ^^^^^^^^^^ support.function.builtin.scr
+    clip_add
+//  ^^^^^^^^ support.function.builtin.scr
+    clip_empty
+//  ^^^^^^^^^^ support.function.builtin.scr
+    clip_fill
+//  ^^^^^^^^^ support.function.builtin.scr
+    clipsize
+//  ^^^^^^^^ support.function.builtin.scr
+    clockside (level.clockside)
+//  ^^^^^^^^^ support.function.builtin.scr
+//                   ^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    close
+//  ^^^^^ support.function.builtin.scr
+    closeportal
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    cnt
+//  ^^^ support.function.builtin.scr
+    collisionent (local.entity.collisionent)
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+//                             ^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    color
+//  ^^^^^ support.function.builtin.scr
+    commanddelay
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    complete
+//  ^^^^^^^^ support.function.builtin.scr
+    cone
+//  ^^^^ support.function.builtin.scr
+    connect_paths
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    constantdamage
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    continue (local.camera continue)
+//  ^^^^^^^^ keyword.control.loop.scr
+//                         ^^^^^^^^ support.function.builtin.scr
+    ControlledBy
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    convergeTime
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    cooktime
+//  ^^^^^^^^ support.function.builtin.scr
+    coord
+//  ^^^^^ support.function.builtin.scr
+    correctweaponattachments
+//  ^^^^^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    cos
+//  ^^^ support.function.builtin.scr
+    count
+//  ^^^^^ support.function.builtin.scr
+    crawlto
+//  ^^^^^^^ support.function.builtin.scr
+    CreateListener
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    crosshair
+//  ^^^^^^^^^ support.function.builtin.scr
+    crouchto
+//  ^^^^^^^^ support.function.builtin.scr
+    cuecamera
+//  ^^^^^^^^^ support.function.builtin.scr
+    cueplayer
+//  ^^^^^^^^^ support.function.builtin.scr
+    curiousoff
+//  ^^^^^^^^^^ support.function.builtin.scr
+    curiouson
+//  ^^^^^^^^^ support.function.builtin.scr
+    current
+//  ^^^^^^^ support.function.builtin.scr
+    cut
+//  ^^^ support.function.builtin.scr
+    cycles
+//  ^^^^^^ support.function.builtin.scr
+    damage
+//  ^^^^^^ support.function.builtin.scr
+    damage_multiplier
+//  ^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    damage_type
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    damageable
+//  ^^^^^^^^^^ support.function.builtin.scr
+    damageagain
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    damageeveryframe
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    damagemult
+//  ^^^^^^^^^^ support.function.builtin.scr
+    damagepuff
+//  ^^^^^^^^^^ support.function.builtin.scr
+    damagesounds
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    damagetype
+//  ^^^^^^^^^^ support.function.builtin.scr
+    dampening
+//  ^^^^^^^^^ support.function.builtin.scr
+    deactivate
+//  ^^^^^^^^^^ support.function.builtin.scr
+    deactivateweapon
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    dead
+//  ^^^^ support.function.builtin.scr
+    deadbody
+//  ^^^^^^^^ support.function.builtin.scr
+    deathembalm
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    deathhandler (local.actor.deathhandler)
+//  ^^^^^^^^^^^^ string.unquoted.scr
+//                            ^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    deathsinkeachframe
+//  ^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    deathsinkstart
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    debrismodel
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    debristype
+//  ^^^^^^^^^^ support.function.builtin.scr
+    debug_int3
+//  ^^^^^^^^^^ support.function.builtin.scr
+    debugline
+//  ^^^^^^^^^ support.function.builtin.scr
+    defaultnonvislevel
+//  ^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    delay
+//  ^^^^^ support.function.builtin.scr
+    delaythrow
+//  ^^^^^^^^^^ support.function.builtin.scr
+    delete
+//  ^^^^^^ support.function.builtin.scr
+    DestroyModel
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    detach
+//  ^^^^^^ support.function.builtin.scr
+    detachallchildren
+//  ^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    DetachDriverSlot
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    detachgrenade
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    DetachPassengerSlot
+//  ^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    DetachTurretSlot
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    detail (game.detail)
+//  ^^^^^^ string.unquoted.scr
+//               ^^^^^^ meta.property.object.scr support.function.builtin.scr
+    dialogneeded
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    dieinwater
+//  ^^^^^^^^^^ support.function.builtin.scr
+    disablespawn
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    disconnect_paths
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    disguise_accept_thread (local.actor.disguise_accept_thread)
+//  ^^^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+//                                      ^^^^^^^^^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    disguise_level (local.actor.disguise_level)
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+//                              ^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    disguise_period (local.actor.disguise_period)
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+//                               ^^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    disguise_range (local.actor.disguise_range)
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+//                              ^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    distancetoenemy (local.actor.distancetoenemy)
+//  ^^^^^^^^^^^^^^^ string.unquoted.scr
+//                               ^^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    dlight
+//  ^^^^^^ support.function.builtin.scr
+    dm
+//  ^^ support.function.builtin.scr
+    dmammorequired
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    dmamount
+//  ^^^^^^^^ support.function.builtin.scr
+    dmbulletcount
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    dmbulletdamage
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    dmbulletrange
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    dmbulletspread
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    dmcantpartialreload
+//  ^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    dmcrosshair
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    dmdeathdrop
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    dmfiredelay
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    dmfirespreadmult
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    dmg
+//  ^^^ support.function.builtin.scr
+    dmlife
+//  ^^^^^^ support.function.builtin.scr
+    dmmaxamount
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    dmmessage
+//  ^^^^^^^^^ support.function.builtin.scr
+    dmmovementspeed
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    dmprojectile
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    dmrealism
+//  ^^^^^^^^^ support.function.builtin.scr
+    dmrespawning  (level.dmrespawning)
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+//                       ^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    dmroundlimit  (level.dmroundlimit)
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+//                       ^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    dmstartammo
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    dmteam (local.player.dmteam)
+//  ^^^^^^ string.unquoted.scr
+//                       ^^^^^^ meta.property.object.scr support.function.builtin.scr
+    dmzoomspreadmult
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    doActivate
+//  ^^^^^^^^^^ support.function.builtin.scr
+    doBlocked
+//  ^^^^^^^^^ support.function.builtin.scr
+    doclose
+//  ^^^^^^^ support.function.builtin.scr
+    dog
+//  ^^^ support.function.builtin.scr
+    doinit
+//  ^^^^^^ support.function.builtin.scr
+    dojitter
+//  ^^^^^^^^ support.function.builtin.scr
+    donedeath
+//  ^^^^^^^^^ support.function.builtin.scr
+    donefiring
+//  ^^^^^^^^^^ support.function.builtin.scr
+    donereloading
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    dontdrophealth (local.AISpawnPoint.dontdrophealth)
+//  ^^^^^^^^^^^^^^ string.unquoted.scr
+//                                     ^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    dontdropweapons
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    doopen
+//  ^^^^^^ support.function.builtin.scr
+    door_triggerfield
+//  ^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    doorclosed
+//  ^^^^^^^^^^ support.function.builtin.scr
+    dooropened
+//  ^^^^^^^^^^ support.function.builtin.scr
+    doortype
+//  ^^^^^^^^ support.function.builtin.scr
+    doroundtransition
+//  ^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    doTouch
+//  ^^^^^^^ support.function.builtin.scr
+    doUse
+//  ^^^^^ support.function.builtin.scr
+    dprintln
+//  ^^^^^^^^ support.function.builtin.scr
+    drawhud
+//  ^^^^^^^ support.function.builtin.scr
+    drivable
+//  ^^^^^^^^ support.function.builtin.scr
+    drive
+//  ^^^^^ support.function.builtin.scr
+    driveNoWait
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    dropitems
+//  ^^^^^^^^^ support.function.builtin.scr
+    droptofloor
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    dropturret
+//  ^^^^^^^^^^ support.function.builtin.scr
+    drunk
+//  ^^^^^ support.function.builtin.scr
+    duckableglue
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    dumb
+//  ^^^^ support.function.builtin.scr
+    duration
+//  ^^^^^^^^ support.function.builtin.scr
+    earthquake
+//  ^^^^^^^^^^ support.function.builtin.scr
+    edgeeffect
+//  ^^^^^^^^^^ support.function.builtin.scr
+    edgetriggered
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    effects
+//  ^^^^^^^ support.function.builtin.scr
+    emitter
+//  ^^^^^^^ support.function.builtin.scr
+    emotion (local.actor.emotion)
+//  ^^^^^^^ string.unquoted.scr
+//                       ^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    enableEnemy (local.actor.enableEnemy)
+//  ^^^^^^^^^^^ string.unquoted.scr
+//                           ^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    enablePain (local.actor.enablePain)
+//  ^^^^^^^^^^ string.unquoted.scr
+//                          ^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    enablespawn
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    end
+//  ^^^ keyword.control.flow.scr
+    endactionanim
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    endalpha
+//  ^^^^^^^^ support.function.builtin.scr
+    endArray
+//  ^^^^^^^^ support.function.builtin.scr
+    EndCycle
+//  ^^^^^^^^ support.function.builtin.scr
+    endlevel
+//  ^^^^^^^^ support.function.builtin.scr
+    endpath
+//  ^^^^^^^ support.function.builtin.scr
+    endpoint
+//  ^^^^^^^^ support.function.builtin.scr
+    enemy (local.actor.enemy)
+//  ^^^^^ string.unquoted.scr
+//                     ^^^^^ meta.property.object.scr support.function.builtin.scr
+    enemy_visible_change_time (local.actor.enemy_visible_change_time)
+//  ^^^^^^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+//                                         ^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    enemyname
+//  ^^^^^^^^^ support.function.builtin.scr
+    enemysharerange (local.actor.enemysharerange)
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+//                               ^^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    enemyswitchdisable
+//  ^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    enemyswitchenable
+//  ^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    ensureforwardoffladder
+//  ^^^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    ensureoverladder
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    enter
+//  ^^^^^ support.function.builtin.scr
+    entity
+//  ^^^^^^ storage.type.scr support.function.builtin.scr
+    entitystart
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    entnum (local.entity.entnum)
+//  ^^^^^^ string.unquoted.scr
+//                       ^^^^^^ meta.property.object.scr support.function.builtin.scr
+    error
+//  ^^^^^ support.function.builtin.scr
+    exec
+//  ^^^^ keyword.control.scr
+    exit
+//  ^^^^ support.function.builtin.scr
+    explode
+//  ^^^^^^^ support.function.builtin.scr
+    explodeontouch
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    explosionattack
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    explosioneffect
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    explosionmodel
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    explosionoffset
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    explosions
+//  ^^^^^^^^^^ support.function.builtin.scr
+    explosionSound
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    eyeslookat
+//  ^^^^^^^^^^ support.function.builtin.scr
+    face
+//  ^^^^ support.function.builtin.scr
+    fade
+//  ^^^^ support.function.builtin.scr
+    fadedelay
+//  ^^^^^^^^^ support.function.builtin.scr
+    fadein
+//  ^^^^^^ support.function.builtin.scr
+    fadeout
+//  ^^^^^^^ support.function.builtin.scr
+    fadesound
+//  ^^^^^^^^^ support.function.builtin.scr
+    fadetime
+//  ^^^^^^^^ support.function.builtin.scr
+    fakebullets
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    fallback
+//  ^^^^^^^^ support.function.builtin.scr
+    fallheight (local.actor.fallheight)
+//  ^^^^^^^^^^ support.function.builtin.scr
+//                          ^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    fallingangleadjust
+//  ^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    farclipoverride
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    farplane ($world.farplane)
+//  ^^^^^^^^ support.function.builtin.scr
+//                   ^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    farplane_bias ($world.farplane_bias)
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+//                        ^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    farplane_color ($world.farplane_color)
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+//                         ^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    farplane_cull
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    farplaneclipcolor
+//  ^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    favoriteenemy (local.actor.favoriteenemy)
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+//                             ^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    findendpoint
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    findenemy
+//  ^^^^^^^^^ support.function.builtin.scr
+    finishroundtransition
+//  ^^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    finishuseanim
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    finishuseobject
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    fire
+//  ^^^^ support.function.builtin.scr
+    fire_grenade
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    firedelay
+//  ^^^^^^^^^ support.function.builtin.scr
+    fireheld  (local.player.fireheld)
+//  ^^^^^^^^ string.unquoted.scr
+//                          ^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    fireOnStartUp
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    firespreadmult
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    firetype
+//  ^^^^^^^^ support.function.builtin.scr
+    firewarmupdelay
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    fixedleash
+//  ^^^^^^^^^^ support.function.builtin.scr
+    flags
+//  ^^^^^ support.function.builtin.scr
+    flash
+//  ^^^^^ support.function.builtin.scr
+    float
+//  ^^^^^ storage.type.scr support.function.builtin.scr
+    flypath
+//  ^^^^^^^ support.function.builtin.scr
+    follow
+//  ^^^^^^ support.function.builtin.scr
+    follow_distance
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    follow_yaw
+//  ^^^^^^^^^^ support.function.builtin.scr
+    follow_yaw_absolute
+//  ^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    follow_yaw_relative
+//  ^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    followpath
+//  ^^^^^^^^^^ support.function.builtin.scr
+    forceactivate
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    forcedrophealth (local.actor.forcedrophealth)
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+//                               ^^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    forcedropweapon (local.actor.forcedropweapon)
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+//                               ^^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    forcelandminemeasure
+//  ^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    forcelegsstate
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    forcemusic
+//  ^^^^^^^^^^ support.function.builtin.scr
+    forcetorsostate
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    forwardvector (local.entity.forwardvector)
+//  ^^^^^^^^^^^^^ string.unquoted.scr
+//                              ^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    found_secrets (level.found_secrets)
+//  ^^^^^^^^^^^^^ string.unquoted.scr
+//                       ^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    fov
+//  ^^^ support.function.builtin.scr
+    freezeplayer
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    front_mass
+//  ^^^^^^^^^^ support.function.builtin.scr
+    fullheal
+//  ^^^^^^^^ support.function.builtin.scr
+    fullstop
+//  ^^^^^^^^ support.function.builtin.scr
+    fuse
+//  ^^^^ support.function.builtin.scr
+    gameversion
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    german
+//  ^^^^^^ support.function.builtin.scr
+    get_render_terrain ($world.get_render_terrain)
+//  ^^^^^^^^^^^^^^^^^^ string.unquoted.scr
+//                             ^^^^^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    getboundkey1
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    getboundkey2
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    getcontrollerangles
+//  ^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    getcurrentdmweapontype
+//  ^^^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    getcvar
+//  ^^^^^^^ support.function.builtin.scr
+    getentbyentnum
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    getLocalYawFromVector
+//  ^^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    getmaxs (local.entity.getmaxs)
+//  ^^^^^^^ string.unquoted.scr
+//                        ^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    getmins (local.entity.getmins)
+//  ^^^^^^^ string.unquoted.scr
+//                        ^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    getmovement
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    getposition
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    GetRunAnim
+//  ^^^^^^^^^^ support.function.builtin.scr
+    gettagangles
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    gettagposition
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    gettargetentity
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    GetWalkAnim
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    ghost
+//  ^^^^^ support.function.builtin.scr
+    give
+//  ^^^^ support.function.builtin.scr
+    givedynitem
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    giveweapon
+//  ^^^^^^^^^^ support.function.builtin.scr
+    globaltranslate
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    glue
+//  ^^^^ support.function.builtin.scr
+    gotkill
+//  ^^^^^^^ support.function.builtin.scr
+    goto
+//  ^^^^ keyword.control.scr
+    gravity
+//  ^^^^^^^ support.function.builtin.scr
+    gren_awareness (local.actor.gren_awareness)
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+//                              ^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    gun (local.actor.gun)
+//  ^^^ support.function.builtin.scr
+//                   ^^^ meta.property.object.scr support.function.builtin.scr
+    gvo
+//  ^^^ support.function.builtin.scr
+    handlespawn
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    has_disguise (local.player.has_disguise)
+//  ^^^^^^^^^^^^ string.unquoted.scr
+//                             ^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    hascompletelookahead (local.actor.hascompletelookahead)
+//  ^^^^^^^^^^^^^^^^^^^^ string.unquoted.scr
+//                                    ^^^^^^^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    headmodel (local.actor.headmodel)
+//  ^^^^^^^^^ support.function.builtin.scr
+//                         ^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    headskin (local.actor.headskin)
+//  ^^^^^^^^ support.function.builtin.scr
+//                        ^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    heal
+//  ^^^^ support.function.builtin.scr
+    health (local.entity.health)
+//  ^^^^^^ support.function.builtin.scr
+//                       ^^^^^^ meta.property.object.scr support.function.builtin.scr
+    health_postspawn
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    healthonly
+//  ^^^^^^^^^^ support.function.builtin.scr
+    hearing (local.actor.hearing)
+//  ^^^^^^^ support.function.builtin.scr
+//                       ^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    heatseek
+//  ^^^^^^^^ support.function.builtin.scr
+    hide
+//  ^^^^ support.function.builtin.scr
+    hidemenu
+//  ^^^^^^^^ support.function.builtin.scr
+    hidemouse
+//  ^^^^^^^^^ support.function.builtin.scr
+    hitdamage
+//  ^^^^^^^^^ support.function.builtin.scr
+    hiteffect
+//  ^^^^^^^^^ support.function.builtin.scr
+    holster
+//  ^^^^^^^ support.function.builtin.scr
+    holsterangles
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    holsteroffset
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    holsterscale
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    holstertag
+//  ^^^^^^^^^^ support.function.builtin.scr
+    huddraw_align
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    huddraw_alpha
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    huddraw_color
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    huddraw_font
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    huddraw_rect
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    huddraw_shader
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    huddraw_string
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    huddraw_virtualsize
+//  ^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    hurt
+//  ^^^^ support.function.builtin.scr
+    ID
+//  ^^ support.function.builtin.scr
+    idle
+//  ^^^^ support.function.builtin.scr
+    idleCheckOffset
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    idleinit
+//  ^^^^^^^^ support.function.builtin.scr
+    idlesay
+//  ^^^^^^^ support.function.builtin.scr
+    ignorebadplaces (local.actor.ignorebadplaces)
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+//                               ^^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    ignoreclock
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    immediateremove
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    immune
+//  ^^^^^^ support.function.builtin.scr
+    impactmarkorientation
+//  ^^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    impactmarkradius
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    impactmarkshader
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    initialize
+//  ^^^^^^^^^^ support.function.builtin.scr
+    injail (local.player.injail)
+//  ^^^^^^ string.unquoted.scr
+//                       ^^^^^^ meta.property.object.scr support.function.builtin.scr
+    inpvs
+//  ^^^^^ support.function.builtin.scr
+    inreload (local.actor.inreload)
+//  ^^^^^^^^ string.unquoted.scr
+//                        ^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    int
+//  ^^^ storage.type.scr support.function.builtin.scr
+    interrupt_point
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    interval (local.actor.interval)
+//  ^^^^^^^^ support.function.builtin.scr
+//                        ^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    intervaldir (local.actor.intervaldir)
+//  ^^^^^^^^^^^ string.unquoted.scr
+//                           ^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    invnext
+//  ^^^^^^^ support.function.builtin.scr
+    invprev
+//  ^^^^^^^ support.function.builtin.scr
+    iprint
+//  ^^^^^^ support.function.builtin.scr
+    iprintln
+//  ^^^^^^^^ support.function.builtin.scr
+    iprintln_noloc
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    iprintlnbold
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    iprintlnbold_noloc
+//  ^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    is_disguised (local.player.is_disguised)
+//  ^^^^^^^^^^^^ string.unquoted.scr
+//                             ^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    is_enemy_visible
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    isabandoned
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    isAlive
+//  ^^^^^^^ support.function.builtin.scr
+    isdonut
+//  ^^^^^^^ support.function.builtin.scr
+    isEscaping (local.player.isEscaping)
+//  ^^^^^^^^^^ string.unquoted.scr
+//                           ^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    isimmune
+//  ^^^^^^^^ support.function.builtin.scr
+    isinside
+//  ^^^^^^^^ support.function.builtin.scr
+    isloopinganim
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    isOpen (local.entity.isOpen)
+//  ^^^^^^ string.unquoted.scr
+//                       ^^^^^^ meta.property.object.scr support.function.builtin.scr
+    isSpectator (local.player.isSpectator)
+//  ^^^^^^^^^^^ string.unquoted.scr
+//                            ^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    istouching
+//  ^^^^^^^^^^ support.function.builtin.scr
+    isturnedon
+//  ^^^^^^^^^^ support.function.builtin.scr
+    item
+//  ^^^^ support.function.builtin.scr
+    item_droptofloor
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    item_pickup
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    jailassistescape
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    jailescape
+//  ^^^^^^^^^^ support.function.builtin.scr
+    jailescapestop
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    jitteramount
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    join_team
+//  ^^^^^^^^^ support.function.builtin.scr
+    joinTeam
+//  ^^^^^^^^ support.function.builtin.scr
+    jump
+//  ^^^^ support.function.builtin.scr
+    jumpto
+//  ^^^^^^ support.function.builtin.scr
+    jumpxy
+//  ^^^^^^ support.function.builtin.scr
+    key
+//  ^^^ support.function.builtin.scr
+    kickdir (local.actor.kickdir)
+//  ^^^^^^^ string.unquoted.scr
+//                       ^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    kill
+//  ^^^^ support.function.builtin.scr
+    kill_axis
+//  ^^^^^^^^^ support.function.builtin.scr
+    killattach
+//  ^^^^^^^^^^ support.function.builtin.scr
+    killclass
+//  ^^^^^^^^^ support.function.builtin.scr
+    killed
+//  ^^^^^^ support.function.builtin.scr
+    killedeffect
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    killent
+//  ^^^^^^^ support.function.builtin.scr
+    killtarget
+//  ^^^^^^^^^^ support.function.builtin.scr
+    killthread
+//  ^^^^^^^^^^ support.function.builtin.scr
+    killtrace
+//  ^^^^^^^^^ support.function.builtin.scr
+    knockback
+//  ^^^^^^^^^ support.function.builtin.scr
+    land_angles
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    land_radius
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    landmark_name
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    landminedamage
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    last_enemy_visible_time (local.actor.last_enemy_visible_time)
+//  ^^^^^^^^^^^^^^^^^^^^^^^ string.unquoted.scr
+//                                       ^^^^^^^^^^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    launchsound
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    lavaalpha
+//  ^^^^^^^^^ support.function.builtin.scr
+    lavacolor
+//  ^^^^^^^^^ support.function.builtin.scr
+    leash (local.actor.leash)
+//  ^^^^^ support.function.builtin.scr
+//                     ^^^^^ meta.property.object.scr support.function.builtin.scr
+    leave_team
+//  ^^^^^^^^^^ support.function.builtin.scr
+    leftvector (local.entity.leftvector)
+//  ^^^^^^^^^^ string.unquoted.scr
+//                           ^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    letterbox
+//  ^^^^^^^^^ support.function.builtin.scr
+    leveltransition
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    life
+//  ^^^^ support.function.builtin.scr
+    light
+//  ^^^^^ support.function.builtin.scr
+    lightBlue
+//  ^^^^^^^^^ support.function.builtin.scr
+    lightGreen
+//  ^^^^^^^^^^ support.function.builtin.scr
+    lightOff
+//  ^^^^^^^^ support.function.builtin.scr
+    lightOn
+//  ^^^^^^^ support.function.builtin.scr
+    lightRadius
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    lightRed
+//  ^^^^^^^^ support.function.builtin.scr
+    lightStyle
+//  ^^^^^^^^^^ support.function.builtin.scr
+    limit
+//  ^^^^^ support.function.builtin.scr
+    linkdoor
+//  ^^^^^^^^ support.function.builtin.scr
+    linkturret
+//  ^^^^^^^^^^ support.function.builtin.scr
+    lip
+//  ^^^ support.function.builtin.scr
+    listinventory
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    load
+//  ^^^^ support.function.builtin.scr
+    loaded
+//  ^^^^^^ support.function.builtin.scr
+    loc_convert_string
+//  ^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    locatecamera
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    lock
+//  ^^^^ support.function.builtin.scr
+    lockmovement
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    locprint
+//  ^^^^^^^^ support.function.builtin.scr
+    lod_angles
+//  ^^^^^^^^^^ support.function.builtin.scr
+    lod_discard
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    lod_model
+//  ^^^^^^^^^ support.function.builtin.scr
+    lod_roll
+//  ^^^^^^^^ support.function.builtin.scr
+    lod_spawn
+//  ^^^^^^^^^ support.function.builtin.scr
+    lod_think
+//  ^^^^^^^^^ support.function.builtin.scr
+    lod_yaw
+//  ^^^^^^^ support.function.builtin.scr
+    logstats
+//  ^^^^^^^^ support.function.builtin.scr
+    lookaroundangle (local.actor.lookaroundangle)
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+//                               ^^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    lookat
+//  ^^^^^^ support.function.builtin.scr
+    loop
+//  ^^^^ support.function.builtin.scr
+    loop_protection (level.loop_protection)
+//  ^^^^^^^^^^^^^^^ string.unquoted.scr
+//                         ^^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    loopfire
+//  ^^^^^^^^ support.function.builtin.scr
+    loopsound
+//  ^^^^^^^^^ support.function.builtin.scr
+    low_wall_arc
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    mainattachtotag
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    makeArray
+//  ^^^^^^^^^ support.function.builtin.scr
+    makenoise
+//  ^^^^^^^^^ support.function.builtin.scr
+    map
+//  ^^^ support.function.builtin.scr
+    mass
+//  ^^^^ support.function.builtin.scr
+    max_health (local.entity.max_health)
+//  ^^^^^^^^^^ support.function.builtin.scr
+//                           ^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    max_time
+//  ^^^^^^^^ support.function.builtin.scr
+    maxalpha
+//  ^^^^^^^^ support.function.builtin.scr
+    maxamount
+//  ^^^^^^^^^ support.function.builtin.scr
+    maxchargetime
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    maxdelay
+//  ^^^^^^^^ support.function.builtin.scr
+    MaxDelay
+//  ^^^^^^^^ support.function.builtin.scr
+    maxdist (local.actor.maxdist)
+//  ^^^^^^^ support.function.builtin.scr
+//                       ^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    maxdonut
+//  ^^^^^^^^ support.function.builtin.scr
+    maxDuration
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    maxfiremovement
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    maxgibs
+//  ^^^^^^^ support.function.builtin.scr
+    maxIdlePitch
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    maxIdleYaw
+//  ^^^^^^^^^^ support.function.builtin.scr
+    maxmouthangle
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    maxmovementsound
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    MaxNumShots
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    maxoffset
+//  ^^^^^^^^^ support.function.builtin.scr
+    maxrange
+//  ^^^^^^^^ support.function.builtin.scr
+    maxs
+//  ^^^^ support.function.builtin.scr
+    maxuseangle
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    maxYawOffset
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    meansofdeath
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    meleeattackend
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    meleeattackstart
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    message
+//  ^^^^^^^ support.function.builtin.scr
+    min_dist
+//  ^^^^^^^^ support.function.builtin.scr
+    min_time
+//  ^^^^^^^^ support.function.builtin.scr
+    minchargetime
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    mindelay
+//  ^^^^^^^^ support.function.builtin.scr
+    mindist (local.actor.mindist)
+//  ^^^^^^^ support.function.builtin.scr
+//                       ^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    mindonut
+//  ^^^^^^^^ support.function.builtin.scr
+    MinDuration
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    minlife
+//  ^^^^^^^ support.function.builtin.scr
+    MinNumShots
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    minoffset
+//  ^^^^^^^^^ support.function.builtin.scr
+    minrange
+//  ^^^^^^^^ support.function.builtin.scr
+    mins
+//  ^^^^ support.function.builtin.scr
+    minspeed
+//  ^^^^^^^^ support.function.builtin.scr
+    missionfailed
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    missiontransition
+//  ^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    model (local.entity.model)
+//  ^^^^^ support.function.builtin.scr
+//                      ^^^^^ meta.property.object.scr support.function.builtin.scr
+    modelname
+//  ^^^^^^^^^ support.function.builtin.scr
+    modheight
+//  ^^^^^^^^^ support.function.builtin.scr
+    modheightfloat
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    modifydrive
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    modifyflypath
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    mood (local.actor.mood)
+//  ^^^^ string.unquoted.scr
+//                    ^^^^ meta.property.object.scr support.function.builtin.scr
+    motionfail (parm.motionfail)
+//  ^^^^^^^^^^ string.unquoted.scr
+//                   ^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    move
+//  ^^^^ support.function.builtin.scr
+    moveanim
+//  ^^^^^^^^ support.function.builtin.scr
+    moveBackward
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    movedir (local.actor.movedir)
+//  ^^^^^^^ string.unquoted.scr
+//                       ^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    movedone (parm.movedone)
+//  ^^^^^^^^ support.function.builtin.scr
+//                 ^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    movedoneradius (local.actor.movedoneradius)
+//  ^^^^^^^^^^^^^^ string.unquoted.scr
+//                              ^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    moveDown
+//  ^^^^^^^^ support.function.builtin.scr
+    moveEast
+//  ^^^^^^^^ support.function.builtin.scr
+    movefail (parm.movefail)
+//  ^^^^^^^^ string.unquoted.scr
+//                 ^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    moveForward
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    moveLeft
+//  ^^^^^^^^ support.function.builtin.scr
+    movementspeed
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    movementstealth
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    moveNorth
+//  ^^^^^^^^^ support.function.builtin.scr
+    moveOffset
+//  ^^^^^^^^^^ support.function.builtin.scr
+    moveplayer
+//  ^^^^^^^^^^ support.function.builtin.scr
+    moveposflags
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    moveRight
+//  ^^^^^^^^^ support.function.builtin.scr
+    movesound
+//  ^^^^^^^^^ support.function.builtin.scr
+    moveSouth
+//  ^^^^^^^^^ support.function.builtin.scr
+    moveto
+//  ^^^^^^ support.function.builtin.scr
+    movetopos
+//  ^^^^^^^^^ support.function.builtin.scr
+    moveUp
+//  ^^^^^^ support.function.builtin.scr
+    moveWest
+//  ^^^^^^^^ support.function.builtin.scr
+    moving_from_anim (local.entity.moving_from_anim)
+//  ^^^^^^^^^^^^^^^^ string.unquoted.scr
+//                                 ^^^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    mprint
+//  ^^^^^^ support.function.builtin.scr
+    mprintln
+//  ^^^^^^^^ support.function.builtin.scr
+    multifaceted
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    mumble (local.actor.mumble)
+//  ^^^^^^ support.function.builtin.scr
+//                      ^^^^^^ meta.property.object.scr support.function.builtin.scr
+    music
+//  ^^^^^ support.function.builtin.scr
+    musicvolume
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    name
+//  ^^^^ support.function.builtin.scr
+    nationality (local.actor.nationality)
+//  ^^^^^^^^^^^ support.function.builtin.scr
+//                           ^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    nationalityprefix (local.player.nationalityprefix)
+//  ^^^^^^^^^^^^^^^^^ string.unquoted.scr
+//                                  ^^^^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    netname (local.player.netname)
+//  ^^^^^^^ support.function.builtin.scr
+//                        ^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    neverdraw
+//  ^^^^^^^^^ support.function.builtin.scr
+    new
+//  ^^^ support.function.builtin.scr
+    next
+//  ^^^^ support.function.builtin.scr
+    nextcamera
+//  ^^^^^^^^^^ support.function.builtin.scr
+    nextdrive
+//  ^^^^^^^^^ support.function.builtin.scr
+    nextmap
+//  ^^^^^^^ support.function.builtin.scr
+    nextpaintime
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    nextpath
+//  ^^^^^^^^ support.function.builtin.scr
+    no_idle (local.actor.no_idle)
+//  ^^^^^^^ string.unquoted.scr
+//                       ^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    no_remove
+//  ^^^^^^^^^ support.function.builtin.scr
+    noammosound
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    noanimlerp
+//  ^^^^^^^^^^ support.function.builtin.scr
+    noclip
+//  ^^^^^^ support.function.builtin.scr
+    nodamage
+//  ^^^^^^^^ support.function.builtin.scr
+    nodrophealth (level.nodrophealth)
+//  ^^^^^^^^^^^^ string.unquoted.scr
+//                      ^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    nodropweapons (level.nodropweapons)
+//  ^^^^^^^^^^^^^ string.unquoted.scr
+//                       ^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    noise
+//  ^^^^^ support.function.builtin.scr
+    nolongpain (local.actor.nolongpain)
+//  ^^^^^^^^^^ support.function.builtin.scr
+//                          ^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    noncinematic
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    nonvislevel (local.actor.nonvislevel)
+//  ^^^^^^^^^^^ support.function.builtin.scr
+//                           ^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    normal_damage
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    normal_health (local.entity.normal_health)
+//  ^^^^^^^^^^^^^ string.unquoted.scr
+//                              ^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    normalangles
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    normaldraw
+//  ^^^^^^^^^^ support.function.builtin.scr
+    northyaw
+//  ^^^^^^^^ support.function.builtin.scr
+    noshadow
+//  ^^^^^^^^ support.function.builtin.scr
+    nosurprise (local.actor.nosurprise)
+//  ^^^^^^^^^^ support.function.builtin.scr
+//                          ^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    notactive
+//  ^^^^^^^^^ support.function.builtin.scr
+    notarget
+//  ^^^^^^^^ support.function.builtin.scr
+    notdroppable
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    noticescale (local.actor.noticescale)
+//  ^^^^^^^^^^^ support.function.builtin.scr
+//                           ^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    notouchdamage
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    notready
+//  ^^^^^^^^ support.function.builtin.scr
+    notshootable
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    notsolid
+//  ^^^^^^^^ support.function.builtin.scr
+    nottriggerable
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    nowatch
+//  ^^^^^^^ support.function.builtin.scr
+    num_loops
+//  ^^^^^^^^^ support.function.builtin.scr
+    numarenas
+//  ^^^^^^^^^ support.function.builtin.scr
+    numfireanims
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    numsegments
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    numspherebeams
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    objectivebased (level.objectivebased)
+//  ^^^^^^^^^^^^^^ string.unquoted.scr
+//                        ^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    objectivecount
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    ObjectiveNbr
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    off
+//  ^^^ support.function.builtin.scr
+    offhandattachtotag
+//  ^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    offset
+//  ^^^^^^ support.function.builtin.scr
+    on
+//  ^^ support.function.builtin.scr
+    oneshot
+//  ^^^^^^^ support.function.builtin.scr
+    onfire
+//  ^^^^^^ support.function.builtin.scr
+    open
+//  ^^^^ support.function.builtin.scr
+    openangle
+//  ^^^^^^^^^ support.function.builtin.scr
+    opendot
+//  ^^^^^^^ support.function.builtin.scr
+    openportal
+//  ^^^^^^^^^^ support.function.builtin.scr
+    orbit
+//  ^^^^^ support.function.builtin.scr
+    orbit_height
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    orientedbbox
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    origin (local.entity.origin)
+//  ^^^^^^ support.function.builtin.scr
+    other (parm.other)
+//  ^^^^^ string.unquoted.scr
+//              ^^^^^ meta.property.object.scr support.function.builtin.scr
+    overcooked
+//  ^^^^^^^^^^ support.function.builtin.scr
+    overcooked_warning
+//  ^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    overlap
+//  ^^^^^^^ support.function.builtin.scr
+    owner (parm.owner, local.entity.owner)
+//  ^^^^^ variable.language.scr
+//              ^^^^^ meta.property.object.scr support.function.builtin.scr
+//                                  ^^^^^ meta.property.object.scr support.function.builtin.scr
+    pain
+//  ^^^^ support.function.builtin.scr
+    painhandler (local.actor.painhandler)
+//  ^^^^^^^^^^^ string.unquoted.scr
+//                           ^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    papers (level.papers)
+//  ^^^^^^ string.unquoted.scr
+//                ^^^^^^ meta.property.object.scr support.function.builtin.scr
+    path_relativeyaw
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    pathdist (local.actor.pathdist)
+//  ^^^^^^^^ string.unquoted.scr
+//                        ^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    pathDrivable
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    patrolpath (local.actor.patrolpath)
+//  ^^^^^^^^^^ support.function.builtin.scr
+//                          ^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    pause
+//  ^^^^^ support.function.builtin.scr
+    pauseanims
+//  ^^^^^^^^^^ support.function.builtin.scr
+    perferredweapon
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    persist
+//  ^^^^^^^ support.function.builtin.scr
+    physics_off
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    physics_on
+//  ^^^^^^^^^^ support.function.builtin.scr
+    physics_velocity
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    pickup
+//  ^^^^^^ support.function.builtin.scr
+    pickup_done
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    pickup_thread
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    pickupoffset
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    pickupsound
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    pickweapon
+//  ^^^^^^^^^^ support.function.builtin.scr
+    pingformines
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    pitchCaps
+//  ^^^^^^^^^ support.function.builtin.scr
+    pitchSpeed
+//  ^^^^^^^^^^ support.function.builtin.scr
+    placeturret
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    planting_team (level.planting_team)
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+//                       ^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    play
+//  ^^^^ support.function.builtin.scr
+    playerspawn
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    playmovie
+//  ^^^^^^^^^ support.function.builtin.scr
+    playpreimpact
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    playreloadsound
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    playsound
+//  ^^^^^^^^^ support.function.builtin.scr
+    pointat
+//  ^^^^^^^ support.function.builtin.scr
+    pophelmet
+//  ^^^^^^^^^ support.function.builtin.scr
+    popmenu
+//  ^^^^^^^ support.function.builtin.scr
+    position (local.actor.position)
+//  ^^^^^^^^ string.unquoted.scr
+//                        ^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    powerupname
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    poweruptimer
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    prealarmthread
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    preimpactsound
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    preimpactsoundprob
+//  ^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    preimpactsoundtime
+//  ^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    prespawnsentient
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    prethink
+//  ^^^^^^^^ support.function.builtin.scr
+    prev
+//  ^^^^ support.function.builtin.scr
+    previewreverb
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    previousthread (parm.previousthread)
+//  ^^^^^^^^^^^^^^ string.unquoted.scr
+//                       ^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    prevpath
+//  ^^^^^^^^ support.function.builtin.scr
+    primarydmweapon
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    primaryfireheld (local.player.primaryfireheld)
+//  ^^^^^^^^^^^^^^^ string.unquoted.scr
+//                                ^^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    print
+//  ^^^^^ support.function.builtin.scr
+    print3d
+//  ^^^^^^^ support.function.builtin.scr
+    println
+//  ^^^^^^^ support.function.builtin.scr
+    projectile
+//  ^^^^^^^^^^ support.function.builtin.scr
+    projectilevulnerable
+//  ^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    psetviewangles
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    pusher
+//  ^^^^^^ support.function.builtin.scr
+    pushmenu
+//  ^^^^^^^^ support.function.builtin.scr
+    pushsound
+//  ^^^^^^^^^ support.function.builtin.scr
+    putawayweapon
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    QueryDriverSlotAngles
+//  ^^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    QueryDriverSlotEntity
+//  ^^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    QueryDriverSlotPosition
+//  ^^^^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    QueryDriverSlotStatus
+//  ^^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    QueryFreeDriverSlot
+//  ^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    QueryFreePassengerSlot
+//  ^^^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    QueryFreeTurretSlot
+//  ^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    QueryPassengerSlotEntity
+//  ^^^^^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    QueryPassengerSlotPosition
+//  ^^^^^^^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    QueryPassengerSlotStatus
+//  ^^^^^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    QuerySpeed
+//  ^^^^^^^^^^ support.function.builtin.scr
+    QueryTurretSlotEntity
+//  ^^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    QueryTurretSlotPosition
+//  ^^^^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    QueryTurretSlotStatus
+//  ^^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    quiet
+//  ^^^^^ support.function.builtin.scr
+    quitTeam
+//  ^^^^^^^^ support.function.builtin.scr
+    radius
+//  ^^^^^^ support.function.builtin.scr
+    radiusdamage
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    radnum (local.entity.radnum)
+//  ^^^^^^ string.unquoted.scr
+//                       ^^^^^^ meta.property.object.scr support.function.builtin.scr
+    rain_density (level.rain_density)
+//  ^^^^^^^^^^^^ string.unquoted.scr
+//                      ^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    rain_length (level.rain_length)
+//  ^^^^^^^^^^^ string.unquoted.scr
+//                     ^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    rain_min_dist (level.rain_min_dist)
+//  ^^^^^^^^^^^^^ string.unquoted.scr
+//                       ^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    rain_numshaders (level.rain_numshaders)
+//  ^^^^^^^^^^^^^^^ string.unquoted.scr
+//                         ^^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    rain_shader (level.rain_shader)
+//  ^^^^^^^^^^^ string.unquoted.scr
+//                     ^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    rain_slant (level.rain_slant)
+//  ^^^^^^^^^^ string.unquoted.scr
+//                    ^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    rain_speed (level.rain_speed)
+//  ^^^^^^^^^^ string.unquoted.scr
+//                    ^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    rain_speed_vary (level.rain_speed_vary)
+//  ^^^^^^^^^^^^^^^ string.unquoted.scr
+//                         ^^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    rain_width (level.rain_width)
+//  ^^^^^^^^^^ string.unquoted.scr
+//                    ^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    random
+//  ^^^^^^ support.function.builtin.scr
+    random_velocity
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    randomfloat
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    randomint
+//  ^^^^^^^^^ support.function.builtin.scr
+    range
+//  ^^^^^ support.function.builtin.scr
+    rank
+//  ^^^^ support.function.builtin.scr
+    ready
+//  ^^^^^ support.function.builtin.scr
+    ReadyToFire
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    realism
+//  ^^^^^^^ support.function.builtin.scr
+    releasefire
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    releaseplayer
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    reload
+//  ^^^^^^ support.function.builtin.scr
+    reload_mg42
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    reloaddelay
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    reloadshots
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    reloadweapon
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    remove
+//  ^^^^^^ support.function.builtin.scr
+    removeattachedmodel
+//  ^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    removebadplace
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    removeclass
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    removeent
+//  ^^^^^^^^^ support.function.builtin.scr
+    removeimmune
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    removeondeath
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    removewhenstopped
+//  ^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    renamepath
+//  ^^^^^^^^^^ support.function.builtin.scr
+    render_terrain
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    rendereffects
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    replace
+//  ^^^^^^^ support.function.builtin.scr
+    reset
+//  ^^^^^ support.function.builtin.scr
+    reset_time
+//  ^^^^^^^^^^ support.function.builtin.scr
+    resetdelay
+//  ^^^^^^^^^^ support.function.builtin.scr
+    resethaveitem
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    resetleash
+//  ^^^^^^^^^^ support.function.builtin.scr
+    resetreverb
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    resetsound
+//  ^^^^^^^^^^ support.function.builtin.scr
+    resetspeed
+//  ^^^^^^^^^^ support.function.builtin.scr
+    resetstate
+//  ^^^^^^^^^^ support.function.builtin.scr
+    respawn
+//  ^^^^^^^ support.function.builtin.scr
+    respawn_done
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    respawnsound
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    restoremusicvolume
+//  ^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    restoresoundtrack
+//  ^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    reverblevel
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    reverbtype
+//  ^^^^^^^^^^ support.function.builtin.scr
+    revive
+//  ^^^^^^ support.function.builtin.scr
+    rightvector (local.entity.rightvector)
+//  ^^^^^^^^^^^ string.unquoted.scr
+//                            ^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    roll
+//  ^^^^ support.function.builtin.scr
+    rotate
+//  ^^^^^^ support.function.builtin.scr
+    rotateaxis
+//  ^^^^^^^^^^ support.function.builtin.scr
+    rotateaxisdown
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    rotateaxisdownto
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    rotateaxisup
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    rotateaxisupto
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    rotatedbbox (local.entity.rotatedbbox)
+//  ^^^^^^^^^^^ string.unquoted.scr
+//                            ^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    rotatedownto
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    rotateto
+//  ^^^^^^^^ support.function.builtin.scr
+    rotateupto
+//  ^^^^^^^^^^ support.function.builtin.scr
+    rotateX
+//  ^^^^^^^ support.function.builtin.scr
+    rotateXdown
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    rotateXdownto
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    rotateXup
+//  ^^^^^^^^^ support.function.builtin.scr
+    rotateXupto
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    rotateY
+//  ^^^^^^^ support.function.builtin.scr
+    rotateYdown
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    rotateYdownto
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    rotateYup
+//  ^^^^^^^^^ support.function.builtin.scr
+    rotateYupto
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    rotateZ
+//  ^^^^^^^ support.function.builtin.scr
+    rotateZdown
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    rotateZdownto
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    rotateZup
+//  ^^^^^^^^^ support.function.builtin.scr
+    rotateZupto
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    roundbased (level.roundbased)
+//  ^^^^^^^^^^ string.unquoted.scr
+//                    ^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    roundstarted (level.roundstarted)
+//  ^^^^^^^^^^^^ string.unquoted.scr
+//                      ^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    runanimrate (local.actor.runanimrate)
+//  ^^^^^^^^^^^ support.function.builtin.scr
+//                           ^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    runsounds
+//  ^^^^^^^^^ support.function.builtin.scr
+    runto
+//  ^^^^^ support.function.builtin.scr
+    safeholster
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    safesolid
+//  ^^^^^^^^^ support.function.builtin.scr
+    safezoom
+//  ^^^^^^^^ support.function.builtin.scr
+    save
+//  ^^^^ support.function.builtin.scr
+    savemap
+//  ^^^^^^^ support.function.builtin.scr
+    savename
+//  ^^^^^^^^ support.function.builtin.scr
+    say
+//  ^^^ support.function.builtin.scr
+    saydone
+//  ^^^^^^^ support.function.builtin.scr
+    sayfail (parm.sayfail)
+//  ^^^^^^^ string.unquoted.scr
+//                ^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    scale (local.entity.scale)
+//  ^^^^^ support.function.builtin.scr
+//                      ^^^^^ meta.property.object.scr support.function.builtin.scr
+    scalerate
+//  ^^^^^^^^^ support.function.builtin.scr
+    score
+//  ^^^^^ support.function.builtin.scr
+    scriptshader
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    scriptslave_followingpath
+//  ^^^^^^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    scriptslave_movedone
+//  ^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    seatanglesoffset
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    seatoffset
+//  ^^^^^^^^^^ support.function.builtin.scr
+    secondary
+//  ^^^^^^^^^ support.function.builtin.scr
+    secondaryammoinhud
+//  ^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    secondaryfireheld (local.player.secondaryfireheld)
+//  ^^^^^^^^^^^^^^^^^ string.unquoted.scr
+//                                  ^^^^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    semiauto
+//  ^^^^^^^^ support.function.builtin.scr
+    server
+//  ^^^^^^ support.function.builtin.scr
+    set_objective_pos
+//  ^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    set_respawn
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    set_respawn_time
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    setactionanim
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    setaimanim
+//  ^^^^^^^^^^ support.function.builtin.scr
+    setaimmotionanim
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    setAimOffset
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    setAimTarget
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    setanim
+//  ^^^^^^^ support.function.builtin.scr
+    setanimlength
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    setbaseentity
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    setcollisionentity
+//  ^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    setcontrollerangles
+//  ^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    setCurrent
+//  ^^^^^^^^^^ support.function.builtin.scr
+    setcurrentfireanim
+//  ^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    setcurrentobjective
+//  ^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    setcvar
+//  ^^^^^^^ support.function.builtin.scr
+    setdamage
+//  ^^^^^^^^^ support.function.builtin.scr
+    setfadetime
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    setfov
+//  ^^^^^^ support.function.builtin.scr
+    sethelmet
+//  ^^^^^^^^^ support.function.builtin.scr
+    setlightstyle
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    setmeansofdeath
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    setmotionanim
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    setpath
+//  ^^^^^^^ support.function.builtin.scr
+    setPlayerUsable
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    setreloadcover
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    setsay
+//  ^^^^^^ support.function.builtin.scr
+    setscoreboardtoggle
+//  ^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    setshaderdata
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    setshadertime
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    setsize
+//  ^^^^^^^ support.function.builtin.scr
+    setsoundparameters
+//  ^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    setspeed
+//  ^^^^^^^^ support.function.builtin.scr
+    setswitchthread
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    setsynctime
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    settarget
+//  ^^^^^^^^^ support.function.builtin.scr
+    settargetentity
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    settargetname
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    setthread
+//  ^^^^^^^^^ keyword.control.scr
+    setupperanim
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    setusable
+//  ^^^^^^^^^ support.function.builtin.scr
+    setusethread
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    setvolumeparameters
+//  ^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    setweapon
+//  ^^^^^^^^^ support.function.builtin.scr
+    setweaponidlestate
+//  ^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    setyawfrombone
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    severity
+//  ^^^^^^^^ support.function.builtin.scr
+    shader
+//  ^^^^^^ support.function.builtin.scr
+    shadow
+//  ^^^^^^ support.function.builtin.scr
+    share_enemy
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    share_grenade
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    shareclip
+//  ^^^^^^^^^ support.function.builtin.scr
+    shoot
+//  ^^^^^ support.function.builtin.scr
+    shootableonly
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    shootradius
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    show
+//  ^^^^ support.function.builtin.scr
+    showmenu
+//  ^^^^^^^^ support.function.builtin.scr
+    showquakes
+//  ^^^^^^^^^^ support.function.builtin.scr
+    showweapon
+//  ^^^^^^^^^^ support.function.builtin.scr
+    sight (local.actor.sight)
+//  ^^^^^ support.function.builtin.scr
+//                     ^^^^^ meta.property.object.scr support.function.builtin.scr
+    sighttrace
+//  ^^^^^^^^^^ support.function.builtin.scr
+    silent (local.actor.silent)
+//  ^^^^^^ support.function.builtin.scr
+//                      ^^^^^^ meta.property.object.scr support.function.builtin.scr
+    sin
+//  ^^^ support.function.builtin.scr
+    sinksound
+//  ^^^^^^^^^ support.function.builtin.scr
+    size (local.array.size)
+//  ^^^^ string.unquoted.scr
+//                    ^^^^ meta.property.object.scr support.function.builtin.scr
+    skidding
+//  ^^^^^^^^ support.function.builtin.scr
+    skill (game.skill)
+//  ^^^^^ string.unquoted.scr
+//              ^^^^^ meta.property.object.scr support.function.builtin.scr
+    skipcinematic
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    skyalpha
+//  ^^^^^^^^ support.function.builtin.scr
+    skybox_farplane ($world.skybox_farplane)
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+//                          ^^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    skybox_speed ($world.skybox_speed)
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+//                       ^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    skyportal
+//  ^^^^^^^^^ support.function.builtin.scr
+    smashthroughglass
+//  ^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    solid
+//  ^^^^^ support.function.builtin.scr
+    sound
+//  ^^^^^ support.function.builtin.scr
+    sound_awareness (local.actor.sound_awareness)
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+//                               ^^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    sound_close_end
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    sound_close_start
+//  ^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    sound_locked
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    sound_message
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    sound_open_end
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    sound_open_start
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    SoundSet
+//  ^^^^^^^^ support.function.builtin.scr
+    soundtrack
+//  ^^^^^^^^^^ support.function.builtin.scr
+    sp
+//  ^^ support.function.builtin.scr
+    spawn
+//  ^^^^^ support.function.builtin.scr
+    spawnbloodygibs
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    spawnchance
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    spawnflags
+//  ^^^^^^^^^^ support.function.builtin.scr
+    spawnitem
+//  ^^^^^^^^^ support.function.builtin.scr
+    spawnlife
+//  ^^^^^^^^^ support.function.builtin.scr
+    spawnmodel
+//  ^^^^^^^^^^ support.function.builtin.scr
+    spawnrate
+//  ^^^^^^^^^ support.function.builtin.scr
+    spawnspot
+//  ^^^^^^^^^ support.function.builtin.scr
+    spawntarget
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    spawntargetname
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    spawnturret
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    spectator
+//  ^^^^^^^^^ support.function.builtin.scr
+    speed
+//  ^^^^^ support.function.builtin.scr
+    spin
+//  ^^^^ support.function.builtin.scr
+    SplinePath_create
+//  ^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    sprealism
+//  ^^^^^^^^^ support.function.builtin.scr
+    sqrt
+//  ^^^^ support.function.builtin.scr
+    start
+//  ^^^^^ support.function.builtin.scr
+    startammo
+//  ^^^^^^^^^ support.function.builtin.scr
+    startangles
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    startFiring
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    startingammotoowner
+//  ^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    startitem
+//  ^^^^^^^^^ support.function.builtin.scr
+    startorigin
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    startuseobject
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    startyaw
+//  ^^^^^^^^ support.function.builtin.scr
+    state
+//  ^^^^^ support.function.builtin.scr
+    state_backwards
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    stationary
+//  ^^^^^^^^^^ support.function.builtin.scr
+    stats
+//  ^^^^^ support.function.builtin.scr
+    steerinplace
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    stickybombwet
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    stop
+//  ^^^^ support.function.builtin.scr
+    stopatend
+//  ^^^^^^^^^ support.function.builtin.scr
+    StopBackwardsVelocity
+//  ^^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    stopfire
+//  ^^^^^^^^ support.function.builtin.scr
+    stopFiring
+//  ^^^^^^^^^^ support.function.builtin.scr
+    StopForwardsVelocity
+//  ^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    stoploopsound
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    stoponfire
+//  ^^^^^^^^^^ support.function.builtin.scr
+    stopped
+//  ^^^^^^^ support.function.builtin.scr
+    stoprotating
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    stopsound
+//  ^^^^^^^^^ support.function.builtin.scr
+    stopteamrespawn
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    stopwatch
+//  ^^^^^^^^^ support.function.builtin.scr
+    StopWatchDuration
+//  ^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    stopwatchingactor
+//  ^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    string
+//  ^^^^^^ storage.type.scr support.function.builtin.scr
+    stuffcmd
+//  ^^^^^^^^ support.function.builtin.scr
+    stufftext
+//  ^^^^^^^^^ support.function.builtin.scr
+    stunend
+//  ^^^^^^^ support.function.builtin.scr
+    stunstart
+//  ^^^^^^^^^ support.function.builtin.scr
+    suppresschance (local.actor.suppresschance)
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+//                              ^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    suppressHeight
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    suppressTime
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    suppressWaitTime
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    suppressWidth
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    surface
+//  ^^^^^^^ support.function.builtin.scr
+    svflags
+//  ^^^^^^^ support.function.builtin.scr
+    switchfacet
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    take
+//  ^^^^ support.function.builtin.scr
+    takeall
+//  ^^^^^^^ support.function.builtin.scr
+    takedamage
+//  ^^^^^^^^^^ support.function.builtin.scr
+    TakeOver
+//  ^^^^^^^^ support.function.builtin.scr
+    takepain
+//  ^^^^^^^^ support.function.builtin.scr
+    tan
+//  ^^^ support.function.builtin.scr
+    target (local.entity.target)
+//  ^^^^^^ support.function.builtin.scr
+//                       ^^^^^^ meta.property.object.scr support.function.builtin.scr
+    targetname (local.entity.targetname)
+//  ^^^^^^^^^^ support.function.builtin.scr
+//                           ^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    targets_destroyed (level.targets_destroyed)
+//  ^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+//                           ^^^^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    targets_to_destroy (level.targets_to_destroy)
+//  ^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+//                            ^^^^^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    targettype
+//  ^^^^^^^^^^ support.function.builtin.scr
+    team (local.actor.team)
+//  ^^^^ support.function.builtin.scr
+//                    ^^^^ meta.property.object.scr support.function.builtin.scr
+    teamwin
+//  ^^^^^^^ support.function.builtin.scr
+    tele
+//  ^^^^ support.function.builtin.scr
+    testmojo
+//  ^^^^^^^^ support.function.builtin.scr
+    testplayeranim
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    testthread
+//  ^^^^^^^^^^ support.function.builtin.scr
+    tether
+//  ^^^^^^ support.function.builtin.scr
+    text
+//  ^^^^ support.function.builtin.scr
+    thinkstate (local.actor.thinkstate)
+//  ^^^^^^^^^^ string.unquoted.scr
+//                          ^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    thread
+//  ^^^^^^ keyword.control.scr
+    threadmove
+//  ^^^^^^^^^^ support.function.builtin.scr
+    threatbias (local.actor.threatbias)
+//  ^^^^^^^^^^ support.function.builtin.scr
+//                          ^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    throughmetal
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    throughwood
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    throw
+//  ^^^^^ keyword.control.scr
+    throwgib
+//  ^^^^^^^^ support.function.builtin.scr
+    throwsound
+//  ^^^^^^^^^^ support.function.builtin.scr
+    TickCycle
+//  ^^^^^^^^^ support.function.builtin.scr
+    TickSound
+//  ^^^^^^^^^ support.function.builtin.scr
+    tileshader
+//  ^^^^^^^^^^ support.function.builtin.scr
+    time (level.time)
+//  ^^^^ support.function.builtin.scr
+//              ^^^^ meta.property.object.scr support.function.builtin.scr
+    timedecay
+//  ^^^^^^^^^ support.function.builtin.scr
+    timeout
+//  ^^^^^^^ support.function.builtin.scr
+    toggledelay
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    toggledoor
+//  ^^^^^^^^^^ support.function.builtin.scr
+    toggleitem
+//  ^^^^^^^^^^ support.function.builtin.scr
+    toss
+//  ^^^^ support.function.builtin.scr
+    total_secrets (level.total_secrets)
+//  ^^^^^^^^^^^^^ string.unquoted.scr
+//                       ^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    touchtriggers
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    trace
+//  ^^^^^ support.function.builtin.scr
+    tracerfreq
+//  ^^^^^^^^^^ support.function.builtin.scr
+    tracerfrequency
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    tracerspeed
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    trigger
+//  ^^^^^^^ support.function.builtin.scr
+    triggerable
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    triggered
+//  ^^^^^^^^^ support.function.builtin.scr
+    triggereffect
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    triggereffectalt
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    triggername
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    triggertarget
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    triggerthread
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    trysolid
+//  ^^^^^^^^ support.function.builtin.scr
+    tryToOpen
+//  ^^^^^^^^^ support.function.builtin.scr
+    turn
+//  ^^^^ support.function.builtin.scr
+    turndoneerror (local.actor.turndoneerror)
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+//                             ^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    turnlegs
+//  ^^^^^^^^ support.function.builtin.scr
+    TurnOff
+//  ^^^^^^^ support.function.builtin.scr
+    TurnOn
+//  ^^^^^^ support.function.builtin.scr
+    turnrate
+//  ^^^^^^^^ support.function.builtin.scr
+    turnspeed (local.actor.turnspeed)
+//  ^^^^^^^^^ support.function.builtin.scr
+//                         ^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    turnto
+//  ^^^^^^ support.function.builtin.scr
+    turnupdate
+//  ^^^^^^^^^^ support.function.builtin.scr
+    turret (local.actor.turret)
+//  ^^^^^^ support.function.builtin.scr
+//                      ^^^^^^ meta.property.object.scr support.function.builtin.scr
+    turretenter
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    turretexit
+//  ^^^^^^^^^^ support.function.builtin.scr
+    turrettik
+//  ^^^^^^^^^ support.function.builtin.scr
+    tweakladderpos
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    type_attack (local.actor.type_attack)
+//  ^^^^^^^^^^^ support.function.builtin.scr
+//                           ^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    type_disguise (local.actor.type_disguise)
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+//                             ^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    type_grenade (local.actor.type_grenade)
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+//                            ^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    type_idle (local.actor.type_idle)
+//  ^^^^^^^^^ support.function.builtin.scr
+//                         ^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    unattachfromladder
+//  ^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    unbind
+//  ^^^^^^ support.function.builtin.scr
+    undrivable
+//  ^^^^^^^^^^ support.function.builtin.scr
+    unglue
+//  ^^^^^^ support.function.builtin.scr
+    unholster
+//  ^^^^^^^^^ support.function.builtin.scr
+    unlock
+//  ^^^^^^ support.function.builtin.scr
+    unlockmovement
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    unregister
+//  ^^^^^^^^^^ support.function.builtin.scr
+    updatebeam
+//  ^^^^^^^^^^ support.function.builtin.scr
+    updateendpoint
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    updateinput
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    updateorigin
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    updatepoweruptime
+//  ^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    upperanim
+//  ^^^^^^^^^ support.function.builtin.scr
+    upperfail (parm.upperfail)
+//  ^^^^^^^^^ string.unquoted.scr
+//                  ^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    upvector (local.entity.upvector)
+//  ^^^^^^^^ string.unquoted.scr
+//                         ^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    use
+//  ^^^ support.function.builtin.scr
+    usebbox
+//  ^^^^^^^ support.function.builtin.scr
+    UsedModel
+//  ^^^^^^^^^ support.function.builtin.scr
+    useheld (local.player.useheld)
+//  ^^^^^^^ string.unquoted.scr
+//                        ^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    uselast
+//  ^^^^^^^ support.function.builtin.scr
+    usematerial
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    usenoammo
+//  ^^^^^^^^^ support.function.builtin.scr
+    userdistance
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    usestuff
+//  ^^^^^^^^ support.function.builtin.scr
+    useweaponclass
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    vector_add
+//  ^^^^^^^^^^ support.function.builtin.scr
+    vector_closer
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    vector_cross
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    vector_dot
+//  ^^^^^^^^^^ support.function.builtin.scr
+    vector_length
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    vector_normalize
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    vector_scale
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    vector_subtract
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    vector_toangles
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    vector_within
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    vehicle (local.player.vehicle)
+//  ^^^^^^^ string.unquoted.scr
+//                        ^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    vehicleanim
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    vehiclebouncy
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    vehicledestroyed
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    vehicledrag
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    vehicleinit
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    vehiclemass
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    vehicleradius
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    vehicleRoll
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    vehiclerollingresistance
+//  ^^^^^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    vehiclesoudnentity_updatetraces
+//  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    vehiclesoundentity_postspawn
+//  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    vehiclespeed
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    vehiclespringy
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    vehicletread
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    vehicleWheelCorners
+//  ^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    vehicleYaw
+//  ^^^^^^^^^^ support.function.builtin.scr
+    vehicleZ
+//  ^^^^^^^^ support.function.builtin.scr
+    velocity (local.entity.velocity)
+//  ^^^^^^^^ string.unquoted.scr
+//                         ^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    viewangles (local.player.viewangles)
+//  ^^^^^^^^^^ support.function.builtin.scr
+//                           ^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    viewanimate
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    viewattach
+//  ^^^^^^^^^^ support.function.builtin.scr
+    viewdelete
+//  ^^^^^^^^^^ support.function.builtin.scr
+    viewdeleteall
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    viewdetach
+//  ^^^^^^^^^^ support.function.builtin.scr
+    viewdetachall
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    viewjitter
+//  ^^^^^^^^^^ support.function.builtin.scr
+    viewkick
+//  ^^^^^^^^ support.function.builtin.scr
+    viewlastframe
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    viewmodel
+//  ^^^^^^^^^ support.function.builtin.scr
+    viewmodelanim
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    viewnext
+//  ^^^^^^^^ support.function.builtin.scr
+    viewnextanim
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    viewOffset
+//  ^^^^^^^^^^ support.function.builtin.scr
+    vieworigin
+//  ^^^^^^^^^^ support.function.builtin.scr
+    viewpitch
+//  ^^^^^^^^^ support.function.builtin.scr
+    viewprev
+//  ^^^^^^^^ support.function.builtin.scr
+    viewprevanim
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    viewroll
+//  ^^^^^^^^ support.function.builtin.scr
+    viewsavesurfaces
+//  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    viewscale
+//  ^^^^^^^^^ support.function.builtin.scr
+    viewscaledown
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    viewscaleup
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    viewscrub
+//  ^^^^^^^^^ support.function.builtin.scr
+    viewsetanim
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    viewsetanim2
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    viewsetanimslot
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    viewspawn
+//  ^^^^^^^^^ support.function.builtin.scr
+    viewthing_think
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    viewthingnext
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    viewthingprev
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    viewyaw
+//  ^^^^^^^ support.function.builtin.scr
+    voicetype (local.actor.voicetype)
+//  ^^^^^^^^^ support.function.builtin.scr
+//                         ^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    volume
+//  ^^^^^^ support.function.builtin.scr
+    volumedamage
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    vote
+//  ^^^^ support.function.builtin.scr
+    wait (local.door wait 1)
+//  ^^^^ keyword.control.scr
+//                   ^^^^ support.function.builtin.scr
+    waitexec
+//  ^^^^^^^^ keyword.control.scr
+    waitForState
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    waitframe
+//  ^^^^^^^^^ keyword.control.scr
+    waitmove
+//  ^^^^^^^^ support.function.builtin.scr
+    waitthread
+//  ^^^^^^^^^^ keyword.control.scr
+    waitTill
+//  ^^^^^^^^ support.function.builtin.scr
+    waittrigger (local.actor.waittrigger)
+//  ^^^^^^^^^^^ support.function.builtin.scr
+//                           ^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    walkto
+//  ^^^^^^ support.function.builtin.scr
+    warmupdelay
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    watch
+//  ^^^^^ support.function.builtin.scr
+    watchactor
+//  ^^^^^^^^^^ support.function.builtin.scr
+    watchnode
+//  ^^^^^^^^^ support.function.builtin.scr
+    watchpath
+//  ^^^^^^^^^ support.function.builtin.scr
+    watchstring
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    wateralpha
+//  ^^^^^^^^^^ support.function.builtin.scr
+    watercolor
+//  ^^^^^^^^^^ support.function.builtin.scr
+    weapdrop
+//  ^^^^^^^^ support.function.builtin.scr
+    weapnext
+//  ^^^^^^^^ support.function.builtin.scr
+    weapon (local.actor.weapon)
+//  ^^^^^^ support.function.builtin.scr
+//                      ^^^^^^ meta.property.object.scr support.function.builtin.scr
+    weapon_internal
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    weaponcommand
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    weapongroup (local.actor.weapongroup)
+//  ^^^^^^^^^^^ support.function.builtin.scr
+//                           ^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    weaponsubtype
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    weapontype (local.actor.weapontype)
+//  ^^^^^^^^^^ support.function.builtin.scr
+//                          ^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    weapprev
+//  ^^^^^^^^ support.function.builtin.scr
+    whatis
+//  ^^^^^^ support.function.builtin.scr
+    worldhitspawn
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    writestats
+//  ^^^^^^^^^^ support.function.builtin.scr
+    wuss
+//  ^^^^ support.function.builtin.scr
+    yaw (local.entity.yaw)
+//  ^^^ string.unquoted.scr
+//                    ^^^ meta.property.object.scr support.function.builtin.scr
+    yaw_offset
+//  ^^^^^^^^^^ support.function.builtin.scr
+    yawCenter
+//  ^^^^^^^^^ support.function.builtin.scr
+    zoom
+//  ^^^^ support.function.builtin.scr
+    zoommovement
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    zoomoff
+//  ^^^^^^^ support.function.builtin.scr
+    zoomspreadmult
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr

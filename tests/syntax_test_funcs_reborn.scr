@@ -1,0 +1,178 @@
+// SYNTAX TEST "Packages/MOHAA/syntaxes/mohaa.scr.sublime-syntax"
+
+    acos
+//  ^^^^ support.function.builtin.scr
+    adddeaths
+//  ^^^^^^^^^ support.function.builtin.scr
+    addkills // Spearhead, Breakthrough & Reborn
+//  ^^^^^^^^ support.function.builtin.scr
+    adminrights (local.player.adminrights)
+//  ^^^^^^^^^^^ string.unquoted.scr
+//                            ^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    asin
+//  ^^^^ support.function.builtin.scr
+    atan // Breakthrough & Reborn
+//  ^^^^ support.function.builtin.scr
+    atan2
+//  ^^^^^ support.function.builtin.scr
+    bindweap
+//  ^^^^^^^^ support.function.builtin.scr
+    ceil
+//  ^^^^ support.function.builtin.scr
+    charToInt
+//  ^^^^^^^^^ support.function.builtin.scr
+    conprintf
+//  ^^^^^^^^^ support.function.builtin.scr
+    cos // Breakthrough & Reborn
+//  ^^^ support.function.builtin.scr
+    cosh
+//  ^^^^ support.function.builtin.scr
+    exp
+//  ^^^ support.function.builtin.scr
+    fclose
+//  ^^^^^^ support.function.builtin.scr
+    fcopy
+//  ^^^^^ support.function.builtin.scr
+    feof
+//  ^^^^ support.function.builtin.scr
+    ferror
+//  ^^^^^^ support.function.builtin.scr
+    fexists
+//  ^^^^^^^ support.function.builtin.scr
+    fflush
+//  ^^^^^^ support.function.builtin.scr
+    fgetc
+//  ^^^^^ support.function.builtin.scr
+    fgets
+//  ^^^^^ support.function.builtin.scr
+    flist
+//  ^^^^^ support.function.builtin.scr
+    floor
+//  ^^^^^ support.function.builtin.scr
+    fmod
+//  ^^^^ support.function.builtin.scr
+    fopen
+//  ^^^^^ support.function.builtin.scr
+    fputc
+//  ^^^^^ support.function.builtin.scr
+    fputs
+//  ^^^^^ support.function.builtin.scr
+    freadall
+//  ^^^^^^^^ support.function.builtin.scr
+    freadpak
+//  ^^^^^^^^ support.function.builtin.scr
+    fremove
+//  ^^^^^^^ support.function.builtin.scr
+    frename
+//  ^^^^^^^ support.function.builtin.scr
+    frewind
+//  ^^^^^^^ support.function.builtin.scr
+    frexp
+//  ^^^^^ support.function.builtin.scr
+    fsaveall
+//  ^^^^^^^^ support.function.builtin.scr
+    fseek
+//  ^^^^^ support.function.builtin.scr
+    ftell
+//  ^^^^^ support.function.builtin.scr
+    getactiveweap
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    getclientnum
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    getconnstate
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    getdate
+//  ^^^^^^^ support.function.builtin.scr
+    getdeaths
+//  ^^^^^^^^^ support.function.builtin.scr
+    getentity
+//  ^^^^^^^^^ support.function.builtin.scr
+    getip
+//  ^^^^^ support.function.builtin.scr
+    getkills
+//  ^^^^^^^^ support.function.builtin.scr
+    getping
+//  ^^^^^^^ support.function.builtin.scr
+    getproperty
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    gettime
+//  ^^^^^^^ support.function.builtin.scr
+    gettimezone
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    ihuddraw_align
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    ihuddraw_alpha
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    ihuddraw_color
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
+    ihuddraw_font
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    ihuddraw_rect
+//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    ihuddraw_shader
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    ihuddraw_string
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    ihuddraw_virtualsize
+//  ^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
+    inventory (local.player.inventory)
+//  ^^^^^^^^^ string.unquoted.scr
+//                          ^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    isadmin
+//  ^^^^^^^ support.function.builtin.scr
+    ldexp
+//  ^^^^^ support.function.builtin.scr
+    leanleftheld (local.player.leanleftheld)
+//  ^^^^^^^^^^^^ string.unquoted.scr
+//                             ^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    leanrightheld (local.player.leanrightheld)
+//  ^^^^^^^^^^^^^ string.unquoted.scr
+//                              ^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    log
+//  ^^^ support.function.builtin.scr
+    log10
+//  ^^^^^ support.function.builtin.scr
+    md5file
+//  ^^^^^^^ support.function.builtin.scr
+    md5string
+//  ^^^^^^^^^ support.function.builtin.scr
+    modf
+//  ^^^^ support.function.builtin.scr
+    netname (local.player.netname) // Breakthrough & Reborn
+//  ^^^^^^^ support.function.builtin.scr
+//                        ^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    pow
+//  ^^^ support.function.builtin.scr
+    registerev
+//  ^^^^^^^^^^ support.function.builtin.scr
+    runheld (local.player.runheld)
+//  ^^^^^^^ string.unquoted.scr
+//                        ^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    secfireheld (local.player.secfireheld)
+//  ^^^^^^^^^^^ string.unquoted.scr
+//                            ^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    setproperty
+//  ^^^^^^^^^^^ support.function.builtin.scr
+    sin // Breakthrough & Reborn
+//  ^^^ support.function.builtin.scr
+    sinh
+//  ^^^^ support.function.builtin.scr
+    sqrt // Breakthrough & Reborn
+//  ^^^^ support.function.builtin.scr
+    stuffsrv
+//  ^^^^^^^^ support.function.builtin.scr
+    tan // Breakthrough & Reborn
+//  ^^^ support.function.builtin.scr
+    tanh
+//  ^^^^ support.function.builtin.scr
+    teamswitchdelay
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+    traced
+//  ^^^^^^ support.function.builtin.scr
+    typeof
+//  ^^^^^^ support.function.builtin.scr
+    unregisterev
+//  ^^^^^^^^^^^^ support.function.builtin.scr
+    userinfo (local.player.userinfo)
+//  ^^^^^^^^ string.unquoted.scr
+//                         ^^^^^^^^ meta.property.object.scr support.function.builtin.scr

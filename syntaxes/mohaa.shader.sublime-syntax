@@ -246,6 +246,6 @@ contexts:
       pop: true
 
   file-path:
-    - match: '(?:[\w-]+/)+(?:[\w''-]+(?:\.\w+)?)'
+    - match: '(?:[\w-]+/)+(?:[\w\.''-]+(?:\.\w+)?)'
       scope: meta.file-path.shader string.unquoted.shader
       pop: true

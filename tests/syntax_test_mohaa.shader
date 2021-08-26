@@ -326,6 +326,11 @@
 //      ^^^ support.function.shader
 //          ^^^^^^^^^^^^^^^^^^^^^ meta.file-path.shader string.unquoted.shader
 
+        map textures/central_europe_winter/winter_interior1.blend.tga
+//     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.block.shader meta.block.shader
+//      ^^^ support.function.shader
+//          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.file-path.shader string.unquoted.shader
+
         map *white
 //      ^^^ support.function.shader
 //          ^ keyword.other.shader

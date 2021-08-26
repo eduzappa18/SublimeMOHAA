@@ -70,7 +70,7 @@
 //  ^ punctuation.section.group.begin.scr
 //                ^ punctuation.section.group.end.scr
 
-    game; level; local; group; parm;
+    game; level; local; group; parm; owner; self;
 //  ^^^^ variable.language.scr
 //      ^ punctuation.terminator.statement.scr
 //        ^^^^^ variable.language.scr
@@ -81,6 +81,10 @@
 //                           ^ punctuation.terminator.statement.scr
 //                             ^^^^ variable.language.scr
 //                                 ^ punctuation.terminator.statement.scr
+//                                   ^^^^^ variable.language.scr
+//                                        ^ punctuation.terminator.statement.scr
+//                                          ^^^^ variable.language.this.scr
+//                                              ^ punctuation.terminator.statement.scr
 
     game.prop; level.prop; local.prop; group.prop; parm.prop;
 //  ^^^^ variable.language.scr
@@ -122,6 +126,15 @@
 //                                       ^ punctuation.terminator.statement.scr
 //                                         ^^^^^^^ string.unquoted.scr
 //                                                ^ punctuation.terminator.statement.scr
+
+    playmovie credits.roq
+//  ^^^^^^^^^ support.function.builtin.scr
+//            ^^^^^^^^^^^ string.unquoted.scr
+    vehicleinit jeep.tik
+//  ^^^^^^^^^^^ support.function.builtin.scr
+//              ^^^^^^^^ string.unquoted.scr
+    dot.dot.dot.dot
+//  ^^^^^^^^^^^^^^^ string.unquoted.scr
 
 
     0
@@ -318,6 +331,19 @@
 //                          ^ punctuation.section.block.begin.scr
 //^^ - meta
 
+        bazooka:
+//    ^^^^^^^^^^^^ meta.switch.scr meta.block.scr
+//      ^^^^^^^ string.unquoted.case.scr
+//             ^ punctuation.separator.scr
+            break;
+//          ^^^^^ keyword.control.loop.scr
+        case value:
+//    ^^^^^^^^^^^^^^^ meta.switch.scr meta.block.scr
+//      ^^^^ keyword.control.switch.scr
+//           ^^^^^ string.unquoted.scr
+//                ^ punctuation.separator.scr
+            break;
+//          ^^^^^ keyword.control.loop.scr
         case "value":
 //      ^^^^ keyword.control.switch.scr
 //           ^^^^^^^ string.quoted.double.scr
@@ -537,19 +563,19 @@
     /* TYPES <bool|entity|float|int|string> */
 
     local.a = bool local.b
-//            ^^^^ storage.type.scr support.function.builtin
+//            ^^^^ storage.type.scr support.function.builtin.scr
 
     local.a = entity local.b
-//            ^^^^^^ storage.type.scr support.function.builtin
+//            ^^^^^^ storage.type.scr support.function.builtin.scr
 
     local.a = float local.b
-//            ^^^^^ storage.type.scr support.function.builtin
+//            ^^^^^ storage.type.scr support.function.builtin.scr
 
     local.a = int local.b
-//            ^^^ storage.type.scr support.function.builtin
+//            ^^^ storage.type.scr support.function.builtin.scr
 
     local.a = string local.b
-//            ^^^^^^ storage.type.scr support.function.builtin
+//            ^^^^^^ storage.type.scr support.function.builtin.scr
 
 
 local.master = spawn ScriptMaster
@@ -661,6 +687,19 @@ local.master aliascache gasmask1 sound/characters/gasmask1.wav soundparms 1.0 0.
 //       ^^^ constant.numeric.scr
 //          ^ punctuation.terminator.statement.scr
 
+    local.door wait 1
+//  ^^^^^ variable.language.scr
+//       ^ punctuation.accessor.dot.scr
+//        ^^^^ meta.property.object.scr
+//             ^^^^ support.function.builtin.scr
+//                  ^ constant.numeric.scr
+
+    local.camera continue
+//  ^^^^^ variable.language.scr
+//       ^ punctuation.accessor.dot.scr
+//        ^^^^^^ meta.property.object.scr
+//               ^^^^^^^^ support.function.builtin.scr
+
     loopsound radio;
 //  ^^^^^^^^^ support.function.builtin.scr
 //            ^^^^^ string.unquoted.scr
@@ -733,44 +772,6 @@ local.master aliascache gasmask1 sound/characters/gasmask1.wav soundparms 1.0 0.
 //      ^ punctuation.accessor.dot.scr
 //       ^^^^^^^^^^^ meta.property.object.scr
 
-
-    local.actor.deathhandler
-    local.actor.enemy
-    local.actor.enemy_visible_change_time
-    local.actor.intervaldir
-
-    local.array.size
-
-    local.entity.angle
-    local.entity.angles
-    local.entity.avelocity
-    local.entity.centroid
-    local.entity.classname
-    local.entity.entnum
-    local.entity.forwardvector
-    local.entity.getmaxs
-    local.entity.getmins
-    local.entity.health
-    local.entity.leftvector
-    local.entity.max_health
-    local.entity.origin
-    local.entity.rightvector
-    local.entity.scale
-    local.entity.target
-    local.entity.targetname
-    local.entity.upvector
-    local.entity.velocity
-    local.entity.viewangles
-
-    local.player.adminrights
-    local.player.dmteam
-    local.player.fireheld
-    local.player.inventory
-    local.player.leanleftheld
-    local.player.leanrightheld
-    local.player.runheld
-    local.player.secfireheld
-    local.player.useheld
     local.player.userinfo
 //  ^^^^^ variable.language.scr
 //       ^ punctuation.accessor.dot.scr
@@ -799,37 +800,10 @@ local.master aliascache gasmask1 sound/characters/gasmask1.wav soundparms 1.0 0.
 //       ^ punctuation.accessor.dot.scr
 //        ^^^^^^^^ meta.property.object.scr - support.function.builtin.scr
 
-
-    level.alarm
-    level.badplace
-    level.bombs_planted
-    level.clockside
-    level.dmrespawning
-    level.dmroundlimit
-    level.found_secrets
-    level.loop_protection
-    level.nodrophealth
-    level.objectivebased
-    level.papers
-    level.planting_team
-    level.rain_density
-    level.rain_length
-    level.rain_min_dist
-    level.rain_numshaders
-    level.rain_shader
-    level.rain_slant
-    level.rain_speed
-    level.rain_speed_vary
-    level.rain_width
-    level.removebadplace
-    level.roundbased
-    level.targets_destroyed
-    level.targets_to_destroy
     level.time
-    level.total_secrets
 //  ^^^^^ variable.language.scr
 //       ^ punctuation.accessor.dot.scr
-//        ^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+//        ^^^^ meta.property.object.scr support.function.builtin.scr
 
     level.ent.time
 //  ^^^^^ variable.language.scr
@@ -843,15 +817,43 @@ local.master aliascache gasmask1 sound/characters/gasmask1.wav soundparms 1.0 0.
 //       ^ punctuation.accessor.dot.scr
 //        ^^^^^^^^^^^ meta.property.object.scr - support.function.builtin.scr
 
-
-    parm.motionfail
-    parm.movedone
-    parm.movefail
-    parm.other
-    parm.owner
-    parm.previousthread
-    parm.sayfail
     parm.upperfail
 //  ^^^^ variable.language.scr
 //      ^ punctuation.accessor.dot.scr
 //       ^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+
+    thread game
+//  ^^^^^^ keyword.control.scr
+//         ^^^^ variable.language.scr
+    thread group
+//  ^^^^^^ keyword.control.scr
+//         ^^^^^ variable.language.scr
+    thread level
+//  ^^^^^^ keyword.control.scr
+//         ^^^^^ variable.language.scr
+    thread local
+//  ^^^^^^ keyword.control.scr
+//         ^^^^^ variable.language.scr
+    thread parm
+//  ^^^^^^ keyword.control.scr
+//         ^^^^ variable.language.scr
+    thread owner
+//  ^^^^^^ keyword.control.scr
+//         ^^^^^ variable.language.scr
+    thread self
+//  ^^^^^^ keyword.control.scr
+//         ^^^^ variable.language.this.scr
+    game:
+//  ^^^^ variable.language.scr
+    group:
+//  ^^^^^ variable.language.scr
+    level:
+//  ^^^^^ variable.language.scr
+    local:
+//  ^^^^^ variable.language.scr
+    parm:
+//  ^^^^ variable.language.scr
+    self:
+//  ^^^^ variable.language.this.scr
+    owner:
+//  ^^^^^ variable.language.scr
