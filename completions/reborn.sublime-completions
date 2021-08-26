@@ -12,7 +12,7 @@
 		"bindweap",
 		"ceil",
 		"charToInt",
-		{ "trigger": "conprintf\t()", "contents": "conprintf(${1:})" },
+		"conprintf",
 		"cos",
 		"cosh",
 		"exp",
@@ -48,6 +48,7 @@
 		"getip",
 		"getkills",
 		"getping",
+		"getproperty",
 		"gettime",
 		"gettimezone",
 		"ihuddraw_align",
@@ -58,7 +59,6 @@
 		"ihuddraw_shader",
 		"ihuddraw_string",
 		"ihuddraw_virtualsize",
-		"inventory",
 		"isadmin",
 		"ldexp",
 		"log",
@@ -69,7 +69,7 @@
 		"netname",
 		"pow",
 		"registerev",
-		"secfireheld",
+		"setproperty",
 		"sin",
 		"sinh",
 		"sqrt",
@@ -77,9 +77,8 @@
 		"tan",
 		"tanh",
 		"teamswitchdelay",
-		{ "trigger": "traced\t()", "contents": "traced( ${1:Vector start}, ${2:Vector end}, ${3:[Integer pass_entities]}, ${4:[Vector mins]}, ${5:[Vector maxs]}, ${6:[Integer mask]})" },
+		"traced",
 		"typeof",
-		"unregisterev",
-		"userinfo"
+		"unregisterev"
 	]
 }
