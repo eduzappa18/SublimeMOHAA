@@ -14,6 +14,15 @@
 |`.cfg` Config files|✔|✔|❌|
 |`.log` Server log files|✔|❌|❌|
 
+#### Tooltips:
+
+This package contains tooltips for Morpheus built-in functions (Allied Assault, Spearhead, Breakthrough and Reborn Patch)
+
+To show a tooltip with the info about a function just click it with the cursor
+
+To disable the tooltips, go to:
+`Preferences -> Package Settings -> MOHAA -> Settings`
+and set `"show_tooltips"` to `false` (in the right side panel)
 _____________________________________________________________
 
 ### Installation
@@ -26,6 +35,9 @@ _____________________________________________________________
 _____________________________________________________________
 
 ### Screenshots
+
+**Tooltips**  
+![Tooltips](screenshots/tooltips.png)
 
 **Morpheus Script**  
 ![Morpheus Script](screenshots/mohaa.scr.png)
