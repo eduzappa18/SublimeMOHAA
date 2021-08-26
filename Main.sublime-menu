@@ -1,0 +1,40 @@
+[
+    {
+        "id": "preferences",
+        "children":
+        [
+            {
+                "caption": "Package Settings",
+                "id": "package-settings",
+                "children":
+                [
+                    {
+                        "caption": "MOHAA",
+                        "children":
+                        [
+                            {
+                                "caption": "Settings",
+                                "command": "edit_settings",
+                                "args": {
+                                    "base_file": "${packages}/MOHAA/MOHAA.sublime-settings",
+                                    "default": "// Settings in here override those in \"MOHAA/MOHAA.sublime-settings\",\n{\n\t$0\n}\n"
+                                }
+                            },
+                            { "caption": "-" },
+                            {
+                                "caption": "xNULL Forums",
+                                "command": "open_url",
+                                "args": {"url": "https://www.x-null.net/forums/forum.php"}
+                            },
+                            {
+                                "caption": "SublimeMOHAA GitHub Repository",
+                                "command": "open_url",
+                                "args": {"url": "https://github.com/eduzappa18/SublimeMOHAA"}
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

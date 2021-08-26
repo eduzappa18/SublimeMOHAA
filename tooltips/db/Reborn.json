@@ -1,0 +1,590 @@
+{
+	"acos": {
+		"syntax": "acos( Float x )",
+		"description": "Returns the principal value of the arc cosine of x, expressed in radians.",
+		"example": "local.result = acos local.x",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"adddeaths": {
+		"syntax": "adddeaths( Integer deaths )",
+		"description": "Adds number of deaths to player. (Can be also negative).",
+		"example": "// Add 5 deaths to player\nlocal.player adddeaths 5\n// Remove 5 deaths from player\nlocal.player adddeaths -5",
+		"class": ["Player"],
+		"gamever": ["REBORN"]
+	},
+	"addkills": {
+		"syntax": "addkills( Integer num_kills )",
+		"description": "Give or take kills from the player.",
+		"example": "// Add 5 kills to player\nlocal.player addkills 5\n// Remove 5 kills from player\nlocal.player addkills -5",
+		"class": ["Player"],
+		"gamever": ["SH", "BT", "REBORN"]
+	},
+	"adminrights": {
+		"syntax": "adminrights",
+		"description": "Gets the admin rights of the player (Reborn ClientAdmin System).",
+		"example": "local.result = local.player.adminrights",
+		"class": ["Player"],
+		"gamever": ["REBORN"]
+	},
+	"asin": {
+		"syntax": "asin( Float x )",
+		"description": "Returns the principal value of the arc sine of x, expressed in radians.",
+		"example": "local.result = asin local.x\n",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"atan": {
+		"syntax": "atan( Float arg, [ Float arg2 ] )",
+		"description": "<b>Reborn</b>: Returns the principal value of the arc tangent of y/x, expressed in radians.\n\n<b>Breakthrough</b>: ArcTangent of float (in degrees, not radians).",
+		"example": "// Breakthrough\nlocal.result = atan local.y local.x\n\n// Reborn\nlocal.result = atan local.x\n// Result: Principal arc tangent of x, in the interval [-pi/2,+pi/2] radians.",
+		"class": ["ScriptThread"],
+		"gamever": ["BT", "REBORN"]
+	},
+	"atan2": {
+		"syntax": "atan2( Float y, Float x )",
+		"description": "Returns the principal value of the arc tangent of y/x, expressed in radians.\nTo compute the value, the function uses the sign of both arguments to determine the quadrant.",
+		"example": "local.result = atan2 local.y local.x",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"bindweap": {
+		"syntax": "bindweap( Entity weapon )",
+		"description": "Binds weapon to player. Sets him as weapon owner.\n2nd use of the command will unbind the weapon from player.",
+		"example": "local.player bindweap local.weapon\nlocal.weapon anim \"fire\"\nlocal.player bindweap local.weapon",
+		"class": ["Player"],
+		"gamever": ["REBORN"]
+	},
+	"ceil": {
+		"syntax": "ceil( Float x )",
+		"description": "Returns the smallest integral value that is not less than x.",
+		"example": "local.result = ceil local.x",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"chartoint": {
+		"syntax": "charToInt( String char )",
+		"description": "Converts an ASCII character to its decimal\nequivalent and returns that as an integer value.",
+		"example": "local.result = charToInt \"a\"\nprintln local.result // Prints: 97",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"conprintf": {
+		"syntax": "conprintf( String text )",
+		"description": "Prints text to a console.",
+		"example": "conprintf \"This can be a custom error message from the script\"",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"cos": {
+		"syntax": "cos( Float x )",
+		"description": "<b>Reborn</b>: Returns the cosine of an angle of x radians.\n\n<b>Breakthrough</b>: Cosine of float (expects degrees not radians).",
+		"example": "local.result = cos local.x",
+		"class": ["ScriptThread"],
+		"gamever": ["BT", "REBORN"]
+	},
+	"cosh": {
+		"syntax": "cosh( Float x )",
+		"description": "Returns the hyperbolic cosine of x.",
+		"example": "local.result = cosh local.x",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"exp": {
+		"syntax": "exp( Float x )",
+		"description": "Returns the base-e exponential function of x,\nwhich is the e number raised to the power x.",
+		"example": "local.result = exp local.x",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"fclose": {
+		"syntax": "fclose( Integer filehandle )",
+		"description": "Closes file.\n\nIf file is successfully closed, a zero value is returned.\nOn failure, EOF is returned.",
+		"example": "local.result = fclose local.file",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"fcopy": {
+		"syntax": "fcopy( String filename, String copyname )",
+		"description": "Creates a copy of file.\nIf the file is successfully copied, a zero value is returned.\nWhen function fails to open original file, a -1 value is returned.\nWhen function fails to create a second file, a -2 value is returned.\nWhen function fails during data copy process, a -3 value is returned.",
+		"example": "local.result = fcopy local.filename local.copyname",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"feof": {
+		"syntax": "feof( Integer filehandle )",
+		"description": "Checks for end of file.\nA non-zero value is returned in the case that the\nEnd-of-File indicator associated with the file is set.\nOtherwise, a zero value is returned.",
+		"example": "local.result = feof local.file",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"ferror": {
+		"syntax": "ferror( Integer filehandle )",
+		"description": "Checks if the error indicator associated with file is set,\nreturning a value different from zero if it is.\n\nIf the error indicator associated with the file was set,\nthe function returns a nonzero value.\nOtherwise, it returns a zero value.",
+		"example": "local.result = ferror local.file",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"fexists": {
+		"syntax": "fexists( String filename )",
+		"description": "Checks if file with given filename exists.\n\nIf file exists, function returns 1. Otherwise it returns 0.",
+		"example": "local.result = fexists \"folder/folder2/file.txt\"",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"fflush": {
+		"syntax": "fflush( Integer filehandle )",
+		"description": "If the given file was open for writing and the last i/o operation was an output operation,\nany unwritten data in the output buffer is written to the file.\nThe file remains open after this command.\n\nA zero value indicates success.\nIf an error occurs, EOF is returned and the error indicator is set.",
+		"example": "local.result = fflush local.file",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"fgetc": {
+		"syntax": "fgetc( Integer filehandle )",
+		"description": "Reads single character from file.\n\nThe character read is returned as an int value.\nYou need to cast it to char if you want to use it in string.",
+		"example": "local.char = fgetc local.file",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"fgets": {
+		"syntax": "fgets( Integer filehandle, Integer maxbuffsize )",
+		"description": "Reads string line from file.\nmaxbuffsize - specifies maximum buffer size that will be allocated to store the string in memory.\n\nIf the End-of-File is encountered and no characters have been read 0 (null) is returned.\nIf an error occurs 0 (null) is returned.\nIf a memory allocation error occurs, -1 is returned.",
+		"example": "local.text = fgets local.file 256",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"flist": {
+		"syntax": "flist( String path, String extension, Integer scanSubDirectories )",
+		"description": "Returns a list (array) of files with given extension located in given path.\nFunction handles .pk3 folder structure and normal system directories.\nWhen scanSubDirectories equals 1, function will include subdirectories located under directory path.\nExtension needs to have \".\" (dot) included. Otherwise it will act as filter.",
+		"example": "local.maplist = flist \"maps/\" \".bsp\" 1",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"floor": {
+		"syntax": "floor( Float x )",
+		"description": "Returns the largest integral value that is not greater than x.",
+		"example": "local.result = floor local.x",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"fmod": {
+		"syntax": "fmod( Float numerator, Float denominator )",
+		"description": "Returns the floating-point remainder of numerator/denominator.\n\nThe remainder of a division operation is the result of subtracting\nthe integral quotient multiplied by the denominator from the numerator:\nremainder = numerator - quotient * denominator",
+		"example": "local.result = fmod local.numerator local.denominator",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"fopen": {
+		"syntax": "fopen( String filename, String accessType )",
+		"description": "Opens file (<a href='https://www.cplusplus.com/reference/cstdio/fopen/'>ANSI C - fopen</a>).\nReturns file handle that is needed for identification and further operations on this file.",
+		"example": "local.file = fopen \"main/config.txt\" \"a+\"",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"fputc": {
+		"syntax": "fputc( Integer filehandle, String character )",
+		"description": "Writes a character to the file and advances the position indicator.\nIf there are no errors, the same character that has been written is returned.\nIf an error occurs, EOF is returned and the error indicator is set.\nYou have to cast returned value to char.\nIf you pass longer string, only first character will be written to file.",
+		"example": "local.result = fputc local.file \"a\"",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"fputs": {
+		"syntax": "fputs( Integer filehandle, String text )",
+		"description": "Writes text to the file and advances the position indicator.\nOn success, a non-negative value is returned.\nOn error, the function returns EOF.",
+		"example": "local.result = fputs local.file \"This is an example\"",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"freadall": {
+		"syntax": "freadall( Integer filehandle )",
+		"description": "Reads whole file into a string at once. File has to be opened in binary mode (rb, rb+)\n\nDon't read binary files with this function because it may cause memory leaks.",
+		"example": "local.content = freadall local.file",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"freadpak": {
+		"syntax": "freadpak( String filename )",
+		"description": "Reads file located inside .pk3 file in text mode and returns it's content as string.\n\nIf the file is successfully read, function returns a string with it's content.\nWhen function fails to find, open or read a file from .pk3, a -1 value is returned.",
+		"example": "local.content = freadpak local.filename",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"fremove": {
+		"syntax": "fremove( String filename )",
+		"description": "Removes the file with given filename.\n\nIf the file is successfully deleted, a zero value is returned.\nOn failure, a nonzero value is returned and the errno variable\nis set to the corresponding error code.",
+		"example": "local.result = fremove local.filename",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"frename": {
+		"syntax": "frename( String oldname, String newname )",
+		"description": "Renames the file with given filename.\n\nIf the file is successfully renamed, a zero value is returned.\nOn failure, a nonzero value is returned and the errno variable\nis set to the corresponding error code.",
+		"example": "local.result = frename local.oldname local.newname",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"frewind": {
+		"syntax": "frewind( Integer filehandle )",
+		"description": "Sets the position indicator associated with file to the beginning of the file.",
+		"example": "local.result = frewind local.file",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"frexp": {
+		"syntax": "frexp( Float x )",
+		"description": "Breaks the floating point number x into its binary significand\n(a floating point value between 0.5(included) and 1.0(excluded))\nand an integral exponent for 2, such that:\nx = significand * 2exponent\n\nIf x is zero, both parts (significand and exponent) are zero.",
+		"example": "local.result = frexp local.x\n// Result\nlocal.result[\"significand\"] // Significand part\nlocal.result[\"exponent\"] // Exponent part",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"fsaveall": {
+		"syntax": "fsaveall( Integer filehandle, String content )",
+		"description": "Writes string content to file at once.\nFile has to be opened in binary mode (wb, wb+, ab).\nThe content will start to be saved from the current file position.\n\nFunction returns number of character written to file or -1 if content is NULL.",
+		"example": "local.result = fsaveall local.file local.content",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"fseek": {
+		"syntax": "fseek( Integer filehandle, Integer offset, Integer origin )",
+		"description": "Sets the position indicator associated with the file to a new position\ndefined by adding offset to a reference position specified by origin.\n\norigin:\n0 = SEEK_SET\n1 = SEEK_CUR\n\nIf successful, the function returns a zero value.\nOtherwise, it returns nonzero value.",
+		"example": "local.return = fseek local.file 154 0",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"ftell": {
+		"syntax": "ftell( Integer filehandle )",
+		"description": "Returns the current value of the position indicator of the file.\n\nOn success, the current value of the position indicator is returned.\nIf an error occurs, -1 is returned.",
+		"example": "local.return = ftell local.file",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"getactiveweap": {
+		"syntax": "getactiveweap( Integer weaponhand )",
+		"description": "Gets currently active weapon from player's hand of given index.",
+		"example": "local.weapon = local.player getactiveweap 0",
+		"class": ["Player"],
+		"gamever": ["REBORN"]
+	},
+	"getclientnum": {
+		"syntax": "getclientnum( Entity player )",
+		"description": "Gets player's client number and returns it as integer.",
+		"example": "local.clientnum = getclientnum local.player",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"getconnstate": {
+		"syntax": "getconnstate",
+		"description": "Gets state of player's connection.\n\nReturns integer value:\n0 = CS_FREE - given player slot is free\n1 = CS_ZOMBIE - given player slot is in zombie state (his data is still kept after he disconnected or lost connection)\n2 = CS_CONNECTED - player has connected to server, but he's not yet in the game\n3 = CS_PRIMED - player has passed through authorization checks and finished downloading any missing files\n4 = CS_ACTIVE - player is in game and can start playing",
+		"example": "local.connection_state = local.player getconnstate",
+		"class": ["Player"],
+		"gamever": ["REBORN"]
+	},
+	"getdate": {
+		"syntax": "getdate( String format )",
+		"description": "Gets current date in format given as parameter.\nMax format length is 512 characters.\n\nFormatting options: <a href='https://www.cplusplus.com/reference/ctime/strftime/'>strftime</a>",
+		"example": "local.date = getdate \"%F\" // YYYY-MM-DD format",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"getdeaths": {
+		"syntax": "getdeaths",
+		"description": "Gets number of player's deaths and returns it as integer.\n\nWarning:\nWhen g_gametype is 3 or 4, deaths aren't counted and result\nof this function will equal to kills amount that player has.",
+		"example": "local.player_deaths = local.player getdeaths",
+		"class": ["Player"],
+		"gamever": ["REBORN"]
+	},
+	"getentity": {
+		"syntax": "getentity( Integer entnum)",
+		"description": "Returns entity with given entity number.",
+		"example": "local.entity = getentity 0\n// Entities with entity number between 0 and sv_maxclients are reserved for players\n// and thus 'getentity 0' is equal to $player[0]",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"getip": {
+		"syntax": "getip( Entity player )",
+		"description": "Gets player's ip address with port and returns it as string.",
+		"example": "local.player_ip = getip local.player // 127.0.0.1:12203",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"getkills": {
+		"syntax": "getkills",
+		"description": "Gets number of player's kills and returns it as integer.",
+		"example": "local.kills = local.player getkills",
+		"class": ["Player"],
+		"gamever": ["REBORN"]
+	},
+	"getping": {
+		"syntax": "getping( Entity player )",
+		"description": "Gets player's ping and returns it as integer.",
+		"example": "local.ping = getping local.player",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"getproperty": {
+		"syntax": "getproperty( String key )",
+		"description": "Gets property saved in local storage for given key.\nReturns value as string or error code as integer.\n\nkey can't be NULL.",
+		"example": "local.value = getproperty \"my_mod_settings\"",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"gettime": {
+		"syntax": "gettime( Integer zero )",
+		"description": "Gets current time in format: H:M:S",
+		"example": "local.time = gettime 0",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"gettimezone": {
+		"syntax": "gettimezone( Integer zero )",
+		"description": "Gets current time zone.",
+		"example": "local.timezone = gettimezone 0",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"ihuddraw_align": {
+		"syntax": "ihuddraw_align( Entity player, Integer index, String h_align, String v_align )",
+		"description": "Sets the alignment of a huddraw element for individual player.\nSpecified with:\n\"left\", \"center\" or \"right\" for horizontal alignment\n\"top\", \"center\" or \"bottom\" for vertical alignment.",
+		"example": "ihuddraw_align local.player 33 \"left\" \"bottom\"",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"ihuddraw_alpha": {
+		"syntax": "ihuddraw_alpha( Entity player, Integer index, Float alpha )",
+		"description": "Sets the alpha of a huddraw element for individual player.",
+		"example": "ihuddraw_alpha local.player 33 1",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"ihuddraw_color": {
+		"syntax": "ihuddraw_color( Entity player, Integer index, Float red, Float green, Float blue )",
+		"description": "Sets the color for a huddraw element for individual player.\nRGB (red, green, blue) format. From 0 to 1.",
+		"example": "ihuddraw_color local.player 33 1 0.5 0.5",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"ihuddraw_font": {
+		"syntax": "ihuddraw_font( Entity player, Integer index, String fontname )",
+		"description": "Sets the font to use for a huddraw element, for individual player.\n\ncourier-16, courier-18, courier-20\nfacfont-20\nhandle-16, handle-18, handle-22, handle-23\nmarlett, Marlett-20\nverdana-12, verdana-14\nDelima-30 (SH & BT only)",
+		"example": "ihuddraw_font local.player 33 \"facfont-20\"",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"ihuddraw_rect": {
+		"syntax": "ihuddraw_rect( Entity player, Integer index, Integer x, Integer y, Integer width, Integer height )",
+		"description": "Specifies the position of the upper left corner and size of a huddraw element for individual player.\nThe x and y position is relative to the position specified with the 'ihuddraw_align' command.",
+		"example": "ihuddraw_rect local.player 33 0 0 640 480",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"ihuddraw_shader": {
+		"syntax": "ihuddraw_shader( Entity player, Integer index, String shader )",
+		"description": "Sets the shader to use for a particular huddraw element for individual player.\nshader can be the name of a shader or the path to the texture.",
+		"example": "ihuddraw_shader local.player 33 \"black\"\n// Or\nihuddraw_shader local.player 33 \"textures/mohmenu/black.tga\"",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"ihuddraw_string": {
+		"syntax": "ihuddraw_string( Entity player, Integer index, String string )",
+		"description": "Sets a string to be displayed. Clears the shader value of huddraw element for individual player.",
+		"example": "ihuddraw_string local.player 33 \"I luv Reborn 1.12 Patch!\"",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"ihuddraw_virtualsize": {
+		"syntax": "ihuddraw_virtualsize( Entity player, Integer index, Integer virtual )",
+		"description": "Sets if the huddraw element (for individual player)\nshould use virutal screen resolution for positioning and size.",
+		"example": "ihuddraw_virtualsize local.player 33 1",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"inventory": {
+		"syntax": "inventory",
+		"description": "Returns player's inventory.",
+		"example": "local.inventory = local.player.inventory\nlocal.inventory_size = local.player.inventory.size\nlocal.item1 = local.player.inventory[0]",
+		"class": ["Player"],
+		"gamever": ["REBORN"]
+	},
+	"isadmin": {
+		"syntax": "isadmin",
+		"description": "Checks if player is currently logged in as server administrator.\nReturns 1 if player is logged in as administrator, otherwise it returns 0.",
+		"example": "local.result = local.player isadmin",
+		"class": ["Player"],
+		"gamever": ["REBORN"]
+	},
+	"ldexp": {
+		"syntax": "ldexp( Float x, Integer exponent )",
+		"description": "Returns the resulting floating point value from multiplying x (the significand) by 2\nraised to the power of exp (the exponent).",
+		"example": "local.result = ldexp local.x local.exponent",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"leanleftheld": {
+		"syntax": "leanleftheld",
+		"description": "Returns 1 if player is leaning left. Otherwise returns 0.",
+		"example": "if (local.player.leanleftheld) {\n\t// local.player is leaning left\n}",
+		"class": ["Player"],
+		"gamever": ["REBORN"]
+	},
+	"leanrightheld": {
+		"syntax": "leanrightheld",
+		"description": "Returns 1 if player is leaning right. Otherwise returns 0.",
+		"example": "if (local.player.leanrightheld) {\n\t// local.player is leaning right\n}",
+		"class": ["Player"],
+		"gamever": ["REBORN"]
+	},
+	"log": {
+		"syntax": "log( Float x )",
+		"description": "Returns the natural logarithm of x.\n\nThe natural logarithm is the base-e logarithm,\nthe inverse of the natural exponential function (exp).\nFor base-10 logarithms, a specific function log10 exists.",
+		"example": "local.result = log local.x",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"log10": {
+		"syntax": "log10( Float x )",
+		"description": "Returns the common (base-10) logarithm of x.",
+		"example": "local.result = log10 local.x",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"md5file": {
+		"syntax": "md5file( String filename )",
+		"description": "Generates MD5 checksum of file with given filename.",
+		"example": "local.checksum = md5file local.filename",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"md5string": {
+		"syntax": "md5string( String text )",
+		"description": "Generates MD5 checksum of text.",
+		"example": "local.checksum = md5string local.text",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"modf": {
+		"syntax": "modf( Float x )",
+		"description": "Breaks x into two parts: the integer part and the fractional part.",
+		"example": "local.result = modf local.x\n// Result\nlocal.result[\"intpart\"] // integer part\nlocal.result[\"fractional\"] // fractional part",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"netname": {
+		"syntax": "netname( Entity player )",
+		"description": "Gets player's name and returns it as string.",
+		"example": "// Breakthrough\nlocal.player_name = local.player.netname\n// Reborn\nlocal.player_name = netname local.player",
+		"class": ["Player", "ScriptThread"],
+		"gamever": ["BT", "REBORN"]
+	},
+	"pow": {
+		"syntax": "pow( Float x, Integer exponent )",
+		"description": "Returns base raised to the power exponent.",
+		"example": "local.result = pow local.x local.exponent",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"registerev": {
+		"syntax": "registerev( String eventname, String scriptname )",
+		"description": "Registers script callback handler for given event type (<a href='https://www.x-null.net/forums/threads/728'>EventSystem Documentation</a>).\nWhen given even type will occur, EventSystem engine will execute given script.\n\nThe result can have one of the following values:\n0 = Registering event callback handler was successful\n1 = Event callback handler is already registered for given event\n2 = Memory allocation error",
+		"example": "local.result = registerev \"connected\" global/eventhandler.scr::connected",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"runheld": {
+		"syntax": "runheld",
+		"description": "Returns 1 if player is running. Otherwise returns 0.",
+		"example": "if (local.player.runheld) {\n\t// local.player is running\n}",
+		"class": ["Player"],
+		"gamever": ["REBORN"]
+	},
+	"secfireheld": {
+		"syntax": "secfireheld",
+		"description": "Returns 1 if player is holding secondary fire button. Otherwise returns 0.",
+		"example": "if (local.player.secfireheld) {\n\t// local.player is holding secondary fire button\n}",
+		"class": ["Player"],
+		"gamever": ["REBORN"]
+	},
+	"setproperty": {
+		"syntax": "setproperty( String key, String value )",
+		"description": "Sets property in local storage to given value.\n\nReturns integer value:\n0 - Success\n&lt; 0 - Error\n\nKey and value can't be NULL.\nIf you want to clear the value, you have to set it to empty string.",
+		"example": "local.result = setproperty \"my_mod_settings\" \"abcdefgh\"",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"sin": {
+		"syntax": "sin( Float x )",
+		"description": "<b>Reborn</b>: Returns the sine of an angle of x radians.\n\n<b>Breakthrough</b>:  Sine of float (expects degrees not radians).",
+		"example": "local.result = sin local.x",
+		"class": ["ScriptThread"],
+		"gamever": ["BT", "REBORN"]
+	},
+	"sinh": {
+		"syntax": "sinh( Float x )",
+		"description": "Returns the hyperbolic sine of x.",
+		"example": "local.result = sinh local.x",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"sqrt": {
+		"syntax": "sqrt( Float x )",
+		"description": "Returns the square root of x.",
+		"example": "local.result = sqrt 4",
+		"class": ["ScriptThread"],
+		"gamever": ["BT", "REBORN"]
+	},
+	"stuffsrv": {
+		"syntax": "stuffsrv( String string )",
+		"description": "Sends command to server console.",
+		"example": "stuffsrv \"map dm/mohdm1\"",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"tan": {
+		"syntax": "tan( Float x )",
+		"description": "<b>Reborn</b>: Returns the tangent of an angle of x radians.\n\n<b>Breakthrough</b>: Tangent of float (expects degrees not radians).",
+		"example": "local.result = tan local.x",
+		"class": ["ScriptThread"],
+		"gamever": ["BT", "REBORN"]
+	},
+	"tanh": {
+		"syntax": "tanh( Float x )",
+		"description": "Returns the hyperbolic tangent of x.",
+		"example": "local.result = tanh local.x",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"teamswitchdelay": {
+		"syntax": "teamswitchdelay( Float time )",
+		"description": "Sets the team switch delay time.",
+		"example": "// Players have to wait 3 seconds until they can switch teams again\nteamswitchdelay 3",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"traced": {
+		"syntax": "traced( Vector start, Vector end, [Integer pass_entities], [Vecotr mins], [Vector maxs], [Integer mask])",
+		"description": "Performs a ray trace from start origin to end origin.\nIt takes optional arguments such as entity number to be ignored/skipped\nby the trace, mins and maxs of trace box and trace mask.",
+		"example": "local.result = traced ( 550 -783 140 ) ( 1220 340 78 ) 1",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"typeof": {
+		"syntax": "typeof( Variable var )",
+		"description": "Gets the type of variable.\nThe type of variable returned as string (array, string, vector, listener, ...)",
+		"example": "local.result = typeof local.var",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"unregisterev": {
+		"syntax": "unregisterev( String eventname )",
+		"description": "Unregisters script callback handler for given event type.\n\nThe result can have one of the following values:\n0 = Unregistering event callback handler was successful\n1 = Event callback handler is already unregistered",
+		"example": "local.result = unregisterev \"connected\"",
+		"class": ["ScriptThread"],
+		"gamever": ["REBORN"]
+	},
+	"userinfo": {
+		"syntax": "userinfo",
+		"description": "Returns player's userinfo.",
+		"example": "local.userinfo = local.player.userinfo",
+		"class": ["Player"],
+		"gamever": ["REBORN"]
+	}
+}

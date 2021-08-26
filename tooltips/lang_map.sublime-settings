@@ -1,0 +1,15 @@
+{
+	"mdpopups.sublime_user_lang_map":
+	{
+		"Morpheus":
+		[
+			[
+				"morpheus"
+			],
+			[
+				"MOHAA/syntaxes/mohaa.scr",
+				"MOHAA/syntaxes/mohaa.tik"
+			]
+		]
+	}
+}

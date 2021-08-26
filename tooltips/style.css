@@ -1,0 +1,92 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	--hr: color(var(--foreground) blend(var(--background) 50%));
+	--hr2: color(var(--foreground) blend(var(--background) 20%));
+	--gris: color(var(--foreground) blend(var(--background) 80%));
+	--border: color(var(--background) alpha(1));
+	--console: #FFFF80;
+}
+body {
+	border: 1px solid var(--foreground);
+	font-size: 0.96em;
+}
+a {
+	color: color(var(--accent) blend(var(--background) 50%));
+}
+.header {
+	border-bottom: 1px solid var(--hr);
+	padding: 0.2rem .5rem;
+	background-color: var(--background);
+	color: color(var(--gris));
+}
+.class-container {
+	display: inline-block;
+}
+.class {
+	color: color(var(--redish) blend(var(--background) 70%));
+}
+.version-container {
+	display: inline-block;
+	padding: 0 .5rem;
+}
+.version {
+	font-weight: bold;
+}
+.AA {color: color(var(--orangish) blend(var(--background) 60%));}
+.SH {color: color(var(--greenish) blend(var(--background) 60%));}
+.BT {color: color(var(--bluish) blend(var(--background) 60%));}
+.REBORN {color: color(var(--purplish) blend(var(--background) 60%));}
+
+.content {
+	padding: 0 1rem;
+}
+.syntax-container {
+	padding: 0.5rem 0rem;
+}
+.name {
+	font-weight: bold;
+}
+.description-container {
+	border-top: 1px solid var(--hr2);
+	padding: 0.5rem 0rem;
+}
+.description-container br {
+	line-height: 0.6rem;
+}
+.example-container {
+	border-top: 1px solid var(--hr);
+	padding: 0.5rem;
+	padding-bottom: 1rem;
+}
+.example-code {
+	display: block;
+	padding: 0.3rem 0.6rem;
+	border: 1px solid var(--hr);
+	background-color: var(--background);
+
+}
+.example-copy {
+	display: inline-block;
+	border: 1px solid var(--hr);
+	border-style: solid;
+	padding: 0.2rem 0 0.2rem 0.2rem;
+	background-color: var(--background);
+	color: var(--gris);
+	text-decoration: none;
+}
+.footer {
+	border-top: 1px solid var(--hr);
+	padding: 0.1rem 0.5rem;
+	background-color: var(--background);
+	color: var(--gris);
+	text-align: right;
+}
+.footer a {
+	border-left: 0.05rem solid var(--hr);
+	border-style: solid;
+	padding: 0 0.5rem;
+	color: var(--gris);
+}

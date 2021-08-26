@@ -1,0 +1,7 @@
+// MOHAA Preferences – User
+// ================================================================
+{
+    // Show tooltips with info when clicking on built-in functions
+    // ( true | false )
+    "show_tooltips": true
+}

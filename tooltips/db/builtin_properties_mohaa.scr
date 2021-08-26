@@ -1,0 +1,189 @@
+// ==============================================
+// List of built-in properties, getters, setters
+// Allied Assault, Spearhead, Breakthrough and Reborn Patch
+// ==============================================
+
+// Array
+local.array.size
+
+// Game
+game.detail
+game.skill
+
+// Level
+level.alarm
+level.bombs_planted
+level.clockside
+level.dmrespawning
+level.dmroundlimit
+level.found_secrets
+level.loop_protection
+level.nodrophealth
+level.nodropweapons
+level.objectivebased
+level.papers
+level.planting_team
+level.rain_density
+level.rain_length
+level.rain_min_dist
+level.rain_numshaders
+level.rain_shader
+level.rain_slant
+level.rain_speed
+level.rain_speed_vary
+level.rain_width
+level.roundbased
+level.roundstarted
+level.targets_destroyed
+level.targets_to_destroy
+level.time
+level.total_secrets
+
+// World
+$world.farplane
+$world.farplane_bias
+$world.farplane_color
+$world.get_render_terrain
+$world.skybox_farplane
+$world.skybox_speed
+
+// Parm
+parm.motionfail
+parm.movedone
+parm.movefail
+parm.other
+parm.owner
+parm.previousthread
+parm.sayfail
+parm.upperfail
+
+// Actor, AISpawnPoint, Sentient
+local.actor.accuracy
+local.actor.alarmnode
+local.actor.alarmthread
+local.actor.ammo_grenade
+local.actor.animname
+local.actor.avoidplayer
+local.actor.balconyheight
+local.actor.blendtime
+local.actor.deathhandler
+local.actor.disguise_accept_thread
+local.actor.disguise_level
+local.actor.disguise_period
+local.actor.disguise_range
+local.actor.distancetoenemy
+local.actor.emotion
+local.actor.enableEnemy
+local.actor.enablePain
+local.actor.enemy
+local.actor.enemy_visible_change_time
+local.actor.enemysharerange
+local.actor.fallheight
+local.actor.favoriteenemy
+local.actor.forcedrophealth
+local.actor.forcedropweapon
+local.actor.gren_awareness
+local.actor.gun
+local.actor.hascompletelookahead
+local.actor.headmodel
+local.actor.headskin
+local.actor.hearing
+local.actor.ignorebadplaces
+local.actor.inreload
+local.actor.interval
+local.actor.intervaldir
+local.actor.kickdir
+local.actor.last_enemy_visible_time
+local.actor.leash
+local.actor.lookaroundangle
+local.actor.maxdist
+local.actor.mindist
+local.actor.mood
+local.actor.movedir
+local.actor.movedoneradius
+local.actor.mumble
+local.actor.nationality
+local.actor.no_idle
+local.actor.nolongpain
+local.actor.nonvislevel
+local.actor.nosurprise
+local.actor.noticescale
+local.actor.painhandler
+local.actor.pathdist
+local.actor.patrolpath
+local.actor.position
+local.actor.runanimrate
+local.actor.sight
+local.actor.silent
+local.actor.sound_awareness
+local.actor.suppresschance
+local.actor.team
+local.actor.thinkstate
+local.actor.threatbias
+local.actor.turndoneerror
+local.actor.turnspeed
+local.actor.turret
+local.actor.type_attack
+local.actor.type_disguise
+local.actor.type_grenade
+local.actor.type_idle
+local.actor.voicetype
+local.actor.waittrigger
+local.actor.weapon
+local.actor.weapongroup
+local.actor.weapontype
+local.AISpawnPoint.dontdrophealth
+
+// Listener, SimpleEntity, Entity (and subclasses)
+local.entity.angle
+local.entity.angles
+local.entity.avelocity
+local.entity.brushmodel
+local.entity.centroid
+local.entity.classname
+local.entity.collisionent
+local.entity.entnum
+local.entity.forwardvector
+local.entity.getmaxs
+local.entity.getmins
+local.entity.health
+local.entity.isOpen
+local.entity.leftvector
+local.entity.max_health
+local.entity.model
+local.entity.moving_from_anim
+local.entity.normal_health
+local.entity.origin
+local.entity.owner
+local.entity.radnum
+local.entity.rightvector
+local.entity.rotatedbbox
+local.entity.scale
+local.entity.target
+local.entity.targetname
+local.entity.upvector
+local.entity.velocity
+local.entity.yaw
+
+// Player
+local.player.adminrights // Reborn
+local.player.dmteam
+local.player.fireheld
+local.player.has_disguise
+local.player.injail
+local.player.inventory // Reborn
+local.player.is_disguised
+local.player.isEscaping
+local.player.isSpectator
+local.player.leanleftheld // Reborn
+local.player.leanrightheld // Reborn
+local.player.nationalityprefix
+local.player.netname
+local.player.primaryfireheld
+local.player.runheld // Reborn
+local.player.secfireheld // Reborn
+local.player.secondaryfireheld
+local.player.useheld
+local.player.userinfo // Reborn
+local.player.vehicle
+local.player.viewangles
