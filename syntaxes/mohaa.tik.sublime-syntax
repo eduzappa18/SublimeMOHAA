@@ -3,7 +3,7 @@
 name: TIKI file [.tik]
 file_extensions:
   - tik
-first_line_match: ^TIKI$
+first_line_match: ^TIKI|animations$
 scope: source.tik
 
 variables:
