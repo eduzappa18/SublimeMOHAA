@@ -401,14 +401,14 @@
 	"angle": {
 		"syntax": "angle( Float newAngle )",
 		"description": "Sets/Gets the angles of the entity using just one value.\nSets/Gets the yaw of the entity or an up and down direction if 'newAngle' is [0-359] or -1 or -2",
-		"example": "local.entity angle 90\nprintln local.entity.angle // Prints: 90.000",
+		"example": "local.entity angle 90\n// Or\nlocal.entity.angle = 90\n\nprintln local.entity.angle // Prints: 90.000",
 		"class": ["SimpleEntity"],
 		"gamever": ["AA", "SH", "BT"]
 	},
 	"angles": {
 		"syntax": "angles( Vector newAngles )",
 		"description": "Sets/Gets the angles of the entity.",
-		"example": "local.entity angles ( 0 90 0 )\nprintln local.entity.angles // Prints: (0.000000, 90.000000, 0.000000)",
+		"example": "local.entity angles ( 0 90 0 )\n// Or\nlocal.entity.angles = ( 0 90 0 )\n\nprintln local.entity.angles // Prints: (0.000000, 90.000000, 0.000000)",
 		"class": ["Entity", "SimpleEntity"],
 		"gamever": ["AA", "SH", "BT"]
 	},
@@ -779,13 +779,13 @@
 	"avelocity": {
 		"syntax": "avelocity( [ String [random|crandom] ], [ Float yaw ], [ String [random|crandom] ],\n[ Float pitch ], [ String [random|crandom] ], [ Float roll ] )",
 		"description": "<b>Entity</b>: Gets the angular velocity for this entity.\n<b>Projectile</b>: Set the angular velocity of the projectile.",
-		"example": "local.avelocity = local.entity.avelocity",
-		"class": ["Entity"],
+		"example": "// Entity\nlocal.angular_velocity = local.entity.avelocity\n\n// Projectile\nlocal.projectile avelocity \"random\" 90 \"random\" 90 60",
+		"class": ["Entity", "Projectile"],
 		"gamever": ["AA", "SH", "BT"]
 	},
 	"avoidplayer": {
 		"syntax": "avoidplayer( Integer allowavoid )",
-		"description": "Set to 0 if this AI shouldn't automatically get out of the way, non-zero if he should.",
+		"description": "Set to 0 if this AI shouldn't automatically get out of the way,\nnon-zero if he should.",
 		"example": "local.actor avoidplayer 1\nlocal.avoidplayer = local.actor.avoidplayer",
 		"class": ["Actor"],
 		"gamever": ["AA", "SH", "BT"]
@@ -1814,7 +1814,7 @@
 	},
 	"disguise_accept_thread": {
 		"syntax": "disguise_accept_thread( String label )",
-		"description": "Sets/Gets the name of the thread for the actor to start when accepting papers",
+		"description": "Sets/Gets the name of the thread for the actor to start when accepting papers.",
 		"example": "local.actor disguise_accept_thread \"label\"\n// Or\nlocal.actor.disguise_accept_thread = \"label\"\nlocal.get_thread = local.actor.disguise_accept_thread",
 		"class": ["Actor"],
 		"gamever": ["AA", "SH", "BT"]
@@ -4510,7 +4510,7 @@
 	"mood": {
 		"syntax": "mood( String new_mood )",
 		"description": "Sets/Gets the AI mood... must be \"bored\", \"nervous\", \"curious\", or \"alert\".",
-		"example": "local.actor mood \"bored\"\nlocal.actor_mood = local.actor.mood",
+		"example": "local.actor.mood = \"bored\"\nlocal.actor_mood = local.actor.mood",
 		"class": ["Actor"],
 		"gamever": ["AA", "SH", "BT"]
 	},
@@ -4887,7 +4887,7 @@
 	},
 	"nolongpain": {
 		"syntax": "nolongpain( Integer allow )",
-		"description": "Sets/Gets if long pain is allowed or not,\n1 = long pain is not allowed.\n0 = long pain is allowed.",
+		"description": "Sets/Gets if long pain is allowed or not.\n1 = long pain is not allowed.\n0 = long pain is allowed.",
 		"example": "local.actor nolongpain 1\n// Or\nlocal.actor.nolongpain = 1\nlocal.nolongpain = local.actor.nolongpain",
 		"class": ["Actor"],
 		"gamever": ["AA", "SH", "BT"]
@@ -6420,7 +6420,7 @@
 	},
 	"sayfail": {
 		"syntax": "sayfail",
-		"description": "sayfail",
+		"description": "sayfail...",
 		"example": "parm.sayfail",
 		"class": [""],
 		"gamever": ["AA", "SH", "BT"]
@@ -6428,7 +6428,7 @@
 	"scale": {
 		"syntax": "scale( Float newScale )",
 		"description": "Entity: Sets/Gets the scale of the entity.\nSmokeGrenade: Sets initial scale of each smoke volume.",
-		"example": "local.entity scale 2\n// Or\nlocal.entity.scale = 2\nlocal.result = local.entity.scale",
+		"example": "local.entity scale 2\n// Or\nlocal.entity.scale = 2\nlocal.scale = local.entity.scale",
 		"class": ["Entity", "SmokeGrenade"],
 		"gamever": ["AA", "SH", "BT"]
 	},
@@ -8863,7 +8863,7 @@
 	},
 	"weapontype": {
 		"syntax": "weapontype( String weapon_type )",
-		"description": "Actor: Gets the weapon type of the actor\nWeapon: Sets the weapon type.",
+		"description": "Actor: Gets the weapon type of the actor.\nWeapon: Sets the weapon type.",
 		"example": "local.weapontype = local.actor.weapontype\nlocal.weapon weapontype \"rifle\"",
 		"class": ["Actor","Weapon"],
 		"gamever": ["AA", "SH", "BT"]
