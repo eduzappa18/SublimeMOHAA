@@ -133,6 +133,7 @@ local.actor.weapon
 local.actor.weapongroup
 local.actor.weapontype
 local.AISpawnPoint.dontdrophealth
+local.AISpawnPoint.dontdropweapons
 
 // Listener, SimpleEntity, Entity (and subclasses)
 local.entity.angle

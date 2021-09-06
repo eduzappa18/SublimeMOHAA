@@ -33,6 +33,7 @@
 		"dmroundlimit",
 		"dmteam",
 		"dontdrophealth",
+		"dontdropweapons",
 		"emotion",
 		"enableEnemy",
 		"enablePain",

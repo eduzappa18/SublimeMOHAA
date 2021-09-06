@@ -29,8 +29,8 @@ variables:
     (?xi:
       accuracy|adminrights|alarmnode|alarmthread|ammo_grenade|angle|angles|animname|avelocity|avoidplayer|
       balconyheight|blendtime|brushmodel|centroid|classname|collisionent|deathhandler|disguise_accept_thread|
-      disguise_level|disguise_period|disguise_range|distancetoenemy|dmteam|dontdrophealth|emotion|enableEnemy|
-      enablePain|enemy|enemy_visible_change_time|enemysharerange|entnum|fallheight|farplane|farplane_bias|
+      disguise_level|disguise_period|disguise_range|distancetoenemy|dmteam|dontdrophealth|dontdropweapons|emotion|
+      enableEnemy|enablePain|enemy|enemy_visible_change_time|enemysharerange|entnum|fallheight|farplane|farplane_bias|
       farplane_color|favoriteenemy|fireheld|forcedrophealth|forcedropweapon|forwardvector|get_render_terrain|
       getmaxs|getmins|gren_awareness|gun|has_disguise|hascompletelookahead|headmodel|headskin|health|hearing|
       ignorebadplaces|injail|inreload|interval|intervaldir|inventory|is_disguised|isEscaping|isOpen|isSpectator|

@@ -2094,9 +2094,9 @@
 	},
 	"dontdropweapons": {
 		"syntax": "dontdropweapons",
-		"description": "Make the sentient not drop weapons.",
-		"example": "local.sentient dontdropweapons",
-		"class": ["Sentient"],
+		"description": "<b>Sentient</b>: Make the sentient not drop weapons.\n<b>AISpawnPoint</b>: dontdropweapons getter.",
+		"example": "// Sentient\nlocal.sentient dontdropweapons\n\n// AISpawnPoint\nlocal.result = local.AISpawnPoint.dontdropweapons",
+		"class": ["AISpawnPoint", "Sentient"],
 		"gamever": ["AA", "SH", "BT"]
 	},
 	"doopen": {
