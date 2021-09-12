@@ -206,8 +206,9 @@
 //  ^^^^^^^^^^^^^^ support.function.builtin.scr
     attachTurretSlot
 //  ^^^^^^^^^^^^^^^^ support.function.builtin.scr
-    attackhandler
-//  ^^^^^^^^^^^^^ support.function.builtin.scr
+    attackhandler (local.actor.attackhandler)
+//  ^^^^^^^^^^^^^ string.unquoted.scr
+//                             ^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
     attackmode
 //  ^^^^^^^^^^ support.function.builtin.scr
     attackplayer
@@ -628,8 +629,9 @@
     dontdrophealth (local.AISpawnPoint.dontdrophealth)
 //  ^^^^^^^^^^^^^^ string.unquoted.scr
 //                                     ^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
-    dontdropweapons
+    dontdropweapons (local.AISpawnPoint.dontdropweapons)
 //  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+//                                      ^^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
     doopen
 //  ^^^^^^ support.function.builtin.scr
     door_triggerfield
@@ -713,8 +715,9 @@
     enemy_visible_change_time (local.actor.enemy_visible_change_time)
 //  ^^^^^^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
 //                                         ^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
-    enemyname
+    enemyname (local.AISpawnPoint.enemyname)
 //  ^^^^^^^^^ support.function.builtin.scr
+//                                ^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
     enemysharerange (local.actor.enemysharerange)
 //  ^^^^^^^^^^^^^^^ support.function.builtin.scr
 //                               ^^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
@@ -827,8 +830,9 @@
 //  ^^^^^^^^ support.function.builtin.scr
     firewarmupdelay
 //  ^^^^^^^^^^^^^^^ support.function.builtin.scr
-    fixedleash
+    fixedleash (local.actor.fixedleash)
 //  ^^^^^^^^^^ support.function.builtin.scr
+//                          ^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
     flags
 //  ^^^^^ support.function.builtin.scr
     flash
@@ -871,8 +875,9 @@
     found_secrets (level.found_secrets)
 //  ^^^^^^^^^^^^^ string.unquoted.scr
 //                       ^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
-    fov
+    fov (local.actor.fov)
 //  ^^^ support.function.builtin.scr
+//                   ^^^ meta.property.object.scr support.function.builtin.scr
     freezeplayer
 //  ^^^^^^^^^^^^ support.function.builtin.scr
     front_mass
@@ -1672,8 +1677,9 @@
 //  ^^^^^^^^^^^ support.function.builtin.scr
     poweruptimer
 //  ^^^^^^^^^^^^ support.function.builtin.scr
-    prealarmthread
+    prealarmthread (local.actor.prealarmthread)
 //  ^^^^^^^^^^^^^^ support.function.builtin.scr
+//                              ^^^^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
     preimpactsound
 //  ^^^^^^^^^^^^^^ support.function.builtin.scr
     preimpactsoundprob

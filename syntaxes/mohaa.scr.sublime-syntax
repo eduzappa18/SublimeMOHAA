@@ -27,21 +27,21 @@ variables:
     )\b
   builtin_props: |-
     (?xi:
-      accuracy|adminrights|alarmnode|alarmthread|ammo_grenade|angle|angles|animname|avelocity|avoidplayer|
-      balconyheight|blendtime|brushmodel|centroid|classname|collisionent|deathhandler|disguise_accept_thread|
-      disguise_level|disguise_period|disguise_range|distancetoenemy|dmteam|dontdrophealth|dontdropweapons|emotion|
-      enableEnemy|enablePain|enemy|enemy_visible_change_time|enemysharerange|entnum|fallheight|farplane|farplane_bias|
-      farplane_color|favoriteenemy|fireheld|forcedrophealth|forcedropweapon|forwardvector|get_render_terrain|
-      getmaxs|getmins|gren_awareness|gun|has_disguise|hascompletelookahead|headmodel|headskin|health|hearing|
-      ignorebadplaces|injail|inreload|interval|intervaldir|inventory|is_disguised|isEscaping|isOpen|isSpectator|
-      kickdir|last_enemy_visible_time|leanleftheld|leanrightheld|leash|leftvector|lookaroundangle|max_health|
-      maxdist|mindist|model|mood|movedir|movedoneradius|moving_from_anim|mumble|nationality|nationalityprefix|
-      netname|no_idle|nolongpain|nonvislevel|normal_health|nosurprise|noticescale|origin|owner|painhandler|pathdist|
-      patrolpath|position|primaryfireheld|radnum|rightvector|rotatedbbox|runanimrate|runheld|scale|secfireheld|
-      secondaryfireheld|sight|silent|size|skybox_farplane|skybox_speed|sound_awareness|suppresschance|target|
-      targetname|team|thinkstate|threatbias|turndoneerror|turnspeed|turret|type_attack|type_disguise|type_grenade|
-      type_idle|upvector|useheld|userinfo|vehicle|velocity|viewangles|voicetype|waittrigger|weapon|weapongroup|
-      weapontype|yaw
+      accuracy|adminrights|alarmnode|alarmthread|ammo_grenade|angle|angles|animname|attackhandler|avelocity|
+      avoidplayer|balconyheight|blendtime|brushmodel|centroid|classname|collisionent|deathhandler|
+      disguise_accept_thread|disguise_level|disguise_period|disguise_range|distancetoenemy|dmteam|dontdrophealth|
+      dontdropweapons|emotion|enableEnemy|enablePain|enemy|enemy_visible_change_time|enemyname|enemysharerange|
+      entnum|fallheight|farplane|farplane_bias|farplane_color|favoriteenemy|fireheld|fixedleash|forcedrophealth|
+      forcedropweapon|forwardvector|fov|get_render_terrain|getmaxs|getmins|gren_awareness|gun|has_disguise|
+      hascompletelookahead|headmodel|headskin|health|hearing|ignorebadplaces|injail|inreload|interval|intervaldir|
+      inventory|is_disguised|isEscaping|isOpen|isSpectator|kickdir|last_enemy_visible_time|leanleftheld|leanrightheld|
+      leash|leftvector|lookaroundangle|max_health|maxdist|mindist|model|mood|movedir|movedoneradius|moving_from_anim|
+      mumble|nationality|nationalityprefix|netname|no_idle|nolongpain|nonvislevel|normal_health|nosurprise|
+      noticescale|origin|owner|painhandler|pathdist|patrolpath|position|prealarmthread|primaryfireheld|radnum|
+      rightvector|rotatedbbox|runanimrate|runheld|scale|secfireheld|secondaryfireheld|sight|silent|size|
+      skybox_farplane|skybox_speed|sound_awareness|suppresschance|target|targetname|team|thinkstate|threatbias|
+      turndoneerror|turnspeed|turret|type_attack|type_disguise|type_grenade|type_idle|upvector|useheld|userinfo|
+      vehicle|velocity|viewangles|voicetype|waittrigger|weapon|weapongroup|weapontype|yaw
     )\b
   parm_props: (?i:motionfail|movedone|movefail|other|owner|previousthread|sayfail|upperfail)\b
   game_props: (?i:detail|skill)\b
@@ -86,7 +86,7 @@ variables:
       animated_farplane|animated_farplane_bias|animated_farplane_color|AnimationSet|animdone|animfinal|animloop|
       animloop_legs|animloop_pain|animloop_torso|animscript|animscript_attached|animscript_noclip|
       animscript_scripted|arc|arctotarget|arena|armor|armwithweapons|assert|attach|AttachDriverSlot|attachedmodelanim|
-      attachgrenade|attachmodel|AttachPassengerSlot|attachtohand|attachtoladder|AttachTurretSlot|attackhandler|
+      attachgrenade|attachmodel|AttachPassengerSlot|attachtohand|attachtoladder|AttachTurretSlot|
       attackmode|attackplayer|auto_active|auto_join_team|auto_maxfov|auto_radius|auto_starttime|auto_state|
       auto_stoptime|autoaim|autoputaway|avelocity|avoidplayer|AxisObjNum|
       #B

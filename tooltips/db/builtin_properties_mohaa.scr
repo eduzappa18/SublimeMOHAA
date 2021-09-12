@@ -63,6 +63,7 @@ local.actor.alarmnode
 local.actor.alarmthread
 local.actor.ammo_grenade
 local.actor.animname
+local.actor.attackhandler
 local.actor.avoidplayer
 local.actor.balconyheight
 local.actor.blendtime
@@ -80,8 +81,10 @@ local.actor.enemy_visible_change_time
 local.actor.enemysharerange
 local.actor.fallheight
 local.actor.favoriteenemy
+local.actor.fixedleash
 local.actor.forcedrophealth
 local.actor.forcedropweapon
+local.actor.fov
 local.actor.gren_awareness
 local.actor.gun
 local.actor.hascompletelookahead
@@ -112,6 +115,7 @@ local.actor.painhandler
 local.actor.pathdist
 local.actor.patrolpath
 local.actor.position
+local.actor.prealarmthread
 local.actor.runanimrate
 local.actor.sight
 local.actor.silent
@@ -134,6 +138,7 @@ local.actor.weapongroup
 local.actor.weapontype
 local.AISpawnPoint.dontdrophealth
 local.AISpawnPoint.dontdropweapons
+local.AISpawnPoint.enemyname
 
 // Listener, SimpleEntity, Entity (and subclasses)
 local.entity.angle
