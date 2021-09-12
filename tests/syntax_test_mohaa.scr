@@ -687,6 +687,20 @@ local.master aliascache gasmask1 sound/characters/gasmask1.wav soundparms 1.0 0.
 //       ^^^ constant.numeric.scr
 //          ^ punctuation.terminator.statement.scr
 
+    teamswitchdelay 1 // test
+//  ^^^^^^^^^^^^^^^ support.function.builtin.scr
+//                  ^ constant.numeric.scr
+    // Comment with indentation
+    wait 1
+//  ^^^^ keyword.control.scr
+//       ^ constant.numeric.scr
+// Comment without indentation
+    wait 1
+//  ^^^^ keyword.control.scr
+//       ^ constant.numeric.scr
+
+
+
     local.door wait 1
 //  ^^^^^ variable.language.scr
 //       ^ punctuation.accessor.dot.scr

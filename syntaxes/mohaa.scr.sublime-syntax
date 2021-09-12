@@ -787,6 +787,7 @@ contexts:
     - include: else-pop
 
   expression-end:
+    - include: eol-pop
     - include: postfix-operators
     - include: binary-operators
     - include: left-expression-end
