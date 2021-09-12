@@ -1,0 +1,15 @@
+SublimeMOHAA v1.2.1
+
+Changelog
+=========
+
+  - fixed: TIKI Syntax highlighting not working on .txt files
+           Now it will work if the first line of the .txt file match the words TIKI, setup or animations
+  - fixed: Some tooltip descriptions and examples
+  - fixed: Missing built-in properties (mostly from Breakthrough)
+  - fixed: Fix some statements not being highlighted correctly under specific conditions
+
+
+
+For more info, please visit the xNULL forums:
+· https://www.x-null.net/forums/threads/3155-MOHAA-Syntax-Highlighting-for-Sublime-Text
