@@ -2375,7 +2375,7 @@
 	"enemyname": {
 		"syntax": "enemyname( String enemyname )",
 		"description": "Use the enemyname parameter for the AI that is being spawned in to set its targetname.",
-		"example": "",
+		"example": "local.AISpawnPoint.enemyname = \"tentguys\"",
 		"class": ["AISpawnPoint"],
 		"gamever": ["BT"]
 	},
@@ -2745,8 +2745,8 @@
 	},
 	"fixedleash": {
 		"syntax": "fixedleash( Float multiplier )",
-		"description": "If non-zero, the leash will never auto-reset If zero, the leash may auto-reset.",
-		"example": "local.actor fixedleash 1",
+		"description": "If non-zero, the leash will never auto-reset.\nIf zero, the leash may auto-reset.",
+		"example": "local.actor fixedleash 1\n// Or\nlocal.actor.fixedleash = 1\nlocal.result = local.actor.fixedleash",
 		"class": ["Actor", "AISpawnPoint"],
 		"gamever": ["AA", "SH", "BT"]
 	},
@@ -2885,8 +2885,8 @@
 	},
 	"fov": {
 		"syntax": "fov( Float fov )",
-		"description": "Actor, AISpawnPoint: The fov angle of the actor.\n\nCamera: fov( Float fov, [ Float fadeTime ] )\nSets the camera's field of view (fov).\nif fadeTime is specified, camera will fade over that time\nif fov is less than 3, than an auto_fov will be assumed\nthe value of fov will be the ratio used for keeping a watch\nentity in the view at the right scale.\n\nPlayer: Sets the player's fov.\n\nSplinePath: Sets the fov at this node.",
-		"example": "local.camera fov 110 2\n// Or\nlocal.other fov 120\n",
+		"description": "Actor, AISpawnPoint: Gets/Sets the Field of View angle of the actor.\n\nCamera: fov( Float fov, [ Float fadeTime ] )\nSets the camera's field of view (fov).\nif fadeTime is specified, camera will fade over that time\nif fov is less than 3, than an auto_fov will be assumed\nthe value of fov will be the ratio used for keeping a watch\nentity in the view at the right scale.\n\nPlayer: Sets the player's fov.\n\nSplinePath: Sets the fov at this node.",
+		"example": "local.camera fov 110 2\n\n// Actor\nlocal.actor fov 120\n// Or\nlocal.actor.fov = 120\nlocal.fov = local.actor.fov",
 		"class": ["Actor", "AISpawnPoint", "Camera", "Player", "SplinePath"],
 		"gamever": ["AA", "SH", "BT"]
 	},
@@ -4915,7 +4915,7 @@
 	},
 	"normal_health": {
 		"syntax": "normal_health",
-		"description": "The Normal Health of the Actor.",
+		"description": "The Normal Health of the entity.",
 		"example": "local.entity.normal_health",
 		"class": ["Entity"],
 		"gamever": ["AA", "SH", "BT"]
@@ -5174,7 +5174,7 @@
 	},
 	"origin": {
 		"syntax": "origin( Vector newOrigin )",
-		"description": "Sets the origin of the entity to newOrigin.\nGets the origin of the entity.",
+		"description": "Sets/Gets the origin of the entity.",
 		"example": "local.entity origin ( 300 -2450 130 )\n// Or\nlocal.entity.origin = ( 300 -2450 130 )\nlocal.origin = local.entity.origin",
 		"class": ["SimpleEntity", "InfoLandmark"],
 		"gamever": ["AA", "SH", "BT"]
@@ -5476,7 +5476,7 @@
 	"prealarmthread": {
 		"syntax": "prealarmthread( String value )",
 		"description": "Sets the name of the pre alarm thread for the actor.\n(Must have type set to alarm for effect).",
-		"example": "local.actor prealarmthread \"label\"",
+		"example": "local.actor prealarmthread \"label\"\n//Or\nlocal.actor.prealarmthread = \"label\"",
 		"class": ["Actor"],
 		"gamever": ["BT"]
 	},
