@@ -50,10 +50,12 @@ clientCommand: UnnamedSoldier : 7 : ad_login user password
 Reborn INFO: 127.0.0.1 (UnnamedSoldier) logged as admin using login "user" and password "password"
 | <- markup.bold.log
 |^^^^^^^^^^^ markup.bold.log
+|            ^^^^^^^^^ markup.underline.log constant.numeric.log
 
 SV packet 123.123.123.123:-30245 : getinfo
 | <- markup.inserted.log
 |^^^^^^^^ markup.inserted.log
+|         ^^^^^^^^^^^^^^^^^^^^^^ markup.underline.log constant.numeric.log
 
 DUPLICATE ALIASES: headshot and headshot
 | <- markup.deleted.log

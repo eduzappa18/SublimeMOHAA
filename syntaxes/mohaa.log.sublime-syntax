@@ -19,6 +19,9 @@ contexts:
     # info
     - match: '(Cvar_Set2:|Reborn INFO:|-->|^([-=]{3,30}).*$)'
       scope: markup.bold.log
+    # IP, IP:Port
+    - match: '\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(?::-?[0-9]+)?\b'
+      scope: markup.underline.log constant.numeric.log
     # numeric
     - match: '\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\.[0-9]+)?))\b'
       scope: constant.numeric.log
