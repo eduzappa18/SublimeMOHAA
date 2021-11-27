@@ -64,8 +64,8 @@ variables:
       gettimezone|isadmin|md5file|md5string|netname|registerev|setproperty|stuffsrv|
       teamswitchdelay|traced|typeof|unregisterev|
       # file
-      fopen|fclose|feof|fseek|ftell|frewind|fputc|fputs|fgetc|fgets|ferror|
-      fflush|fexists|freadall|fsaveall|fremove|frename|fcopy|freadpak|flist|
+      fclose|fcopy|feof|ferror|fexists|fflush|fgetc|fgets|flist|fnewdir|fopen|fputc|
+      fputs|freadall|freadpak|fremove|fremovedir|frename|frewind|fsaveall|fseek|ftell|
       # math
       cos|sin|tan|acos|asin|atan|atan2|cosh|sinh|tanh|exp|
       frexp|ldexp|log|log10|modf|pow|sqrt|ceil|floor|fmod|

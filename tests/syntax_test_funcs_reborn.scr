@@ -51,6 +51,8 @@
 //  ^^^^^ support.function.builtin.scr
     fmod
 //  ^^^^ support.function.builtin.scr
+    fnewdir
+//  ^^^^^^^ support.function.builtin.scr
     fopen
 //  ^^^^^ support.function.builtin.scr
     fputc
@@ -63,6 +65,8 @@
 //  ^^^^^^^^ support.function.builtin.scr
     fremove
 //  ^^^^^^^ support.function.builtin.scr
+    fremovedir
+//  ^^^^^^^^^^ support.function.builtin.scr
     frename
 //  ^^^^^^^ support.function.builtin.scr
     frewind
