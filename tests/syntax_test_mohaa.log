@@ -60,3 +60,24 @@ SV packet 123.123.123.123:-30245 : getinfo
 DUPLICATE ALIASES: headshot and headshot
 | <- markup.deleted.log
 |^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ markup.deleted.log
+
+    clientCommand: Player : 5 : dmmessage 0 PUCLIC CHAT
+|   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ markup.raw.inline.log
+|   ^^^^^^^^^^^^^^ markup.inserted.log
+|                               ^^^^^^^^^ keyword.other.dmmessage.log
+|                                         ^ constant.numeric.log
+|                                           ^^^^^^^^^^^ markup.bold.log
+
+    clientCommand: Player : 6 : dmmessage -1 TEAM CHAT
+|   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ markup.raw.inline.log
+|   ^^^^^^^^^^^^^^ markup.inserted.log
+|                               ^^^^^^^^^ keyword.other.dmmessage.log
+|                                         ^^ constant.numeric.log
+|                                            ^^^^^^^^^ markup.bold.log
+
+    clientCommand: Player : 7 : dmmessage 1 PRIVATE CHAT
+|   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ markup.raw.inline.log
+|   ^^^^^^^^^^^^^^ markup.inserted.log
+|                               ^^^^^^^^^ keyword.other.dmmessage.log
+|                                         ^ constant.numeric.log
+|                                           ^^^^^^^^^^^^ markup.bold.log

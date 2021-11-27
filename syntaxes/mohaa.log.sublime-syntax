@@ -7,8 +7,16 @@ scope: source.log
 
 contexts:
   main:
+    # chat
+    - match: '(clientCommand:)\s.+\s\b(dmmessage)\s(\-?\d+)\s(.+)$'
+      captures:
+        0: markup.raw.inline.log
+        1: markup.inserted.log
+        2: keyword.other.dmmessage.log
+        3: constant.numeric.log
+        4: markup.bold.log
     # client stuff
-    - match: '^(clientCommand:|clientDownload:)|^.+has entered the battle$'
+    - match: '^(clientCommand:|clientDownload:)|^.+(has entered the battle|is preparing for deployment)$'
       scope: markup.inserted.log
     # warnings
     - match: '^(WARNING[:-]|Warning:|Hitch warning:|TIKI_InitTiki:|TIKI_FreeSkel:|Tiki:LoadFile|DUPLICATE ALIASES:|(BIG )?Info string length exceeded).*$\n?'
