@@ -3543,8 +3543,8 @@
 	},
 	"is_disguised": {
 		"syntax": "is_disguised",
-		"description": "zero = not disguised, non-zero = disguised",
-		"example": "$player.is_disguised = 1\nlocal.is_disguised = $player.is_disguised",
+		"description": "Gets if the player is disguised or not.\nzero = not disguised, non-zero = disguised",
+		"example": "local.is_disguised = $player.is_disguised",
 		"class": ["Player"],
 		"gamever": ["AA", "SH", "BT"]
 	},
