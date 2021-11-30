@@ -8,7 +8,8 @@
 			],
 			[
 				"MOHAA/syntaxes/mohaa.scr",
-				"MOHAA/syntaxes/mohaa.tik"
+				"MOHAA/syntaxes/mohaa.tik",
+				"MOHAA/syntaxes/mohaa.st"
 			]
 		]
 	}
