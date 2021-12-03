@@ -1,0 +1,14 @@
+SublimeMOHAA v1.2.2
+
+Changelog
+=========
+
+  - fixed: Missing Reborn commands 'fnewdir' and 'fremovedir'
+  - fixed: Improved highlighting of .log files (IP, IP:Port and chat messages)
+  - fixed: Improved some tooltip descriptions and examples
+  - fixed: Improved completions
+  - fixed: Missing Morpheus syntax highlighting in tooltips for .st files ('entrycommands' and 'exitcommands')
+
+
+For more info, please visit the xNULL forums:
+· https://www.x-null.net/forums/threads/3155-MOHAA-Syntax-Highlighting-for-Sublime-Text
