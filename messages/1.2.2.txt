@@ -4,9 +4,9 @@ Changelog
 =========
 
   - fixed: Missing Reborn commands 'fnewdir' and 'fremovedir'
-  - fixed: Improved highlighting of .log files (IP, IP:Port and chat messages)
-  - fixed: Improved some tooltip descriptions and examples
-  - fixed: Improved completions
+  - Improved highlighting of .log files (IP, IP:Port and chat messages)
+  - Improved some tooltip descriptions and examples
+  - Improved completions
   - fixed: Missing Morpheus syntax highlighting in tooltips for .st files ('entrycommands' and 'exitcommands')
 
 
