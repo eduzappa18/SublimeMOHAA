@@ -37,7 +37,7 @@ _____________________________________________________________
 ### Screenshots
 
 **Tooltips**  
-![Tooltips](screenshots/tooltips.png)
+![Tooltips](screenshots/tooltips.gif)
 
 **Morpheus Script**  
 ![Morpheus Script](screenshots/mohaa.scr.png)
