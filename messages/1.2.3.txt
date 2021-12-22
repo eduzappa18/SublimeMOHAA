@@ -1,0 +1,10 @@
+SublimeMOHAA v1.2.3
+
+Changelog
+=========
+
+  - fixed: Identifiers with hyphens not being highlighted correctly in state files (Sky is the limit mod)
+
+
+For more info, please visit the xNULL forums:
+· https://www.x-null.net/forums/threads/3155-MOHAA-Syntax-Highlighting-for-Sublime-Text
