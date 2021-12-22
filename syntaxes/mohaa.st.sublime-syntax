@@ -6,7 +6,7 @@ file_extensions:
 scope: source.st
 
 variables:
-  identifier: \b([[:upper:][:digit:]_]+)\b
+  identifier: \b([[:upper:][:digit:]_-]+)\b
   cmds: \b(movetype|camera)\b
   conditions: (?:{{player_conditions}}|{{weapon_conditions}})
   player_conditions: |-

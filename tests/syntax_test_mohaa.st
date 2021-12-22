@@ -7,7 +7,7 @@
     state STATE_NAME
 //  ^^^^^^^^^^^ meta.state.declaration.st
 //  ^^^^^ storage.type.st
-//        ^^^^^ entity.name.function.st
+//        ^^^^^^^^^^ entity.name.function.st
 
 {
 // <- meta.state.body.st punctuation.definition.block.begin.st
@@ -81,8 +81,28 @@
 //                                                                                      ^^^^^^^^^^^^^^^^^^^^^^^ constant.language.st
 //                                                                                                              ^^^^^^^^^^ string.quoted.st
 
+        // from "Sky is the limit" mod
+        FORWARD-STRAFE_LEFT : FORWARD STRAFE_LEFT
+//      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.state.body.st meta.block.st
+//      ^^^^^^^^^^^^^^^^^^^ variable.function.st
+//                          ^ punctuation.separator.st
+//                            ^^^^^^^ meta.block.st constant.language.st
+//                                    ^^^^^^^^^^^ meta.block.st constant.language.st
+
     }
 //  ^ meta.state.body.st meta.block.st punctuation.section.block.end.st
 
+}
+// <- meta.state.body.st punctuation.definition.block.end.st
+
+    // from "Sky is the limit" mod
+    state FORWARD-STRAFE_LEFT
+//  ^^^^^^^^^^^ meta.state.declaration.st
+//  ^^^^^ storage.type.st
+//        ^^^^^^^^^^^^^^^^^^^ entity.name.function.st
+
+{
+// <- meta.state.body.st punctuation.definition.block.begin.st
+//^ meta.state.body.st comment.line.double-slash.st punctuation.definition.comment.st
 }
 // <- meta.state.body.st punctuation.definition.block.end.st
