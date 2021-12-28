@@ -41,7 +41,7 @@
 //  ^^^^^^^^^^^^^ string.quoted.double.scr
 //   ^^ constant.character.escape.scr
 //      ^^ constant.character.escape.scr
-//         ^^ constant.character.escape.scr
+//         ^^ - constant.character.escape.scr
 //            ^^ constant.character.escape.scr
 
     "// /* not a comment";

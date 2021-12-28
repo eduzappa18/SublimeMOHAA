@@ -325,7 +325,7 @@ contexts:
             1: punctuation.definition.string.end.scr
             2: invalid.illegal.newline.scr
           pop: true
-        - match: '\\[nrt"\\]'
+        - match: '\\[nt"\\]'
           scope: constant.character.escape.scr
 
   literal-number:
