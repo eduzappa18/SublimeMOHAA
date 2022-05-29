@@ -2145,14 +2145,14 @@
 		"syntax": "doTouch( Entity touchingEntity )",
 		"description": "Sent to entity when touched.\n\nClasses:\nDrivableVehicle, Emitter, ExplodingWall, FallingRock, Fulcrum, Gib, Projectile, PuffDaddy, RunThrough, ScriptSlave,\nSinkObject, ThrowObject, TossObject, Trigger, TriggerAll, TriggerHurt, TriggerNoDamage, UseAnim, Vehicle.",
 		"example": "",
-		"class": [""],
+		"class": ["…"],
 		"gamever": ["AA", "SH", "BT"]
 	},
 	"douse": {
 		"syntax": "doUse( Entity activatingEntity )",
 		"description": "Sent to entity when it is used by another entity.\n\nClasses:\nDoor, Item, ScriptSlave, ThrobbingBox_Explosive, ThrobbingBox_Stickybomb,\nTriggerCameraUse, TriggerUse, TurretGun, Vehicle, VehicleTurretGun",
 		"example": "",
-		"class": [""],
+		"class": ["…"],
 		"gamever": ["AA", "SH", "BT"]
 	},
 	"dprintln": {
@@ -4705,7 +4705,7 @@
 	},
 	"mprintln": {
 		"syntax": "mprintln( String string )",
-		"description": "Prints a string.followed by a newline.",
+		"description": "Prints a string, followed by a newline.",
 		"example": "mprintln \"Hello World!\"",
 		"class": ["ScriptThread"],
 		"gamever": ["AA", "SH", "BT"]
@@ -6422,7 +6422,7 @@
 		"syntax": "sayfail",
 		"description": "sayfail...",
 		"example": "parm.sayfail",
-		"class": [""],
+		"class": ["Parm"],
 		"gamever": ["AA", "SH", "BT"]
 	},
 	"scale": {
@@ -6505,7 +6505,7 @@
 	"semiauto": {
 		"syntax": "semiauto",
 		"description": "Sets the weapon to fire semi-auto.",
-		"example": "",
+		"example": "local.weapon semiauto",
 		"class": ["Weapon"],
 		"gamever": ["AA", "SH", "BT"]
 	},

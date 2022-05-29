@@ -71,8 +71,8 @@
 	},
 	"conprintf": {
 		"syntax": "conprintf( String text )",
-		"description": "Prints text to a console.",
-		"example": "conprintf \"This can be a custom error message from the script\"",
+		"description": "Prints text to the console without a new line at the end.",
+		"example": "conprintf \"This can be a custom error message from the script\n\"",
 		"class": ["ScriptThread"],
 		"gamever": ["REBORN"]
 	},
@@ -100,7 +100,7 @@
 	"fclose": {
 		"syntax": "fclose( Integer filehandle )",
 		"description": "Closes file.\n\nIf file is successfully closed, a zero value is returned.\nOn failure, EOF is returned.",
-		"example": "local.result = fclose local.file",
+		"example": "local.result = fclose local.filehandle",
 		"class": ["ScriptThread"],
 		"gamever": ["REBORN"]
 	},
@@ -114,42 +114,42 @@
 	"feof": {
 		"syntax": "feof( Integer filehandle )",
 		"description": "Checks for end of file.\nA non-zero value is returned in the case that the\nEnd-of-File indicator associated with the file is set.\nOtherwise, a zero value is returned.",
-		"example": "local.result = feof local.file",
+		"example": "local.result = feof local.filehandle",
 		"class": ["ScriptThread"],
 		"gamever": ["REBORN"]
 	},
 	"ferror": {
 		"syntax": "ferror( Integer filehandle )",
 		"description": "Checks if the error indicator associated with file is set,\nreturning a value different from zero if it is.\n\nIf the error indicator associated with the file was set,\nthe function returns a nonzero value.\nOtherwise, it returns a zero value.",
-		"example": "local.result = ferror local.file",
+		"example": "local.result = ferror local.filehandle",
 		"class": ["ScriptThread"],
 		"gamever": ["REBORN"]
 	},
 	"fexists": {
 		"syntax": "fexists( String filename )",
 		"description": "Checks if file with given filename exists.\n\nIf file exists, function returns 1. Otherwise it returns 0.",
-		"example": "local.result = fexists \"folder/folder2/file.txt\"",
+		"example": "local.result = fexists \"main/folder/file.txt\"",
 		"class": ["ScriptThread"],
 		"gamever": ["REBORN"]
 	},
 	"fflush": {
 		"syntax": "fflush( Integer filehandle )",
 		"description": "If the given file was open for writing and the last i/o operation was an output operation,\nany unwritten data in the output buffer is written to the file.\nThe file remains open after this command.\n\nA zero value indicates success.\nIf an error occurs, EOF is returned and the error indicator is set.",
-		"example": "local.result = fflush local.file",
+		"example": "local.result = fflush local.filehandle",
 		"class": ["ScriptThread"],
 		"gamever": ["REBORN"]
 	},
 	"fgetc": {
 		"syntax": "fgetc( Integer filehandle )",
 		"description": "Reads single character from file.\n\nThe character read is returned as an int value.\nYou need to cast it to char if you want to use it in string.",
-		"example": "local.char = fgetc local.file",
+		"example": "local.char = fgetc local.filehandle",
 		"class": ["ScriptThread"],
 		"gamever": ["REBORN"]
 	},
 	"fgets": {
 		"syntax": "fgets( Integer filehandle, Integer maxbuffsize )",
 		"description": "Reads string line from file.\nmaxbuffsize - specifies maximum buffer size that will be allocated to store the string in memory.\n\nIf the End-of-File is encountered and no characters have been read 0 (null) is returned.\nIf an error occurs 0 (null) is returned.\nIf a memory allocation error occurs, -1 is returned.",
-		"example": "local.text = fgets local.file 256",
+		"example": "local.text = fgets local.filehandle 256",
 		"class": ["ScriptThread"],
 		"gamever": ["REBORN"]
 	},
@@ -191,35 +191,35 @@
 	"fputc": {
 		"syntax": "fputc( Integer filehandle, String character )",
 		"description": "Writes a character to the file and advances the position indicator.\nIf there are no errors, the same character that has been written is returned.\nIf an error occurs, EOF is returned and the error indicator is set.\nYou have to cast returned value to char.\nIf you pass longer string, only first character will be written to file.",
-		"example": "local.result = fputc local.file \"a\"",
+		"example": "local.result = fputc local.filehandle \"a\"",
 		"class": ["ScriptThread"],
 		"gamever": ["REBORN"]
 	},
 	"fputs": {
 		"syntax": "fputs( Integer filehandle, String text )",
 		"description": "Writes text to the file and advances the position indicator.\nOn success, a non-negative value is returned.\nOn error, the function returns EOF.",
-		"example": "local.result = fputs local.file \"This is an example\"",
+		"example": "local.result = fputs local.filehandle \"This is an example\"",
 		"class": ["ScriptThread"],
 		"gamever": ["REBORN"]
 	},
 	"freadall": {
 		"syntax": "freadall( Integer filehandle )",
 		"description": "Reads whole file into a string at once. File has to be opened in binary mode (rb, rb+)\n\nDon't read binary files with this function because it may cause memory leaks.",
-		"example": "local.content = freadall local.file",
+		"example": "local.content = freadall local.filehandle",
 		"class": ["ScriptThread"],
 		"gamever": ["REBORN"]
 	},
 	"freadpak": {
 		"syntax": "freadpak( String filename )",
 		"description": "Reads file located inside .pk3 file in text mode and returns it's content as string.\n\nIf the file is successfully read, function returns a string with it's content.\nWhen function fails to find, open or read a file from .pk3, a -1 value is returned.",
-		"example": "local.content = freadpak local.filename",
+		"example": "local.content = freadpak \"path/to/file.txt\"",
 		"class": ["ScriptThread"],
 		"gamever": ["REBORN"]
 	},
 	"fremove": {
 		"syntax": "fremove( String filename )",
 		"description": "Removes the file with given filename.\n\nIf the file is successfully deleted, a zero value is returned.\nOn failure, a nonzero value is returned and the errno variable\nis set to the corresponding error code.",
-		"example": "local.result = fremove local.filename",
+		"example": "local.result = fremove \"main/folder/file.txt\"",
 		"class": ["ScriptThread"],
 		"gamever": ["REBORN"]
 	},
@@ -240,7 +240,7 @@
 	"frewind": {
 		"syntax": "frewind( Integer filehandle )",
 		"description": "Sets the position indicator associated with file to the beginning of the file.",
-		"example": "local.result = frewind local.file",
+		"example": "local.result = frewind local.filehandle",
 		"class": ["ScriptThread"],
 		"gamever": ["REBORN"]
 	},
@@ -254,21 +254,21 @@
 	"fsaveall": {
 		"syntax": "fsaveall( Integer filehandle, String content )",
 		"description": "Writes string content to file at once.\nFile has to be opened in binary mode (wb, wb+, ab).\nThe content will start to be saved from the current file position.\n\nFunction returns number of character written to file or -1 if content is NULL.",
-		"example": "local.result = fsaveall local.file local.content",
+		"example": "local.result = fsaveall local.filehandle local.content",
 		"class": ["ScriptThread"],
 		"gamever": ["REBORN"]
 	},
 	"fseek": {
 		"syntax": "fseek( Integer filehandle, Integer offset, Integer origin )",
 		"description": "Sets the position indicator associated with the file to a new position\ndefined by adding offset to a reference position specified by origin.\n\norigin:\n0 = SEEK_SET\n1 = SEEK_CUR\n\nIf successful, the function returns a zero value.\nOtherwise, it returns nonzero value.",
-		"example": "local.return = fseek local.file 154 0",
+		"example": "local.return = fseek local.filehandle 154 0",
 		"class": ["ScriptThread"],
 		"gamever": ["REBORN"]
 	},
 	"ftell": {
 		"syntax": "ftell( Integer filehandle )",
 		"description": "Returns the current value of the position indicator of the file.\n\nOn success, the current value of the position indicator is returned.\nIf an error occurs, -1 is returned.",
-		"example": "local.return = ftell local.file",
+		"example": "local.return = ftell local.filehandle",
 		"class": ["ScriptThread"],
 		"gamever": ["REBORN"]
 	},
