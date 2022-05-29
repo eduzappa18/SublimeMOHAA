@@ -21,10 +21,35 @@
 // <- comment.block.documentation.scr
  *
  * Blah blah...
+ * @desc   Description here
+ * no@param
+//^^^^^^^^^^ - entity
+ * @param {string} local.name The name
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.scr
+// ^^^^^^ entity.name.tag.documentation.scr
+//        ^^^^^^^^ entity.other.attribute-name.scr
+//                 ^^^^^^^^^^ variable.parameter.scr
+//       ^ - entity - variable
+//                ^ - entity - variable
+//                           ^^^^^^^^^^^^^ - entity - variable
+ * @param {integer} [local.optional] Optional parameter
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.scr
+// ^^^^^^ entity.name.tag.documentation.scr
+//        ^^^^^^^^^ entity.other.attribute-name.scr
+//                  ^^^^^^^^^^^^^^^^ variable.parameter.scr
+//       ^ - entity - variable
+//                 ^ - entity - variable
+//                                  ^^^^^^^^^^^^^^^^^^^^^ - entity - variable
+ * @return {string} A string
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.scr
+// ^^^^^^^ entity.name.tag.documentation.scr
+//         ^^^^^^^^ entity.other.attribute-name.scr
+//        ^ - entity
+//                 ^^^^^^^^^^^ - entity
  * @author Name
  * @version 1.0.0
  * @anything Any keyword you want to highlight
-// ^^^^^^^^^ keyword.other.documentation.scr
+// ^^^^^^^^^ entity.name.tag.documentation.scr
  * @contact username@domain.com
 //                  ^^^^^^^ - keyword
  *

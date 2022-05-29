@@ -293,8 +293,31 @@ contexts:
           scope: punctuation.definition.comment.end.scr
           pop: true
 
-        - match: \B\@(\w+)\b
-          scope: keyword.other.documentation.scr
+        - match: '\B\@param\b'
+          scope: entity.name.tag.documentation.scr
+          push:
+            - match: '(\{)([\w@#:/''\.]+)(\})'
+              scope: entity.other.attribute-name.scr
+              push:
+                - match: '(\[)(\b[\w@#''\.]+\b)(\])|(\b[\w@#''\.]+\b)'
+                  scope: variable.parameter.scr
+                  pop: true
+                - include: else-pop
+                - include: eol-pop
+            - include: else-pop
+            - include: eol-pop
+
+        - match: '\B\@returns?\b'
+          scope: entity.name.tag.documentation.scr
+          push:
+            - match: '\{[\w@#:/''\.]+\}'
+              scope: entity.other.attribute-name.scr
+              pop: true
+            - include: else-pop
+            - include: eol-pop
+
+        - match: \B\@([-\w]+)\b
+          scope: entity.name.tag.documentation.scr
 
     - match: /\*
       scope: punctuation.definition.comment.begin.scr
