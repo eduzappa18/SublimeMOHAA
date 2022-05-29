@@ -1,0 +1,12 @@
+SublimeMOHAA v1.2.4
+
+Changelog
+=========
+
+  - Improved highlighting of documentation comments (similar to JSDoc/JavaDoc) in morpheus script files
+  - Improved some tooltips descriptions and examples
+  - Removed the escape sequence "\r" (Doesn't work in morpheus script)
+
+
+For more info, please visit the xNULL forums:
+· https://www.x-null.net/forums/threads/3155-MOHAA-Syntax-Highlighting-for-Sublime-Text
