@@ -516,10 +516,10 @@ contexts:
           scope: invalid.illegal.scr
           pop: true
 
-        - match: \n
-          pop: true
+        - include: eol-pop
 
     - include: else-pop
+    - include: eol-pop
 
   statements:
     - match: '\)|\}|\]'

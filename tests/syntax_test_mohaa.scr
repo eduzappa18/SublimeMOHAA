@@ -770,6 +770,16 @@ local.master aliascache gasmask1 sound/characters/gasmask1.wav soundparms 1.0 0.
 //        ^^^^^^^^ support.function.builtin.scr
 //                 ^^^^^^^^^^^ invalid.illegal.scr
 
+    level waittill postthink
+//  ^^^^^ variable.language.scr
+//        ^^^^^^^^^^^^^^^^^^ meta.waittill-levelphase.scr
+//        ^^^^^^^^ support.function.builtin.scr
+//                 ^^^^^^^^^ keyword.other.scr
+
+    wait .1
+//  ^^^^ keyword.control.scr
+//       ^^ constant.numeric.scr
+
     $
 //  ^ keyword.operator.targetname.scr
 
