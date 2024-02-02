@@ -9,7 +9,7 @@
 |`.tik` TIKI files|✔|❌|❌|
 |`.st` State Machine files|✔|❌|❌|
 |`.urc` Uber Resource Script files|✔|❌|❌|
-|`.mus` Music files|✔|❌|❌|
+|`.mus` Music files|✔|✔|❌|
 |`.shader` Shader files|✔|❌|❌|
 |`.cfg` Config files|✔|✔|❌|
 |`.log` Server log files|✔|❌|❌|
