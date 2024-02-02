@@ -17,7 +17,8 @@ VERSION = {
     "AA": "Medal of Honor: Allied Assault",
     "SH": "Medal of Honor: Allied Assault - Spearhead",
     "BT": "Medal of Honor: Allied Assault - Breakthrough",
-    "REBORN": "MoH:AA 1.12 Reborn Patch"
+    "Reborn": "MoH:AA 1.12 Reborn Patch",
+    "NightFall": "NightFall - (d)gamexwrapper"
 }
 
 class MOHAATooltips(sublime_plugin.EventListener):
@@ -89,6 +90,7 @@ class MOHAATooltips(sublime_plugin.EventListener):
         menus.append("<a href='https://x-null.net/wiki' title='MoH:AA Reborn Wiki'>Wiki</a>".format(name))
         menus.append("<a href='https://www.x-null.net/forums/forum.php' title='xNULL | MoH:AA 1.12 Reborn Forums'>xNULL</a>")
         menus.append("<a href='http://mohreborn.com' title='mohreborn.com'>MoHReborn</a>")
+        menus.append("<a href='https://github.com/mohabhassan/NightFall' title='NightFall GitHub Repository'>NightFall</a>")
         menus.append("</div>")
         menus.append("</body>")
 

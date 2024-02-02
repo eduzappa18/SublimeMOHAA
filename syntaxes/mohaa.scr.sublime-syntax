@@ -71,7 +71,9 @@ variables:
       frexp|ldexp|log|log10|modf|pow|sqrt|ceil|floor|fmod|
       # ihuddraw_
       ihuddraw_align|ihuddraw_alpha|ihuddraw_color|ihuddraw_font|
-      ihuddraw_rect|ihuddraw_shader|ihuddraw_string|ihuddraw_virtualsize
+      ihuddraw_rect|ihuddraw_shader|ihuddraw_string|ihuddraw_virtualsize|
+      # NightFall
+      constarray|create_api_request|json_parse|json_stringify|regex_parse|register_api_route|setcvar_ex|unregister_api_route
     )
   moh_funcs: |-
     (?xi:

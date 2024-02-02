@@ -16,6 +16,12 @@ body {
 a {
 	color: color(var(--accent) blend(var(--background) 50%));
 }
+code {
+	background-color: var(--background);
+	border-radius: 0.2rem;
+	padding-right: 0.2rem;
+	padding-left: 0.2rem;
+}
 .header {
 	border-bottom: 1px solid var(--hr);
 	padding: 0.2rem .5rem;
@@ -38,7 +44,7 @@ a {
 .AA {color: color(var(--orangish) blend(var(--background) 60%));}
 .SH {color: color(var(--greenish) blend(var(--background) 60%));}
 .BT {color: color(var(--bluish) blend(var(--background) 60%));}
-.REBORN {color: color(var(--purplish) blend(var(--background) 60%));}
+.Reborn, .NightFall {color: color(var(--purplish) blend(var(--background) 60%));}
 
 .content {
 	padding: 0 1rem;

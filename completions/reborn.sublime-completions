@@ -13,8 +13,10 @@
 		{"trigger": "ceil", "contents": "ceil", "kind": "function", "annotation": "Reborn Function"},
 		{"trigger": "chartoint", "contents": "chartoint", "kind": "function", "annotation": "Reborn Function"},
 		{"trigger": "conprintf", "contents": "conprintf", "kind": "function", "annotation": "Reborn Function"},
+		{"trigger": "constarray", "contents": "constarray", "kind": "function", "annotation": "NightFall Function"},
 		{"trigger": "cos", "contents": "cos", "kind": "function", "annotation": "Reborn Function"},
 		{"trigger": "cosh", "contents": "cosh", "kind": "function", "annotation": "Reborn Function"},
+		{"trigger": "create_api_request", "contents": "create_api_request", "kind": "function", "annotation": "NightFall Function"},
 		{"trigger": "exp", "contents": "exp", "kind": "function", "annotation": "Reborn Function"},
 		{"trigger": "fclose", "contents": "fclose", "kind": "function", "annotation": "Reborn Function"},
 		{"trigger": "fcopy", "contents": "fcopy", "kind": "function", "annotation": "Reborn Function"},
@@ -62,6 +64,8 @@
 		{"trigger": "ihuddraw_string", "contents": "ihuddraw_string", "kind": "function", "annotation": "Reborn Function"},
 		{"trigger": "ihuddraw_virtualsize", "contents": "ihuddraw_virtualsize", "kind": "function", "annotation": "Reborn Function"},
 		{"trigger": "isadmin", "contents": "isadmin", "kind": "function", "annotation": "Reborn Function"},
+		{"trigger": "json_parse", "contents": "json_parse", "kind": "function", "annotation": "NightFall Function"},
+		{"trigger": "json_stringify", "contents": "json_stringify", "kind": "function", "annotation": "NightFall Function"},
 		{"trigger": "ldexp", "contents": "ldexp", "kind": "function", "annotation": "Reborn Function"},
 		{"trigger": "log", "contents": "log", "kind": "function", "annotation": "Reborn Function"},
 		{"trigger": "log10", "contents": "log10", "kind": "function", "annotation": "Reborn Function"},
@@ -70,7 +74,10 @@
 		{"trigger": "modf", "contents": "modf", "kind": "function", "annotation": "Reborn Function"},
 		{"trigger": "netname", "contents": "netname", "kind": "function", "annotation": "Reborn Function"},
 		{"trigger": "pow", "contents": "pow", "kind": "function", "annotation": "Reborn Function"},
+		{"trigger": "regex_parse", "contents": "regex_parse", "kind": "function", "annotation": "NightFall Function"},
+		{"trigger": "register_api_route", "contents": "register_api_route", "kind": "function", "annotation": "NightFall Function"},
 		{"trigger": "registerev", "contents": "registerev", "kind": "function", "annotation": "Reborn Function"},
+		{"trigger": "setcvar_ex", "contents": "setcvar_ex", "kind": "function", "annotation": "NightFall Function"},
 		{"trigger": "setproperty", "contents": "setproperty", "kind": "function", "annotation": "Reborn Function"},
 		{"trigger": "sin", "contents": "sin", "kind": "function", "annotation": "Reborn Function"},
 		{"trigger": "sinh", "contents": "sinh", "kind": "function", "annotation": "Reborn Function"},
@@ -81,6 +88,7 @@
 		{"trigger": "teamswitchdelay", "contents": "teamswitchdelay", "kind": "function", "annotation": "Reborn Function"},
 		{"trigger": "traced", "contents": "traced", "kind": "function", "annotation": "Reborn Function"},
 		{"trigger": "typeof", "contents": "typeof", "kind": "function", "annotation": "Reborn Function"},
+		{"trigger": "unregister_api_route", "contents": "unregister_api_route", "kind": "function", "annotation": "NightFall Function"},
 		{"trigger": "unregisterev", "contents": "unregisterev", "kind": "function", "annotation": "Reborn Function"}
 	]
 }

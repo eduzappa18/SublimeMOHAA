@@ -23,10 +23,14 @@
 //  ^^^^^^^^^ support.function.builtin.scr
     conprintf
 //  ^^^^^^^^^ support.function.builtin.scr
+    constarray // NightFall
+//  ^^^^^^^^^^ support.function.builtin.scr
     cos // Breakthrough & Reborn
 //  ^^^ support.function.builtin.scr
     cosh
 //  ^^^^ support.function.builtin.scr
+    create_api_request // NightFall
+//  ^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
     exp
 //  ^^^ support.function.builtin.scr
     fclose
@@ -124,6 +128,10 @@
 //                          ^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
     isadmin
 //  ^^^^^^^ support.function.builtin.scr
+    json_parse // NightFall
+//  ^^^^^^^^^^ support.function.builtin.scr
+    json_stringify // NightFall
+//  ^^^^^^^^^^^^^^ support.function.builtin.scr
     ldexp
 //  ^^^^^ support.function.builtin.scr
     leanleftheld (local.player.leanleftheld)
@@ -147,14 +155,20 @@
 //                        ^^^^^^^ meta.property.object.scr support.function.builtin.scr
     pow
 //  ^^^ support.function.builtin.scr
+    regex_parse // NightFall
+//  ^^^^^^^^^^^ support.function.builtin.scr
     registerev
 //  ^^^^^^^^^^ support.function.builtin.scr
+    register_api_route // NightFall
+//  ^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
     runheld (local.player.runheld)
 //  ^^^^^^^ string.unquoted.scr
 //                        ^^^^^^^ meta.property.object.scr support.function.builtin.scr
     secfireheld (local.player.secfireheld)
 //  ^^^^^^^^^^^ string.unquoted.scr
 //                            ^^^^^^^^^^^ meta.property.object.scr support.function.builtin.scr
+    setcvar_ex // NightFall
+//  ^^^^^^^^^^ support.function.builtin.scr
     setproperty
 //  ^^^^^^^^^^^ support.function.builtin.scr
     sin // Breakthrough & Reborn
@@ -175,6 +189,8 @@
 //  ^^^^^^ support.function.builtin.scr
     typeof
 //  ^^^^^^ support.function.builtin.scr
+    unregister_api_route // NightFall
+//  ^^^^^^^^^^^^^^^^^^^^ support.function.builtin.scr
     unregisterev
 //  ^^^^^^^^^^^^ support.function.builtin.scr
     userinfo (local.player.userinfo)
