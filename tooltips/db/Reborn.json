@@ -72,7 +72,7 @@
 	"conprintf": {
 		"syntax": "conprintf( String text )",
 		"description": "Prints text to the console without a new line at the end.",
-		"example": "conprintf \"This can be a custom error message from the script\n\"",
+		"example": "conprintf \"This can be a custom error message from the script\\n\"",
 		"class": ["ScriptThread"],
 		"gamever": ["REBORN"]
 	},
