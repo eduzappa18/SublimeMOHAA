@@ -1,0 +1,14 @@
+SublimeMOHAA v1.3.0
+
+Changelog
+=========
+
+  - added: Support for NightFall commands, completions and tooltips (https://github.com/mohabhassan/NightFall)
+  - fixed: Some tooltip descriptions and examples
+  - fixed: Missing keywords for .mus files
+  - fixed: Scope bug showing wrong syntax highlighting after level waittill ... 
+
+
+
+For more info, please visit the xNULL forums:
+· https://www.x-null.net/forums/threads/3155-MOHAA-Syntax-Highlighting-for-Sublime-Text
