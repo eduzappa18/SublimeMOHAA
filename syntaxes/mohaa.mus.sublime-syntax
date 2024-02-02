@@ -34,10 +34,13 @@ contexts:
     - match: \!
       scope: keyword.operator.logical.mus
 
-    - match: \b(?:path|normal|aux\d?)\b
-      scope: keyword.other.mus
+    - match: \bpath\b
+      scope: keyword.other.path.mus
 
-    - match: \b(?:fadetime|loop|restart|volume)\b
+    - match: \b(?:none|normal|action|suspense|mystery|success|failure|surprise|special|aux1|aux2|aux3|aux4|aux5|aux6|aux7)\b
+      scope: keyword.other.musicmood.mus
+
+    - match: \b(?:volume|fadetime|loop|restart|interrupt)\b
       scope: support.function.builtin.mus
 
   arguments:

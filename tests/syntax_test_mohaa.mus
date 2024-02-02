@@ -5,64 +5,102 @@
 //  ^^ punctuation.definition.comment.mus
 
     path sound/amb_stereo
-//  ^^^^ keyword.other.mus
+//  ^^^^ keyword.other.path.mus
 //       ^^^^^^^^^^^^^^^^ meta.file-path.mus string.unquoted.mus
 
     normal Amb_M4_CountryExt_03.mp3// Player Start
-//  ^^^^^^ keyword.other.mus
+//  ^^^^^^ keyword.other.musicmood.mus
 //         ^^^^^^^^^^^^^^^^^^^^^^^^ string.unquoted.mus
 //                                 ^^^^^^^^^^^^^^^^ comment.line.double-slash.mus
 //                                 ^^ punctuation.definition.comment.mus
 
     aux1 Amb_M5_TownExt_2.mp3 // Plays over entire level
-//  ^^^^ keyword.other.mus
+//  ^^^^ keyword.other.musicmood.mus
 //       ^^^^^^^^^^^^^^^^^^^^ string.unquoted.mus
 //                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.mus
 
     aux2 Amb_M1_Bunker_02.mp3
-//  ^^^^ keyword.other.mus
+//  ^^^^ keyword.other.musicmood.mus
 //       ^^^^^^^^^^^^^^^^^^^^ string.unquoted.mus
+
+    none
+//  ^^^^ keyword.other.musicmood.mus
+    normal
+//  ^^^^^^ keyword.other.musicmood.mus
+    action
+//  ^^^^^^ keyword.other.musicmood.mus
+    suspense
+//  ^^^^^^^^ keyword.other.musicmood.mus
+    mystery
+//  ^^^^^^^ keyword.other.musicmood.mus
+    success
+//  ^^^^^^^ keyword.other.musicmood.mus
+    failure
+//  ^^^^^^^ keyword.other.musicmood.mus
+    surprise
+//  ^^^^^^^^ keyword.other.musicmood.mus
+    special
+//  ^^^^^^^ keyword.other.musicmood.mus
+    aux1
+//  ^^^^ keyword.other.musicmood.mus
+    aux2
+//  ^^^^ keyword.other.musicmood.mus
+    aux3
+//  ^^^^ keyword.other.musicmood.mus
+    aux4
+//  ^^^^ keyword.other.musicmood.mus
+    aux5
+//  ^^^^ keyword.other.musicmood.mus
+    aux6
+//  ^^^^ keyword.other.musicmood.mus
+    aux7
+//  ^^^^ keyword.other.musicmood.mus
 
     !normal volume 1.0
 //  ^ keyword.operator.logical.mus
-//   ^^^^^^ keyword.other.mus
+//   ^^^^^^ keyword.other.musicmood.mus
 //          ^^^^^^ support.function.builtin.mus
 //                 ^^^ constant.numeric.mus
 
     !normal loop
 //  ^ keyword.operator.logical.mus
-//   ^^^^^^ keyword.other.mus
+//   ^^^^^^ keyword.other.musicmood.mus
 //          ^^^^ support.function.builtin.mus
 
     !aux1 volume 1.0
 //  ^ keyword.operator.logical.mus
-//   ^^^^ keyword.other.mus
+//   ^^^^ keyword.other.musicmood.mus
 //        ^^^^^^ support.function.builtin.mus
 //               ^^^ constant.numeric.mus
 
     !aux1 loop
 //  ^ keyword.operator.logical.mus
-//   ^^^^ keyword.other.mus
+//   ^^^^ keyword.other.musicmood.mus
 //        ^^^^ support.function.builtin.mus
 
     !aux2 volume .7
 //  ^ keyword.operator.logical.mus
-//   ^^^^ keyword.other.mus
+//   ^^^^ keyword.other.musicmood.mus
 //        ^^^^^^ support.function.builtin.mus
 //               ^^ constant.numeric.mus
 
-    !aux2 loop
-//  ^ keyword.operator.logical.mus
-//   ^^^^ keyword.other.mus
-//        ^^^^ support.function.builtin.mus
-
     !aux2 fadetime 5
 //  ^ keyword.operator.logical.mus
-//   ^^^^ keyword.other.mus
+//   ^^^^ keyword.other.musicmood.mus
 //        ^^^^^^^^ support.function.builtin.mus
 //                 ^ constant.numeric.mus
 
+    !aux2 loop
+//  ^ keyword.operator.logical.mus
+//   ^^^^ keyword.other.musicmood.mus
+//        ^^^^ support.function.builtin.mus
+
     !aux2 restart
 //  ^ keyword.operator.logical.mus
-//   ^^^^ keyword.other.mus
+//   ^^^^ keyword.other.musicmood.mus
 //        ^^^^^^^ support.function.builtin.mus
+
+    !aux2 interrupt
+//  ^ keyword.operator.logical.mus
+//   ^^^^ keyword.other.musicmood.mus
+//        ^^^^^^^^^ support.function.builtin.mus

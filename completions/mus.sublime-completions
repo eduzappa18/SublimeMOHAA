@@ -1,0 +1,29 @@
+{
+	"scope": "source.mus",
+
+	"completions":
+	[
+		"path",
+		"none",
+		"normal",
+		"action",
+		"suspense",
+		"mystery",
+		"success",
+		"failure",
+		"surprise",
+		"special",
+		"aux1",
+		"aux2",
+		"aux3",
+		"aux4",
+		"aux5",
+		"aux6",
+		"aux7",
+		"volume",
+		"fadetime",
+		"loop",
+		"restart",
+		"interrupt"
+	]
+}
