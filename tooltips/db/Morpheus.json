@@ -120,7 +120,7 @@
 	},
 	"addobjective": {
 		"syntax": "addobjective( Integer objective_number, Integer status, [ String text ], [ Vector location ] )",
-		"description": "Adds/Changes an Objective.",
+		"description": "Adds/Changes an Objective.\n\nThe <b>status</b> value can be one of the following:\n<code>1</code> = Don't draw\n<code>2</code> = In progress\n<code>3</code> = Completed",
 		"example": "addobjective 2 1 \"Check the door.\" $door.origin\nsetcurrentobjective 2 \"allies\"",
 		"class": ["ScriptThread"],
 		"gamever": ["AA", "SH", "BT"]
