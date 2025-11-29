@@ -1,0 +1,11 @@
+SublimeMOHAA v1.3.1
+
+Changelog
+=========
+
+  - fixed: popup docs not showing up caused by a dependencies bug
+
+
+
+For more info, please visit the xNULL forums:
+· https://www.x-null.net/forums/threads/3155-MOHAA-Syntax-Highlighting-for-Sublime-Text
