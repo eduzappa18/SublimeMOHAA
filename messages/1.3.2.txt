@@ -1,0 +1,11 @@
+SublimeMOHAA v1.3.2
+
+Changelog
+=========
+
+  - fixed: tooltip crash on Sublime Text 4200+
+
+
+
+For more info, please visit the xNULL forums:
+· https://www.x-null.net/forums/threads/3155-MOHAA-Syntax-Highlighting-for-Sublime-Text
