@@ -87,10 +87,10 @@ class MOHAATooltips(sublime_plugin.EventListener):
             copy = command["example"]
 
         menus.append("<div class='footer'>")
-        menus.append("<a href='https://x-null.net/wiki' title='MoH:AA Reborn Wiki'>Wiki</a>".format(name))
-        menus.append("<a href='https://www.x-null.net/forums/forum.php' title='xNULL | MoH:AA 1.12 Reborn Forums'>xNULL</a>")
-        menus.append("<a href='http://mohreborn.com' title='mohreborn.com'>MoHReborn</a>")
-        menus.append("<a href='https://github.com/mohabhassan/NightFall' title='NightFall GitHub Repository'>NightFall</a>")
+        menus.append("<a href='https://www.mohreborn.com/' title='www.mohreborn.com'>MOH Reborn</a>")
+        menus.append("<a href='https://forums.moharchive.com/' title='forums.moharchive.com'>MOH Reborn Forums</a>")
+        menus.append("<a href='https://github.com/mohabhassan/NightFall' title='github.com/mohabhassan/NightFall'>NightFall</a>")
+        menus.append("<a href='https://www.openmohaa.org/' title='www.openmohaa.org'>OpenMoHAA</a>")
         menus.append("</div>")
         menus.append("</body>")
 
