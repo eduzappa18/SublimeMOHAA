@@ -95,8 +95,8 @@ class MOHAATooltips(sublime_plugin.EventListener):
         menus.append("</body>")
 
         max_width, max_height = view.viewport_extent()
-        max_width *= 0.90
-        max_height *= 0.90
+        max_width = int(max_width * 0.90)
+        max_height = int(max_height * 0.90)
         a = view.word(view.sel()[0]).begin()
         b = view.word(view.sel()[0]).end()
 
