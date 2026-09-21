@@ -65,7 +65,7 @@ class MOHAATooltips(sublime_plugin.EventListener):
 
         menus.append("<div class='content'>")
         if command["syntax"]:
-            name, *args = re.split("(\\W)", command["syntax"], maxsplit=1)
+            name, *args = re.split(r"(\W)", command["syntax"], maxsplit=1)
             menus.append("<div class='syntax-container'>")
             menus.append("<strong class='name'>{}</strong>".format(name))
             if args:
